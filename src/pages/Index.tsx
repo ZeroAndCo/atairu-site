@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Layout } from '@/components/layout/Layout';
 import { BrazilMap } from '@/components/home/BrazilMap';
 import { heritages, getUnescoHeritages, getCategoryIcon } from '@/data/heritages';
+import brazilMapHero from '@/assets/brazil-map-hero.png';
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -104,16 +105,18 @@ const Index = () => {
               </div>
             </motion.div>
 
-            {/* Brazil Map Illustration */}
+            {/* Brazil Map Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="max-w-md w-full">
-                <BrazilMap />
-              </div>
+              <img 
+                src={brazilMapHero} 
+                alt="Mapa do Brasil com pins de patrimônios" 
+                className="max-w-md w-full h-auto"
+              />
             </motion.div>
           </div>
         </div>
@@ -140,6 +143,36 @@ const Index = () => {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Map Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {t('map.title')}
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {t('map.subtitle')}
+            </p>
+          </motion.div>
+
+          <BrazilMap />
+
+          <div className="text-center mt-8">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+              <Link to="/map">
+                <MapPin className="mr-2 h-5 w-5" />
+                {t('hero.exploreMap')}
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
