@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-gradient-hero relative overflow-hidden">
+      <section className="py-16 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -58,10 +58,10 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               {t('contact.title')}
             </h1>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
           </motion.div>

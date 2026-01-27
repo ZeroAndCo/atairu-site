@@ -62,7 +62,7 @@ const Team = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-gradient-hero relative overflow-hidden">
+      <section className="py-16 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -70,10 +70,10 @@ const Team = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               {t('team.title')}
             </h1>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
               {t('team.subtitle')}
             </p>
           </motion.div>
@@ -101,7 +101,7 @@ const Team = () => {
               >
                 <Card className="h-full text-center hover:shadow-brand transition-shadow">
                   <CardContent className="p-6">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-4 flex items-center justify-center text-white text-3xl font-serif font-bold">
+                    <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center text-primary-foreground text-3xl font-serif font-bold">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <h3 className="font-serif text-xl font-semibold mb-1">
