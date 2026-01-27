@@ -12,6 +12,7 @@ const resources = {
   es: { translation: es },
 };
 
+// Initialize i18next synchronously
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -23,8 +24,10 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['path', 'localStorage', 'navigator'],
-      lookupFromPathIndex: 0,
+      order: ['localStorage', 'navigator'],
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
