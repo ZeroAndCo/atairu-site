@@ -53,12 +53,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center bg-cream overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-cream overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 pattern-indigenous opacity-10" />
         
         {/* Content */}
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container mx-auto px-4 py-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <motion.div
