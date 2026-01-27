@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "heritage": "Heritage",
+    "map": "Interactive Map",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Your Travel Companion to the Heart of Brazil",
+    "subtitle": "Discover Brazil's cultural and natural richness through unique heritage sites that tell our story",
+    "exploreMap": "Explore the Map",
+    "learnMore": "Learn More"
+  },
+  "stats": {
+    "heritages": "Heritage Sites",
+    "unesco": "UNESCO",
+    "regions": "Regions",
+    "states": "States"
+  },
+  "categories": {
+    "title": "Heritage Categories",
+    "world": {
+      "name": "World Heritage",
+      "description": "UNESCO-recognized sites of outstanding universal value"
+    },
+    "material": {
+      "name": "Tangible Heritage",
+      "description": "Physical assets such as historic buildings, monuments, and urban centers"
+    },
+    "intangible": {
+      "name": "Intangible Heritage",
+      "description": "Living cultural expressions including dances, festivals, cuisine, and crafts"
+    },
+    "natural": {
+      "name": "Natural Heritage",
+      "description": "National parks, reserves, and environmental preservation areas"
+    }
+  },
+  "regions": {
+    "sul": "South",
+    "sudeste": "Southeast",
+    "nordeste": "Northeast",
+    "centro-oeste": "Central-West",
+    "norte": "North"
+  },
+  "about": {
+    "title": "About the Project",
+    "mission": {
+      "title": "Our Mission",
+      "text": "Connect national and international travelers to Brazil's immense cultural and natural wealth, promoting sustainable tourism and appreciation of our heritage."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the ultimate travel companion for those who wish to explore authentic Brazil, facilitating access to information about cultural and natural heritage throughout the country."
+    },
+    "story": {
+      "title": "Our Story",
+      "text": "Ataîru was born from a passion for revealing the beauties and traditions of Brazil that often go unnoticed. Our name is a tribute to the indigenous roots of the country."
+    },
+    "heritage": {
+      "title": "Understanding Heritage",
+      "world": "UNESCO World Heritage - Sites of outstanding universal value internationally recognized.",
+      "material": "Tangible Heritage - Physical assets representing historical and architectural landmarks.",
+      "intangible": "Intangible Heritage - Traditions, knowledge, and cultural expressions passed down through generations.",
+      "natural": "Natural Heritage - Protected areas preserving unique ecosystems and biodiversity."
+    }
+  },
+  "map": {
+    "title": "Interactive Map",
+    "subtitle": "Explore Brazil's cultural and natural heritage",
+    "filter": "Filter",
+    "search": "Search heritage...",
+    "allCategories": "All categories",
+    "allRegions": "All regions",
+    "allStates": "All states",
+    "noResults": "No heritage found",
+    "viewDetails": "View Details"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people behind Ataîru",
+    "partners": "Partners"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or suggestions? We'd love to hear from you!",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "newsletter": {
+      "title": "Newsletter",
+      "text": "Receive updates about heritage and cultural routes",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "footer": {
+    "description": "Your travel companion to discover authentic Brazil",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading",
+    "back": "Back",
+    "close": "Close",
+    "seeAll": "See all",
+    "featured": "Featured"
+  }
+}
