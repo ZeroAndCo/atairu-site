@@ -8,7 +8,6 @@ import { Search, Filter, X } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Select,
@@ -329,7 +328,7 @@ const MapPage = () => {
                     {heritage.description[currentLang]}
                   </p>
                   {heritage.unesco && (
-                    <Badge className="bg-gold text-foreground text-xs">UNESCO</Badge>
+                    <span className="inline-block bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded">UNESCO</span>
                   )}
                 </div>
               </Popup>
@@ -378,11 +377,11 @@ const MapPage = () => {
                 {selectedHeritage.description[currentLang]}
               </p>
               <div className="flex gap-2">
-                <Badge className={`bg-${getCategoryColor(selectedHeritage.category)}`}>
+                <span className={`inline-block px-2 py-1 rounded text-sm text-white bg-${getCategoryColor(selectedHeritage.category)}`}>
                   {t(`categories.${selectedHeritage.category}.name`)}
-                </Badge>
+                </span>
                 {selectedHeritage.unesco && (
-                  <Badge className="bg-gold text-foreground">UNESCO</Badge>
+                  <span className="inline-block px-2 py-1 rounded text-sm bg-amber-200 text-amber-900">UNESCO</span>
                 )}
               </div>
             </div>
