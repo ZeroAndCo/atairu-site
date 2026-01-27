@@ -52,65 +52,70 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-hero overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-cream overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 pattern-indigenous opacity-20" />
+        <div className="absolute inset-0 pattern-indigenous opacity-10" />
         
         {/* Content */}
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <Badge className="mb-6 bg-gold/20 text-gold-light border-gold/30 text-sm px-4 py-1">
-              🇧🇷 Brasil
-            </Badge>
-            
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {t('hero.tagline')}
-            </h1>
-            
-            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              {t('hero.subtitle')}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild
-                size="lg" 
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8"
-              >
-                <Link to="/map">
-                  <MapPin className="mr-2 h-5 w-5" />
-                  {t('hero.exploreMap')}
-                </Link>
-              </Button>
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left"
+            >
+              <Badge className="mb-6 bg-gold/20 text-foreground border-gold/50 text-sm px-4 py-1">
+                🇧🇷 Brasil
+              </Badge>
               
-              <Button 
-                asChild
-                variant="outline" 
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
-              >
-                <Link to="/about">
-                  {t('hero.learnMore')}
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                {t('hero.tagline')}
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl">
+                {t('hero.subtitle')}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8"
+                >
+                  <Link to="/map">
+                    <MapPin className="mr-2 h-5 w-5" />
+                    {t('hero.exploreMap')}
+                  </Link>
+                </Button>
+                
+                <Button 
+                  asChild
+                  variant="outline" 
+                  size="lg"
+                  className="border-primary/30 text-primary hover:bg-primary/10 font-semibold px-8"
+                >
+                  <Link to="/about">
+                    {t('hero.learnMore')}
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </motion.div>
 
-        {/* Decorative bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" 
-              fill="hsl(var(--background))"
-            />
-          </svg>
+            {/* Brazil Map Illustration */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <div className="max-w-md w-full">
+                <BrazilMap />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -135,36 +140,6 @@ const Index = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brazil Map Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t('map.title')}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('map.subtitle')}
-            </p>
-          </motion.div>
-
-          <BrazilMap />
-
-          <div className="text-center mt-8">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link to="/map">
-                <MapPin className="mr-2 h-5 w-5" />
-                {t('hero.exploreMap')}
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
@@ -274,7 +249,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero relative overflow-hidden">
+      <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -283,10 +258,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
               {t('hero.tagline')}
             </h2>
-            <p className="text-white/80 mb-8 text-lg">
+            <p className="text-primary-foreground/80 mb-8 text-lg">
               {t('hero.subtitle')}
             </p>
             <Button 

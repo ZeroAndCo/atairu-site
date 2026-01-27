@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import logo from '@/assets/logo-atairu-1.jpeg';
+import logo from '@/assets/logo-atairu.png';
 
 const languages = [
   { code: 'pt', name: 'Português', flag: '🇧🇷' },
