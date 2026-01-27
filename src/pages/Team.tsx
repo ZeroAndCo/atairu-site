@@ -9,52 +9,47 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: 'Ana Silva',
-      role: { pt: 'Fundadora & Diretora', en: 'Founder & Director', es: 'Fundadora y Directora' },
+      name: 'Adriane Laste',
+      role: { 
+        pt: 'Cofundadora & Empreendedora Social', 
+        en: 'Co-founder & Social Entrepreneur', 
+        es: 'Cofundadora y Emprendedora Social' 
+      },
       bio: { 
-        pt: 'Apaixonada por cultura brasileira e turismo sustentável.',
-        en: 'Passionate about Brazilian culture and sustainable tourism.',
-        es: 'Apasionada por la cultura brasileña y el turismo sostenible.'
+        pt: 'Empreendedora social gaúcha com MBA em ESG e Gestão Empresarial. Sócia fundadora da Clic Marketing e Vendas, realizou 11 projetos socioculturais desde 2008. Fundadora do Hub Nossa Biblioteca, já doou mais de 115 mil livros para 590 bibliotecas no Brasil.',
+        en: 'Social entrepreneur from Rio Grande do Sul with an MBA in ESG and Business Management. Co-founder of Clic Marketing e Vendas, she has carried out 11 sociocultural projects since 2008. Founder of Hub Nossa Biblioteca, having donated over 115,000 books to 590 libraries across Brazil.',
+        es: 'Emprendedora social de Rio Grande do Sul con MBA en ESG y Gestión Empresarial. Cofundadora de Clic Marketing e Vendas, realizó 11 proyectos socioculturales desde 2008. Fundadora de Hub Nossa Biblioteca, donando más de 115 mil libros a 590 bibliotecas en Brasil.'
       },
       image: null
     },
     {
-      name: 'Carlos Santos',
-      role: { pt: 'Pesquisador Cultural', en: 'Cultural Researcher', es: 'Investigador Cultural' },
+      name: 'Nelma Zero',
+      role: { 
+        pt: 'Cofundadora & Consultora de Sustentabilidade', 
+        en: 'Co-founder & Sustainability Consultant', 
+        es: 'Cofundadora y Consultora de Sostenibilidad' 
+      },
       bio: { 
-        pt: 'Historiador especializado em patrimônio imaterial.',
-        en: 'Historian specialized in intangible heritage.',
-        es: 'Historiador especializado en patrimonio inmaterial.'
+        pt: 'Mais de 27 anos de experiência em comunicação e sustentabilidade. Pós-graduada em Meio Ambiente e Sustentabilidade pela FGV, ativista ambiental pelo Climate Reality Project e Multiplicadora B Corp. Especialista em desenvolvimento de negócios com impacto social positivo.',
+        en: 'Over 27 years of experience in communication and sustainability. Postgraduate in Environment and Sustainability from FGV, environmental activist for Climate Reality Project and B Corp Multiplier. Specialist in business development with positive social impact.',
+        es: 'Más de 27 años de experiencia en comunicación y sostenibilidad. Posgrado en Medio Ambiente y Sostenibilidad por FGV, activista ambiental del Climate Reality Project y Multiplicadora B Corp. Especialista en desarrollo de negocios con impacto social positivo.'
       },
       image: null
     },
     {
-      name: 'Marina Costa',
-      role: { pt: 'Coordenadora de Conteúdo', en: 'Content Coordinator', es: 'Coordinadora de Contenido' },
+      name: 'Fernanda da Silva Pereira',
+      role: { 
+        pt: 'Cofundadora & Especialista em Patrimônio Cultural', 
+        en: 'Co-founder & Cultural Heritage Specialist', 
+        es: 'Cofundadora y Especialista en Patrimonio Cultural' 
+      },
       bio: { 
-        pt: 'Jornalista com foco em turismo cultural.',
-        en: 'Journalist focused on cultural tourism.',
-        es: 'Periodista enfocada en turismo cultural.'
+        pt: 'Especialista em Patrimônio Cultural com 10 anos no IPHAN como Coordenadora de Comunicação. Idealizadora da Exposição Patrimônio Imaterial Brasileiro e pesquisadora do projeto Caravana do Patrimônio Cultural, que impactou 650 mil pessoas.',
+        en: 'Cultural Heritage specialist with 10 years at IPHAN as Communication Coordinator. Creator of the Brazilian Intangible Heritage Exhibition and researcher of the Cultural Heritage Caravan project, which impacted 650,000 people.',
+        es: 'Especialista en Patrimonio Cultural con 10 años en IPHAN como Coordinadora de Comunicación. Idealizadora de la Exposición Patrimonio Inmaterial Brasileño e investigadora del proyecto Caravana del Patrimonio Cultural, que impactó a 650 mil personas.'
       },
       image: null
     },
-    {
-      name: 'Pedro Lima',
-      role: { pt: 'Desenvolvedor', en: 'Developer', es: 'Desarrollador' },
-      bio: { 
-        pt: 'Tecnologia a serviço da cultura brasileira.',
-        en: 'Technology serving Brazilian culture.',
-        es: 'Tecnología al servicio de la cultura brasileña.'
-      },
-      image: null
-    },
-  ];
-
-  const partners = [
-    { name: 'IPHAN', type: 'institutional' },
-    { name: 'UNESCO Brasil', type: 'institutional' },
-    { name: 'Ministério do Turismo', type: 'government' },
-    { name: 'IBRAM', type: 'institutional' },
   ];
 
   const currentLang = useTranslation().i18n.language as 'pt' | 'en' | 'es';
@@ -90,7 +85,7 @@ const Team = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -121,37 +116,11 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
+      {/* Partners Section - Hidden for now
       <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <Handshake className="h-8 w-8 text-primary" />
-            <h2 className="font-serif text-3xl font-bold text-foreground">
-              {t('team.partners')}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {partners.map((partner, index) => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-brand transition-shadow">
-                  <CardContent className="p-6 flex items-center justify-center min-h-[120px]">
-                    <p className="font-serif text-lg font-semibold text-center text-foreground">
-                      {partner.name}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        ...
       </section>
+      */}
     </Layout>
   );
 };
