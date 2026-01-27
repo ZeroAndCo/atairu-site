@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Users, Handshake } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
+import adrianePhoto from '@/assets/team/adriane.jpeg';
+import nelmaPhoto from '@/assets/team/nelma.jpeg';
 
 const Team = () => {
   const { t } = useTranslation();
@@ -20,7 +22,7 @@ const Team = () => {
         en: 'Social entrepreneur from Rio Grande do Sul with an MBA in ESG and Business Management. Co-founder of Clic Marketing e Vendas, she has carried out 11 sociocultural projects since 2008. Founder of Hub Nossa Biblioteca, having donated over 115,000 books to 590 libraries across Brazil.',
         es: 'Emprendedora social de Rio Grande do Sul con MBA en ESG y Gestión Empresarial. Cofundadora de Clic Marketing e Vendas, realizó 11 proyectos socioculturales desde 2008. Fundadora de Hub Nossa Biblioteca, donando más de 115 mil libros a 590 bibliotecas en Brasil.'
       },
-      image: null
+      image: adrianePhoto
     },
     {
       name: 'Nelma Zero',
@@ -34,7 +36,7 @@ const Team = () => {
         en: 'Over 27 years of experience in communication and sustainability. Postgraduate in Environment and Sustainability from FGV, environmental activist for Climate Reality Project and B Corp Multiplier. Specialist in business development with positive social impact.',
         es: 'Más de 27 años de experiencia en comunicación y sostenibilidad. Posgrado en Medio Ambiente y Sostenibilidad por FGV, activista ambiental del Climate Reality Project y Multiplicadora B Corp. Especialista en desarrollo de negocios con impacto social positivo.'
       },
-      image: null
+      image: nelmaPhoto
     },
     {
       name: 'Fernanda da Silva Pereira',
@@ -96,9 +98,17 @@ const Team = () => {
               >
                 <Card className="h-full text-center hover:shadow-brand transition-shadow">
                   <CardContent className="p-6">
-                    <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center text-primary-foreground text-3xl font-serif font-bold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </div>
+                    {member.image ? (
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center text-primary-foreground text-3xl font-serif font-bold">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    )}
                     <h3 className="font-serif text-xl font-semibold mb-1">
                       {member.name}
                     </h3>
