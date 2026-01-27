@@ -57,7 +57,9 @@
     },
     "story": {
       "title": "Our Story",
-      "text": "Ataîru was born from a passion for revealing the beauties and traditions of Brazil that often go unnoticed. Our name is a tribute to the indigenous roots of the country."
+      "text": "Ataîru was born from a passion for revealing the beauties and traditions of Brazil that often go unnoticed. Our name is a tribute to the indigenous roots of the country.",
+      "origin": "The word 'Ataîru' comes from Tupi-Guarani and means 'travel companion'. We chose this name because we believe discovering Brazil is a journey best made with company — through stories, culture, and people who share the same love for our country.",
+      "purpose": "Our platform was created to connect travelers with the essence of Brazil: its cultural and natural heritage, its living traditions, and its incomparable biodiversity. We want to be the bridge between you and authentic experiences that transform trips into unforgettable memories."
     },
     "heritage": {
       "title": "Understanding Heritage",

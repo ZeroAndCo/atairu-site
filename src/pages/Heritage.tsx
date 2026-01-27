@@ -57,7 +57,7 @@ const Heritage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-gradient-hero relative overflow-hidden">
+      <section className="py-16 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -65,10 +65,10 @@ const Heritage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               {t('categories.title')}
             </h1>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
               {t('map.subtitle')}
             </p>
           </motion.div>
@@ -124,7 +124,7 @@ const Heritage = () => {
                       transition={{ delay: Math.min(index * 0.05, 0.5) }}
                     >
                       <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group">
-                        <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center relative">
+                        <div className="h-40 bg-muted flex items-center justify-center relative">
                           <span className="text-5xl group-hover:scale-110 transition-transform">
                             {getCategoryIcon(heritage.category)}
                           </span>

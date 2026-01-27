@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Sparkles, Building2, Music, TreePine, Heart, Eye, BookOpen } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
-import pattern from '@/assets/pattern-1.jpeg';
 
 const About = () => {
   const { t } = useTranslation();
@@ -18,7 +17,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-20 bg-gradient-hero overflow-hidden">
+      <section className="relative py-20 bg-primary overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -26,7 +25,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               {t('about.title')}
             </h1>
           </motion.div>
@@ -85,37 +84,30 @@ const About = () => {
       {/* Story Section */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <img 
-                src={pattern}
-                alt="Indigenous pattern" 
-                className="w-full rounded-2xl shadow-brand"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent rounded-2xl" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <BookOpen className="h-6 w-6 text-primary" />
-                <h2 className="font-serif text-3xl font-bold text-foreground">
-                  {t('about.story.title')}
-                </h2>
-              </div>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="h-6 w-6 text-primary" />
+              <h2 className="font-serif text-3xl font-bold text-foreground">
+                {t('about.story.title')}
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <p>
                 {t('about.story.text')}
               </p>
-            </motion.div>
-          </div>
+              <p>
+                {t('about.story.origin')}
+              </p>
+              <p>
+                {t('about.story.purpose')}
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

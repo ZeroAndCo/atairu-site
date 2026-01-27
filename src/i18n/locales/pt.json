@@ -57,7 +57,9 @@
     },
     "story": {
       "title": "Nossa História",
-      "text": "O Ataîru nasceu da paixão por revelar as belezas e tradições do Brasil que muitas vezes passam despercebidas. Nosso nome é uma homenagem às raízes indígenas do país."
+      "text": "O Ataîru nasceu da paixão por revelar as belezas e tradições do Brasil que muitas vezes passam despercebidas. Nosso nome é uma homenagem às raízes indígenas do país.",
+      "origin": "A palavra 'Ataîru' vem do Tupi-Guarani e significa 'companheiro de viagem'. Escolhemos esse nome porque acreditamos que descobrir o Brasil é uma jornada que se faz melhor acompanhado — por histórias, por cultura e por pessoas que compartilham o mesmo amor pelo nosso país.",
+      "purpose": "Nossa plataforma foi criada para conectar viajantes com a essência do Brasil: seus patrimônios culturais e naturais, suas tradições vivas e sua biodiversidade incomparável. Queremos ser a ponte entre você e experiências autênticas que transformam viagens em memórias inesquecíveis."
     },
     "heritage": {
       "title": "Entendendo os Patrimônios",

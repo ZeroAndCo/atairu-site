@@ -246,7 +246,7 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group">
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
                     <span className="text-6xl group-hover:scale-110 transition-transform">
                       {getCategoryIcon(heritage.category)}
                     </span>
