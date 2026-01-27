@@ -156,11 +156,18 @@
 }
 
 .leaflet-popup-content-wrapper {
-  @apply rounded-lg shadow-brand;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 40px -10px hsl(145 51% 20% / 0.3);
 }
 
 .leaflet-popup-content {
   margin: 0;
+}
+
+/* Fix marker icons */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
 }
 
 /* Custom scrollbar */
