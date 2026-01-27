@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "heritage": "Patrimônios",
+    "map": "Mapa Interativo",
+    "team": "Equipe",
+    "contact": "Contato"
+  },
+  "hero": {
+    "tagline": "Seu Companheiro de Viagem ao Coração do Brasil",
+    "subtitle": "Descubra a riqueza cultural e natural do Brasil através de patrimônios únicos que contam nossa história",
+    "exploreMap": "Explorar o Mapa",
+    "learnMore": "Saiba Mais"
+  },
+  "stats": {
+    "heritages": "Patrimônios",
+    "unesco": "UNESCO",
+    "regions": "Regiões",
+    "states": "Estados"
+  },
+  "categories": {
+    "title": "Categorias de Patrimônio",
+    "world": {
+      "name": "Patrimônio Mundial",
+      "description": "Sítios reconhecidos pela UNESCO por seu valor universal excepcional"
+    },
+    "material": {
+      "name": "Patrimônio Material",
+      "description": "Bens tangíveis como edifícios históricos, monumentos e centros urbanos"
+    },
+    "intangible": {
+      "name": "Patrimônio Imaterial",
+      "description": "Expressões culturais vivas como danças, festas, culinária e artesanato"
+    },
+    "natural": {
+      "name": "Patrimônio Natural",
+      "description": "Parques nacionais, reservas e áreas de preservação ambiental"
+    }
+  },
+  "regions": {
+    "sul": "Sul",
+    "sudeste": "Sudeste",
+    "nordeste": "Nordeste",
+    "centro-oeste": "Centro-Oeste",
+    "norte": "Norte"
+  },
+  "about": {
+    "title": "Sobre o Projeto",
+    "mission": {
+      "title": "Nossa Missão",
+      "text": "Conectar viajantes nacionais e estrangeiros à imensa riqueza cultural e natural do Brasil, promovendo o turismo sustentável e a valorização de nossos patrimônios."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "text": "Ser o companheiro de viagem definitivo para quem deseja explorar o Brasil autêntico, facilitando o acesso a informações sobre patrimônios culturais e naturais em todo o território nacional."
+    },
+    "story": {
+      "title": "Nossa História",
+      "text": "O Ataîru nasceu da paixão por revelar as belezas e tradições do Brasil que muitas vezes passam despercebidas. Nosso nome é uma homenagem às raízes indígenas do país."
+    },
+    "heritage": {
+      "title": "Entendendo os Patrimônios",
+      "world": "Patrimônio Mundial UNESCO - Sítios de valor universal excepcional reconhecidos internacionalmente.",
+      "material": "Patrimônio Material - Bens físicos que representam marcos históricos e arquitetônicos.",
+      "intangible": "Patrimônio Imaterial - Tradições, saberes e expressões culturais transmitidas entre gerações.",
+      "natural": "Patrimônio Natural - Áreas protegidas que preservam ecossistemas e biodiversidade únicos."
+    }
+  },
+  "map": {
+    "title": "Mapa Interativo",
+    "subtitle": "Explore os patrimônios culturais e naturais do Brasil",
+    "filter": "Filtrar",
+    "search": "Buscar patrimônio...",
+    "allCategories": "Todas as categorias",
+    "allRegions": "Todas as regiões",
+    "allStates": "Todos os estados",
+    "noResults": "Nenhum patrimônio encontrado",
+    "viewDetails": "Ver Detalhes"
+  },
+  "team": {
+    "title": "Nossa Equipe",
+    "subtitle": "Conheça as pessoas por trás do Ataîru",
+    "partners": "Parceiros"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Tem dúvidas ou sugestões? Adoraríamos ouvir você!",
+    "name": "Nome",
+    "email": "E-mail",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "success": "Mensagem enviada com sucesso!",
+    "newsletter": {
+      "title": "Newsletter",
+      "text": "Receba novidades sobre patrimônios e roteiros culturais",
+      "placeholder": "Seu e-mail",
+      "subscribe": "Inscrever-se"
+    }
+  },
+  "footer": {
+    "description": "Seu companheiro de viagem para descobrir o Brasil autêntico",
+    "quickLinks": "Links Rápidos",
+    "followUs": "Siga-nos",
+    "rights": "Todos os direitos reservados"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro ao carregar",
+    "back": "Voltar",
+    "close": "Fechar",
+    "seeAll": "Ver todos",
+    "featured": "Destaque"
+  }
+}

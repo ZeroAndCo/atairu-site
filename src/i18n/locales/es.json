@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "heritage": "Patrimonios",
+    "map": "Mapa Interactivo",
+    "team": "Equipo",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Tu Compañero de Viaje al Corazón de Brasil",
+    "subtitle": "Descubre la riqueza cultural y natural de Brasil a través de patrimonios únicos que cuentan nuestra historia",
+    "exploreMap": "Explorar el Mapa",
+    "learnMore": "Saber Más"
+  },
+  "stats": {
+    "heritages": "Patrimonios",
+    "unesco": "UNESCO",
+    "regions": "Regiones",
+    "states": "Estados"
+  },
+  "categories": {
+    "title": "Categorías de Patrimonio",
+    "world": {
+      "name": "Patrimonio Mundial",
+      "description": "Sitios reconocidos por la UNESCO por su valor universal excepcional"
+    },
+    "material": {
+      "name": "Patrimonio Material",
+      "description": "Bienes tangibles como edificios históricos, monumentos y centros urbanos"
+    },
+    "intangible": {
+      "name": "Patrimonio Inmaterial",
+      "description": "Expresiones culturales vivas como danzas, fiestas, gastronomía y artesanía"
+    },
+    "natural": {
+      "name": "Patrimonio Natural",
+      "description": "Parques nacionales, reservas y áreas de preservación ambiental"
+    }
+  },
+  "regions": {
+    "sul": "Sur",
+    "sudeste": "Sureste",
+    "nordeste": "Noreste",
+    "centro-oeste": "Centro-Oeste",
+    "norte": "Norte"
+  },
+  "about": {
+    "title": "Sobre el Proyecto",
+    "mission": {
+      "title": "Nuestra Misión",
+      "text": "Conectar a viajeros nacionales y extranjeros con la inmensa riqueza cultural y natural de Brasil, promoviendo el turismo sostenible y la valorización de nuestros patrimonios."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "text": "Ser el compañero de viaje definitivo para quienes desean explorar el Brasil auténtico, facilitando el acceso a información sobre patrimonios culturales y naturales en todo el país."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "text": "Ataîru nació de la pasión por revelar las bellezas y tradiciones de Brasil que muchas veces pasan desapercibidas. Nuestro nombre es un homenaje a las raíces indígenas del país."
+    },
+    "heritage": {
+      "title": "Entendiendo los Patrimonios",
+      "world": "Patrimonio Mundial UNESCO - Sitios de valor universal excepcional reconocidos internacionalmente.",
+      "material": "Patrimonio Material - Bienes físicos que representan hitos históricos y arquitectónicos.",
+      "intangible": "Patrimonio Inmaterial - Tradiciones, saberes y expresiones culturales transmitidas entre generaciones.",
+      "natural": "Patrimonio Natural - Áreas protegidas que preservan ecosistemas y biodiversidad únicos."
+    }
+  },
+  "map": {
+    "title": "Mapa Interactivo",
+    "subtitle": "Explora los patrimonios culturales y naturales de Brasil",
+    "filter": "Filtrar",
+    "search": "Buscar patrimonio...",
+    "allCategories": "Todas las categorías",
+    "allRegions": "Todas las regiones",
+    "allStates": "Todos los estados",
+    "noResults": "Ningún patrimonio encontrado",
+    "viewDetails": "Ver Detalles"
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Conoce a las personas detrás de Ataîru",
+    "partners": "Socios"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes preguntas o sugerencias? ¡Nos encantaría escucharte!",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "newsletter": {
+      "title": "Boletín",
+      "text": "Recibe novedades sobre patrimonios y rutas culturales",
+      "placeholder": "Tu correo",
+      "subscribe": "Suscribirse"
+    }
+  },
+  "footer": {
+    "description": "Tu compañero de viaje para descubrir el Brasil auténtico",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Síguenos",
+    "rights": "Todos los derechos reservados"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error al cargar",
+    "back": "Volver",
+    "close": "Cerrar",
+    "seeAll": "Ver todos",
+    "featured": "Destacado"
+  }
+}
