@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
+import { PatternBorder } from '@/components/ui/PatternBorder';
 import { 
   heritages, 
   HeritageCategory,
@@ -57,23 +58,26 @@ const Heritage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 pattern-indigenous opacity-20" />
+      <section className="py-16 bg-terracotta relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-15" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
               {t('categories.title')}
             </h1>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
+            <p className="text-white/80 max-w-2xl mx-auto">
               {t('map.subtitle')}
             </p>
           </motion.div>
         </div>
       </section>
+      
+      {/* Pattern Border */}
+      <PatternBorder variant={2} height={20} opacity={0.9} />
 
       {/* Content */}
       <section className="py-12 bg-background">
@@ -86,7 +90,7 @@ const Heritage = () => {
                 placeholder={t('map.search')}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="pl-10 h-12"
+                className="pl-10 h-12 border-2 focus:border-terracotta"
               />
             </div>
           </div>
@@ -98,7 +102,7 @@ const Heritage = () => {
                 <TabsTrigger
                   key={cat.key}
                   value={cat.key}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2"
+                  className="data-[state=active]:bg-forest data-[state=active]:text-white px-4 py-2"
                 >
                   {cat.icon && <cat.icon className="h-4 w-4 mr-2" />}
                   {cat.label}
@@ -148,7 +152,7 @@ const Heritage = () => {
                           <p className="text-sm text-foreground/80 line-clamp-3 mb-4">
                             {heritage.description[currentLang]}
                           </p>
-                          <Button asChild variant="outline" size="sm" className="w-full">
+                          <Button asChild variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10">
                             <Link to={`/map?heritage=${heritage.id}`}>
                               {t('map.viewDetails')}
                             </Link>
@@ -163,6 +167,9 @@ const Heritage = () => {
           </Tabs>
         </div>
       </section>
+      
+      {/* Bottom Pattern Border */}
+      <PatternBorder variant={1} height={20} opacity={0.9} />
     </Layout>
   );
 };
