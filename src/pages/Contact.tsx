@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Mail, Send, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Send, Instagram } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -42,9 +42,7 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/atairu.tur.br/', label: 'Instagram' },
   ];
 
   return (
@@ -200,10 +198,10 @@ const Contact = () => {
                     Email
                   </h3>
                   <a 
-                    href="mailto:contato@atairu.com.br"
+                    href="mailto:contato@atairu.tur.br"
                     className="text-primary hover:underline"
                   >
-                    contato@atairu.com.br
+                    contato@atairu.tur.br
                   </a>
                 </CardContent>
               </Card>
