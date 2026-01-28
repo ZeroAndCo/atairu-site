@@ -48,7 +48,7 @@ export const Header = () => {
               alt="Ataîru" 
               className="h-10 md:h-12 w-auto rounded-lg"
             />
-            <span className="text-xl md:text-2xl font-bold text-primary hidden sm:block" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>
+            <span className="text-2xl md:text-3xl font-bold text-primary hidden sm:block" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>
               Ataîru
             </span>
           </Link>
@@ -59,7 +59,7 @@ export const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-base font-medium transition-colors hover:text-primary ${
                   location.pathname === link.path 
                     ? 'text-primary' 
                     : 'text-muted-foreground'
