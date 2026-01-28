@@ -87,8 +87,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Calibri', 'Trebuchet MS', 'system-ui', 'sans-serif'],
+        serif: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

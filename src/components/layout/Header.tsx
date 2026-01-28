@@ -48,7 +48,7 @@ export const Header = () => {
               alt="Ataîru" 
               className="h-10 md:h-12 w-auto rounded-lg"
             />
-            <span className="font-serif text-xl md:text-2xl font-bold text-primary hidden sm:block">
+            <span className="text-xl md:text-2xl font-bold text-primary hidden sm:block" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>
               Ataîru
             </span>
           </Link>
