@@ -115,7 +115,7 @@ const Index = () => {
               <img 
                 src={brazilMapHero} 
                 alt="Mapa do Brasil com pins de patrimônios" 
-                className="max-w-md w-full h-auto"
+                className="max-w-xl w-full h-auto lg:max-w-2xl"
               />
             </motion.div>
           </div>
