@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import { PatternBorder } from '@/components/ui/PatternBorder';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -48,23 +49,26 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 pattern-indigenous opacity-20" />
+      <section className="py-16 bg-gold relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-15" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t('contact.title')}
             </h1>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
+            <p className="text-foreground/80 max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
           </motion.div>
         </div>
       </section>
+      
+      {/* Pattern Border */}
+      <PatternBorder variant={2} height={20} opacity={0.9} />
 
       {/* Content */}
       <section className="py-20 bg-background">
@@ -76,10 +80,10 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <Card>
+              <Card className="border-2 border-forest/20">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-6">
-                    <Mail className="h-6 w-6 text-primary" />
+                    <Mail className="h-6 w-6 text-forest" />
                     <h2 className="font-serif text-2xl font-bold">
                       {t('contact.title')}
                     </h2>
@@ -92,6 +96,7 @@ const Contact = () => {
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="border-2 focus:border-forest"
                         required
                       />
                     </div>
@@ -103,6 +108,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="border-2 focus:border-forest"
                         required
                       />
                     </div>
@@ -113,6 +119,7 @@ const Contact = () => {
                         id="subject"
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        className="border-2 focus:border-forest"
                         required
                       />
                     </div>
@@ -124,11 +131,12 @@ const Contact = () => {
                         rows={5}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="border-2 focus:border-forest"
                         required
                       />
                     </div>
 
-                    <Button type="submit" className="w-full">
+                    <Button type="submit" className="w-full bg-forest hover:bg-forest-light">
                       <Send className="h-4 w-4 mr-2" />
                       {t('contact.send')}
                     </Button>
@@ -145,12 +153,12 @@ const Contact = () => {
               className="space-y-8"
             >
               {/* Newsletter */}
-              <Card className="bg-primary text-primary-foreground">
+              <Card className="bg-terracotta text-white">
                 <CardContent className="p-8">
                   <h3 className="font-serif text-2xl font-bold mb-2">
                     {t('contact.newsletter.title')}
                   </h3>
-                  <p className="text-primary-foreground/80 mb-6">
+                  <p className="text-white/80 mb-6">
                     {t('contact.newsletter.text')}
                   </p>
                   
@@ -160,10 +168,10 @@ const Contact = () => {
                       placeholder={t('contact.newsletter.placeholder')}
                       value={newsletterEmail}
                       onChange={(e) => setNewsletterEmail(e.target.value)}
-                      className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                       required
                     />
-                    <Button type="submit" variant="secondary">
+                    <Button type="submit" className="bg-white text-terracotta hover:bg-cream">
                       {t('contact.newsletter.subscribe')}
                     </Button>
                   </form>
@@ -171,7 +179,7 @@ const Contact = () => {
               </Card>
 
               {/* Social Links */}
-              <Card>
+              <Card className="border-2 border-navy/20">
                 <CardContent className="p-8">
                   <h3 className="font-serif text-2xl font-bold mb-4">
                     {t('footer.followUs')}
@@ -182,7 +190,7 @@ const Contact = () => {
                         key={social.label}
                         href={social.href}
                         aria-label={social.label}
-                        className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                        className="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center hover:bg-navy hover:text-white transition-colors"
                       >
                         <social.icon className="h-6 w-6" />
                       </a>
@@ -192,14 +200,14 @@ const Contact = () => {
               </Card>
 
               {/* Email */}
-              <Card>
+              <Card className="border-2 border-gold/30">
                 <CardContent className="p-8">
                   <h3 className="font-serif text-xl font-bold mb-2">
                     Email
                   </h3>
                   <a 
                     href="mailto:contato@atairu.tur.br"
-                    className="text-primary hover:underline"
+                    className="text-forest hover:underline font-medium"
                   >
                     contato@atairu.tur.br
                   </a>
@@ -209,6 +217,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      
+      {/* Bottom Pattern Border */}
+      <PatternBorder variant={1} height={20} opacity={0.9} />
     </Layout>
   );
 };
