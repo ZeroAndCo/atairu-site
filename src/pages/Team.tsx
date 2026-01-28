@@ -4,6 +4,7 @@ import { Users, Handshake } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import adrianePhoto from '@/assets/team/adriane.jpeg';
+import fernandaPhoto from '@/assets/team/fernanda.jpeg';
 import nelmaPhoto from '@/assets/team/nelma.jpeg';
 
 const Team = () => {
@@ -25,6 +26,20 @@ const Team = () => {
       image: adrianePhoto
     },
     {
+      name: 'Fernanda da Silva Pereira',
+      role: { 
+        pt: 'Cofundadora & Especialista em Patrimônio Cultural', 
+        en: 'Co-founder & Cultural Heritage Specialist', 
+        es: 'Cofundadora y Especialista en Patrimonio Cultural' 
+      },
+      bio: { 
+        pt: 'Especialista em Patrimônio Cultural com 10 anos no IPHAN como Coordenadora de Comunicação. Idealizadora da Exposição Patrimônio Imaterial Brasileiro e pesquisadora do projeto Caravana do Patrimônio Cultural, que impactou 650 mil pessoas.',
+        en: 'Cultural Heritage specialist with 10 years at IPHAN as Communication Coordinator. Creator of the Brazilian Intangible Heritage Exhibition and researcher of the Cultural Heritage Caravan project, which impacted 650,000 people.',
+        es: 'Especialista en Patrimonio Cultural con 10 años en IPHAN como Coordinadora de Comunicación. Idealizadora de la Exposición Patrimonio Inmaterial Brasileño e investigadora del proyecto Caravana del Patrimonio Cultural, que impactó a 650 mil personas.'
+      },
+      image: fernandaPhoto
+    },
+    {
       name: 'Nelma Zero',
       role: { 
         pt: 'Cofundadora & Consultora de Sustentabilidade', 
@@ -37,20 +52,6 @@ const Team = () => {
         es: 'Más de 27 años de experiencia en comunicación y sostenibilidad. Posgrado en Medio Ambiente y Sostenibilidad por FGV, activista ambiental del Climate Reality Project y Multiplicadora B Corp. Especialista en desarrollo de negocios con impacto social positivo.'
       },
       image: nelmaPhoto
-    },
-    {
-      name: 'Fernanda da Silva Pereira',
-      role: { 
-        pt: 'Cofundadora & Especialista em Patrimônio Cultural', 
-        en: 'Co-founder & Cultural Heritage Specialist', 
-        es: 'Cofundadora y Especialista en Patrimonio Cultural' 
-      },
-      bio: { 
-        pt: 'Especialista em Patrimônio Cultural com 10 anos no IPHAN como Coordenadora de Comunicação. Idealizadora da Exposição Patrimônio Imaterial Brasileiro e pesquisadora do projeto Caravana do Patrimônio Cultural, que impactou 650 mil pessoas.',
-        en: 'Cultural Heritage specialist with 10 years at IPHAN as Communication Coordinator. Creator of the Brazilian Intangible Heritage Exhibition and researcher of the Cultural Heritage Caravan project, which impacted 650,000 people.',
-        es: 'Especialista en Patrimonio Cultural con 10 años en IPHAN como Coordinadora de Comunicación. Idealizadora de la Exposición Patrimonio Inmaterial Brasileño e investigadora del proyecto Caravana del Patrimonio Cultural, que impactó a 650 mil personas.'
-      },
-      image: null
     },
   ];
 
