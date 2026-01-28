@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Instagram, Facebook, Twitter, Mail } from 'lucide-react';
-import logo from '@/assets/logo-atairu-1.jpeg';
+import { Instagram, Mail } from 'lucide-react';
+import logo from '@/assets/logo-atairu.png';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -15,10 +15,8 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:contato@atairu.com.br', label: 'Email' },
+    { icon: Instagram, href: 'https://www.instagram.com/atairu.tur.br/', label: 'Instagram' },
+    { icon: Mail, href: 'mailto:contato@atairu.tur.br', label: 'Email' },
   ];
 
   return (
@@ -35,7 +33,7 @@ export const Footer = () => {
               />
               <span className="text-2xl font-bold" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>Ataîru</span>
             </div>
-            <p className="text-primary-foreground/80 text-sm max-w-xs">
+            <p className="text-terracotta italic text-sm max-w-xs">
               {t('footer.description')}
             </p>
           </div>
