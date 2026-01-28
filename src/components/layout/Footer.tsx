@@ -33,7 +33,7 @@ export const Footer = () => {
                 alt="Ataîru" 
                 className="h-12 w-auto rounded-lg"
               />
-              <span className="font-serif text-2xl font-bold">Ataîru</span>
+              <span className="text-2xl font-bold" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>Ataîru</span>
             </div>
             <p className="text-primary-foreground/80 text-sm max-w-xs">
               {t('footer.description')}
