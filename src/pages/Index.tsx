@@ -7,6 +7,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Layout } from '@/components/layout/Layout';
 import { BrazilMap } from '@/components/home/BrazilMap';
+import { PatternBorder } from '@/components/ui/PatternBorder';
+import { SectionDivider } from '@/components/ui/SectionDivider';
 import { heritages, getUnescoHeritages, getCategoryIcon } from '@/data/heritages';
 import brazilMapHero from '@/assets/brazil-map-hero.png';
 
@@ -15,10 +17,10 @@ const Index = () => {
   const currentLang = i18n.language as 'pt' | 'en' | 'es';
 
   const stats = [
-    { value: heritages.length + '+', label: t('stats.heritages') },
-    { value: getUnescoHeritages().length, label: t('stats.unesco') },
-    { value: 5, label: t('stats.regions') },
-    { value: 27, label: t('stats.states') },
+    { value: heritages.length + '+', label: t('stats.heritages'), color: 'text-forest' },
+    { value: getUnescoHeritages().length, label: t('stats.unesco'), color: 'text-gold' },
+    { value: 5, label: t('stats.regions'), color: 'text-terracotta' },
+    { value: 27, label: t('stats.states'), color: 'text-navy' },
   ];
 
   const categories = [
@@ -26,25 +28,29 @@ const Index = () => {
       key: 'world', 
       icon: Sparkles, 
       color: 'bg-gold text-foreground',
-      borderColor: 'border-gold'
+      borderColor: 'border-gold',
+      hoverBg: 'hover:bg-gold/5'
     },
     { 
       key: 'material', 
       icon: Building2, 
       color: 'bg-terracotta text-white',
-      borderColor: 'border-terracotta'
+      borderColor: 'border-terracotta',
+      hoverBg: 'hover:bg-terracotta/5'
     },
     { 
       key: 'intangible', 
       icon: Music, 
       color: 'bg-navy text-white',
-      borderColor: 'border-navy'
+      borderColor: 'border-navy',
+      hoverBg: 'hover:bg-navy/5'
     },
     { 
       key: 'natural', 
       icon: TreePine, 
       color: 'bg-forest text-white',
-      borderColor: 'border-forest'
+      borderColor: 'border-forest',
+      hoverBg: 'hover:bg-forest/5'
     },
   ];
 
@@ -67,7 +73,7 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
-              <Badge className="mb-6 bg-gold/20 text-foreground border-gold/50 text-sm px-4 py-1">
+              <Badge className="mb-6 bg-terracotta/20 text-terracotta border-terracotta/50 text-sm px-4 py-1">
                 🇧🇷 Brasil
               </Badge>
               
@@ -83,7 +89,7 @@ const Index = () => {
                 <Button 
                   asChild
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8"
+                  className="bg-forest hover:bg-forest-light text-primary-foreground font-semibold px-8"
                 >
                   <Link to="/map">
                     <MapPin className="mr-2 h-5 w-5" />
@@ -95,7 +101,7 @@ const Index = () => {
                   asChild
                   variant="outline" 
                   size="lg"
-                  className="border-primary/30 text-primary hover:bg-primary/10 font-semibold px-8"
+                  className="border-terracotta/50 text-terracotta hover:bg-terracotta/10 font-semibold px-8"
                 >
                   <Link to="/about">
                     {t('hero.learnMore')}
@@ -122,6 +128,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pattern Border */}
+      <PatternBorder variant={1} height={20} opacity={0.9} />
+
       {/* Stats Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -135,7 +144,7 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <p className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2">
+                <p className={`font-serif text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
                   {stat.value}
                 </p>
                 <p className="text-muted-foreground font-medium">
@@ -154,7 +163,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-4"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('map.title')}
@@ -163,11 +172,13 @@ const Index = () => {
               {t('map.subtitle')}
             </p>
           </motion.div>
+          
+          <SectionDivider color="forest" className="mb-8" />
 
           <BrazilMap />
 
           <div className="text-center mt-8">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Button asChild size="lg" className="bg-forest hover:bg-forest-light">
               <Link to="/map">
                 <MapPin className="mr-2 h-5 w-5" />
                 {t('hero.exploreMap')}
@@ -177,6 +188,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pattern Border */}
+      <PatternBorder variant={2} height={20} opacity={0.9} />
+
       {/* Categories Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -184,12 +198,14 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-4"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('categories.title')}
             </h2>
           </motion.div>
+          
+          <SectionDivider color="terracotta" className="mb-8" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
@@ -200,7 +216,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className={`h-full border-2 ${category.borderColor} hover:shadow-brand transition-shadow cursor-pointer`}>
+                <Card className={`h-full border-2 ${category.borderColor} ${category.hoverBg} hover:shadow-brand transition-all cursor-pointer`}>
                   <CardContent className="p-6 text-center">
                     <div className={`w-16 h-16 rounded-full ${category.color} flex items-center justify-center mx-auto mb-4`}>
                       <category.icon className="h-8 w-8" />
@@ -220,13 +236,13 @@ const Index = () => {
       </section>
 
       {/* Featured Heritages Section */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-cream-dark">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-4"
           >
             <Badge className="mb-4 bg-gold/20 text-gold border-gold/30">
               {t('common.featured')}
@@ -235,6 +251,8 @@ const Index = () => {
               {t('common.unescoWorldHeritage')}
             </h2>
           </motion.div>
+          
+          <SectionDivider color="gold" className="mb-8" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredHeritages.map((heritage, index) => (
@@ -245,7 +263,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group">
+                <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group bg-card">
                   <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
                     <span className="text-6xl group-hover:scale-110 transition-transform">
                       {getCategoryIcon(heritage.category)}
@@ -271,7 +289,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold/10">
               <Link to="/heritage">
                 {t('common.seeAll')}
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -281,8 +299,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pattern Border */}
+      <PatternBorder variant={1} height={20} opacity={0.9} />
+
       {/* CTA Section */}
-      <section className="py-20 bg-primary relative overflow-hidden">
+      <section className="py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -291,16 +312,16 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
               {t('hero.tagline')}
             </h2>
-            <p className="text-primary-foreground/80 mb-8 text-lg">
+            <p className="text-cream/80 mb-8 text-lg">
               {t('hero.subtitle')}
             </p>
             <Button 
               asChild
               size="lg" 
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-10"
+              className="bg-terracotta hover:bg-terracotta-dark text-white font-semibold px-10"
             >
               <Link to="/map">
                 <MapPin className="mr-2 h-5 w-5" />
@@ -310,6 +331,9 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Bottom Pattern Border */}
+      <PatternBorder variant={2} height={20} opacity={0.9} />
     </Layout>
   );
 };

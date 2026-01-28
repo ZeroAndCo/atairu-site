@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Users, Handshake } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
+import { PatternBorder } from '@/components/ui/PatternBorder';
+import { SectionDivider } from '@/components/ui/SectionDivider';
 import adrianePhoto from '@/assets/team/adriane.jpeg';
 import fernandaPhoto from '@/assets/team/fernanda.jpeg';
 import nelmaPhoto from '@/assets/team/nelma.jpeg';
@@ -23,7 +25,8 @@ const Team = () => {
         en: 'Social entrepreneur from Rio Grande do Sul with an MBA in ESG and Business Management. Co-founder of Clic Marketing e Vendas, she has carried out 11 sociocultural projects since 2008. Founder of Hub Nossa Biblioteca, having donated over 115,000 books to 590 libraries across Brazil.',
         es: 'Emprendedora social de Rio Grande do Sul con MBA en ESG y Gestión Empresarial. Cofundadora de Clic Marketing e Vendas, realizó 11 proyectos socioculturales desde 2008. Fundadora de Hub Nossa Biblioteca, donando más de 115 mil libros a 590 bibliotecas en Brasil.'
       },
-      image: adrianePhoto
+      image: adrianePhoto,
+      color: 'border-forest'
     },
     {
       name: 'Fernanda da Silva Pereira',
@@ -37,7 +40,8 @@ const Team = () => {
         en: 'Cultural Heritage specialist with 10 years at IPHAN as Communication Coordinator. Creator of the Brazilian Intangible Heritage Exhibition and researcher of the Cultural Heritage Caravan project, which impacted 650,000 people.',
         es: 'Especialista en Patrimonio Cultural con 10 años en IPHAN como Coordinadora de Comunicación. Idealizadora de la Exposición Patrimonio Inmaterial Brasileño e investigadora del proyecto Caravana del Patrimonio Cultural, que impactó a 650 mil personas.'
       },
-      image: fernandaPhoto
+      image: fernandaPhoto,
+      color: 'border-terracotta'
     },
     {
       name: 'Nelma Zero',
@@ -51,7 +55,8 @@ const Team = () => {
         en: 'Over 27 years of experience in communication and sustainability. Postgraduate in Environment and Sustainability from FGV, environmental activist for Climate Reality Project and B Corp Multiplier. Specialist in business development with positive social impact.',
         es: 'Más de 27 años de experiencia en comunicación y sostenibilidad. Posgrado en Medio Ambiente y Sostenibilidad por FGV, activista ambiental del Climate Reality Project y Multiplicadora B Corp. Especialista en desarrollo de negocios con impacto social positivo.'
       },
-      image: nelmaPhoto
+      image: nelmaPhoto,
+      color: 'border-navy'
     },
   ];
 
@@ -60,33 +65,38 @@ const Team = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 pattern-indigenous opacity-20" />
+      <section className="py-16 bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-15" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-cream mb-4">
               {t('team.title')}
             </h1>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
+            <p className="text-cream/80 max-w-2xl mx-auto">
               {t('team.subtitle')}
             </p>
           </motion.div>
         </div>
       </section>
+      
+      {/* Pattern Border */}
+      <PatternBorder variant={1} height={20} opacity={0.9} />
 
       {/* Team Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <Users className="h-8 w-8 text-primary" />
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Users className="h-8 w-8 text-forest" />
             <h2 className="font-serif text-3xl font-bold text-foreground">
               {t('team.title')}
             </h2>
           </div>
+          
+          <SectionDivider color="terracotta" className="mb-12" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {teamMembers.map((member, index) => (
@@ -97,23 +107,23 @@ const Team = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full text-center hover:shadow-brand transition-shadow">
+                <Card className={`h-full text-center hover:shadow-brand transition-shadow border-t-4 ${member.color}`}>
                   <CardContent className="p-6">
                     {member.image ? (
                       <img 
                         src={member.image} 
                         alt={member.name}
-                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover ring-4 ring-gold/30"
                       />
                     ) : (
-                      <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center text-primary-foreground text-3xl font-serif font-bold">
+                      <div className="w-24 h-24 rounded-full bg-forest mx-auto mb-4 flex items-center justify-center text-cream text-3xl font-serif font-bold">
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
                     <h3 className="font-serif text-xl font-semibold mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-secondary font-medium text-sm mb-3">
+                    <p className="text-terracotta font-medium text-sm mb-3">
                       {member.role[currentLang]}
                     </p>
                     <p className="text-muted-foreground text-sm">
@@ -126,12 +136,9 @@ const Team = () => {
           </div>
         </div>
       </section>
-
-      {/* Partners Section - Hidden for now
-      <section className="py-20 bg-muted/50">
-        ...
-      </section>
-      */}
+      
+      {/* Bottom Pattern Border */}
+      <PatternBorder variant={2} height={20} opacity={0.9} />
     </Layout>
   );
 };
