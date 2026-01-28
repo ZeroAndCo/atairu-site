@@ -232,7 +232,7 @@ const Index = () => {
               {t('common.featured')}
             </Badge>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-              UNESCO World Heritage
+              {t('common.unescoWorldHeritage')}
             </h2>
           </motion.div>
 
