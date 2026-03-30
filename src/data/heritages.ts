@@ -3200,7 +3200,7 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi',
+    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi-cultural-humanity',
     name: { pt: 'Arte Kusiwa pintura corporal e arte gráfica Wajãpi', en: 'Kusiwa Art - Wajãpi Body Painting and Graphic Art', es: 'Arte Kusiwa - Pintura corporal y arte gráfico Wajãpi' },
     category: 'cultural-humanity',
     region: 'norte',
