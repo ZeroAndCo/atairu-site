@@ -188,6 +188,7 @@ const MapPage = () => {
                   <SelectItem value="material">{t('categories.material.name')}</SelectItem>
                   <SelectItem value="intangible">{t('categories.intangible.name')}</SelectItem>
                   <SelectItem value="natural">{t('categories.natural.name')}</SelectItem>
+                  <SelectItem value="cultural-humanity">{t('categories.cultural-humanity.name')}</SelectItem>
                 </SelectContent>
               </Select>
 
