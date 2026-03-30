@@ -25,6 +25,7 @@ const Heritage = () => {
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState<HeritageCategory | 'all'>('all');
   const [activeTag, setActiveTag] = useState<HeritageTag | 'all'>('all');
+  const [selectedHeritage, setSelectedHeritage] = useState<typeof heritages[0] | null>(null);
 
   const categories = [
     { key: 'all' as const, icon: null, label: 'Todos', count: heritages.length },
