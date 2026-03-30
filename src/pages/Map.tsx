@@ -341,7 +341,7 @@ const MapPage = () => {
         <div className="absolute bottom-4 left-4 bg-card rounded-lg p-3 shadow-lg z-[1000]">
           <p className="text-xs font-semibold mb-2">Legenda:</p>
           <div className="space-y-1">
-            {(['world', 'material', 'intangible', 'natural'] as HeritageCategory[]).map(cat => (
+            {(['world', 'material', 'intangible', 'natural', 'cultural-humanity'] as HeritageCategory[]).map(cat => (
               <div key={cat} className="flex items-center gap-2 text-xs">
                 <span>{getCategoryIcon(cat)}</span>
                 <span>{t(`categories.${cat}.name`)}</span>
