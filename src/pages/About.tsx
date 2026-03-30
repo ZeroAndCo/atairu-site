@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Sparkles, Building2, Music, TreePine, Heart, Eye, BookOpen } from 'lucide-react';
+import { Sparkles, Building2, Music, TreePine, Heart, Eye, BookOpen, Globe2 } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { PatternBorder } from '@/components/ui/PatternBorder';
@@ -14,6 +14,7 @@ const About = () => {
     { icon: Building2, key: 'material', color: 'bg-terracotta text-white', borderColor: 'border-terracotta' },
     { icon: Music, key: 'intangible', color: 'bg-navy text-white', borderColor: 'border-navy' },
     { icon: TreePine, key: 'natural', color: 'bg-forest text-white', borderColor: 'border-forest' },
+    { icon: Globe2, key: 'cultural-humanity', color: 'bg-purple-700 text-white', borderColor: 'border-purple-700' },
   ];
 
   return (

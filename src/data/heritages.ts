@@ -1,787 +1,2817 @@
-export type HeritageCategory = 'world' | 'material' | 'intangible' | 'natural';
+export type HeritageCategory = 'world' | 'material' | 'intangible' | 'natural' | 'cultural-humanity';
 export type Region = 'sul' | 'sudeste' | 'nordeste' | 'centro-oeste' | 'norte';
 
 export interface Heritage {
   id: string;
-  name: {
-    pt: string;
-    en: string;
-    es: string;
-  };
+  name: { pt: string; en: string; es: string; };
   category: HeritageCategory;
   region: Region;
   state: string;
   city: string;
-  coordinates: {
-    lat: number;
-    lng: number;
-  };
-  description: {
-    pt: string;
-    en: string;
-    es: string;
-  };
+  coordinates: { lat: number; lng: number; };
+  description: { pt: string; en: string; es: string; };
   unesco: boolean;
   imageUrl?: string;
 }
 
 export const heritages: Heritage[] = [
-  // REGIÃO SUL - Rio Grande do Sul
   {
-    id: 'missoes-jesuiticas',
-    name: {
-      pt: 'Missões Jesuíticas Guaranis',
-      en: 'Jesuit Missions of the Guaranis',
-      es: 'Misiones Jesuíticas Guaraníes'
-    },
+    id: 'missoes-jesuiticas-guaranis',
+    name: { pt: 'Missões Jesuíticas Guaranis', en: 'Jesuit Missions of the Guaranis', es: 'Misiones Jesuíticas Guaraníes' },
     category: 'world',
     region: 'sul',
     state: 'Rio Grande do Sul',
     city: 'São Miguel das Missões',
-    coordinates: { lat: -28.5558, lng: -54.5612 },
-    description: {
-      pt: 'Ruínas e sítio arqueológico das missões jesuíticas, Patrimônio Mundial da UNESCO.',
-      en: 'Ruins and archaeological site of the Jesuit missions, UNESCO World Heritage.',
-      es: 'Ruinas y sitio arqueológico de las misiones jesuíticas, Patrimonio Mundial de la UNESCO.'
-    },
+    coordinates: { lat: -28.56, lng: -54.56 },
+    description: { pt: 'As Ruinas de São Miguel Arcanjo estão localizadas no município de São Miguel das Missões no Rio Grande do Sul. É um sítio arqueológico protegido nacionalmente como Patrimônio Cultural do Brasil.', en: 'The ruins of São Miguel Arcanjo, located in São Miguel das Missões, Rio Grande do Sul, are a protected national archaeological site and Brazilian Cultural Heritage.', es: 'Las ruinas de São Miguel Arcanjo, ubicadas en São Miguel das Missões, Rio Grande do Sul, son un sitio arqueológico protegido nacionalmente como Patrimonio Cultural de Brasil.' },
     unesco: true
   },
   {
-    id: 'parque-aparados-serra',
-    name: {
-      pt: 'Parque Nacional Aparados da Serra',
-      en: 'Aparados da Serra National Park',
-      es: 'Parque Nacional Aparados da Serra'
-    },
-    category: 'natural',
-    region: 'sul',
-    state: 'Rio Grande do Sul',
-    city: 'Cambará do Sul',
-    coordinates: { lat: -29.1833, lng: -50.1000 },
-    description: {
-      pt: 'Faz parte do Geoparque Mundial da UNESCO - Caminho dos Cânions.',
-      en: 'Part of the UNESCO Global Geopark - Path of the Canyons.',
-      es: 'Parte del Geoparque Mundial de la UNESCO - Camino de los Cañones.'
-    },
+    id: 'paisagens-cariocas-entre-o-montanha-e-o-mar',
+    name: { pt: 'Paisagens Cariocas entre o Montanha e o Mar', en: 'Rio de Janeiro: Carioca Landscapes between the Mountain and the Sea', es: 'Río de Janeiro: Paisajes Cariocas entre la montaña y el mar' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Paisagem cultural entre o mar e a montanha, Patrimônio Mundial. (A cidade do Rio de Janeiro conquistou de forma inédita o título de primeira paisagem cultural urbana reconhecida como Patrimônio Mundial pela Unesco. A paisagem cultural do Rio é única no mundo e representa um exemplo excepcional dos desafios, das contradições e da criatividade do povo brasileiro.', en: 'World Heritage cultural landscape. Rio de Janeiro was the first city to have its urban landscape recognized by UNESCO, representing the creativity and challenges of the Brazilian people.', es: 'Paisaje cultural, Patrimonio Mundial. Río de Janeiro fue la primera ciudad en tener su paisaje urbano reconocido por la UNESCO, representando la creatividad y los desafíos del pueblo brasileño.' },
     unesco: true
   },
   {
-    id: 'pelotas-doceira',
-    name: {
-      pt: 'Região Doceira de Pelotas',
-      en: 'Pelotas Confectionery Region',
-      es: 'Región Dulcera de Pelotas'
-    },
-    category: 'intangible',
-    region: 'sul',
-    state: 'Rio Grande do Sul',
-    city: 'Pelotas',
-    coordinates: { lat: -31.7654, lng: -52.3376 },
-    description: {
-      pt: 'Tradição doceira reconhecida como patrimônio imaterial brasileiro.',
-      en: 'Confectionery tradition recognized as Brazilian intangible heritage.',
-      es: 'Tradición dulcera reconocida como patrimonio inmaterial brasileño.'
-    },
-    unesco: false
+    id: 'cais-do-valongo-e-da-imperatriz',
+    name: { pt: 'Cais do Valongo e da Imperatriz', en: 'Valongo Wharf Archaeological Site', es: 'Sitio Arqueológico del Muelle de Valongo' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Sítio arqueológico do antigo cais de desembarque de africanos escravizados. (Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', en: 'Located in the port area of Rio de Janeiro, it was the primary landing point for enslaved Africans in the Americas and is a significant archaeological site.', es: 'Ubicado en la zona portuaria de Río de Janeiro, fue el principal punto de desembarque de africanos esclavizados en todas las Américas y es un importante sitio arqueológico.' },
+    unesco: true
   },
   {
-    id: 'centro-historico-pelotas',
-    name: {
-      pt: 'Centro Histórico de Pelotas',
-      en: 'Historic Center of Pelotas',
-      es: 'Centro Histórico de Pelotas'
-    },
-    category: 'material',
-    region: 'sul',
-    state: 'Rio Grande do Sul',
-    city: 'Pelotas',
-    coordinates: { lat: -31.7719, lng: -52.3425 },
-    description: {
-      pt: 'Conjunto arquitetônico com casarões do período charqueador.',
-      en: 'Architectural ensemble with mansions from the charque period.',
-      es: 'Conjunto arquitectónico con casonas del período charqueador.'
-    },
-    unesco: false
-  },
-  // Santa Catarina
-  {
-    id: 'florianopolis-ponte-hercilio',
-    name: {
-      pt: 'Ponte Hercílio Luz',
-      en: 'Hercílio Luz Bridge',
-      es: 'Puente Hercílio Luz'
-    },
-    category: 'material',
-    region: 'sul',
-    state: 'Santa Catarina',
-    city: 'Florianópolis',
-    coordinates: { lat: -27.5965, lng: -48.5629 },
-    description: {
-      pt: 'Maior ponte pênsil do Brasil e cartão-postal de Florianópolis.',
-      en: 'Largest suspension bridge in Brazil and Florianópolis postcard.',
-      es: 'El puente colgante más grande de Brasil y postal de Florianópolis.'
-    },
-    unesco: false
+    id: 'sitio-roberto-burle-marx',
+    name: { pt: 'Sítio Roberto Burle Marx', en: 'Sítio Roberto Burle Marx', es: 'Sítio Roberto Burle Marx' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Barra de Guaratiba',
+    coordinates: { lat: -23.07, lng: -43.57 },
+    description: { pt: 'Localizado em Barra de Guaratiba na cidade do Rio de Janeiro, o Sitio mistura mata atlântica nativa com projetos paisagísticos, em uma harmonia com formas sinuosas e intensa diversidade. Foi o primeiro jardim tropical moderno a receber o reconhecimento internacional como Patrimônio Mundial.', en: 'Located in Barra de Guaratiba, Rio de Janeiro, this World Heritage site blends native Atlantic Forest with modern landscape design and intense biodiversity.', es: 'Ubicado en Barra de Guaratiba, Río de Janeiro, este Patrimonio Mundial mezcla el bosque atlántico nativo con el paisajismo moderno y una intensa biodiversidad.' },
+    unesco: true
   },
   {
-    id: 'boi-de-mamao',
-    name: {
-      pt: 'Boi de Mamão',
-      en: 'Boi de Mamão',
-      es: 'Boi de Mamão'
-    },
-    category: 'intangible',
-    region: 'sul',
-    state: 'Santa Catarina',
-    city: 'Florianópolis',
-    coordinates: { lat: -27.5954, lng: -48.5480 },
-    description: {
-      pt: 'Folguedo tradicional catarinense com influências açorianas.',
-      en: 'Traditional Santa Catarina folk celebration with Azorean influences.',
-      es: 'Fiesta tradicional catarinense con influencias azorianas.'
-    },
-    unesco: false
-  },
-  // Paraná
-  {
-    id: 'parque-iguacu',
-    name: {
-      pt: 'Parque Nacional do Iguaçu',
-      en: 'Iguaçu National Park',
-      es: 'Parque Nacional del Iguazú'
-    },
+    id: 'parque-nacional-do-iguacu',
+    name: { pt: 'Parque Nacional do Iguaçu', en: 'Iguaçu National Park', es: 'Parque Nacional del Iguazú' },
     category: 'world',
     region: 'sul',
     state: 'Paraná',
     city: 'Foz do Iguaçu',
-    coordinates: { lat: -25.6953, lng: -54.4367 },
-    description: {
-      pt: 'Cataratas do Iguaçu, uma das Sete Novas Maravilhas da Natureza.',
-      en: 'Iguazu Falls, one of the New Seven Wonders of Nature.',
-      es: 'Cataratas del Iguazú, una de las Siete Nuevas Maravillas de la Naturaleza.'
-    },
+    coordinates: { lat: -25.7, lng: -54.44 },
+    description: { pt: 'Cataratas do Iguaçu, uma das Sete Novas Maravilhas da Natureza.', en: 'Home to the Iguaçu Falls, recognized as one of the New Seven Wonders of Nature.', es: 'Hogar de las Cataratas del Iguazú, reconocidas como una de las Siete Nuevas Maravillas de la Naturaleza.' },
     unesco: true
   },
   {
-    id: 'fandango-caicara',
-    name: {
-      pt: 'Fandango Caiçara',
-      en: 'Caiçara Fandango',
-      es: 'Fandango Caiçara'
-    },
-    category: 'intangible',
-    region: 'sul',
-    state: 'Paraná',
-    city: 'Paranaguá',
-    coordinates: { lat: -25.5205, lng: -48.5095 },
-    description: {
-      pt: 'Expressão musical e coreográfica do litoral paranaense.',
-      en: 'Musical and choreographic expression of the Paraná coast.',
-      es: 'Expresión musical y coreográfica del litoral paranaense.'
-    },
-    unesco: false
-  },
-
-  // REGIÃO SUDESTE - São Paulo
-  {
-    id: 'masp',
-    name: {
-      pt: 'Museu de Arte de São Paulo (MASP)',
-      en: 'São Paulo Museum of Art (MASP)',
-      es: 'Museo de Arte de São Paulo (MASP)'
-    },
-    category: 'material',
-    region: 'sudeste',
-    state: 'São Paulo',
-    city: 'São Paulo',
-    coordinates: { lat: -23.5614, lng: -46.6558 },
-    description: {
-      pt: 'Principal museu de arte do Brasil com acervo de relevância internacional.',
-      en: 'Brazil\'s main art museum with internationally significant collection.',
-      es: 'Principal museo de arte de Brasil con acervo de relevancia internacional.'
-    },
-    unesco: false
-  },
-  {
-    id: 'serra-bocaina',
-    name: {
-      pt: 'Parque Nacional da Serra da Bocaina',
-      en: 'Serra da Bocaina National Park',
-      es: 'Parque Nacional de la Sierra de Bocaina'
-    },
-    category: 'natural',
-    region: 'sudeste',
-    state: 'São Paulo',
-    city: 'São José do Barreiro',
-    coordinates: { lat: -22.7500, lng: -44.6167 },
-    description: {
-      pt: 'Mata Atlântica preservada entre São Paulo e Rio de Janeiro.',
-      en: 'Preserved Atlantic Forest between São Paulo and Rio de Janeiro.',
-      es: 'Mata Atlántica preservada entre São Paulo y Río de Janeiro.'
-    },
-    unesco: false
-  },
-  // Rio de Janeiro
-  {
-    id: 'rio-paisagem-cultural',
-    name: {
-      pt: 'Rio de Janeiro: Paisagem Carioca',
-      en: 'Rio de Janeiro: Carioca Landscapes',
-      es: 'Río de Janeiro: Paisajes Cariocas'
-    },
-    category: 'world',
-    region: 'sudeste',
-    state: 'Rio de Janeiro',
-    city: 'Rio de Janeiro',
-    coordinates: { lat: -22.9068, lng: -43.1729 },
-    description: {
-      pt: 'Paisagem cultural entre o mar e a montanha, Patrimônio Mundial.',
-      en: 'Cultural landscape between the sea and mountains, World Heritage.',
-      es: 'Paisaje cultural entre el mar y la montaña, Patrimonio Mundial.'
-    },
-    unesco: true
-  },
-  {
-    id: 'cais-valongo',
-    name: {
-      pt: 'Cais do Valongo',
-      en: 'Valongo Wharf',
-      es: 'Muelle de Valongo'
-    },
-    category: 'world',
-    region: 'sudeste',
-    state: 'Rio de Janeiro',
-    city: 'Rio de Janeiro',
-    coordinates: { lat: -22.8967, lng: -43.1867 },
-    description: {
-      pt: 'Sítio arqueológico do antigo cais de desembarque de africanos escravizados.',
-      en: 'Archaeological site of the former landing wharf for enslaved Africans.',
-      es: 'Sitio arqueológico del antiguo muelle de desembarco de africanos esclavizados.'
-    },
-    unesco: true
-  },
-  {
-    id: 'samba-carioca',
-    name: {
-      pt: 'Samba Carioca',
-      en: 'Rio Samba',
-      es: 'Samba Carioca'
-    },
-    category: 'intangible',
-    region: 'sudeste',
-    state: 'Rio de Janeiro',
-    city: 'Rio de Janeiro',
-    coordinates: { lat: -22.9035, lng: -43.2096 },
-    description: {
-      pt: 'Gênero musical e cultural símbolo da identidade brasileira.',
-      en: 'Musical and cultural genre symbol of Brazilian identity.',
-      es: 'Género musical y cultural símbolo de la identidad brasileña.'
-    },
-    unesco: false
-  },
-  // Minas Gerais
-  {
-    id: 'ouro-preto',
-    name: {
-      pt: 'Ouro Preto',
-      en: 'Ouro Preto',
-      es: 'Ouro Preto'
-    },
+    id: 'cidade-historica-de-ouro-preto',
+    name: { pt: 'Cidade Histórica de Ouro Preto', en: 'Historic Town of Ouro Preto', es: 'Ciudad Histórica de Ouro Preto' },
     category: 'world',
     region: 'sudeste',
     state: 'Minas Gerais',
     city: 'Ouro Preto',
-    coordinates: { lat: -20.3856, lng: -43.5035 },
-    description: {
-      pt: 'Cidade histórica do ciclo do ouro, Patrimônio Mundial.',
-      en: 'Historic city from the gold cycle, World Heritage.',
-      es: 'Ciudad histórica del ciclo del oro, Patrimonio Mundial.'
-    },
+    coordinates: { lat: -20.39, lng: -43.5 },
+    description: { pt: 'Cidade histórica do ciclo do ouro, Patrimônio Mundial.', en: 'A historic World Heritage city founded during the gold cycle period.', es: 'Ciudad histórica del ciclo del oro y Patrimonio de la Humanidad.' },
     unesco: true
   },
   {
-    id: 'pampulha',
-    name: {
-      pt: 'Conjunto Moderno da Pampulha',
-      en: 'Pampulha Modern Ensemble',
-      es: 'Conjunto Moderno de Pampulha'
-    },
+    id: 'conjunto-moderno-da-pampulha',
+    name: { pt: 'Conjunto Moderno da Pampulha', en: 'Pampulha Modern Ensemble', es: 'Conjunto Moderno de la Pampulha' },
     category: 'world',
     region: 'sudeste',
     state: 'Minas Gerais',
     city: 'Belo Horizonte',
-    coordinates: { lat: -19.8533, lng: -43.9700 },
-    description: {
-      pt: 'Obras de Oscar Niemeyer e jardins de Burle Marx.',
-      en: 'Works by Oscar Niemeyer and gardens by Burle Marx.',
-      es: 'Obras de Oscar Niemeyer y jardines de Burle Marx.'
-    },
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Obras de Oscar Niemeyer e jardins de Burle Marx. (O Conjunto Arquitetônico da Pampulha era o centro de um projeto de cidade-jardim visionário criado em 1940 em Belo Horizonte, capital de Minas Gerais. Concebido em torno de um lago artificial, este centro cultural e de lazer inclui um casino, um salão de baile, o Iate Clube e a igreja São Francisco de Assis. Os edifícios foram concebidos pelo arquiteto Oscar Niemeyer, em colaboração com artistas inovadores.)', en: 'A visionary garden-city project in Belo Horizonte featuring architecture by Oscar Niemeyer and landscape gardens by Burle Marx.', es: 'Proyecto visionario de ciudad jardín en Belo Horizonte con arquitectura de Oscar Niemeyer y jardines de Burle Marx.' },
     unesco: true
   },
   {
-    id: 'queijo-canastra',
-    name: {
-      pt: 'Modo de Fazer Queijo de Minas',
-      en: 'Minas Cheese Making',
-      es: 'Modo de Hacer Queso de Minas'
-    },
-    category: 'intangible',
-    region: 'sudeste',
-    state: 'Minas Gerais',
-    city: 'São Roque de Minas',
-    coordinates: { lat: -20.2500, lng: -46.3667 },
-    description: {
-      pt: 'Tradição queijeira das regiões do Serro, Canastra e Salitre.',
-      en: 'Cheese-making tradition from the Serro, Canastra, and Salitre regions.',
-      es: 'Tradición quesera de las regiones del Serro, Canastra y Salitre.'
-    },
-    unesco: false
-  },
-
-  // REGIÃO NORDESTE - Bahia
-  {
-    id: 'salvador-centro-historico',
-    name: {
-      pt: 'Centro Histórico de Salvador',
-      en: 'Historic Center of Salvador',
-      es: 'Centro Histórico de Salvador'
-    },
+    id: 'centro-historico-da-cidade-de-salvador',
+    name: { pt: 'Centro Histórico da Cidade de Salvador', en: 'Historic Centre of Salvador', es: 'Centro Histórico de Salvador de Bahía' },
     category: 'world',
     region: 'nordeste',
     state: 'Bahia',
     city: 'Salvador',
-    coordinates: { lat: -12.9714, lng: -38.5014 },
-    description: {
-      pt: 'Pelourinho, conjunto arquitetônico colonial, Patrimônio Mundial.',
-      en: 'Pelourinho, colonial architectural ensemble, World Heritage.',
-      es: 'Pelourinho, conjunto arquitectónico colonial, Patrimonio Mundial.'
-    },
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Pelourinho, conjunto arquitetônico colonial, Patrimônio Mundial.', en: 'The Pelourinho district features a colonial architectural ensemble and is a World Heritage site.', es: 'El barrio de Pelourinho cuenta con un conjunto arquitectónico colonial y es Patrimonio de la Humanidad.' },
     unesco: true
   },
   {
-    id: 'capoeira',
-    name: {
-      pt: 'Capoeira',
-      en: 'Capoeira',
-      es: 'Capoeira'
-    },
-    category: 'intangible',
-    region: 'nordeste',
-    state: 'Bahia',
-    city: 'Salvador',
-    coordinates: { lat: -12.9777, lng: -38.5016 },
-    description: {
-      pt: 'Arte marcial afro-brasileira que combina luta, dança e música.',
-      en: 'Afro-Brazilian martial art combining fight, dance, and music.',
-      es: 'Arte marcial afrobrasileña que combina lucha, danza y música.'
-    },
-    unesco: true
-  },
-  {
-    id: 'chapada-diamantina',
-    name: {
-      pt: 'Parque Nacional da Chapada Diamantina',
-      en: 'Chapada Diamantina National Park',
-      es: 'Parque Nacional de Chapada Diamantina'
-    },
-    category: 'natural',
-    region: 'nordeste',
-    state: 'Bahia',
-    city: 'Lençóis',
-    coordinates: { lat: -12.4500, lng: -41.4500 },
-    description: {
-      pt: 'Planalto com cachoeiras, cavernas e formações rochosas únicas.',
-      en: 'Plateau with waterfalls, caves, and unique rock formations.',
-      es: 'Meseta con cascadas, cuevas y formaciones rocosas únicas.'
-    },
-    unesco: false
-  },
-  // Pernambuco
-  {
-    id: 'olinda',
-    name: {
-      pt: 'Centro Histórico de Olinda',
-      en: 'Historic Center of Olinda',
-      es: 'Centro Histórico de Olinda'
-    },
+    id: 'centro-historico-de-olinda',
+    name: { pt: 'Centro Histórico de Olinda', en: 'Historic Centre of the Town of Olinda', es: 'Centro Histórico de Olinda' },
     category: 'world',
     region: 'nordeste',
     state: 'Pernambuco',
     city: 'Olinda',
-    coordinates: { lat: -8.0089, lng: -34.8553 },
-    description: {
-      pt: 'Cidade colonial com igrejas barrocas e ladeiras históricas.',
-      en: 'Colonial city with baroque churches and historic slopes.',
-      es: 'Ciudad colonial con iglesias barrocas y laderas históricas.'
-    },
+    coordinates: { lat: -8.01, lng: -34.86 },
+    description: { pt: 'Cidade colonial com igrejas barrocas e ladeiras históricas. (http://portal.iphan.gov.br/pagina/detalhes/351/)', en: 'A colonial city known for its Baroque churches and historic sloped streets.', es: 'Ciudad colonial conocida por sus iglesias barrocas y laderas históricas.' },
     unesco: true
   },
   {
-    id: 'frevo',
-    name: {
-      pt: 'Frevo',
-      en: 'Frevo',
-      es: 'Frevo'
-    },
-    category: 'intangible',
-    region: 'nordeste',
-    state: 'Pernambuco',
-    city: 'Recife',
-    coordinates: { lat: -8.0476, lng: -34.8770 },
-    description: {
-      pt: 'Ritmo e dança típicos do carnaval pernambucano.',
-      en: 'Rhythm and dance typical of Pernambuco carnival.',
-      es: 'Ritmo y danza típicos del carnaval pernambucano.'
-    },
-    unesco: true
-  },
-  {
-    id: 'fernando-noronha',
-    name: {
-      pt: 'Fernando de Noronha',
-      en: 'Fernando de Noronha',
-      es: 'Fernando de Noronha'
-    },
+    id: 'ilhas-atlanticas-brasileiras-reservas-de-fernando-de-noronha',
+    name: { pt: 'Ilhas atlânticas brasileiras: Reservas de Fernando de Noronha e Atol das Rocas', en: 'Brazilian Atlantic Islands: Fernando de Noronha and Atol das Rocas Reserves', es: 'Islas atlánticas brasileñas: Reservas de Fernando de Noronha y Atol de las Rocas' },
     category: 'world',
-    region: 'nordeste',
-    state: 'Pernambuco',
-    city: 'Fernando de Noronha',
-    coordinates: { lat: -3.8547, lng: -32.4280 },
-    description: {
-      pt: 'Arquipélago com praias paradisíacas e rica vida marinha.',
-      en: 'Archipelago with paradise beaches and rich marine life.',
-      es: 'Archipiélago con playas paradisíacas y rica vida marina.'
-    },
+    region: 'sudeste',
+    state: 'Pernambuco e Rio Grande do Norte',
+    city: 'Ilhas de Fernando de Noronha e Atol das Rocas',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Arquipélago com praias paradisíacas e rica vida marinha. (Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', en: 'Archipelago with paradisiacal beaches and rich marine life on the South Atlantic submarine ridge.', es: 'Archipiélago con playas paradisíacas y rica vida marina en la dorsal submarina del Atlántico Sur.' },
     unesco: true
   },
-  // Maranhão
   {
-    id: 'sao-luis-centro-historico',
-    name: {
-      pt: 'Centro Histórico de São Luís',
-      en: 'Historic Center of São Luís',
-      es: 'Centro Histórico de São Luis'
-    },
+    id: 'centro-historico-de-sao-luis',
+    name: { pt: 'Centro Histórico de São Luís', en: 'Historic Centre of São Luís', es: 'Centro Histórico de São Luís' },
     category: 'world',
     region: 'nordeste',
     state: 'Maranhão',
-    city: 'São Luís',
-    coordinates: { lat: -2.5307, lng: -44.3068 },
-    description: {
-      pt: 'Conjunto de casarões coloniais com azulejos portugueses.',
-      en: 'Ensemble of colonial mansions with Portuguese tiles.',
-      es: 'Conjunto de casonas coloniales con azulejos portugueses.'
-    },
+    city: 'São Luis',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'Conjunto de casarões coloniais com azulejos portugueses. (http://portal.iphan.gov.br/pagina/detalhes/346/)', en: 'A collection of colonial mansions decorated with traditional Portuguese tiles.', es: 'Conjunto de casonas coloniales decoradas con azulejos portugueses tradicionales.' },
     unesco: true
   },
   {
-    id: 'lencois-maranhenses',
-    name: {
-      pt: 'Parque Nacional dos Lençóis Maranhenses',
-      en: 'Lençóis Maranhenses National Park',
-      es: 'Parque Nacional de los Lençóis Maranhenses'
-    },
-    category: 'natural',
-    region: 'nordeste',
-    state: 'Maranhão',
-    city: 'Barreirinhas',
-    coordinates: { lat: -2.4833, lng: -43.1167 },
-    description: {
-      pt: 'Dunas e lagoas cristalinas em paisagem única no mundo.',
-      en: 'Dunes and crystal lagoons in a unique landscape.',
-      es: 'Dunas y lagunas cristalinas en un paisaje único en el mundo.'
-    },
-    unesco: false
-  },
-  {
-    id: 'bumba-meu-boi',
-    name: {
-      pt: 'Bumba Meu Boi',
-      en: 'Bumba Meu Boi',
-      es: 'Bumba Meu Boi'
-    },
-    category: 'intangible',
-    region: 'nordeste',
-    state: 'Maranhão',
-    city: 'São Luís',
-    coordinates: { lat: -2.5297, lng: -44.3028 },
-    description: {
-      pt: 'Festa tradicional que une música, dança e teatro popular.',
-      en: 'Traditional festival combining music, dance, and popular theater.',
-      es: 'Fiesta tradicional que une música, danza y teatro popular.'
-    },
-    unesco: true
-  },
-  // Piauí
-  {
-    id: 'serra-capivara',
-    name: {
-      pt: 'Parque Nacional Serra da Capivara',
-      en: 'Serra da Capivara National Park',
-      es: 'Parque Nacional Sierra de Capivara'
-    },
+    id: 'parque-nacional-serra-da-capivara',
+    name: { pt: 'Parque Nacional Serra da Capivara', en: 'Serra da Capivara National Park', es: 'Parque Nacional de la Sierra de Capivara' },
     category: 'world',
     region: 'nordeste',
     state: 'Piauí',
     city: 'São Raimundo Nonato',
-    coordinates: { lat: -8.8333, lng: -42.5500 },
-    description: {
-      pt: 'Maior concentração de sítios arqueológicos das Américas.',
-      en: 'Largest concentration of archaeological sites in the Americas.',
-      es: 'Mayor concentración de sitios arqueológicos de las Américas.'
-    },
+    coordinates: { lat: -9.01, lng: -42.7 },
+    description: { pt: 'Maior concentração de sítios arqueológicos das Américas.', en: 'The largest concentration of archaeological sites in the Americas.', es: 'La mayor concentración de sitios arqueológicos de las Américas.' },
     unesco: true
   },
-
-  // REGIÃO CENTRO-OESTE - Goiás
   {
-    id: 'cidade-goias',
-    name: {
-      pt: 'Cidade de Goiás',
-      en: 'City of Goiás',
-      es: 'Ciudad de Goiás'
-    },
+    id: 'cidade-de-goias',
+    name: { pt: 'Cidade de Goiás', en: 'Historic Town of Goiás', es: 'Ciudad de Goiás' },
     category: 'world',
     region: 'centro-oeste',
     state: 'Goiás',
     city: 'Goiás',
-    coordinates: { lat: -15.9333, lng: -50.1333 },
-    description: {
-      pt: 'Antiga capital do estado, preserva arquitetura colonial.',
-      en: 'Former state capital, preserves colonial architecture.',
-      es: 'Antigua capital del estado, preserva arquitectura colonial.'
-    },
+    coordinates: { lat: -15.93, lng: -50.13 },
+    description: { pt: 'Antiga capital do estado, preserva arquitetura colonial. (Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.)', en: 'Former state capital preserving colonial architecture and traditional mining town urbanism.', es: 'Antigua capital estatal que preserva la arquitectura colonial y el urbanismo de las ciudades mineras.' },
     unesco: true
   },
   {
-    id: 'chapada-veadeiros',
-    name: {
-      pt: 'Parque Nacional da Chapada dos Veadeiros',
-      en: 'Chapada dos Veadeiros National Park',
-      es: 'Parque Nacional de Chapada dos Veadeiros'
-    },
+    id: 'zonas-protegidas-do-cerrado-parques-nacionais-de-chapada-dos',
+    name: { pt: 'Zonas protegidas do Cerrado: Parques nacionais de Chapada dos Veadeiros e das Emas', en: 'Cerrado Protected Areas: Chapada dos Veadeiros and Emas National Parks', es: 'Zonas protegidas del Cerrado: Parques nacionales de Chapada dos Veadeiros y las Emas' },
     category: 'world',
     region: 'centro-oeste',
     state: 'Goiás',
-    city: 'Alto Paraíso de Goiás',
-    coordinates: { lat: -14.1000, lng: -47.5333 },
-    description: {
-      pt: 'Cerrado preservado com cachoeiras e formações de cristal.',
-      en: 'Preserved cerrado with waterfalls and crystal formations.',
-      es: 'Cerrado preservado con cascadas y formaciones de cristal.'
-    },
+    city: 'Alto Paraíso do Goiás',
+    coordinates: { lat: -16.69, lng: -49.25 },
+    description: { pt: 'Cerrado preservado com cachoeiras e formações de cristal. (Estes parques abrigam a flora, fauna e habitats característicos do “cerrado”, um dos ecossistemas tropicais mais antigos e diversificados do mundo. Os dois sítios protegidos tem servido de refúgio durante milênios a numerosas espécies nos períodos de mudança climática e se estima que serão indispensáveis para o mantimento da biodiversidade.)', en: 'Preserved Cerrado ecosystem with waterfalls and diverse flora and fauna, serving as a biodiversity refuge.', es: 'Ecosistema de Cerrado preservado con cascadas y diversa flora y fauna, funcionando como refugio de biodiversidad.' },
     unesco: true
   },
-  // Distrito Federal
   {
-    id: 'brasilia',
-    name: {
-      pt: 'Brasília',
-      en: 'Brasília',
-      es: 'Brasilia'
-    },
+    id: 'cidadde-de-brasilia',
+    name: { pt: 'Cidadde de Brasília', en: 'Brasília', es: 'Brasilia' },
     category: 'world',
     region: 'centro-oeste',
     state: 'Distrito Federal',
     city: 'Brasília',
-    coordinates: { lat: -15.7942, lng: -47.8825 },
-    description: {
-      pt: 'Capital modernista projetada por Lucio Costa e Oscar Niemeyer.',
-      en: 'Modernist capital designed by Lucio Costa and Oscar Niemeyer.',
-      es: 'Capital modernista diseñada por Lucio Costa y Oscar Niemeyer.'
-    },
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Capital modernista projetada por Lucio Costa e Oscar Niemeyer.', en: 'Modernist capital city designed by Lucio Costa and Oscar Niemeyer.', es: 'Capital modernista diseñada por Lucio Costa y Oscar Niemeyer.' },
     unesco: true
   },
-  // Mato Grosso do Sul
   {
-    id: 'pantanal',
-    name: {
-      pt: 'Parque Nacional do Pantanal Matogrossense',
-      en: 'Pantanal Matogrossense National Park',
-      es: 'Parque Nacional del Pantanal Matogrossense'
-    },
+    id: 'parque-nacional-do-pantanal-matogrossense',
+    name: { pt: 'Parque Nacional do Pantanal Matogrossense', en: 'Pantanal Matogrossense National Park', es: 'Parque Nacional del Pantanal Matogrossense' },
     category: 'world',
-    region: 'centro-oeste',
-    state: 'Mato Grosso do Sul',
+    region: 'sudeste',
+    state: 'Mato Grosso e Mato Grosso do Sul',
     city: 'Poconé',
-    coordinates: { lat: -17.8833, lng: -57.4000 },
-    description: {
-      pt: 'Maior planície alagável do mundo, rica em biodiversidade.',
-      en: 'World\'s largest wetland, rich in biodiversity.',
-      es: 'Mayor llanura inundable del mundo, rica en biodiversidad.'
-    },
+    coordinates: { lat: -17.88, lng: -57.4 },
+    description: { pt: 'Maior planície alagável do mundo, rica em biodiversidade. (A reserva do Pantanal compreende quatro zonas protegidas, com uma superfície total de 187.818 hectares. Situada no extremo sul oriental do Estado de Mato Grosso, esta zona de conservação abarca as cabeceiras dos rios Cuiabá e Paraguai.', en: 'The world\'s largest wetland, rich in biodiversity. This 187,818-hectare conservation area in Mato Grosso encompasses the headwaters of the Cuiabá and Paraguay rivers.', es: 'La llanura aluvial más grande del mundo, rica en biodiversidad. Esta zona de conservación de 187.818 hectáreas en Mato Grosso abarca las cabeceras de los ríos Cuiabá y Paraguay.' },
     unesco: true
   },
   {
-    id: 'viola-cocho',
-    name: {
-      pt: 'Modo de Fazer Viola de Cocho',
-      en: 'Viola de Cocho Making',
-      es: 'Modo de Hacer Viola de Cocho'
-    },
-    category: 'intangible',
-    region: 'centro-oeste',
-    state: 'Mato Grosso do Sul',
-    city: 'Corumbá',
-    coordinates: { lat: -19.0092, lng: -57.6517 },
-    description: {
-      pt: 'Instrumento musical artesanal típico do Pantanal.',
-      en: 'Traditional handmade musical instrument from the Pantanal.',
-      es: 'Instrumento musical artesanal típico del Pantanal.'
-    },
-    unesco: false
-  },
-
-  // REGIÃO NORTE - Amazonas
-  {
-    id: 'teatro-amazonas',
-    name: {
-      pt: 'Teatro Amazonas',
-      en: 'Amazon Theatre',
-      es: 'Teatro Amazonas'
-    },
-    category: 'material',
-    region: 'norte',
-    state: 'Amazonas',
-    city: 'Manaus',
-    coordinates: { lat: -3.1303, lng: -60.0233 },
-    description: {
-      pt: 'Ópera do ciclo da borracha, candidato a Patrimônio Mundial.',
-      en: 'Opera house from the rubber boom era, World Heritage candidate.',
-      es: 'Ópera del ciclo del caucho, candidato a Patrimonio Mundial.'
-    },
-    unesco: false
-  },
-  {
-    id: 'festival-parintins',
-    name: {
-      pt: 'Festival de Parintins',
-      en: 'Parintins Festival',
-      es: 'Festival de Parintins'
-    },
-    category: 'intangible',
-    region: 'norte',
-    state: 'Amazonas',
-    city: 'Parintins',
-    coordinates: { lat: -2.6286, lng: -56.7353 },
-    description: {
-      pt: 'Complexo cultural do Boi-Bumbá, maior festa folclórica do Norte.',
-      en: 'Boi-Bumbá cultural complex, largest folk festival in the North.',
-      es: 'Complejo cultural del Boi-Bumbá, mayor fiesta folclórica del Norte.'
-    },
-    unesco: true
-  },
-  {
-    id: 'parque-jau',
-    name: {
-      pt: 'Parque Nacional do Jaú',
-      en: 'Jaú National Park',
-      es: 'Parque Nacional del Jaú'
-    },
+    id: 'parque-nacional-do-jau',
+    name: { pt: 'Parque Nacional do Jaú', en: 'Jaú National Park', es: 'Parque Nacional del Jaú' },
     category: 'world',
     region: 'norte',
     state: 'Amazonas',
     city: 'Novo Airão',
-    coordinates: { lat: -1.9000, lng: -62.6167 },
-    description: {
-      pt: 'Maior parque de floresta tropical do mundo, Patrimônio Natural.',
-      en: 'World\'s largest tropical rainforest park, Natural Heritage.',
-      es: 'Mayor parque de bosque tropical del mundo, Patrimonio Natural.'
-    },
+    coordinates: { lat: -2.62, lng: -60.94 },
+    description: { pt: 'Maior parque de floresta tropical do mundo, Patrimônio Natural.', en: 'The world\'s largest tropical forest park, recognized as a Natural Heritage site.', es: 'El parque de selva tropical más grande del mundo, reconocido como Patrimonio Natural.' },
     unesco: true
   },
-  // Pará
   {
-    id: 'cirio-nazare',
-    name: {
-      pt: 'Círio de Nazaré',
-      en: 'Círio de Nazaré',
-      es: 'Círio de Nazaré'
-    },
-    category: 'intangible',
+    id: 'santuario-de-bom-jesus-de-matosinhos',
+    name: { pt: 'Santuário de Bom Jesus de Matosinhos', en: 'Sanctuary of Bom Jesus de Matosinhos', es: 'Santuario del Bom Jesus de Matosinhos' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Congonhas',
+    coordinates: { lat: -20.5, lng: -43.86 },
+    description: { pt: 'Construído na segunda metade do século XVII, este santuário está situado na cidade de Congonhas, no estado de Minas Gerais. Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.', en: 'An 18th-century complex in Congonhas, Minas Gerais, featuring a Rococo church, prophets\' statues, and Way of the Cross chapels with Aleijadinho\'s Baroque masterpieces.', es: 'Complejo del siglo XVIII en Congonhas, Minas Gerais, con una iglesia rococó, estatuas de profetas y capillas del Vía Crucis con obras maestras barrocas de Aleijadinho.' },
+    unesco: true
+  },
+  {
+    id: 'centro-historico-de-diamantina',
+    name: { pt: 'Centro Histórico de Diamantina', en: 'Historic Centre of Diamantina', es: 'Centro Histórico de Diamantina' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Diamantina',
+    coordinates: { lat: -18.25, lng: -43.6 },
+    description: { pt: 'Diamantina é uma cidade colonial engastada como uma pedra preciosa em um inóspito maciço montanhoso. É um testemunho da aventura dos mineradores de diamantes do século XVIII, assim como do influxo exercido pelas realizações culturais e artísticas do ser humano em seu marco de vida.', en: 'A colonial city set in a rocky mountain range, testifying to the 18th-century diamond mining adventure and human cultural achievement.', es: 'Ciudad colonial engastada en un macizo montañoso, testimonio de la aventura de los mineros de diamantes del siglo XVIII y de la realización cultural humana.' },
+    unesco: true
+  },
+  {
+    id: 'reservas-de-mata-atlantica-do-sudeste',
+    name: { pt: 'Reservas de Mata Atlântica do Sudeste', en: 'Atlantic Forest South-East Reserves', es: 'Reservas de Mata Atlántica del Sudeste' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'São Paulo e Paraná',
+    city: 'São Paulo e Paraná',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Estas reservas estão situadas nos Estados de Paraná e São Paulo e oferecem um dos melhores e mais vastos exemplos do bosque atlântico brasileiro. As 25 zonas protegidas que formam o sítio somam uma superfície de 470.000 hectares e ilustram a riqueza biológica e a evolução dos últimos vestígios do mata atlântica.', en: 'Located in Paraná and São Paulo, these 25 protected areas totaling 470,000 hectares represent the biological evolution of the Brazilian Atlantic forest.', es: 'Ubicadas en Paraná y São Paulo, estas 25 zonas protegidas de 470.000 hectáreas representan la evolución biológica del bosque atlántico brasileño.' },
+    unesco: true
+  },
+  {
+    id: 'reservas-de-mata-atlantica-da-costa-do-descobrimento',
+    name: { pt: 'Reservas de Mata Atlântica da Costa do Descobrimento', en: 'Discovery Coast Atlantic Forest Reserves', es: 'Reservas de Mata Atlántica de la Costa del Descubrimiento' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Bahia e Espírito Santo',
+    city: 'Bahia e Espírito Santo',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'As reservas da Costa do Descobrimento estão situadas entre os Estados de Bahia e Espírito Santo. São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados (“restingas”). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'Eight protected areas in Bahia and Espírito Santo covering 112,000 hectares of rainforest and restingas, hosting immense biodiversity and endemic species.', es: 'Ocho zonas protegidas en Bahia y Espírito Santo con 112.000 hectáreas de selva y restingas, que albergan una inmensa biodiversidad y especies endémicas.' },
+    unesco: true
+  },
+  {
+    id: 'complexo-de-conservacao-da-amazonia-central',
+    name: { pt: 'Complexo de Conservação da Amazônia Central', en: 'Central Amazon Conservation Complex', es: 'Complejo de Conservación de la Amazonía Central' },
+    category: 'world',
     region: 'norte',
-    state: 'Pará',
-    city: 'Belém',
-    coordinates: { lat: -1.4558, lng: -48.4902 },
-    description: {
-      pt: 'Maior procissão católica do Brasil, realizada em outubro.',
-      en: 'Largest Catholic procession in Brazil, held in October.',
-      es: 'Mayor procesión católica de Brasil, realizada en octubre.'
-    },
+    state: 'Amazonas',
+    city: 'Amazonas',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'Este sítio de mais de seis milhões de hectares é a zona protegida mais vasta da bacia do Amazonas e uma das regiões do planeta da mais rica biodiversidade. Compõe o Parque Nacional do Jaú, o Parque Nacional de Anavilhanas, a Reserva de Desenvolvimento Sustentável Amanã, área de demonstração da Reserva de Desenvolvimento Sustentável Mamirauá.', en: 'The largest protected area in the Amazon Basin, exceeding six million hectares, including Jaú and Anavilhanas National Parks and Amanã and Mamirauá reserves.', es: 'La mayor zona protegida de la cuenca del Amazonas, con más de seis millones de hectáreas, incluyendo los parques de Jaú y Anavilhanas y las reservas Amanã y Mamirauá.' },
     unesco: true
   },
   {
-    id: 'ver-o-peso',
-    name: {
-      pt: 'Mercado Ver-o-Peso',
-      en: 'Ver-o-Peso Market',
-      es: 'Mercado Ver-o-Peso'
-    },
+    id: 'praca-de-sao-francisco',
+    name: { pt: 'Praça de São Francisco', en: 'São Francisco Square', es: 'Plaza de São Francisco' },
+    category: 'world',
+    region: 'nordeste',
+    state: 'Sergipe',
+    city: 'São Cristóvão',
+    coordinates: { lat: -11.01, lng: -37.21 },
+    description: { pt: 'A praça de São Francisco na cidade de São Cristovão forma um quadrilátero a céu aberto rodeado de imponentes edifícios, como a igreja e convento de São Francisco, a igreja e a Santa Casa da Misericórdia, o palácio provincial e suas moradias associadas de diferentes períodos históricos.', en: 'An open-air square in São Cristóvão surrounded by historic buildings including the São Francisco church/convent, Santa Casa, and the provincial palace.', es: 'Plaza a cielo abierto en São Cristóvão rodeada de edificios históricos como la iglesia y convento de São Francisco, la Santa Casa y el palacio provincial.' },
+    unesco: true
+  },
+  {
+    id: 'paraty-e-ilha-grande-cultura-e-biodiversidade',
+    name: { pt: 'Paraty e Ilha Grande – Cultura e Biodiversidade', en: 'Paraty and Ilha Grande – Culture and Biodiversity', es: 'Paraty e Ilha Grande – Cultura y Biodiversidad' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Paraty e Ilha Grande',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural. Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', en: 'Brazil\'s first mixed World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
+    unesco: true
+  },
+  {
+    id: 'parque-nacional-dos-lencois-maranhenses',
+    name: { pt: 'Parque Nacional dos Lençóis Maranhenses', en: 'Lençóis Maranhenses National Park', es: 'Parque Nacional de los Lençóis Maranhenses' },
+    category: 'world',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Maranhão',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'O Parque Nacional dos Lençóis Maranhenses (PNLM), criado pelo Decreto 86.060, em 2 de junho de 1981, é caracterizado como o maior campo de dunas de areia da América do Sul. Compreende uma área de 155 mil hectares, dos quais 90 mil consistem em dunas móveis e lagoas formadas por essas dunas.', en: 'South America\'s largest field of sand dunes, spanning 155,000 hectares with seasonal lagoons formed between mobile dunes.', es: 'El mayor campo de dunas de arena de Sudamérica, con 155.000 hectáreas y lagunas estacionales formadas entre dunas móviles.' },
+    unesco: true
+  },
+  {
+    id: 'canion-do-rio-peruacu',
+    name: { pt: 'Cânion do Rio Peruaçu', en: 'Peruaçu River Canyon', es: 'Cañón del Río Peruaçu' },
+    category: 'world',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Norte do Estado',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Localizado no norte de Minas Gerais, os sistemas de cavernas horizontais do parque, formados em rochas carbonáticas, revelam espeleotemas impressionantes, dolinas desmoronadas, arcos calcários e rios subterrâneos. Desenvolvido no estável cráton do São Francisco, a paisagem reflete as principais mudanças climáticas e geológicas do Plio-Pleistoceno.', en: 'Located in northern Minas Gerais, it features horizontal cave systems, speleothems, limestone arches, and underground rivers reflecting Plio-Pleistocene geological changes.', es: 'Ubicado al norte de Minas Gerais, presenta sistemas de cuevas, espeleotemas, arcos de piedra caliza y ríos subterráneos que reflejan cambios geológicos del Plio-Pleistoceno.' },
+    unesco: true
+  },
+  {
+    id: 'centro-historico-cidade-de-pelotas',
+    name: { pt: 'Centro Histórico Cidade de Pelotas', en: 'Historic Centre of Pelotas', es: 'Centro Histórico de la Ciudad de Pelotas' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Pelotas',
+    coordinates: { lat: -31.77, lng: -52.34 },
+    description: { pt: 'A cidade de Pelotas está localizada na região sul do estado do Rio Grande do Sul. Seu conjunto histórico e sua arquitetura eclética é reconhecido Patrimônio Cultural do Brasil englobando o centro histórico, refletindo a riqueza da aristocracia do charque do século XIX.', en: 'A historic area in southern Rio Grande do Sul featuring eclectic architecture that reflects the 19th-century wealth of the jerked beef aristocracy.', es: 'Conjunto histórico en el sur de Rio Grande do Sul con arquitectura ecléctica que refleja la riqueza de la aristocracia del charqui del siglo XIX.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-cidade-antonio-prado',
+    name: { pt: 'Centro Histórico Cidade Antônio Prado', en: 'Historic Centre of Antônio Prado', es: 'Centro Histórico de la Ciudad de Antônio Prado' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Antônio Prado',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'O conjunto histórico de Antônio Prado, localizado na serra gaúcha, é formado pelo estilo colonial de casario de madeira e alvenaria. A cidade remete às vilas europeias e pelo seu valor histórico foi reconhecida como Patrimônio Cultural do Brasil. Fundada em 1886 foi a sexta e última das chamadas “antigas colônias da imigração italiana”.', en: 'A historic town in the Gaúcho highlands featuring wood and masonry colonial architecture from 1886, preserving the legacy of Italian immigration.', es: 'Ciudad histórica en la sierra gaúcha con arquitectura colonial de madera y mampostería de 1886, preservando el legado de la inmigración italiana.' },
+    unesco: false
+  },
+  {
+    id: 'museu-de-arte-de-sao-paulo-masp',
+    name: { pt: 'Museu de Arte de São Paulo (MASP)', en: 'São Paulo Museum of Art (MASP)', es: 'Museo de Arte de São Paulo (MASP)' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'São Paulo',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: 'Principal museu de arte do Brasil com acervo de relevância internacional.', en: 'The primary art museum in Brazil, housing a collection of international significance.', es: 'El principal museo de arte de Brasil con una colección de relevancia internacional.' },
+    unesco: false
+  },
+  {
+    id: 'ponte-hercilio-luz',
+    name: { pt: 'Ponte Hercílio Luz', en: 'Hercílio Luz Bridge', es: 'Puente Hercílio Luz' },
+    category: 'material',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Florianópolis',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Maior ponte pênsil do Brasil e cartão-postal de Florianópolis.', en: 'The largest suspension bridge in Brazil and an iconic landmark of Florianópolis.', es: 'El puente colgante más grande de Brasil y postal icónica de Florianópolis.' },
+    unesco: false
+  },
+  {
+    id: 'vila-serra-do-navio-ap',
+    name: { pt: 'Vila Serra do Navio (AP)', en: 'Vila Serra do Navio (AP)', es: 'Vila Serra do Navio (AP)' },
+    category: 'material',
+    region: 'norte',
+    state: 'Amapá',
+    city: 'Vila Serra do Navio',
+    coordinates: { lat: -0.03, lng: -51.07 },
+    description: { pt: 'A Vila Serra do Navio, no Amapá, que viveu os áureos tempos da exploração do manganês, foi tombada como Patrimônio Cultural Brasileiro, em abril de 2010. A Vila mantém as características originais que a distinguem na história da ocupação da Região Norte, na arquitetura e no urbanismo brasileiros.', en: 'Vila Serra do Navio, in Amapá, thrived during the manganese mining golden age and was listed as Brazilian Cultural Heritage in 2010. It preserves original characteristics that define Northern occupation, Brazilian architecture, and urban planning.', es: 'La Vila Serra do Navio, en Amapá, vivió los años dorados de la exploración de manganeso y fue declarada Patrimonio Cultural Brasileño en 2010. Mantiene características originales que la distinguen en la historia del Norte, la arquitectura y el urbanismo brasileño.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-manaus',
+    name: { pt: 'Centro Histórico Manaus', en: 'Manaus Historic Center', es: 'Centro Histórico de Manaus' },
+    category: 'material',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Manaus',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'O centro histórico de Manaus - tombado pelo Iphan, em 2012 - abrange uma área entre a orla do rio Negro e o entorno do Teatro Amazonas e ainda mantém os aspectos simbólicos e densos de realizações artístico-construtivas.', en: 'The historic center of Manaus, listed by Iphan in 2012, spans from the Rio Negro waterfront to the area surrounding Teatro Amazonas, preserving symbolic artistic-constructive achievements.', es: 'El centro histórico de Manaus, protegido por el Iphan en 2012, abarca el área entre la orilla del río Negro y el entorno del Teatro Amazonas, conservando aspectos simbólicos de realizaciones artístico-constructivas.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-belem',
+    name: { pt: 'Centro histórico de Belém', en: 'Belém Historic Center', es: 'Centro histórico de Belém' },
     category: 'material',
     region: 'norte',
     state: 'Pará',
     city: 'Belém',
-    coordinates: { lat: -1.4530, lng: -48.5024 },
-    description: {
-      pt: 'Maior feira livre da América Latina, símbolo de Belém.',
-      en: 'Largest open-air market in Latin America, symbol of Belém.',
-      es: 'Mayor mercado abierto de América Latina, símbolo de Belém.'
-    },
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'Entre os primeiros conjuntos arquitetônicos, urbanísticos e paisagísticos tombados estão o Cemitério de Nossa Senhora da Soledade, a Praça Frei Caetano Brandão (ex-Largo da Sé) e o Mercado Ver o Peso com suas áreas adjacentes (Praça Pedro II e Boulevard Castilhos França, inclusive o Mercado de Carne e o Mercado Bolonha de Peixe).', en: 'Among the first protected architectural complexes are the Cemetery of Nossa Senhora da Soledade, Frei Caetano Brandão Square, and the Ver-o-Peso Market with its adjacent areas, including the Meat and Fish Markets.', es: 'Entre los primeros conjuntos arquitectónicos protegidos están el Cementerio de Nossa Senhora da Soledade, la Plaza Frei Caetano Brandão y el Mercado Ver-o-Peso con sus áreas adyacentes, incluyendo los mercados de Carne y Pescado.' },
     unesco: false
   },
   {
-    id: 'carimbo',
-    name: {
-      pt: 'Carimbó',
-      en: 'Carimbó',
-      es: 'Carimbó'
-    },
+    id: 'cidade-de-natividade',
+    name: { pt: 'Cidade de Natividade', en: 'City of Natividade', es: 'Ciudad de Natividade' },
+    category: 'material',
+    region: 'norte',
+    state: 'Tocantins',
+    city: 'Natividade',
+    coordinates: { lat: -10.18, lng: -48.33 },
+    description: { pt: 'Natividade apresenta uma estrutura urbana colonial, com ruas irregulares. O conjunto arquitetônico destaca-se por sua simplicidade, com ausência de monumentalidade nas construções públicas, resultando em um conjunto harmonioso, com uma estrutura urbana colonial e casario simples. As fachadas das construções remetem a dois períodos econômicos distintos.', en: 'Natividade features a colonial urban structure with irregular streets. The architectural set is noted for its simplicity and lack of monumentality in public buildings, resulting in a harmonious ensemble with two distinct economic periods.', es: 'Natividade presenta una estructura urbana colonial con calles irregulares. El conjunto destaca por su sencillez y ausencia de monumentalidad, resultando en un conjunto armonioso cuyas fachadas reflejan dos periodos económicos distintos.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-porto-nacional',
+    name: { pt: 'Centro Histórico Porto Nacional', en: 'Porto Nacional Historic Center', es: 'Centro Histórico de Porto Nacional' },
+    category: 'material',
+    region: 'norte',
+    state: 'Tocantins',
+    city: 'Porto Nacional',
+    coordinates: { lat: -10.18, lng: -48.33 },
+    description: { pt: 'O centro histórico de Porto Nacional, em Tocantins, foi tombado pelo Iphan, em 2008. A área delimitada abrange cerca de 250 edificações, conjuntos de ruas, largos e praças, incluindo a Avenida Beira Lago e o entorno da Catedral Nossa Senhora das Mercês. Na cidade, destacam-se as edificações construídas pelos freis dominicanos como a Catedral das Mercês, além de espaços públicos e residências.', en: 'Listed by Iphan in 2008, Porto Nacional\'s historic center covers 250 buildings and surrounding squares near the Cathedral of Nossa Senhora das Mercês, featuring structures built by Dominican friars.', es: 'El centro histórico de Porto Nacional fue protegido por el Iphan en 2008. Abarca unas 250 edificaciones y plazas, incluyendo la Avenida Beira Lago y la Catedral de Nossa Senhora das Mercês, construida por frailes dominicos.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-marechal-deodoro',
+    name: { pt: 'Cidade de Marechal Deodoro', en: 'City of Marechal Deodoro', es: 'Ciudad de Marechal Deodoro' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Alagoas',
+    city: 'Marechal Deodoro',
+    coordinates: { lat: -9.67, lng: -35.74 },
+    description: { pt: 'O conjunto arquitetônico e urbanístico de Marechal Deodoro, no Estado Alagoas, foi tombado pelo Iphan, em 2009. A área definida para proteção envolve três locais descontinuados - o Centro, a área do Carmo e a área de Taperagua - todos com elementos de interesse, devido à sua importância histórica e relevância paisagística.', en: 'The protected architectural and urban ensemble of Marechal Deodoro (2009) includes three areas: the Center, Carmo, and Taperagua, all significant for their historical importance and landscape relevance.', es: 'El conjunto arquitectónico de Marechal Deodoro (2009) involucra tres áreas: el Centro, la zona del Carmo y Taperagua, todas con elementos de gran importancia histórica y relevancia paisajística.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-penedo',
+    name: { pt: 'Cidade de Penedo', en: 'City of Penedo', es: 'Ciudad de Penedo' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Alagoas',
+    city: 'Penedo',
+    coordinates: { lat: -10.29, lng: -36.59 },
+    description: { pt: 'A cidade de Penedo possui um centro histórico de significativa importância, formado por conjuntos de logradouros públicos e edificações. Sua paisagem edificada inclui alguns dos mais importantes bens da arquitetura religiosa do Nordeste – o Convento e Igreja Santa Maria dos Anjos e as igrejas de Nossa Sra.', en: 'Penedo has a significant historic center with public spaces and buildings. Its landscape includes major religious architecture of the Northeast, such as the Convent and Church of Santa Maria dos Anjos.', es: 'Penedo posee un centro histórico de gran importancia. Su paisaje construido incluye algunas de las obras de arquitectura religiosa más importantes del Nordeste, como el Convento e Iglesia de Santa Maria dos Anjos.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-piranhas',
+    name: { pt: 'Cidade de Piranhas', en: 'City of Piranhas', es: 'Ciudad de Piranhas' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Alagoas',
+    city: 'Piranhas',
+    coordinates: { lat: -9.67, lng: -35.74 },
+    description: { pt: 'Localizada no sertão do Estado de Alagoas, Piranhas se divide em “cidade de baixo e cidade de cima”, em uma região de caatinga cortada pelos rios São Francisco, Boa Vista (ou Piranhas), Urucu e Capiá.', en: 'Located in the Alagoas backlands, Piranhas is divided into the \'lower city\' and \'upper city\' within a caatinga region crossed by the São Francisco and Piranhas rivers.', es: 'Ubicada en el sertón de Alagoas, Piranhas se divide en "ciudad baja y ciudad alta", en una región de caatinga atravesada por los ríos São Francisco y Piranhas.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-cachoeira',
+    name: { pt: 'Cidade Cachoeira', en: 'City of Cachoeira', es: 'Ciudad de Cachoeira' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Cachoeira',
+    coordinates: { lat: -12.62, lng: -38.95 },
+    description: { pt: 'Importante reduto histórico do Recôncavo Baiano, destaca-se por sua arquitetura colonial preservada e papel crucial nas lutas pela independência do Brasil.', en: 'An important historical stronghold in the Recôncavo Baiano, it is noted for its preserved colonial architecture and crucial role in Brazil\'s independence struggles.', es: 'Importante baluarte histórico del Recôncavo Baiano, destaca por su arquitectura colonial preservada y su papel crucial en las luchas por la independencia de Brasil.' },
+    unesco: false
+  },
+  {
+    id: 'igatu',
+    name: { pt: 'Igatu', en: 'Igatu', es: 'Igatu' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Andaraí',
+    coordinates: { lat: -12.81, lng: -41.33 },
+    description: { pt: 'Conhecida como a \'Machu Picchu baiana\', a vila de Igatu abriga ruínas de pedra que remetem ao auge do ciclo do garimpo de diamantes na Chapada Diamantina.', en: 'Known as the \'Bahian Machu Picchu\', Igatu features stone ruins from the peak of the diamond mining cycle in the Chapada Diamantina.', es: 'Conocida como el \'Machu Picchu bahiano\', la aldea de Igatu alberga ruinas de piedra del auge del ciclo del diamante en la Chapada Diamantina.' },
+    unesco: false
+  },
+  {
+    id: 'itaparica',
+    name: { pt: 'Itaparica', en: 'Itaparica', es: 'Itaparica' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Itaparica',
+    coordinates: { lat: -12.89, lng: -38.68 },
+    description: { pt: 'Unindo beleza natural e história, a ilha preserva um conjunto arquitetônico colonial e a primeira igreja matriz do país, além de fortificações estratégicas.', en: 'Combining natural beauty and history, the island preserves a colonial architectural ensemble, the country\'s first parish church, and strategic fortifications.', es: 'Uniendo belleza natural e historia, la isla preserva un conjunto arquitectónico colonial, la primera iglesia matriz del país y fortificaciones estratégicas.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-lencois',
+    name: { pt: 'Centro Histórico Lençóis', en: 'Lençóis Historic Center', es: 'Centro Histórico de Lençóis' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Lençois',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Principal portal da Chapada Diamantina, o conjunto destaca-se pelos casarões coloridos do século XIX e seu passado ligado à exploração mineira.', en: 'The main gateway to Chapada Diamantina, this area stands out for its colorful 19th-century mansions and a past linked to mining exploration.', es: 'Principal portal de la Chapada Diamantina, el conjunto destaca por sus casonas coloridas del siglo XIX y su pasado ligado a la exploración minera.' },
+    unesco: false
+  },
+  {
+    id: 'monte-santo',
+    name: { pt: 'Monte Santo', en: 'Monte Santo', es: 'Monte Santo' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Monte Santo',
+    coordinates: { lat: -10.44, lng: -39.33 },
+    description: { pt: 'Famosa por seu caráter religioso, a cidade abriga um impressionante caminho de santuários que ladeia o morro, palco da Guerra de Canudos.', en: 'Famous for its religious character, the city features an impressive path of shrines alongside the hill, which served as a stage for the War of Canudos.', es: 'Famosa por su carácter religioso, la ciudad alberga un impresionante camino de santuarios en la colina, escenario de la Guerra de Canudos.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-mucuge',
+    name: { pt: 'Cidade de Mucugê', en: 'City of Mucugê', es: 'Ciudad de Mucugê' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Mucugê',
+    coordinates: { lat: -13.0, lng: -41.37 },
+    description: { pt: 'Patrimônio histórico tombado que preserva casario colonial e um cemitério bizantino único, cercado pelas paisagens naturais da Chapada Diamantina.', en: 'Protected historical heritage preserving colonial houses and a unique Byzantine cemetery, surrounded by the natural landscapes of Chapada Diamantina.', es: 'Patrimonio histórico protegido que preserva casas coloniales y un cementerio bizantino único, rodeado por los paisajes naturales de la Chapada Diamantina.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-porto-seguro',
+    name: { pt: 'Cidade de Porto Seguro', en: 'City of Porto Seguro', es: 'Ciudad de Porto Seguro' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Porto Seguro',
+    coordinates: { lat: -16.45, lng: -39.06 },
+    description: { pt: 'Berço da história brasileira, seu centro histórico no topo da falésia abriga construções coloniais, igrejas e marcos do descobrimento do Brasil.', en: 'Cradle of Brazilian history, its clifftop historic center houses colonial buildings, churches, and landmarks of the discovery of Brazil.', es: 'Cuna de la historia brasileña, su centro histórico en lo alto del acantilado alberga edificios coloniales, iglesias y hitos del descubrimiento de Brasil.' },
+    unesco: false
+  },
+  {
+    id: 'conjunto-arquitetonico-de-rio-das-contas',
+    name: { pt: 'Conjunto Arquitetônico de Rio das Contas', en: 'Architectural Complex of Rio das Contas', es: 'Conjunto Arquitectónico de Rio das Contas' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Rio das Contas',
+    coordinates: { lat: -13.58, lng: -41.81 },
+    description: { pt: 'Cidade-monumento da Chapada Diamantina com traçado urbano preservado, casarões de pedra e igrejas barrocas do período áureo do ouro.', en: 'Monument-city of Chapada Diamantina with a preserved urban layout, stone mansions, and Baroque churches from the golden age of gold mining.', es: 'Ciudad-monumento de Chapada Diamantina con trazado urbano preservado, casonas de piedra e iglesias barrocas del periodo áureo del oro.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-sao-felix',
+    name: { pt: 'Cidade de São Felix', en: 'City of São Felix', es: 'Ciudad de São Felix' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'São Felix',
+    coordinates: { lat: -12.61, lng: -38.97 },
+    description: { pt: 'Situada à margem do Rio Paraguaçu, compõe com Cachoeira um cenário vital da industrialização baiana e da cultura fumageira regional.', en: 'Located on the banks of the Paraguaçu River, it forms with Cachoeira a vital landscape of Bahia\'s industrialization and regional tobacco culture.', es: 'Situada a orillas del río Paraguaçu, conforma junto a Cachoeira un escenario vital de la industrialización bahiana y de la cultura tabacalera regional.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-jaguarao',
+    name: { pt: 'Cidade de Jaguarão', en: 'City of Jaguarão', es: 'Ciudad de Jaguarão' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Aracati',
+    coordinates: { lat: -4.56, lng: -37.77 },
+    description: { pt: 'Jaguarão é conhecida por seu rico patrimônio histórico e arquitetônico, com um conjunto de edificações coloniais, ecléticas, art déco e modernistas que refletem a diversidade cultural da região.', en: 'Known for its rich history and architecture, featuring colonial, eclectic, Art Deco, and modernist buildings reflecting the region\'s cultural diversity.', es: 'Conocida por su rico patrimonio histórico y arquitectónico, con edificios coloniales, eclécticos, art déco y modernistas que reflejan la diversidad cultural regional.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-aracati',
+    name: { pt: 'Cidade de Aracati', en: 'City of Aracati', es: 'Ciudad de Aracati' },
+    category: 'material',
+    region: 'sudeste',
+    state: '',
+    city: '',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Famosa por seus sobrados revestidos de azulejos portugueses, a cidade guarda a herança do período das charqueadas e do comércio portuário.', en: 'Famous for its townhouses covered in Portuguese tiles, the city preserves the legacy of the jerked beef era and port commerce.', es: 'Famosa por sus casonas revestidas de azulejos portugueses, la ciudad guarda la herencia del periodo de las charqueadas y del comercio portuario.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-de-ico',
+    name: { pt: 'Cidade de Icó', en: 'City of Icó', es: 'Ciudad de Icó' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Icó',
+    coordinates: { lat: -6.4, lng: -38.86 },
+    description: { pt: 'Destaca-se pelo sítio histórico que exemplifica o urbanismo colonial do interior cearense, com igrejas e o imponente Teatro da Ribeira dos Icós.', en: 'Stands out for its historical site exemplifying colonial urbanism in the Ceará interior, featuring churches and the grand Ribeira dos Icós Theater.', es: 'Se destaca por su sitio histórico que ejemplifica el urbanismo colonial del interior de Ceará, con iglesias y el imponente Teatro da Ribeira dos Icós.' },
+    unesco: false
+  },
+  {
+    id: 'cidade-sobral',
+    name: { pt: 'Cidade Sobral', en: 'City of Sobral', es: 'Ciudad de Sobral' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Sobral',
+    coordinates: { lat: -3.69, lng: -40.35 },
+    description: { pt: 'Referência do desenvolvimento urbano no norte do Ceará, possui um rico acervo de arquitetura civil e religiosa dos séculos XVIII e XIX.', en: 'A reference for urban development in northern Ceará, it possesses a rich collection of civil and religious architecture from the 18th and 19th centuries.', es: 'Referencia del desarrollo urbano en el norte de Ceará, posee un rico acervo de arquitectura civil y religiosa de los siglos XVIII y XIX.' },
+    unesco: false
+  },
+  {
+    id: 'vicosa-do-ceara',
+    name: { pt: 'Viçosa do Ceará', en: 'Viçosa do Ceará', es: 'Viçosa do Ceará' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Viçosado Ceará',
+    coordinates: { lat: -3.72, lng: -38.52 },
+    description: { pt: 'Localizada na Serra da Ibiapaba, é uma das cidades mais antigas do estado, preservando a Igreja Matriz e casario colonial em clima de montanha.', en: 'Located in the Serra da Ibiapaba, it is one of the oldest cities in the state, preserving the Mother Church and colonial houses in a mountain climate.', es: 'Ubicada en la Serra da Ibiapaba, es una de las ciudades más antiguas del estado, preservando la Iglesia Matriz y el caserío colonial en clima de montaña.' },
+    unesco: false
+  },
+  {
+    id: 'alcantara',
+    name: { pt: 'Alcântara', en: 'Alcântara', es: 'Alcântara' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Alcântara',
+    coordinates: { lat: -2.41, lng: -44.41 },
+    description: { pt: 'Cidade-museu no Maranhão, Alcântara é repleta de ruínas de palacetes e sobrados azulejados que narram a opulência da aristocracia rural brasileira.', en: 'Museum-city in Maranhão, Alcântara is filled with ruins of palaces and tiled townhouses narrating the opulence of the Brazilian rural aristocracy.', es: 'Ciudad-museo en Maranhão, Alcântara está llena de ruinas de palacetes y casonas azulejadas que narran la opulencia de la aristocracia rural brasileña.' },
+    unesco: false
+  },
+  {
+    id: 'areia',
+    name: { pt: 'Areia', en: 'Areia', es: 'Areia' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Paraíba',
+    city: 'Areia',
+    coordinates: { lat: -6.97, lng: -35.7 },
+    description: { pt: 'Tombada pelo IPHAN, a cidade paraibana mantém um casario colonial íntegro e forte tradição cultural ligada aos antigos engenhos de açúcar.', en: 'Protected by IPHAN, this Paraíba city maintains intact colonial houses and a strong cultural tradition linked to old sugar mills.', es: 'Protegida por el IPHAN, la ciudad de Paraíba mantiene un caserío colonial íntegro y una fuerte tradición cultural vinculada a los antiguos ingenios de azúcar.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-joao-pessoa',
+    name: { pt: 'Centro histórico de João Pessoa', en: 'Historic Center of João Pessoa', es: 'Centro Histórico de João Pessoa' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Paraíba',
+    city: 'João Pessoa',
+    coordinates: { lat: -7.12, lng: -34.84 },
+    description: { pt: 'Um dos conjuntos urbanos mais antigos do Brasil, mescla construções barrocas, ecléticas e art déco em um traçado histórico preservado.', en: 'One of Brazil\'s oldest urban complexes, blending Baroque, eclectic, and Art Deco buildings within a preserved historical layout.', es: 'Uno de los conjuntos urbanos más antiguos de Brasil, mezcla construcciones barrocas, eclécticas y art déco en un trazado histórico preservado.' },
+    unesco: false
+  },
+  {
+    id: 'goiana',
+    name: { pt: 'Goiana', en: 'Goiana', es: 'Goiana' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Goiania',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Importante polo histórico de Pernambuco, abriga valiosos conjuntos de conventos e igrejas, além de ser berço de manifestações culturais tradicionais.', en: 'An important historical hub in Pernambuco, housing valuable convents and churches, and serving as the birthplace of traditional cultural expressions.', es: 'Importante polo histórico de Pernambuco, alberga valiosos conjuntos de conventos e iglesias, además de ser cuna de manifestaciones culturales tradicionales.' },
+    unesco: false
+  },
+  {
+    id: 'igarassu',
+    name: { pt: 'Igarassu', en: 'Igarassu', es: 'Igarassu' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Igarassu',
+    coordinates: { lat: -7.83, lng: -34.91 },
+    description: { pt: 'Uma das vilas mais antigas do Brasil, possui o conjunto de Santos Cosme e Damião, considerada a igreja mais antiga em funcionamento no país.', en: 'One of Brazil\'s oldest towns, featuring the Santos Cosme e Damião complex, considered the oldest functioning church in the country.', es: 'Una de las villas más antiguas de Brasil, posee el conjunto de Santos Cosme e Damião, considerada la iglesia más antigua en funcionamiento del país.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-recife',
+    name: { pt: 'Centro Histórico de Recife', en: 'Historic Center of Recife', es: 'Centro Histórico de Recife' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Refice',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Região que abriga os bairros do Recife, Santo Antônio e São José, com marcos da ocupação holandesa e da riqueza do ciclo do açúcar.', en: 'Region housing the Recife, Santo Antônio, and São José neighborhoods, with landmarks of Dutch occupation and the sugar cycle wealth.', es: 'Región que alberga los barrios de Recife, Santo Antônio y São José, con hitos de la ocupación holandesa y de la riqueza del ciclo del azúcar.' },
+    unesco: false
+  },
+  {
+    id: 'oieiras',
+    name: { pt: 'Oieiras', en: 'Oeiras', es: 'Oeiras' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Oieiras',
+    coordinates: { lat: -5.09, lng: -42.8 },
+    description: { pt: 'Antiga capital do Piauí, preserva monumentos religiosos e arquitetura colonial que refletem a interiorização do povoamento e a pecuária do século XVIII.', en: 'The former capital of Piauí, it preserves religious monuments and colonial architecture reflecting interior settlement and 18th-century cattle ranching.', es: 'Antigua capital de Piauí, preserva monumentos religiosos y arquitectura colonial que reflejan la colonización del interior y la ganadería del siglo XVIII.' },
+    unesco: false
+  },
+  {
+    id: 'parnaiba',
+    name: { pt: 'Parnaíba', en: 'Parnaíba', es: 'Parnaíba' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Parnaíba',
+    coordinates: { lat: -2.91, lng: -41.78 },
+    description: { pt: 'Cidade portuária com casario colonial do século XIX, marcada pela arquitetura luso-brasileira e importância administrativa no Piauí.', en: 'Port city with 19th-century colonial houses, marked by Luso-Brazilian architecture and its administrative importance in Piauí.', es: 'Ciudad portuaria con caserío colonial del siglo XIX, marcada por la arquitectura luso-brasileña y su importancia administrativa en Piauí.' },
+    unesco: false
+  },
+  {
+    id: 'piracuruca',
+    name: { pt: 'Piracuruca', en: 'Piracuruca', es: 'Piracuruca' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Piracuruca',
+    coordinates: { lat: -3.93, lng: -41.71 },
+    description: { pt: 'Destaca-se pela Igreja Matriz de Nossa Senhora do Carmo, monumento em pedra labiríntica que remete às origens da colonização piauiense.', en: 'Features the Parish Church of Nossa Senhora do Carmo, a stone monument that refers to the origins of the colonization of Piauí.', es: 'Destaca por la Iglesia Matriz de Nossa Senhora do Carmo, monumento de piedra que remite a los orígenes de la colonización de Piauí.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-natal',
+    name: { pt: 'Centro Histórico de Natal', en: 'Natal Historic Center', es: 'Centro Histórico de Natal' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Rio Grande do Norte',
+    city: 'Natal',
+    coordinates: { lat: -5.79, lng: -35.21 },
+    description: { pt: 'Abrange bairros como Ribeira e Cidade Alta, com edificações de diversos estilos que narram a evolução urbana da capital potiguar.', en: 'Includes the Ribeira and Cidade Alta neighborhoods, with buildings of various styles that narrate the urban evolution of the capital of Rio Grande do Norte.', es: 'Abarca los barrios de Ribeira y Cidade Alta, con edificaciones de diversos estilos que narran la evolución urbana de la capital de Rio Grande do Norte.' },
+    unesco: false
+  },
+  {
+    id: 'laranjeiras',
+    name: { pt: 'Laranjeiras', en: 'Laranjeiras', es: 'Laranjeiras' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Laranjeiras',
+    coordinates: { lat: -10.8, lng: -37.17 },
+    description: { pt: 'Referência em arquitetura colonial e barroca em Sergipe, sendo um dos núcleos urbanos históricos mais expressivos da região Nordeste.', en: 'A reference in colonial and baroque architecture in Sergipe, it is one of the most expressive historic urban centers in the Northeast region.', es: 'Referencia en arquitectura colonial y barroca en Sergipe, siendo uno de los núcleos urbanos históricos más expresivos de la región Nordeste.' },
+    unesco: false
+  },
+  {
+    id: 'sao-cristovao',
+    name: { pt: 'São Cristóvão', en: 'São Cristóvão', es: 'São Cristóvão' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Sergipe',
+    city: 'São Cristóvão',
+    coordinates: { lat: -11.01, lng: -37.21 },
+    description: { pt: 'Quarta cidade mais antiga do Brasil, possui a Praça São Francisco, Patrimônio Mundial da UNESCO por sua harmonia urbanística espanhola.', en: 'The fourth oldest city in Brazil, it features São Francisco Square, a UNESCO World Heritage Site for its Spanish urban harmony.', es: 'Cuarta ciudad más antigua de Brasil, posee la Plaza São Francisco, Patrimonio Mundial de la UNESCO por su armonía urbanística española.' },
+    unesco: false
+  },
+  {
+    id: 'coumba-de-goias',
+    name: { pt: 'Coumbá de Goiás', en: 'Corumbá de Goiás', es: 'Corumbá de Goiás' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Corumbá de Goiás',
+    coordinates: { lat: -15.92, lng: -48.81 },
+    description: { pt: 'Preserva tradições do ciclo do ouro, com destaque para a Igreja Matriz de Nossa Senhora da Penha e o traçado urbano setecentista.', en: 'Preserves gold cycle traditions, highlighting the Parish Church of Nossa Senhora da Penha and the 18th-century urban layout.', es: 'Preserva tradiciones del ciclo del oro, destacando la Iglesia Matriz de Nossa Senhora da Penha y el trazado urbano del siglo XVIII.' },
+    unesco: false
+  },
+  {
+    id: 'conjunto-arte-deco-de-goiania',
+    name: { pt: 'Conjunto arte Déco de Goiânia', en: 'Goiânia Art Deco Collection', es: 'Conjunto Art Déco de Goiânia' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Goiania',
+    coordinates: { lat: -16.69, lng: -49.25 },
+    description: { pt: 'Um dos mais importantes acervos de arquitetura Art Déco do mundo, refletindo o projeto modernista da fundação da capital na década de 1930.', en: 'One of the world\'s most important Art Deco architectural collections, reflecting the modernist design of the capital\'s foundation in the 1930s.', es: 'Uno de los acervos arquitectónicos Art Déco más importantes del mundo, reflejando el proyecto modernista de la fundación de la capital en la década de 1930.' },
+    unesco: false
+  },
+  {
+    id: 'pilar-de-goias',
+    name: { pt: 'Pilar de Goiás', en: 'Pilar de Goiás', es: 'Pilar de Goiás' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Pilar de Goiás',
+    coordinates: { lat: -14.76, lng: -49.58 },
+    description: { pt: 'Antigo arraial de mineração que guarda relíquias do barroco goiano, como a Igreja de Nossa Senhora do Pilar e ruínas do período colonial.', en: 'An old mining settlement preserving Goiano baroque relics, such as the Church of Nossa Senhora do Pilar and colonial ruins.', es: 'Antiguo asentamiento minero que guarda reliquias del barroco de Goiás, como la Iglesia de Nossa Senhora do Pilar y ruinas coloniales.' },
+    unesco: false
+  },
+  {
+    id: 'pirenopolis',
+    name: { pt: 'Pirenópolis', en: 'Pirenópolis', es: 'Pirenópolis' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Pirenópolis',
+    coordinates: { lat: -15.85, lng: -49.0 },
+    description: { pt: 'Panteão da cultura goiana, famosa pelas ruas de pedra, igrejas coloniais, festas tradicionais e preservação da arquitetura do século XVIII.', en: 'A pantheon of Goiano culture, famous for its stone streets, colonial churches, traditional festivals, and 18th-century architecture.', es: 'Panteón de la cultura de Goiás, famosa por sus calles de piedra, iglesias coloniales, fiestas tradicionales y arquitectura del siglo XVIII.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-campo-grande',
+    name: { pt: 'Centro Histórico de Campo Grande', en: 'Campo Grande Historic Center', es: 'Centro Histórico de Campo Grande' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Mato Grosso do Sul',
+    city: 'Campo Grande',
+    coordinates: { lat: -20.44, lng: -54.65 },
+    description: { pt: 'Marca o desenvolvimento da capital com prédios que testemunharam a expansão ferroviária e comercial do Mato Grosso do Sul.', en: 'Marks the development of the capital with buildings that witnessed the railway and commercial expansion of Mato Grosso do Sul.', es: 'Marca el desarrollo de la capital con edificios que presenciaron la expansión ferroviaria y comercial de Mato Grosso do Sul.' },
+    unesco: false
+  },
+  {
+    id: 'corumba',
+    name: { pt: 'Corumbá', en: 'Corumbá', es: 'Corumbá' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Mato Grosso do Sul',
+    city: 'Corumbá',
+    coordinates: { lat: -19.01, lng: -57.65 },
+    description: { pt: 'Porto fluvial estratégico no Rio Paraguai, possui um conjunto arquitetônico monumental que reflete a riqueza do período da navegação.', en: 'Strategic river port on the Paraguay River, featuring a monumental architectural ensemble reflecting the wealth of the navigation era.', es: 'Puerto fluvial estratégico en el río Paraguay, posee un conjunto arquitectónico monumental que refleja la riqueza del período de navegación.' },
+    unesco: false
+  },
+  {
+    id: 'caceres',
+    name: { pt: 'Cáceres', en: 'Cáceres', es: 'Cáceres' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Mato Grosso',
+    city: 'Cáceres',
+    coordinates: { lat: -16.07, lng: -57.68 },
+    description: { pt: 'Conhecida como a \'Princesinha do Paraguai\', destaca-se pelo traçado urbano regular e por casarões que mesclam estilos neoclássico e eclético.', en: 'Known as the \'Princess of the Paraguay\', it stands out for its regular urban layout and mansions blending neoclassical and eclectic styles.', es: 'Conocida como la \'Princesita del Paraguay\', destaca por su trazado urbano regular y casonas que mezclan estilos neoclásico y ecléctico.' },
+    unesco: false
+  },
+  {
+    id: 'centro-historico-de-cuiaba',
+    name: { pt: 'Centro Histórico de Cuiabá', en: 'Cuiabá Historic Center', es: 'Centro Histórico de Cuiabá' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Mato Grosso',
+    city: 'Cuiabá',
+    coordinates: { lat: -15.6, lng: -56.1 },
+    description: { pt: 'Guarda o testemunho da mineração setecentista e do ecletismo, com ruas irregulares e edificações vernáculas no coração de Mato Grosso.', en: 'Preserves evidence of 18th-century mining and eclecticism, with irregular streets and vernacular buildings in the heart of Mato Grosso.', es: 'Guarda el testimonio de la minería del siglo XVIII y del eclecticismo, con calles irregulares y edificaciones vernáculas en el corazón de Mato Grosso.' },
+    unesco: false
+  },
+  {
+    id: 'cataguases',
+    name: { pt: 'Cataguases', en: 'Cataguases', es: 'Cataguases' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Cataguases',
+    coordinates: { lat: -21.39, lng: -42.7 },
+    description: { pt: 'Polo do modernismo brasileiro, abriga obras de Niemeyer e Portinari que integram arquitetura e arte urbana de forma pioneira no interior.', en: 'A hub of Brazilian modernism, it houses works by Niemeyer and Portinari that pioneeringly integrate architecture and urban art.', es: 'Polo del modernismo brasileño, alberga obras de Niemeyer y Portinari que integran arquitectura y arte urbano de forma pionera.' },
+    unesco: false
+  },
+  {
+    id: 'congonhas',
+    name: { pt: 'Congonhas', en: 'Congonhas', es: 'Congonhas' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Congonhas',
+    coordinates: { lat: -20.5, lng: -43.86 },
+    description: { pt: 'Sede do Santuário do Bom Jesus de Matosinhos, onde estão as famosas esculturas dos profetas de Aleijadinho, Patrimônio da Humanidade.', en: 'Home to the Sanctuary of Bom Jesus de Matosinhos, featuring the famous prophet sculptures by Aleijadinho, a World Heritage Site.', es: 'Sede del Santuario de Bom Jesus de Matosinhos, donde se encuentran las famosas esculturas de los profetas de Aleijadinho, Patrimonio de la Humanidad.' },
+    unesco: false
+  },
+  {
+    id: 'mariana',
+    name: { pt: 'Mariana', en: 'Mariana', es: 'Mariana' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Mariana',
+    coordinates: { lat: -20.38, lng: -43.42 },
+    description: { pt: 'Primeira capital mineira, possui um riquíssimo conjunto barroco com igrejas monumentais e o traçado urbano planejado mais antigo do estado.', en: 'The first capital of Minas Gerais, it possesses a rich baroque collection with monumental churches and the state\'s oldest planned urban layout.', es: 'Primera capital de Minas Gerais, posee un riquísimo conjunto barroco con iglesias monumentales y el trazado urbano planificado más antiguo del estado.' },
+    unesco: false
+  },
+  {
+    id: 'paracatu',
+    name: { pt: 'Paracatu', en: 'Paracatu', es: 'Paracatu' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Paracatu',
+    coordinates: { lat: -17.22, lng: -46.87 },
+    description: { pt: 'Importante núcleo minerador do noroeste mineiro, preserva um núcleo histórico com casario colonial e tradições culturais singulares.', en: 'An important mining hub in northwestern Minas Gerais, it preserves a historical center with colonial houses and unique cultural traditions.', es: 'Importante centro minero del noroeste de Minas Gerais, preserva un núcleo histórico con casonas coloniales y tradiciones culturales singulares.' },
+    unesco: false
+  },
+  {
+    id: 'sao-joao-del-rei',
+    name: { pt: 'São João Del Rei', en: 'São João Del Rei', es: 'São João Del Rei' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'São João Del Rei',
+    coordinates: { lat: -21.13, lng: -44.25 },
+    description: { pt: 'Cidade que mescla o barroco com o desenvolvimento comercial, famosa por suas igrejas pomposas e o som tradicional de seus sinos.', en: 'A city that blends Baroque style with commercial development, famous for its grand churches and the traditional sound of its bells.', es: 'Ciudad que mezcla el Barroco con el desarrollo comercial, famosa por sus iglesias pomposas y el sonido tradicional de sus campanas.' },
+    unesco: false
+  },
+  {
+    id: 'serro',
+    name: { pt: 'Serro', en: 'Serro', es: 'Serro' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Serro',
+    coordinates: { lat: -18.6, lng: -43.38 },
+    description: { pt: 'Reconhecida por sua paisagem montanhosa e igrejas singelas, foi a primeira cidade brasileira a ter seu conjunto urbano tombado pelo IPHAN.', en: 'Recognized for its mountainous landscape and simple churches, it was the first Brazilian city to have its urban ensemble listed by IPHAN.', es: 'Reconocida por su paisaje montañoso e iglesias sencillas, fue la primera ciudad brasileña en tener su conjunto urbano protegido por el IPHAN.' },
+    unesco: false
+  },
+  {
+    id: 'vila-historica-mambucaba-angra-dos-reis',
+    name: { pt: 'Vila Histórica Mambucaba - Angra dos Reis', en: 'Mambucaba Historical Village - Angra dos Reis', es: 'Vila Histórica Mambucaba - Angra dos Reis' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Angra dos Reis',
+    coordinates: { lat: -23.01, lng: -44.32 },
+    description: { pt: 'Exemplo de vila operária ligada ao ciclo do café, preserva harmonia entre arquitetura colonial e a paisagem natural litorânea fluminense.', en: 'An example of a workers\' village linked to the coffee cycle, it preserves harmony between colonial architecture and the coastal landscape of Rio de Janeiro state.', es: 'Ejemplo de villa obrera ligada al ciclo del café, preserva la armonía entre la arquitectura colonial y el paisaje natural costero de Río de Janeiro.' },
+    unesco: false
+  },
+  {
+    id: 'cabo-frio',
+    name: { pt: 'Cabo Frio', en: 'Cabo Frio', es: 'Cabo Frio' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Cabo Frio',
+    coordinates: { lat: -22.88, lng: -42.03 },
+    description: { pt: 'Destaca-se pelo Forte de São Mateus e conjunto histórico que reflete a importância estratégica e a beleza do litoral fluminense desde o século XVII.', en: 'Noted for the São Mateus Fort and a historical ensemble reflecting strategic importance and coastal beauty since the 17th century.', es: 'Destaca por el Fuerte de São Mateus y un conjunto histórico que refleja la importancia estratégica y la belleza costera desde el siglo XVII.' },
+    unesco: false
+  },
+  {
+    id: 'nova-friburgo',
+    name: { pt: 'Nova Friburgo', en: 'Nova Friburgo', es: 'Nova Friburgo' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Nova Friburgo',
+    coordinates: { lat: -22.28, lng: -42.53 },
+    description: { pt: 'Berço da colonização suíça no Brasil, preserva arquitetura e tradições que remetem à imigração europeia nas serras fluminenses.', en: 'The birthplace of Swiss colonization in Brazil, it preserves architecture and traditions from European immigration in the Rio de Janeiro highlands.', es: 'Cuna de la colonización suiza en Brasil, preserva la arquitectura y tradiciones de la inmigración europea en las sierras de Río de Janeiro.' },
+    unesco: false
+  },
+  {
+    id: 'petropolis',
+    name: { pt: 'Petrópolis', en: 'Petrópolis', es: 'Petrópolis' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Petrópolis',
+    coordinates: { lat: -22.51, lng: -43.18 },
+    description: { pt: 'A \'Cidade Imperial\' abriga o Palácio de Verão de D. Pedro II e um vasto acervo arquitetônico neoclássico de valor histórico nacional.', en: 'The \'Imperial City\' houses the Summer Palace of D. Pedro II and a vast neoclassical architectural collection of national historical value.', es: 'La \'Ciudad Imperial\' alberga el Palacio de Verano de D. Pedro II y un vasto acervo arquitectónico neoclásico de valor histórico nacional.' },
+    unesco: false
+  },
+  {
+    id: 'vassouras',
+    name: { pt: 'Vassouras', en: 'Vassouras', es: 'Vassouras' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Vassouras',
+    coordinates: { lat: -22.4, lng: -43.66 },
+    description: { pt: 'Epicentro do ciclo do café, possui um conjunto urbanístico e arquitetônico monumental que testemunha a opulência dos antigos barões.', en: 'Epicenter of the coffee cycle, featuring a monumental urban and architectural ensemble witnessing the opulence of former coffee barons.', es: 'Epicentro del ciclo del café, posee un conjunto urbanístico y arquitectónico monumental que atestigua la opulencia de los antiguos barones.' },
+    unesco: false
+  },
+  {
+    id: 'aldeia-carapicuiba',
+    name: { pt: 'Aldeia Carapicuibá', en: 'Carapicuíba Village', es: 'Aldea Carapicuíba' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Carapicuíba',
+    coordinates: { lat: -23.52, lng: -46.84 },
+    description: { pt: 'Remanescente das missões jesuíticas, mantém a estrutura original de aldeamento indígena com sua praça central e capela histórica.', en: 'A remnant of Jesuit missions, it maintains the original indigenous settlement structure with its central square and historical chapel.', es: 'Remanente de las misiones jesuíticas, mantiene la estructura original de aldea indígena con su plaza central y capilla histórica.' },
+    unesco: false
+  },
+  {
+    id: 'iguape',
+    name: { pt: 'Iguape', en: 'Iguape', es: 'Iguape' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Iguape',
+    coordinates: { lat: -24.71, lng: -47.56 },
+    description: { pt: 'Preserva um importante casario colonial e registros do período minerador, sendo um marco do desenvolvimento histórico do litoral paulista.', en: 'Preserves important colonial houses and mining period records, serving as a landmark of historical development on the São Paulo coast.', es: 'Preserva importantes casonas coloniales y registros del período minero, siendo un hito del desarrollo histórico del litoral paulista.' },
+    unesco: false
+  },
+  {
+    id: 'vila-ferroviaria-de-paranapiacaba',
+    name: { pt: 'Vila Ferroviária de Paranapiacaba', en: 'Paranapiacaba Railway Village', es: 'Vila Ferroviária de Paranapiacaba' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Santo André',
+    coordinates: { lat: -23.67, lng: -46.54 },
+    description: { pt: 'Antigo centro de controle ferroviário da companhia inglesa, destaca-se pela arquitetura vitoriana e sistema de transporte por cabos.', en: 'Former railway control center for the British company, featuring Victorian architecture and a cable-funicular transport system.', es: 'Antiguo centro de control ferroviario de la compañía inglesa, destaca por su arquitectura victoriana y sistema de transporte por cables.' },
+    unesco: false
+  },
+  {
+    id: 'sao-luis-do-paraitinga',
+    name: { pt: 'São Luis do Paraitinga', en: 'São Luis do Paraitinga', es: 'São Luis do Paraitinga' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'São Luis do Paraitinga',
+    coordinates: { lat: -23.22, lng: -45.31 },
+    description: { pt: 'Conhecida por seu centro histórico colorido e tradições culturais vibrantes, possui o maior conjunto arquitetônico colonial de São Paulo.', en: 'Known for its colorful historical center and vibrant cultural traditions, it holds the largest colonial architectural ensemble in São Paulo.', es: 'Conocida por su colorido centro histórico y tradiciones culturales vibrantes, posee el mayor conjunto arquitectónico colonial de São Paulo.' },
+    unesco: false
+  },
+  {
+    id: 'antonina',
+    name: { pt: 'Antonina', en: 'Antonina', es: 'Antonina' },
+    category: 'material',
+    region: 'sul',
+    state: 'Paraná',
+    city: 'Antonina',
+    coordinates: { lat: -25.43, lng: -48.71 },
+    description: { pt: 'Cidade litorânea com casario colonial e ruínas industriais que contam a história do comércio portuário e da erva-mate no Paraná.', en: 'Coastal city with colonial houses and industrial ruins detailing the history of port commerce and yerba mate in Paraná.', es: 'Ciudad costera con casonas coloniales y ruinas industriales que narran la historia del comercio portuario y del mate en Paraná.' },
+    unesco: false
+  },
+  {
+    id: 'lapa',
+    name: { pt: 'Lapa', en: 'Lapa', es: 'Lapa' },
+    category: 'material',
+    region: 'sul',
+    state: 'Paraná',
+    city: 'Lapa',
+    coordinates: { lat: -25.77, lng: -49.72 },
+    description: { pt: 'Cenário do Cerco da Lapa, preserva ruas de paralelepípedo e edifícios que marcam a resistência histórica e a cultura tropeira.', en: 'Setting of the Siege of Lapa, it preserves cobblestone streets and buildings marking historical resistance and \'tropeiro\' culture.', es: 'Escenario del Cerco de Lapa, preserva calles empedradas y edificios que marcan la resistencia histórica y la cultura tropeira.' },
+    unesco: false
+  },
+  {
+    id: 'paranagua',
+    name: { pt: 'Paranaguá', en: 'Paranaguá', es: 'Paranaguá' },
+    category: 'material',
+    region: 'sul',
+    state: 'Paraná',
+    city: 'Paranaguá',
+    coordinates: { lat: -25.52, lng: -48.51 },
+    description: { pt: 'Cidade mais antiga do Paraná, guarda no seu centro histórico registros da arquitetura colonial e da importância comercial do seu porto.', en: 'The oldest city in Paraná, its historical center holds records of colonial architecture and the commercial importance of its port.', es: 'Ciudad más antigua de Paraná, guarda en su centro histórico registros de la arquitectura colonial y de la importancia comercial de su puerto.' },
+    unesco: false
+  },
+  {
+    id: 'vila-de-santo-amaro-do-sul',
+    name: { pt: 'Vila de Santo Amaro do Sul', en: 'Vila de Santo Amaro do Sul', es: 'Vila de Santo Amaro do Sul' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'General Câmara',
+    coordinates: { lat: -29.9, lng: -51.76 },
+    description: { pt: 'Singular povoado colonial que mantém a traça urbanística luso-brasileira preservada em meio à paisagem gaúcha.', en: 'A unique colonial village that maintains its Portuguese-Brazilian urban layout preserved within the Gaúcho landscape.', es: 'Singular poblado colonial que mantiene el trazado urbanístico luso-brasileño preservado en medio del paisaje Gaúcho.' },
+    unesco: false
+  },
+  {
+    id: 'novo-hamburgo',
+    name: { pt: 'Novo Hamburgo', en: 'Novo Hamburgo', es: 'Novo Hamburgo' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Novo Hamburgo',
+    coordinates: { lat: -29.69, lng: -51.13 },
+    description: { pt: 'Patrimônio marcado pela imigração alemã, com destaque para a arquitetura enxaimel e o desenvolvimento da indústria coureiro-calçadista.', en: 'Heritage site marked by German immigration, highlighting half-timbered architecture and the development of the leather-footwear industry.', es: 'Patrimonio marcado por la inmigración alemana, con énfasis en la arquitectura de entramado de madera y el desarrollo de la industria del cuero y calzado.' },
+    unesco: false
+  },
+  {
+    id: 'porto-alegre',
+    name: { pt: 'Porto Alegre', en: 'Porto Alegre', es: 'Porto Alegre' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Porto Alegre',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'A capital gaúcha abriga monumentos e edifícios históricos que refletem a evolução urbana e a diversidade cultural do sul do país.', en: 'The capital of Rio Grande do Sul houses monuments and historic buildings reflecting urban evolution and the cultural diversity of southern Brazil.', es: 'La capital gaúcha alberga monumentos y edificios históricos que reflejan la evolución urbana y la diversidad cultural del sur del país.' },
+    unesco: false
+  },
+  {
+    id: 'santa-tereza',
+    name: { pt: 'Santa Tereza', en: 'Santa Tereza', es: 'Santa Tereza' },
+    category: 'material',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Santa Tereza',
+    coordinates: { lat: -29.17, lng: -51.73 },
+    description: { pt: 'Polo da imigração italiana, a cidade preserva um conjunto arquitetônico único com casas de pedra e madeira integradas à paisagem rural.', en: 'A hub of Italian immigration, the city preserves a unique architectural ensemble of stone and wooden houses integrated into the rural landscape.', es: 'Centro de inmigración italiana, la ciudad preserva un conjunto arquitectónico único con casas de piedra y madera integradas al paisaje rural.' },
+    unesco: false
+  },
+  {
+    id: 'itaiopolis',
+    name: { pt: 'Itaiópolis', en: 'Itaiópolis', es: 'Itaiópolis' },
+    category: 'material',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Itaiópolis',
+    coordinates: { lat: -26.34, lng: -49.91 },
+    description: { pt: 'Referência da cultura polonesa e ucraniana no Brasil, com igrejas e arquitetura rural típicas dos imigrantes leste-europeus.', en: 'A reference for Polish and Ukrainian culture in Brazil, featuring churches and rural architecture typical of Eastern European immigrants.', es: 'Referencia de la cultura polaca y ucraniana en Brasil, con iglesias y arquitectura rural típicas de los inmigrantes de Europa del Este.' },
+    unesco: false
+  },
+  {
+    id: 'laguna',
+    name: { pt: 'Laguna', en: 'Laguna', es: 'Laguna' },
+    category: 'material',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Laguna',
+    coordinates: { lat: -28.48, lng: -48.78 },
+    description: { pt: 'Terra de Anita Garibaldi, possui um centro histórico tombado com dezenas de edificações que narram séculos de ocupação litorânea.', en: 'Land of Anita Garibaldi, it features a protected historic center with dozens of buildings narrating centuries of coastal occupation.', es: 'Tierra de Anita Garibaldi, posee un centro histórico protegido con decenas de edificios que narran siglos de ocupación costera.' },
+    unesco: false
+  },
+  {
+    id: 'sao-francisco-do-sul',
+    name: { pt: 'São Francisco do Sul', en: 'São Francisco do Sul', es: 'São Francisco do Sul' },
+    category: 'material',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'São Francisco do Sul',
+    coordinates: { lat: -26.24, lng: -48.64 },
+    description: { pt: 'Uma das cidades mais antigas do país, destaca-se pelo seu conjunto urbano neoclássico de frente para a Baía de Babitonga.', en: 'One of the oldest cities in the country, it stands out for its neoclassical urban complex facing Babitonga Bay.', es: 'Una de las ciudades más antiguas del país, destaca por su conjunto urbano neoclásico frente a la Bahía de Babitonga.' },
+    unesco: false
+  },
+  {
+    id: 'museu-solar-monjardim',
+    name: { pt: 'Museu Solar Monjardim', en: 'Solar Monjardim Museum', es: 'Museo Solar Monjardim' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Espírito Santo',
+    city: 'Vitória',
+    coordinates: { lat: -20.32, lng: -40.34 },
+    description: { pt: 'Antiga sede de fazenda em Vitória, é um exemplar raro da arquitetura rural colonial e da vida aristocrática capixaba do século XIX.', en: 'A former farmstead in Vitória, it is a rare example of colonial rural architecture and 19th-century aristocratic life in Espírito Santo.', es: 'Antigua sede de hacienda en Vitória, es un ejemplar raro de la arquitectura rural colonial y de la vida aristocrática del siglo XIX en Espírito Santo.' },
+    unesco: false
+  },
+  {
+    id: 'museu-de-arte-sacra-da-boa-morte-igreja-de-nossa-senhora-da',
+    name: { pt: 'Museu de Arte Sacra da Boa Morte - Igreja de Nossa Senhora da Boa Morte', en: 'Museum of Sacred Art of Boa Morte - Church of Nossa Senhora da Boa Morte', es: 'Museo de Arte Sacro de la Boa Morte - Iglesia de Nossa Senhora da Boa Morte' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Goiás',
+    coordinates: { lat: -15.93, lng: -50.13 },
+    description: { pt: 'Sediado em igreja barroca de 1779, o museu guarda um precioso acervo de imaginária religiosa do artista Veiga Valle.', en: 'Housed in a 1779 Baroque church, the museum holds a precious collection of religious imagery by the artist Veiga Valle.', es: 'Ubicado en una iglesia barroca de 1779, el museo guarda una preciosa colección de imaginería religiosa del artista Veiga Valle.' },
+    unesco: false
+  },
+  {
+    id: 'museu-da-inconfidencia',
+    name: { pt: 'Museu da Inconfidência', en: 'Inconfidência Museum', es: 'Museo de la Inconfidência' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Ouro Preto',
+    coordinates: { lat: -20.39, lng: -43.5 },
+    description: { pt: 'Sediado na antiga Casa de Câmara e Cadeia de Ouro Preto, preserva a memória da Inconfidência Mineira e a história social de Minas Gerais.', en: 'Housed in the former Town Hall and Prison of Ouro Preto, it preserves the memory of the Inconfidência Mineira and the social history of Minas Gerais.', es: 'Sede en la antigua Casa de Cámara y Cárcel de Ouro Preto, preserva la memoria de la Inconfidência Mineira y la historia social de Minas Gerais.' },
+    unesco: false
+  },
+  {
+    id: 'museu-do-ouro',
+    name: { pt: 'Museu do Ouro', en: 'Gold Museum', es: 'Museo del Oro' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Ouro Preto',
+    coordinates: { lat: -20.39, lng: -43.5 },
+    description: { pt: 'Instalado em uma antiga Casa de Intendência, explora as técnicas de mineração, fundição e a economia do ouro no período colonial.', en: 'Located in a former Intendancy House, it explores mining and smelting techniques and the gold economy in the colonial period.', es: 'Instalado en una antigua Casa de Intendencia, explora las técnicas de minería, fundición y la economía del oro en el período colonial.' },
+    unesco: false
+  },
+  {
+    id: 'museu-regional-casa-dos-ottoni',
+    name: { pt: 'Museu Regional Casa dos Ottoni', en: 'Casa dos Ottoni Regional Museum', es: 'Museo Regional Casa dos Ottoni' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Serro',
+    coordinates: { lat: -18.6, lng: -43.38 },
+    description: { pt: 'Localizado em Solar do século XVIII no Serro, apresenta o cotidiano e a produção cultural regional através de mobiliário e arte sacra.', en: 'Located in an 18th-century manor in Serro, it showcases regional daily life and cultural production through furniture and sacred art.', es: 'Ubicado en una casona del siglo XVIII en Serro, presenta la vida cotidiana y la producción cultural regional a través de mobiliario y arte sacro.' },
+    unesco: false
+  },
+  {
+    id: 'museu-regional-de-caete',
+    name: { pt: 'Museu Regional de Caeté', en: 'Regional Museum of Caeté', es: 'Museo Regional de Caeté' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Caeté',
+    coordinates: { lat: -19.88, lng: -43.67 },
+    description: { pt: 'Ocupa um sobrado colonial em Caeté e reúne objetos que narram o desenvolvimento urbano, religioso e artístico do interior mineiro.', en: 'Occupies a colonial townhouse in Caeté and gathers objects narrating the urban, religious, and artistic development of the Minas interior.', es: 'Ocupa una casona colonial en Caeté y reúne objetos que narran el desarrollo urbano, religioso y artístico del interior de Minas Gerais.' },
+    unesco: false
+  },
+  {
+    id: 'museu-regional-de-sao-joao-del-rei',
+    name: { pt: 'Museu Regional de São João del-Rei', en: 'Regional Museum of São João del-Rei', es: 'Museo Regional de São João del-Rei' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'São João del-Rei',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Situado em mansão do século XIX, expõe um acervo diversificado sobre a vida doméstica, o trabalho e a fé na antiga comarca do Rio das Mortes.', en: 'Set in a 19th-century mansion, it displays a diverse collection on domestic life, work, and faith in the old Rio das Mortes district.', es: 'Situado en una mansión del siglo XIX, expone un acervo diverso sobre la vida doméstica, el trabajo y la fe en la antigua comarca del Rio das Mortes.' },
+    unesco: false
+  },
+  {
+    id: 'museu-da-abolicao',
+    name: { pt: 'Museu da Abolição', en: 'Abolition Museum', es: 'Museo de la Abolición' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Recife',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Sediado no antigo Engenho Madalena, dedica-se à preservação e valorização da cultura afro-brasileira e das lutas contra a escravidão.', en: 'Housed in the old Engenho Madalena, it is dedicated to the preservation and promotion of Afro-Brazilian culture and the struggles against slavery.', es: 'Sede en el antiguo Engenho Madalena, se dedica a la preservación y valorización de la cultura afrobrasileña y de las luchas contra la esclavitud.' },
+    unesco: false
+  },
+  {
+    id: 'museu-forte-defensor-perpetuo',
+    name: { pt: 'Museu Forte Defensor Perpétuo', en: 'Defensor Perpétuo Fort Museum', es: 'Museo Fuerte Defensor Perpétuo' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Paraty',
+    coordinates: { lat: -23.22, lng: -44.71 },
+    description: { pt: 'Antiga fortificação militar que hoje preserva a história da defesa da costa fluminense e as tradições caiçaras de Paraty.', en: 'Former military fortification that preserves the history of the Fluminense coast defense and the caiçara traditions of Paraty.', es: 'Antigua fortificación militar que preserva la historia de la defensa de la costa fluminense y las tradiciones caiçaras de Paraty.' },
+    unesco: false
+  },
+  {
+    id: 'museu-de-arte-sacra-de-paraty-e-igreja-de-santa-rita',
+    name: { pt: 'Museu de Arte Sacra de Paraty e Igreja de Santa Rita', en: 'Museum of Sacred Art of Paraty and Santa Rita Church', es: 'Museo de Arte Sacro de Paraty e Iglesia de Santa Rita' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Paraty',
+    coordinates: { lat: -23.22, lng: -44.71 },
+    description: { pt: 'Localizado em um dos marcos arquitetônicos de Paraty, abriga peças religiosas de valor histórico e artístico datadas dos séculos XVII a XIX.', en: 'Located in an architectural landmark of Paraty, it houses religious pieces of historical and artistic value dating from the 17th to the 19th centuries.', es: 'Ubicado en un hito arquitectónico de Paraty, alberga piezas religiosas de valor histórico y artístico de los siglos XVII al XIX.' },
+    unesco: false
+  },
+  {
+    id: 'museu-casa-de-benjamin-constant',
+    name: { pt: 'Museu Casa de Benjamin Constant', en: 'Benjamin Constant House Museum', es: 'Museo Casa de Benjamin Constant' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Preserva a residência e o acervo pessoal do \'Pai da República\', oferecendo um retrato fiel da vida doméstica e política no final do Império.', en: 'Preserves the residence and personal collection of the \'Father of the Republic\', offering a faithful portrait of domestic and political life at the end of the Empire.', es: 'Preserva la residencia y el acervo personal del \'Padre de la República\', ofreciendo un retrato fiel de la vida doméstica y política a finales del Imperio.' },
+    unesco: false
+  },
+  {
+    id: 'museu-casa-da-hera',
+    name: { pt: 'Museu Casa da Hera', en: 'Casa da Hera Museum', es: 'Museo Casa da Hera' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Vassouras',
+    coordinates: { lat: -22.4, lng: -43.66 },
+    description: { pt: 'Localizada em Vassouras, a chácara mantém o mobiliário original e o luxo do auge do ciclo do café no Vale do Paraíba.', en: 'Located in Vassouras, the villa maintains original furniture and the luxury of the coffee cycle peak in the Paraíba Valley.', es: 'Ubicada en Vassouras, la quinta mantiene el mobiliario original y el lujo del auge del ciclo del café en el Vale do Paraíba.' },
+    unesco: false
+  },
+  {
+    id: 'museu-da-republica-palacio-do-catete',
+    name: { pt: 'Museu da República - Palácio do Catete', en: 'Museum of the Republic - Catete Palace', es: 'Museo de la República - Palacio do Catete' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Antiga sede da presidência brasileira, o palácio é palco de eventos cruciais da história nacional, incluindo a morte de Getúlio Vargas.', en: 'Former seat of the Brazilian presidency, the palace was the stage for crucial national historical events, including the death of Getúlio Vargas.', es: 'Antigua sede de la presidencia brasileña, el palacio es escenario de eventos cruciales de la historia nacional, incluyendo la muerte de Getúlio Vargas.' },
+    unesco: false
+  },
+  {
+    id: 'museu-historico-nacional',
+    name: { pt: 'Museu Histórico Nacional', en: 'National Historical Museum', es: 'Museo Histórico Nacional' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Instalado em fortificações coloniais no Rio de Janeiro, abriga um imenso acervo que narra a formação do Brasil desde antes da colonização.', en: 'Set in colonial fortifications in Rio de Janeiro, it houses a vast collection narrating Brazil\'s formation since before colonization.', es: 'Instalado en fortificaciones coloniales en Rio de Janeiro, alberga un inmenso acervo que narra la formación de Brasil desde antes de la colonización.' },
+    unesco: false
+  },
+  {
+    id: 'museu-nacional-de-belas-artes',
+    name: { pt: 'Museu Nacional de Belas Artes', en: 'National Museum of Fine Arts', es: 'Museo Nacional de Bellas Artes' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Principal instituição dedicada à arte brasileira do século XIX, possui uma coleção vasta de pinturas, esculturas e desenhos clássicos.', en: 'The main institution dedicated to 19th-century Brazilian art, featuring a vast collection of classic paintings, sculptures, and drawings.', es: 'Principal institución dedicada al arte brasileño del siglo XIX, posee una vasta colección de pinturas, esculturas y dibujos clásicos.' },
+    unesco: false
+  },
+  {
+    id: 'museu-villa-lobos',
+    name: { pt: 'Museu Villa-Lobos', en: 'Villa-Lobos Museum', es: 'Museo Villa-Lobos' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Instituição que preserva a vida e a obra do maior compositor das Américas, Heitor Villa-Lobos, promovendo a música erudita brasileira.', en: 'Institution preserving the life and work of the Americas\' greatest composer, Heitor Villa-Lobos, promoting Brazilian classical music.', es: 'Institución que preserva la vida y obra del mayor compositor de las Américas, Heitor Villa-Lobos, promoviendo la música clásica brasileña.' },
+    unesco: false
+  },
+  {
+    id: 'museu-victor-meirelles',
+    name: { pt: 'Museu Victor Meirelles', en: 'Victor Meirelles Museum', es: 'Museo Victor Meirelles' },
+    category: 'material',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Florianópolis',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Sediado na casa natal do artista em Florianópolis, o museu é dedicado à memória do pintor e ao ensino das artes visuais.', en: 'Housed in the artist\'s birthplace in Florianópolis, the museum is dedicated to the painter\'s memory and visual arts education.', es: 'Sede de la casa natal del artista en Florianópolis, el museo está dedicado a la memoria del pintor y a la enseñanza de las artes visuales.' },
+    unesco: false
+  },
+  {
+    id: 'acervo-do-museu-imperial',
+    name: { pt: 'Acervo do Museu Imperial', en: 'Imperial Museum Collection', es: 'Acervo del Museo Imperial' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Petrópolis',
+    coordinates: { lat: -22.51, lng: -43.18 },
+    description: { pt: 'Coleção documental e mobiliária de valor inestimável sobre o Império Brasileiro, localizada no antigo palácio de verão de D. Pedro II.', en: 'Invaluable documentary and furniture collection regarding the Brazilian Empire, located in the former summer palace of D. Pedro II.', es: 'Colección documental y mobiliaria de valor inestimable sobre el Imperio Brasileño, ubicada en el antiguo palacio de verano de D. Pedro II.' },
+    unesco: false
+  },
+  {
+    id: 'acervo-museu-lasar-segall',
+    name: { pt: 'Acervo Museu Lasar Segall', en: 'Lasar Segall Museum Collection', es: 'Acervo Museo Lasar Segall' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'São Paulo',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: 'Reúne a produção artística de Lasar Segall, pioneiro do modernismo no Brasil, em sua residência e ateliê projetados por Gregori Warchavchik.', en: 'Brings together the artistic production of Lasar Segall, a pioneer of modernism in Brazil, in his residence and studio designed by Gregori Warchavchik.', es: 'Reúne la producción artística de Lasar Segall, pionero del modernismo en Brasil, en su residencia y taller diseñados por Gregori Warchavchik.' },
+    unesco: false
+  },
+  {
+    id: 'canoa-luzitania',
+    name: { pt: 'Canoa Luzitânia', en: 'Luzitânia Canoe', es: 'Canoa Luzitânia' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Sergipe',
+    city: 'Rio São Francisco',
+    coordinates: { lat: -10.91, lng: -37.07 },
+    description: { pt: 'Canoa de tolda utilizada na região do baixo rio São Francisco', en: 'A canopy canoe used in the lower São Francisco River region.', es: 'Canoa de toldo utilizada en la región del bajo río São Francisco.' },
+    unesco: false
+  },
+  {
+    id: 'canoa-dinamar',
+    name: { pt: 'Canoa Dinamar', en: 'Dinamar Canoe', es: 'Canoa Dinamar' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Baía de São Marcos',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'Canoa costeira que navega na Baía de São Marcos', en: 'A coastal canoe that sails in the São Marcos Bay.', es: 'Canoa costera que navega en la Bahía de São Marcos.' },
+    unesco: false
+  },
+  {
+    id: 'canoa-sombra-da-lua',
+    name: { pt: 'Canoa Sombra da Lua', en: 'Sombra da Lua Canoe', es: 'Canoa Sombra da Lua' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Recôncavo Baiano',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Canoa Sombra da Lua - Saveiro de vela de içar, do Recôncavo Baiano.', en: 'Sombra da Lua Canoe - A hoist-sail saveiro boat from the Recôncavo Baiano.', es: 'Canoa Sombra da Lua - Saveiro de vela de izar, del Recôncavo Baiano.' },
+    unesco: false
+  },
+  {
+    id: 'canoa-tradicao',
+    name: { pt: 'Canoa Tradição', en: 'Tradição Canoe', es: 'Canoa Tradição' },
+    category: 'material',
+    region: 'sudeste',
+    state: 'Santa Catarina e Rio Grande do Sul',
+    city: 'Santa Catarina e Rio Grande do Sul',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Canoa pranchão utilizada nos estados do Rio Grande do Sul e Santa Catarina.', en: 'A \'pranchão\' style canoe used in the states of Rio Grande do Sul and Santa Catarina.', es: 'Canoa tipo \'pranchão\' utilizada en los estados de Rio Grande do Sul y Santa Catarina.' },
+    unesco: false
+  },
+  {
+    id: 'quilombos',
+    name: { pt: 'Quilombos', en: 'Quilombos', es: 'Quilombos' },
+    category: 'material',
+    region: 'centro-oeste',
+    state: 'Distrito Federal',
+    city: 'Distrito Federal',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'A Constituição de 88 definiu que os quilombolas, as comunidades quilombolas, suas reminiscências históricas, seus bens, já são patrimônio cultural', en: 'The 1988 Constitution established that Quilombos, their descendant communities, historical memories, and assets are part of Brazil\'s cultural heritage.', es: 'La Constitución de 1988 definió que los Quilombos, sus comunidades, sus reminiscencias históricas y sus bienes son parte del patrimonio cultural brasileño.' },
+    unesco: false
+  },
+  {
+    id: 'ile-oba-ogunte-terreiro-de-pai-adao',
+    name: { pt: 'Ilê Obá Ogunté (Terreiro de Pai Adão)', en: 'Ilê Obá Ogunté (Terreiro de Pai Adão)', es: 'Ilê Obá Ogunté (Terreiro de Pai Adão)' },
+    category: 'material',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Tamarineira, Recife',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'O Terreiro Ilê Obá Ogunté, o Sítio de Pai Adão, é um marco da tradição Nagô no Brasil. Celebrar seus 150 anos é honrar a força de um território que mantém vivas práticas, memórias e modos de vida fundamentais para a cultura afro-brasileira', en: 'A landmark of the Nagô tradition in Brazil. Its 150th anniversary honors a territory preserving practices and memories fundamental to Afro-Brazilian culture.', es: 'Un hito de la tradición Nagô en Brasil. La celebración de sus 150 años honra un territorio que mantiene vivas prácticas y memorias fundamentales para la cultura afrobrasileña.' },
+    unesco: false
+  },
+  {
+    id: 'tradicoes-doceiras-da-regiao-de-pelotas-e-antiga-pelotas',
+    name: { pt: 'Tradições Doceiras da Região de Pelotas e Antiga Pelotas', en: 'Confectionery Traditions of the Pelotas Region', es: 'Tradiciones Dulceras de la Región de Pelotas' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Pelotas',
+    coordinates: { lat: -31.77, lng: -52.34 },
+    description: { pt: 'A prática doceira é um legado cultural desta região do Sul do Brasil revelando uma variedade de saberes que são transmitidos de geração para geração. O modo de fazer doces finos de mesa e os doces de frutas mistura influências dos mais diversos grupos sociais que contribuíram com o desenvolvimento econômico e cultural desta região como os portugueses, africanos e germânicos.', en: 'A cultural legacy of Southern Brazil blending Portuguese, African, and Germanic influences in the artisanal production of fine sweets and fruit preserves.', es: 'Legado cultural del sur de Brasil que mezcla influencias portuguesas, africanas y germánicas en la elaboración artesanal de dulces finos y de frutas.' },
+    unesco: false
+  },
+  {
+    id: 'capoeira-praticada-em-todo-o-brasil',
+    name: { pt: 'Capoeira (praticada em todo o Brasil)', en: 'Capoeira', es: 'Capoeira' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Brasil Todo',
+    city: 'Brasil Todo',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Símbolo da identidade brasileira, considerada luta, arte, dança, esporte e folclore, carrega uma filosofia ancestral do povo africano. Originada no século XVII, período escravocrata, desenvolveu-se como um modo de sociabilidade e solidariedade construída pelos africanos escravizados, uma estratégia social para lidar com o controle da violência.', en: 'An Afro-Brazilian art form combining martial arts, dance, and philosophy, developed by enslaved people as a strategy for resilience and solidarity.', es: 'Arte afrobrasileño que combina lucha, danza y filosofía, desarrollado por personas esclavizadas como una estrategia de sociabilidad y resistencia.' },
+    unesco: false
+  },
+  {
+    id: 'tava-lugar-de-referencia-para-o-povo-guarani',
+    name: { pt: 'Tava – lugar de referência para o Povo Guarani', en: 'Tava – Place of Reference for the Guarani People', es: 'Tava – Lugar de Referencia para el Pueblo Guarani' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'São Miguel das Missões',
+    coordinates: { lat: -28.56, lng: -54.56 },
+    description: { pt: 'Situado no município de São Miguel das Missões (RS) abriga os remanescentes do antigo povoado e sua importância histórica e simbólica conquistou reconhecimento nacional e internacional. É um lugar de referência por ser um espaço vivo que articula concepções relativas ao bem-viver, integra narrativas sobre a trajetória desse povo e é diariamente vivenciada como lugar de atividades diversas e de aprendizado para os mais jovens. A Tava é reconhecida como Patrimônio Imaterial do Brasil.', en: 'Located in São Miguel das Missões, it is a living space integrating sacred narratives, worldviews, and daily learning for the Guarani people.', es: 'Ubicada en São Miguel das Missões, es un espacio vivo que integra narrativas sagradas, cosmovisiones y el aprendizaje diario del pueblo Guarani.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-queijo-serrano',
+    name: { pt: 'Modo de fazer queijo serrano', en: 'Traditional Method of Making Serrano Cheese', es: 'Modo de Elaboración del Queso Serrano' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'São Francisco do Sul',
+    coordinates: { lat: -26.24, lng: -48.64 },
+    description: { pt: 'Fortemente enraizado na cultura do Rio Grande do Sul e tradicionalmente ligado à pecuária extensiva e aos tropeiros, o modo de fazer queijo artesanal serrano e um Patrimônio Cultural Imaterial estadual. A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.', en: 'Rooted in Rio Grande do Sul, this artisanal cheese-making tradition is linked to cattle ranching and the historical paths of the \'tropeiros\'.', es: 'Arraigado en Rio Grande do Sul, este método artesanal de elaboración de queso está vinculado a la ganadería y a la historia de los \'tropeiros\'.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-cuca-artesanal',
+    name: { pt: 'Modo de fazer cuca artesanal', en: 'Method of Making Artisanal Cuca', es: 'Modo de Elaboración de la Cuca Artesanal' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Rolante',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'Os saberes culinários transmitidos de geração em geração têm origem nas receitas trazidas por imigrantes durante o processo de colonização do Rio Grande do Sul, ao longo do século XIX. Com o tempo, a cuca passou por alterações em sua receita original, ajustando-se às práticas agrícolas já presentes na região, cultivadas tanto pelas populações originárias quanto por colonos portugueses. O modo de fazer cuca é um Patrimônio Cultural Imaterial do Estado.', en: 'A culinary knowledge brought by 19th-century immigrants to Rio Grande do Sul, adapted over time with local ingredients and social practices.', es: 'Saber culinario traído por inmigrantes del siglo XIX a Rio Grande do Sul, adaptado con el tiempo a los ingredientes y prácticas locales.' },
+    unesco: false
+  },
+  {
+    id: 'sistema-cultural-e-socioambiental-da-erva-mate-tradicional',
+    name: { pt: 'Sistema Cultural e socioambiental da Erva mate tradicional', en: 'Cultural and Socio-Environmental System of Traditional Yerba Mate', es: 'Sistema Cultural y Socioambiental de la Yerba Mate Tradicional' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Rio Grande do Sul',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'Símbolo do Rio Grande do Sul este reconhecimento destaca e valoriza os diversos guardiões e produtores que mantêm vivas e atualizadas as práticas tradicionais associadas à erva-mate. O sistema é entendido como uma articulação de visões de mundo, tradições, modos de vida.', en: 'A symbol of Rio Grande do Sul, this system values the guardians and producers who maintain the traditional practices associated with yerba mate.', es: 'Símbolo de Rio Grande do Sul, este sistema valora a los guardianes y productores que mantienen vivas las prácticas tradicionales de la yerba mate.' },
+    unesco: false
+  },
+  {
+    id: 'palha-de-butia-para-o-artesanato',
+    name: { pt: 'Palha de Butiá para o Artesanato', en: 'Butiá Straw Craftwork', es: 'Artesanía en Paja de Butiá' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Torres',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'Uma atividade que persiste por seis gerações de famílias rurais de Torres, Litoral Norte do Estado, que foi reconhecida como patrimônio cultural imaterial do Rio Grande do Sul.', en: 'An intangible cultural heritage activity practiced by rural families in Torres for six generations, using fibers from the Butiá palm.', es: 'Actividad patrimonial practicada por familias rurales de Torres durante seis generaciones, utilizando fibras de la palma Butiá.' },
+    unesco: false
+  },
+  {
+    id: 'genero-musical-bugio',
+    name: { pt: 'Gênero Musical Bugio', en: 'Bugio Musical Genre', es: 'Género Musical Bugio' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Rio Grande do Sul',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'O bugio é um gênero musical executado no acordeão, no qual o instrumentista realiza um toque característico denominado “sincopado”. Esse ritmo é caracterizado pela execução de som em um tempo fraco que se prolonga até o tempo forte, constituindo um compasso binário simples. Há uma unanimidade quanto ao fato de que esse toque característico no instrumento foi desenvolvido a partir da imitação do som produzido pelo macaco bugio, animal nativo de diversas regiões do Estado.', en: 'An accordion-based musical genre from Rio Grande do Sul with a syncopated rhythm inspired by the sound of the native \'bugio\' (howler monkey).', es: 'Género musical de acordeón de Rio Grande do Sul con un ritmo sincopado inspirado en el sonido del mono aullador nativo (bugio).' },
+    unesco: false
+  },
+  {
+    id: 'boi-de-mamao-patrimonio-imaterial-de-santa-catarina',
+    name: { pt: 'Boi de Mamão Patrimônio Imaterial de Santa Catarina', en: 'Boi de Mamão', es: 'Boi de Mamão' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Florianópolis',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Folguedo tradicional catarinense com influências açorianas.', en: 'A traditional folk play from Santa Catarina with Azorean influences, featuring music and symbolic characters.', es: 'Un juego popular tradicional de Santa Catarina con influencias azoreanas, que presenta música y personajes simbólicos.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-fandango-caicara',
+    name: { pt: 'Manifestação Cultural: Fandango Caiçara', en: 'Fandango Caiçara Cultural Expression', es: 'Manifestación Cultural Fandango Caiçara' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Paraná',
+    city: 'Paranaguá e Litoral de São Paulo',
+    coordinates: { lat: -25.43, lng: -49.27 },
+    description: { pt: 'Expressão musical e coreográfica do litoral paranaense.', en: 'A musical and choreographic expression typical of the coastal communities (Caiçaras) of Paraná.', es: 'Expresión musical y coreográfica típica de las comunidades costeras (Caiçaras) de Paraná.' },
+    unesco: false
+  },
+  {
+    id: 'genero-musical-samba-carioca',
+    name: { pt: 'Gênero Musical Samba Carioca', en: 'Carioca Samba Musical Genre', es: 'Género Musical Samba Carioca' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Gênero musical e cultural símbolo da identidade brasileira.', en: 'A musical and cultural genre from Rio de Janeiro that serves as a symbol of Brazilian national identity.', es: 'Género musical y cultural de Río de Janeiro que es símbolo de la identidad nacional brasileña.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-queijo-de-minas',
+    name: { pt: 'Modo de Fazer Queijo de Minas', en: 'Method of Making Minas Cheese', es: 'Modo de Elaboración del Queso de Minas' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'São Roque de Minas',
+    coordinates: { lat: -20.25, lng: -46.37 },
+    description: { pt: 'Tradição queijeira das regiões do Serro, Canastra e Salitre.', en: 'The artisanal cheese-making tradition from the Serro, Canastra, and Salitre regions of Minas Gerais.', es: 'Tradición artesanal de elaboración de queso de las regiones de Serro, Canastra y Salitre en Minas Gerais.' },
+    unesco: false
+  },
+  {
+    id: 'festa-de-santana-de-caico',
+    name: { pt: 'Festa de Sant\'Ana de Caicó', en: 'Festival of Sant\'Ana de Caicó', es: 'Fiesta de Sant\'Ana de Caicó' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'RIo Grande do Norte',
+    city: 'Caicó região do Seridó',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'A Festa de Sant\' Ana de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral. A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'A 260-year-old tradition in the Seridó region celebration Sant\'Ana, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a Sant\'Ana, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-frevo',
+    name: { pt: 'Manifestação Cultural: Frevo', en: 'Cultural Manifestation: Frevo', es: 'Manifestación Cultural: Frevo' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Recife',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Ritmo e dança típicos do carnaval pernambucano.', en: 'Typical music rhythm and dance from the Pernambuco carnival.', es: 'Ritmo y danza típicos del carnaval de Pernambuco.' },
+    unesco: false
+  },
+  {
+    id: 'bumba-meu-boi',
+    name: { pt: 'Bumba Meu Boi', en: 'Bumba Meu Boi', es: 'Bumba Meu Boi' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'São Luis',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'Festa tradicional que une música, dança e teatro popular.', en: 'Traditional festival combining music, dance, and folk theater.', es: 'Fiesta tradicional que une música, danza y teatro popular.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-viola-de-cocho',
+    name: { pt: 'Modo de Fazer Viola de Cocho', en: 'Crafting of the Viola de Cocho', es: 'Modo de Hacer la Viola de Cocho' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Mato Grosso do Sul',
+    city: 'Corumbá',
+    coordinates: { lat: -19.01, lng: -57.65 },
+    description: { pt: 'Instrumento musical artesanal típico do Pantanal.', en: 'Handcrafted musical instrument typical of the Pantanal region.', es: 'Instrumento musical artesanal típico de la región del Pantanal.' },
+    unesco: false
+  },
+  {
+    id: 'festival-de-parintins',
+    name: { pt: 'Festival de Parintins', en: 'Parintins Festival', es: 'Festival de Parintins' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Parintis',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'Complexo cultural do Boi-Bumbá, maior festa folclórica do Norte.', en: 'Cultural complex of Boi-Bumbá, the largest folk festival in Northern Brazil.', es: 'Complejo cultural del Boi-Bumbá, la mayor fiesta folclórica del Norte de Brasil.' },
+    unesco: false
+  },
+  {
+    id: 'cirio-de-nossa-senhora-de-nazare',
+    name: { pt: 'Círio de Nossa Senhora de Nazaré', en: 'Círio de Nossa Senhora de Nazaré', es: 'Círio de Nossa Senhora de Nazaré' },
     category: 'intangible',
     region: 'norte',
     state: 'Pará',
     city: 'Belém',
-    coordinates: { lat: -1.4558, lng: -48.4902 },
-    description: {
-      pt: 'Gênero musical e dança típica do Pará.',
-      en: 'Musical genre and typical dance of Pará.',
-      es: 'Género musical y danza típica de Pará.'
-    },
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'Maior procissão católica do Brasil, realizada em outubro.', en: 'The largest Catholic procession in Brazil, held in October.', es: 'La mayor procesión católica de Brasil, realizada en octubre.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-carimbo',
+    name: { pt: 'Manifestação Cultural: Carimbó', en: 'Cultural Manifestation: Carimbó', es: 'Manifestación Cultural: Carimbó' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Belém',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'Gênero musical e dança típica do Pará.', en: 'Musical genre and typical dance from Pará.', es: 'Género musical y danza típica de Pará.' },
+    unesco: false
+  },
+  {
+    id: 'ayahuasca',
+    name: { pt: 'Ayahuasca', en: 'Ayahuasca', es: 'Ayahuasca' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Acre',
+    city: 'Acre',
+    coordinates: { lat: -9.97, lng: -67.81 },
+    description: { pt: 'Está na lista para ser patrimônio. Ainda não é patrimônio. O consumo da ayahuasca, antes limitado apenas a algumas tribos indígenas na Amazônia, ao longo dos anos, expandiu-se também para o meio urbano, mormente com o crescimento das religiões ayahuasqueiras criadas a partir da década de 30 (Santo Daime, Barquinha e União do Vegetal).', en: 'A traditional drink from Amazonian tribes now expanded to urban religious practices such as Santo Daime and União do Vegetal.', es: 'Bebida tradicional de tribus amazónicas expandida a prácticas religiosas urbanas como el Santo Daime y la União do Vegetal.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-bonecas-karaja',
+    name: { pt: 'Modo de fazer bonecas Karajá', en: 'The Making of Karajá Dolls', es: 'Modo de Hacer Muñecas Karajá' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Goiás, Tocantis e Pará',
+    city: 'Goiás, Tocantis e Pará',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Denominadas na língua nativa ritxoko (na fala feminina) ou Ritxoko (na fala masculina), as bonecas Karajá são consideradas representações culturais que comportam significados sociais profundos. Com motivos mitológicos, de rituais, da vida cotidiana e da fauna, são importantes instrumentos de socialização das crianças indígenas que, brincando, se veem nesses objetos e aprendem a ser Karajá.', en: 'Called ritxoko, these dolls represent social and mythological meanings, serving as socialization tools for Karajá children.', es: 'Llamadas ritxoko, estas muñecas representan significados sociales y mitológicos, sirviendo como herramientas de socialización para niños Karajá.' },
+    unesco: false
+  },
+  {
+    id: 'literatura-de-cordel',
+    name: { pt: 'Literatura de Cordel', en: 'Cordel Literature', es: 'Literatura de Cordel' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Distrito Federal',
+    city: 'Distrito Federal',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'O gênero literário, que também é ofício e meio de sobrevivência para inúmeros cidadãos brasileiros, a Literatura de Cordel. Apesar de ter começado no Norte e no Nordeste do país, o cordel hoje é disseminado por todo o Brasil, principalmente por causa do processo de migração de populações.http://portal.iphan.gov.br/noticias/detalhes/4833/literatura-de-cordel-e-reconhecida-como-patrimonio-cultural-do-brasil', en: 'A literary genre and craft disseminated throughout Brazil, deeply rooted in Northern and Northeastern migration patterns.', es: 'Género literario y oficio difundido por todo Brasil, con raíces en la migración del Norte y Nordeste.' },
+    unesco: false
+  },
+  {
+    id: 'festividade-a-sao-sebastiao-na-regiao-do-marajo',
+    name: { pt: 'Festividade a São Sebastião na região do Marajó', en: 'Festivity of Saint Sebastian in the Marajó Region', es: 'Festividad de San Sebastián en la Región de Marajó' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Para',
+    city: 'Marajó',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'O reconhecimento das festividades do Glorioso São Sebastião como Patrimônio Cultural do Brasil, em 2013, reforçou a importância dessa celebração como expressão de fé, pertencimento e continuidade histórica. A festa se consolidou como parte da memória coletiva e da vida social das comunidades marajoaras.', en: 'A cultural heritage celebration representing faith, belonging, and historical continuity for Marajó communities.', es: 'Celebración de patrimonio cultural que representa fe, pertenencia y continuidad histórica para las comunidades de Marajó.' },
+    unesco: false
+  },
+  {
+    id: 'teatro-de-bonecos-do-nordeste',
+    name: { pt: 'Teatro de Bonecos do Nordeste', en: 'Puppet Theater of the Northeast', es: 'Teatro de Títeres del Nordeste' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Estados do Nordeste',
+    city: 'Cidades do Nordeste',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'O Teatro de Bonecos Popular do Nordeste é um teatro que não precisa de palco nem cortina, mas que diverte, emociona e provoca. Conhecido por nomes como Mamulengo, Babau, João Redondo ou Cassimiro Coco, ele se espalha por vários estados, sempre com a mesma força de encantar.', en: 'Popular puppet theater known as Mamulengo or Babau, characterized by its improvisational and enchanting nature.', es: 'Teatro de títeres popular conocido como Mamulengo o Babau, caracterizado por su improvisación y encanto.' },
+    unesco: false
+  },
+  {
+    id: 'sistema-agricola-tradicional-do-alto-rio-negro',
+    name: { pt: 'Sistema Agricola Tradicional do Alto Rio Negro', en: 'Traditional Agricultural System of the Upper Rio Negro', es: 'Sistema Agrícola Tradicional del Alto Rio Negro' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Amazonas',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'No norte do Amazonas, nas regiões do Médio e Alto Rio Negro, comunidades indígenas mantêm um jeito próprio de plantar, colher e preparar alimentos, passado de geração em geração. Esse modo de viver é conhecido como Sistema Agrícola Tradicional do Rio Negro, reconhecido como Patrimônio Cultural do Brasil desde 2010.', en: 'Indigenous ancestral knowledge of planting and harvesting in the Amazon, recognized as cultural heritage since 2010.', es: 'Saberes ancestrales indígenas de siembra y cosecha en la Amazonía, reconocidos como patrimonio cultural desde 2010.' },
+    unesco: false
+  },
+  {
+    id: 'festividade-de-sao-tiago-no-distrito-de-mazagao-velho',
+    name: { pt: 'Festividade de São Tiago no Distrito de Mazagão Velho', en: 'Festivity of Saint James in Mazagão Velho', es: 'Festividad de Santiago en el Distrito de Mazagão Velho' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amapá',
+    city: 'Cidades do Amapá',
+    coordinates: { lat: -0.03, lng: -51.07 },
+    description: { pt: 'Celebra a resistência cultural afro-luso-indígena, mantém viva a memória coletiva e une religiosidade com arte popular.', en: 'Celebration of Afro-Luso-Indigenous resistance, uniting religious faith with popular art and collective memory.', es: 'Celebración de la resistencia Afro-Luso-Indígena, que une la fe religiosa con el arte popular y la memoria colectiva.' },
+    unesco: false
+  },
+  {
+    id: 'marabaixo',
+    name: { pt: 'Marabaixo', en: 'Marabaixo', es: 'Marabaixo' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amapá',
+    city: 'Amapa',
+    coordinates: { lat: -0.03, lng: -51.07 },
+    description: { pt: 'Em 2018, o Marabaixo foi registrado como Patrimônio Cultural do Brasil. Seu valor está no que ele representa para o povo negro do Amapá: memória, identidade, resistência e celebração. Cada roda de Marabaixo é uma afirmação viva da cultura construída nas comunidades. https://bcr.iphan.gov.br/bens-culturais/marabaixo/#:~:text=Em%202018%2C%20o%20Marabaixo%20foi,da%20cultura%20constru%C3%ADda%20nas%20comunidades.', en: 'A cultural expression from Amapá representing Black identity, resistance, and celebration through music and dance circles.', es: 'Expresión cultural de Amapá que representa la identidad negra, resistencia y celebración a través de ruedas de música y danza.' },
+    unesco: false
+  },
+  {
+    id: 'cultura-da-ilha-de-marajo',
+    name: { pt: 'Cultura da Ilha de Marajó', en: 'Culture of Marajó Island', es: 'Cultura de la Isla de Marajó' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Ilha do Marajó',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'A cultura da Ilha do Marajó é um fascinante mosaico que reflete a rica herança histórica e a diversidade natural desse extraordinário destino amazônico. Com raízes que remontam à era pré- colombiana, a cultura marajoara é um tesouro de tradições preservadas ao longo dos séculos. https://visitbrasil.com/pt/location/ilha-de-marajo/#:~:text=A%20cultura%20da%20Ilha%20do,preservadas%20ao%20longo%20dos%20s%C3%A9culos.', en: 'A cultural mosaic with pre-Columbian roots reflecting the historical heritage and natural diversity of the Marajó Island.', es: 'Mosaico cultural con raíces precolombinas que refleja la herencia histórica y la diversidad natural de la Isla de Marajó.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-preparo-da-farinha-de-mandioca',
+    name: { pt: 'Modo de Preparo da Farinha de Mandioca', en: 'Mandioca Flour Preparation Method', es: 'Método de Preparación de la Harina de Mandioca' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Cidades do Pará',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'Mais do que farinha: um jeito de viver É no engenho que acontece a farinhada, que é como um mutirão: vizinhos e parentes se reúnem para trabalhos juntos, cada um contribuindo com o que sabe. Enquanto uns raspam e lavam a mandioca, outros operam a prensa, controlam o forno ou peneiram a massa. E enquanto se trabalha, também se canta.https://www.gov.br/iphan/pt-br/assuntos/noticias/iphan-aprova-registro-dos-saberes-e-praticas-tradicionais-associados-aos-engenhos-de-farinha-de-mandioca-de-sc', en: 'More than flour, it\'s a way of life in the \'engenho\' mills. Neighbors and relatives gather for \'farinhada\' communal work, scraping, washing, pressing, and sifting while singing.', es: 'Más que harina, es una forma de vida en los \'engenhos\'. Vecinos y familiares se reúnen para la \'farinhada\', un trabajo comunitario donde raspan, lavan, prensan y tamizan mientras cantan.' },
+    unesco: false
+  },
+  {
+    id: 'cuias-do-baixo-amazonas-padroes-graficos-de-ornamentacao-das',
+    name: { pt: 'Cuias do Baixo Amazonas - Padrões Gráficos de Ornamentação das Cuias de Monte Alegre e Santarém', en: 'Lower Amazon Gourds - Graphic Ornamentation Patterns of Monte Alegre and Santarém', es: 'Calebasas del Bajo Amazonas - Patrones Gráficos de Ornamentación de Monte Alegre y Santarém' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Amazonas',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'Simples, tingidas, lisas ou ricamente ornamentadas, as cuias fazem parte de uma das classes de utensílios mais importantes na vida amazônica.', en: 'Simple, dyed, smooth, or richly decorated, gourds (cuias) are essential utensils in Amazonian life.', es: 'Simples, teñidas, lisas o ricamente ornamentadas, las calebasas (cuias) son utensilios esenciales en la vida amazónica.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-das-tacacazeiras-no-norte-do-brasil',
+    name: { pt: 'Ofício das Tacacazeiras no Norte do Brasil', en: 'Trade of the Tacacazeiras in Northern Brazil', es: 'Oficio de las Tacacazeiras en el Norte de Brasil' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Pará',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'O Ofício das Tacacazeiras é comum às sete capitais da Região Norte, com características distintas. Na cidade de Belém (PA), por exemplo, há registros literários e artísticos sobre as tacacazeiras desde o final do século XIX.', en: 'The trade of selling Tacacá is present in seven northern capitals. In Belém, records of the tacacazeiras date back to the late 19th century.', es: 'El oficio de vender Tacacá es común en las siete capitales del norte. En Belém, los registros de las tacacazeiras datan de finales del siglo XIX.' },
+    unesco: false
+  },
+  {
+    id: 'mercado-do-ver-o-peso',
+    name: { pt: 'Mercado do Ver o Peso', en: 'Ver-o-Peso Market', es: 'Mercado del Ver-o-Peso' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Belém',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'Também é Patrimônio Material (Arquitetura do Mercado)', en: 'Also designated as Material Heritage due to the market\'s architecture.', es: 'También designado como Patrimonio Material por la arquitectura del mercado.' },
+    unesco: false
+  },
+  {
+    id: 'cultura-do-povo-indigena-tembe',
+    name: { pt: 'Cultura do Povo Indígena Tembé', en: 'Culture of the Tembé Indigenous People', es: 'Cultura del Pueblo Indígena Tembé' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Estado do Maranhão',
+    city: 'Margens do Rio Guripi',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Os Tembé constituem o ramo ocidental dos Tenetehara. O grupo oriental é conhecido por Guajajara. Sua autodenominação é Tenetehara, que significa gente, índios em geral ou, mais especificamente, Tembé e Guajajara. Tembé, ou sua variante Timbé, constitui um nome que provavelmente lhes foi atribuído pelos regionais. De acordo com o lingüista Max Boudin, timbeb significaria "nariz chato".', en: 'The Tembé belong to the Tenetehara branch. Their name means \'people\' or \'Indians\'. According to linguist Max Boudin, Tembé likely means \'flat nose\'.', es: 'Los Tembé pertenecen a la rama Tenetehara. Su nombre significa \'gente\' o \'indios\'. Según el lingüista Max Boudin, Tembé probablemente significa \'nariz chata\'.' },
+    unesco: false
+  },
+  {
+    id: 'cultura-do-babacu-na-regiao-do-bico-do-papagaio',
+    name: { pt: 'Cultura do Babaçu na Região do Bico do Papagaio', en: 'Babaçu Culture in the Bico do Papagaio Region', es: 'Cultura del Babaçu en la Región del Bico do Papagaio' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Tocantins',
+    city: 'Municípios: Ananás, Araguatins, Itaguatins, Luzinópolis, Praia Norte, Santa Terezinha e São Sebastião do Tocantins.',
+    coordinates: { lat: -10.18, lng: -48.33 },
+    description: { pt: 'O Babaçu é uma espécie de grande importância econômica e cultural para as regiões norte e nordeste do Brasil. A palmeira chamada de “mãe” pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf', en: 'The Babaçu palm, called \'mother\' by coconut-breaking communities, provides food, shelter, and livelihoods for families in the Mata dos Cocais region.', es: 'La palmera Babaçu, llamada \'madre\' por las comunidades recolectoras, proporciona alimento, refugio y sustento a las familias de la región de Mata dos Cocais.' },
+    unesco: false
+  },
+  {
+    id: 'ourivesaria-de-natividade',
+    name: { pt: 'Ourivesaria de Natividade', en: 'Goldsmithing of Natividade', es: 'Orfebrería de Natividade' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Tocantins',
+    city: 'Natividade',
+    coordinates: { lat: -10.18, lng: -48.33 },
+    description: { pt: 'A Ourivesaria de Natividade, expressão artesanal que preserva técnicas seculares de produção em ouro e prata no sudeste tocantinense. A arte é um bem cultural definido pela produção e uso de um conjunto de joias artesanais - feitas com ouro e prata extraídos da própria região - como crucifixos, colares, cordões, gargantilhas, brincos, pingentes, pulseiras e anéis. https://www.gov.br/iphan/pt-br/assuntos/noticias/ourivesaria-de-natividade-to-e-registrada-como-patrimonio-cultural-do-brasil', en: 'Artisanal gold and silver craft from southeast Tocantins using secular techniques to create traditional jewelry like crucifixes and necklaces.', es: 'Artesanía en oro y plata del sureste de Tocantins que utiliza técnicas seculares para crear joyas tradicionales como crucifijos y collares.' },
+    unesco: false
+  },
+  {
+    id: 'mapeamento-das-casas-de-matriz-africana-em-palmas',
+    name: { pt: 'Mapeamento das Casas de Matriz Africana em Palmas', en: 'Mapping of African-Matrix Houses in Palmas', es: 'Mapeo de las Casas de Matriz Africana en Palmas' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Tocantins',
+    city: 'Palmas',
+    coordinates: { lat: -10.18, lng: -48.33 },
+    description: { pt: 'Patrimônio cultural localizado em Palmas, Tocantins.', en: 'Cultural heritage mapping located in Palmas, Tocantins.', es: 'Mapeo del patrimonio cultural ubicado en Palmas, Tocantins.' },
+    unesco: false
+  },
+  {
+    id: 'ceramica-do-rio-real',
+    name: { pt: 'Cerâmica do Rio Real', en: 'Ceramics of Rio Real', es: 'Cerámica del Rio Real' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Rio Real',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Cerâmica de Rio Real, produção de cerâmica deste município, do norte da Bahia e considerado um dos mais importantes pólos artesanais do estado. Rio Real tem um significado cultural muito grande e o momento é de fortalecer o trabalho de resgate das tradições e de valorização para que a transmissão desses conhecimentos não se perca.', en: 'Traditional ceramic production from northern Bahia, representing an important artisanal hub and the preservation of ancestral knowledge.', es: 'Producción cerámica tradicional del norte de Bahía, que representa un importante núcleo artesanal y la preservación de conocimientos ancestrales.' },
+    unesco: false
+  },
+  {
+    id: 'tabuleiro-das-baianas-em-salvador',
+    name: { pt: 'Tabuleiro das Baianas em Salvador', en: 'Baianas\' Table in Salvador', es: 'Tablero de las Baianas en Salvador' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Salvador',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Lista para se tornar patrimônio, ainda não é', en: 'Candidate for heritage status; not yet officially registered.', es: 'Candidato a patrimonio; aún no registrado oficialmente.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-das-baianas-de-acaraje',
+    name: { pt: 'Ofício das Baianas de Acarajé', en: 'Trade of the Baianas de Acarajé', es: 'Oficio de las Baianas de Acarajé' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Bahia',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'O acarajé é um bolinho de feijãofradinho, cebola e sal, frito em azeite-de-dendê. É uma iguaria de origem africana, vinda com os escravos na colonização do Brasil. Hoje está plenamente incorporado à cultura brasileira.', en: 'Acarajé is a black-eyed pea fritter fried in palm oil. Of African origin, it is now a fundamental part of Brazilian culture.', es: 'El acarajé es un buñuelo de frijol carilla frito en aceite de palma. De origen africano, hoy forma parte fundamental de la cultura brasileña.' },
+    unesco: false
+  },
+  {
+    id: 'festa-de-santa-barbara',
+    name: { pt: 'Festa de Santa Bárbara', en: 'Festival of Saint Barbara', es: 'Fiesta de Santa Bárbara' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Salvador',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Festa de caráter religioso que homenageia Santa Bárbara, realizada desde o séc. XVII, em Salvador. A santa recebe homenagens no dia 4 de dezembro, quando a população sai em procissão pelas ruas do Centro Histórico. https://www.ba.gov.br/ipac/festa-de-santa-barbara#:~:text=Festa%20de%20car%C3%A1ter%20religioso%20que,pelas%20ruas%20do%20Centro%20Hist%C3%B3rico.', en: 'Religious festival held since the 17th century in Salvador. It features a procession through the Historic Center on December 4th.', es: 'Fiesta religiosa celebrada desde el siglo XVII en Salvador. Incluye una procesión por el Centro Histórico el 4 de diciembre.' },
+    unesco: false
+  },
+  {
+    id: 'acaraje-em-salvador',
+    name: { pt: 'Acarajé em Salvador', en: 'Acarajé in Salvador', es: 'Acarajé en Salvador' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Salvador',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Lista para se tornar patrimônio, ainda não é', en: 'Candidate for heritage status; not yet officially registered.', es: 'Candidato a patrimonio; aún no registrado oficialmente.' },
+    unesco: false
+  },
+  {
+    id: 'festa-do-senhor-bom-jesus-do-bonfim',
+    name: { pt: 'Festa do Senhor Bom Jesus do Bonfim', en: 'Festival of Senhor Bom Jesus do Bonfim', es: 'Fiesta del Señor Bom Jesus do Bonfim' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Salvador',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'A tradicional Festa de Nosso Senhor do Bonfim, que ocorre a quase 300 anos, na capital Salvador (BA). https://bcr.iphan.gov.br/bens-culturais/festa-do-senhor-bom-jesus-do-bonfim/', en: 'A traditional festival held for nearly 300 years in Salvador, Bahia, celebrating the patron lord.', es: 'Fiesta tradicional celebrada desde hace casi 300 años en Salvador, Bahía, en honor al señor patrón.' },
+    unesco: false
+  },
+  {
+    id: 'sertao-baiano',
+    name: { pt: 'Sertão Baiano', en: 'Sertão Baiano', es: 'Sertão Baiano' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Municípios de Euclides da Cunha, Monte Santo e Canudos',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'A cultura do interior da Bahia, é a cultura sertaneja, cultura interiorana marcada pela cultura do couro, culinária da região, festas e manifestações rurais e o vaqueiro, que lida com o gado no sertão baiano desde 1550 onde surgiu durante o povoamento e avanço da pecuária para o interior do estado, foi a primeira fixação do homem no interior da Bahia e de todo interior do Nordeste brasileiro.', en: 'The rural culture of inland Bahia, characterized by leatherwork, regional cuisine, rural festivals, and the figure of the \'vaqueiro\' cowboy since 1550.', es: 'La cultura rural del interior de Bahía, caracterizada por el cuero, la gastronomía regional, fiestas rurales y la figura del vaquero desde 1550.' },
+    unesco: false
+  },
+  {
+    id: 'mestres-artifices-na-chapada-diamantina',
+    name: { pt: 'Mestres Artífices na Chapada Diamantina', en: 'Master Artisans in Chapada Diamantina', es: 'Maestros Artífices en Chapada Diamantina' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Municípios de Lençóis, Andaraí, Palmeiras, Iraquara e Seabra',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Registro dos saberes tradicionais de mestres que mantêm vivas técnicas ancestrais de construção e artesanato na região da Chapada.', en: 'Registry of the traditional knowledge of masters who keep alive ancestral construction and craft techniques in the Chapada region.', es: 'Registro de los saberes tradicionales de maestros que mantienen vivas técnicas ancestrales de construcción y artesanía en la región de Chapada.' },
+    unesco: false
+  },
+  {
+    id: 'festa-do-pau-da-bandeira-de-santo-antonio-em-barbalha',
+    name: { pt: 'Festa do Pau da Bandeira de Santo Antônio em Barbalha', en: 'Festival of the Pole of Saint Anthony in Barbalha', es: 'Fiesta del Palo de la Bandera de San Antonio en Barbalha' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Ceará',
+    city: 'Barbalha, região Cariri - Fortaleza',
+    coordinates: { lat: -3.72, lng: -38.52 },
+    description: { pt: 'A Festa do Pau da Bandeira de Santo Antônio de Barbalha é a reafirmação identitária da região do Cariri e por envolver noções de reciprocidade, sacrifício e sociabilidade. A devoção a Santo Antônio na cidade de Barbalha remonta, pelo menos, ao século XVIII, quando é erigida a capela em sua homenagem. A festa tem uma data de início móvel.', en: 'A celebration reaffirming the identity of the Cariri region through reciprocity and devotion to Saint Anthony, dating back to the 18th century.', es: 'Una celebración que reafirma la identidad de la región de Cariri a través de la reciprocidad y devoción a San Antonio, datada desde el siglo XVIII.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-tambor-de-crioula',
+    name: { pt: 'Manifestação Cultural: Tambor de Crioula', en: 'Cultural Manifestation: Tambor de Crioula', es: 'Manifestación Cultural: Tambor de Crioula' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Maranhão',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'É uma forma de expressão de matriz afro-brasileira que envolve dança circular, canto e percussão de tambores que ocorre na maioria dos municípios do Maranhão. Referencial de identidade e resistência cultural dos negros maranhenses que compartilham um passado comum.', en: 'An Afro-Brazilian expression involving circular dance, singing, and percussion in Maranhão, symbolizing identity and Black resistance.', es: 'Expresión afrobrasileña que integra danza circular, canto y percusión en Maranhão, simbolizando identidad y resistencia afrodescendiente.' },
+    unesco: false
+  },
+  {
+    id: 'genero-musical-chorinho',
+    name: { pt: 'Gênero Musical: Chorinho', en: 'Musical Genre: Chorinho', es: 'Género Musical: Chorinho' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Distrito Federal',
+    city: 'Distrito Federal',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'O choro musicado pelo conjunto de bandolim, flauta, violão 7 Cordas, pandeiro, cavaquinho e clarinete em rodas por todo o país. O choro é gênero musical considerado mais brasileiro.', en: 'Instrumental music played in circles with mandolin, flute, and guitars, considered the most authentic Brazilian musical genre.', es: 'Música instrumental tocada en ruedas con mandolina, flauta y guitarras, considerada el género musical más brasileño.' },
+    unesco: false
+  },
+  {
+    id: 'bebida-cajuina',
+    name: { pt: '- Bebida: Cajuina', en: 'Beverage: Cajuína', es: 'Bebida: Cajuína' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Estados do Nordeste',
+    city: 'Estados do Nordeste',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'A cajuína é uma bebida não alcoólica, feita a partir do suco do caju separado do seu tanino, por meio da adição de um agente precipitador (originalmente, a resina do cajueiro, durante muitas décadas a cola de madeira ou de sapateiro e, atualmente, a gelatina em pó), coado várias vezes em redes ou funis de pano.', en: 'A non-alcoholic beverage made from cashew juice, clarified and filtered to remove tannins.', es: 'Bebida no alcohólica elaborada a partir del zumo de marañón, clarificada y filtrada para eliminar los taninos.' },
+    unesco: false
+  },
+  {
+    id: 'blocos-tradicionais-do-maranhao',
+    name: { pt: 'Blocos Tradicionais do Maranhão', en: 'Traditional Bloco Groups of Maranhão', es: 'Blocos Tradicionales de Maranhão' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Maranhão',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'Com história que remonta a 1920, os blocos tradicionais são um tipo de grupo carnavalesco em São Luís que possui diversas peculiaridades, como as vestimentas e até o som que produzem. Na capital maranhense existem, atualmente, 30 blocos. Cada bloco tradicional possui um figurino próprio que carrega vivacidade e ritmo.', en: 'Unique carnival groups from São Luís known for their specific costumes, history since 1920, and distinct rhythmic sounds.', es: 'Grupos carnavalescos exclusivos de São Luís conocidos por sus vestimentas, historia desde 1920 y ritmos distintivos.' },
+    unesco: false
+  },
+  {
+    id: 'feira-central-de-campina-grande',
+    name: { pt: 'Feira Central de Campina Grande', en: 'Campina Grande Central Market', es: 'Feria Central de Campina Grande' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Paraíba',
+    city: 'Campina Grande',
+    coordinates: { lat: -7.12, lng: -34.84 },
+    description: { pt: 'A chamada Feira das Feiras é um lugar de referência, de criação, de expressão, de sociabilidade e de identidade do povo nordestino. Suas cores, aromas, personagens e sons inconfundíveis são a marca de uma cidade que tem sua história e seu traçado misturados com os de seu centro mercadológico e também cultural.', en: 'A landmark of Northeastern identity, where history, commerce, and culture blend through unique colors, aromas, and sounds.', es: 'Un referente de la identidad del noreste brasileño, donde la historia, el comercio y la cultura se mezclan entre aromas y sonidos.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-tradicional-das-parteiras',
+    name: { pt: 'Ofício Tradicional das Parteiras', en: 'Traditional Craft of Midwives', es: 'Oficio Tradicional de las Parteras' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Distrito Federal',
+    city: 'Distrito Federal',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'As parteiras tradicionais são descritas como “mestras do ofício do partejar, detentoras de um repertório de saberes e práticas acerca de todas as etapas da gestação (pré-natal, parto e pós-parto)”. Limitar seu papel à assistência no nascimento de crianças, portanto, seria reducionista.', en: 'Masters of birthing who hold traditional knowledge regarding all stages of pregnancy, prenatal care, and postnatal support.', es: 'Maestras del oficio de partear, poseedoras de saberes tradicionales sobre todas las etapas del embarazo y el cuidado posparto.' },
+    unesco: false
+  },
+  {
+    id: 'feira-de-caruaru',
+    name: { pt: 'Feira de Caruaru', en: 'Caruaru Fair', es: 'Feria de Caruaru' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Caruaru',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Cantada em verso e prosa, a Feira de Caruaru resguarda diversos aspectos de nossa cultura: arte, literatura, música, gastronomia, modos e costumes.', en: 'Famed in verse and prose, this market preserves art, literature, music, and the traditional customs of Pernambuco.', es: 'Famosa en versos y prosa, esta feria preserva el arte, la literatura, la música y las costumbres tradicionales de Pernambuco.' },
+    unesco: false
+  },
+  {
+    id: 'mestres-artifices-de-pernambuco',
+    name: { pt: 'Mestres Artífices de Pernambuco', en: 'Master Artisans of Pernambuco', es: 'Maestros Artífices de Pernambuco' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Os mestres artífices de ofícios em Pernambuco: Caboclinho, Lóla, Figueiredo, Ferrão, Seu Floriano, João Cabelo de Fogo, Livonaldo e muitos anônimos que, em Recife e Olinda, como tantos outros mestres nos demais estados do país, contribuíram silenciosamente com seus saberes e habilidades para a preservação do patrimônio. http://portal.iphan.gov.br/uploads/publicacao/ColCadMem_MestresArtificeis_Pernambuco_m.pdf', en: 'Masters like Caboclinho and Seu Floriano who silently contributed to heritage preservation through their craft in Recife and Olinda.', es: 'Maestros como Caboclinho y Seu Floriano que contribuyeron silenciosamente a la preservación del patrimonio en Recife y Olinda.' },
+    unesco: false
+  },
+  {
+    id: 'mestres-artifices-da-construcao-civil-tradicional-chapada-di',
+    name: { pt: 'Mestres Artífices da Construção Civil Tradicional Chapada Diamantina', en: 'Master Artisans of Traditional Civil Construction in Chapada Diamantina', es: 'Maestros Artífices de la Construcción Civil Tradicional en Chapada Diamantina' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Municípios de Lençóis, Andaraí, Palmeiras, Iraquara e Seabra',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: '.', en: 'Techniques and knowledge of traditional architecture in the region.', es: 'Técnicas y conocimientos de la arquitectura tradicional en la región.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-cavalo-marinho',
+    name: { pt: 'Manifestação Cultural: Cavalo Marinho', en: 'Cultural Manifestation: Cavalo Marinho', es: 'Manifestación Cultural: Cavalo Marinho' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Pernambuco e Paraíba',
+    city: 'Zona da Mata Norte de Pernambuco e do Sul da Paraíba',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'É uma manifestação cultural que mistura teatro, dança e música, vivenciada principalmente durante as festas de fim de ano', en: 'A cultural expression blending theater, dance, and music, performed mainly during end-of-year festivities.', es: 'Expresión cultural que mezcla teatro, danza y música, realizada principalmente durante las festividades de fin de año.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-caboclinho',
+    name: { pt: 'Manifestação Cultural: Caboclinho', en: 'Cultural Manifestation: Caboclinho', es: 'Manifestación Cultural: Caboclinho' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil. Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', en: 'A tribute to Brazil\'s first inhabitants, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
+    unesco: false
+  },
+  {
+    id: 'maracatu-nacao-e-maracatu-baque-solto',
+    name: { pt: 'Maracatu Nação e  Maracatu Baque Solto', en: 'Maracatu Nação and Maracatu Baque Solto', es: 'Maracatu Nação y Maracatu Baque Solto' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Maracatu de Baque Virado / Maracatu Nação: é mais tradicional e tem uma sonoridade mais grave e intensa, devido ao estilo de toque dos instrumentos. A principal diferença em relação ao Maracatu de Rua é que o Baque Virado possui uma estrutura musical mais elaborada e uma dança mais solene. https://bcr.iphan.gov.br/bens-culturais/maracatu-baque-solto/', en: 'Different styles of Maracatu, ranging from the solemn ancestral rhythms of Baque Virado to the rural Baque Solto.', es: 'Diferentes estilos de Maracatu, desde los ritmos solemnes ancestrales de Baque Virado hasta el Baque Solto rural.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-quilombolas-do-estado-de-pernambuco',
+    name: { pt: 'Comunidades Quilombolas do Estado de Pernambuco', en: 'Quilombola Communities of the State of Pernambuco', es: 'Comunidades Quilombolas del Estado de Pernambuco' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'O sertão do São Francisco é uma região que possui uma quantidade significativa de comunidades.', en: 'Communities founded by descendants of enslaved people in the São Francisco hinterland region.', es: 'Comunidades fundadas por descendientes de personas esclavizadas en la región del sertão de São Francisco.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-ciranda-do-nordeste',
+    name: { pt: 'Manifestação Cultural: Ciranda do Nordeste', en: 'Cultural Manifestation: Ciranda do Nordeste', es: 'Manifestación Cultural: Ciranda do Nordeste' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'A Ciranda do Nordeste é uma manifestação cultural que une música e poesia para embalar uma dança de roda, elemento central de sua expressão', en: 'Ciranda do Nordeste is a cultural manifestation that combines music and poetry to guide a circle dance, a central element of its expression.', es: 'La Ciranda do Nordeste es una manifestación cultural que une música y poesía para guiar una danza circular, elemento central de su expresión.' },
+    unesco: false
+  },
+  {
+    id: 'reisado-em-pernambuco',
+    name: { pt: 'Reisado em Pernambuco', en: 'Reisado in Pernambuco', es: 'Reisado en Pernambuco' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Estato Todo',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'A manifestação cultural é pertencente ao ciclo natalino, registrada como Patrimônio Imaterial de Pernambuco (2022), e possui referências a costumes europeus, mais especificamente da religião católica, e à cultura africana, principalmente no tocante aos ritmos musicados e dançados.', en: 'A cultural manifestation belonging to the Christmas cycle, registered as Intangible Heritage of Pernambuco (2022), featuring references to European Catholic customs and African culture, especially regarding musical and dance rhythms.', es: 'Manifestación cultural perteneciente al ciclo navideño, registrada como Patrimonio Inmaterial de Pernambuco (2022), con referencias a costumbres católicas europeas y cultura africana, especialmente en los ritmos musicales y danzados.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-quilombolas-do-piaui',
+    name: { pt: 'Comunidades Quilombolas do Piauí', en: 'Quilombola Communities of Piauí', es: 'Comunidades Quilombolas de Piauí' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Piauí',
+    coordinates: { lat: -5.09, lng: -42.8 },
+    description: { pt: 'As comunidades quilombolas são guardiãs de uma parte essencial da nossa identidade cultural. Apoiar eventos como o Festival de Batuques é garantir que essas vozes ancestrais continuem ecoando, ensinando e inspirando. https://g1.globo.com/pi/piaui/piaui-de-riquezas/noticia/2022/11/12/tradicoes-quilombolas-do-sul-do-piaui-tem-patrimonio-historico-vivo-culinaria-propria-e-curiosidades-surpreendentes.ghtml', en: 'Quilombola communities are guardians of a vital part of cultural identity. Supporting events like the Batuques Festival ensures these ancestral voices continue to echo, teach, and inspire.', es: 'Las comunidades quilombolas son guardianas de una parte esencial de la identidad cultural. Apoyar eventos como el Festival de Batuques garantiza que estas voces ancestrales sigan resonando, enseñando e inspirando.' },
+    unesco: false
+  },
+  {
+    id: 'arte-santeira-do-piaui',
+    name: { pt: 'Arte Santeira do Piauí', en: 'Santeira Art of Piauí', es: 'Arte Santeira de Piauí' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Piauí',
+    coordinates: { lat: -5.09, lng: -42.8 },
+    description: { pt: 'A arte santeira, uma das manifestações mais emblemáticas do patrimônio cultural piauiense, envolve a produção de esculturas em madeira que retratam figuras religiosas, como santos católicos e imagens devocionais.', en: 'Santeira art is an emblematic manifestation of Piauí heritage involving the production of wooden sculptures depicting religious figures, such as Catholic saints and devotional images.', es: 'El arte santeira es una manifestación emblemática del patrimonio de Piauí que consiste en la producción de esculturas de madera que representan figuras religiosas, como santos católicos e imágenes devocionales.' },
+    unesco: false
+  },
+  {
+    id: 'tambor-de-crioula-do-piaui',
+    name: { pt: 'Tambor de Crioula do Piauí', en: 'Tambor de Crioula of Piauí', es: 'Tambor de Crioula de Piauí' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Piauí',
+    city: 'Piauí',
+    coordinates: { lat: -5.09, lng: -42.8 },
+    description: { pt: 'A dança, de origem africana, é formada por mulheres com saias longas que se revezam na roda, enquanto os homens, tocam seus tambores. O Tambor de Crioula é carregado de forte simbolismo nas narrativas de seu mito fundador.', en: 'A dance of African origin performed by women in long skirts rotating in a circle while men play drums. It carries strong symbolism within its founding myth narratives.', es: 'Danza de origen africano formada por mujeres con faldas largas que se turnan en la rueda mientras los hombres tocan tambores. Posee un fuerte simbolismo en las narrativas de su mito fundador.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-da-pesca-artesanal-no-litoral-do-rio-grande-do-norte',
+    name: { pt: 'Ofício da Pesca Artesanal no Litoral do Rio Grande do Norte', en: 'Artisanal Fishing Craft on the Coast of Rio Grande do Norte', es: 'Oficio de la Pesca Artesanal en el Litoral de Rio Grande do Norte' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Rio Grande do Norte',
+    city: 'Rio Grande do Norte',
+    coordinates: { lat: -5.79, lng: -35.21 },
+    description: { pt: 'Patrimônio cultural localizado em Rio Grande do Norte, Rio Grande do Norte.', en: 'Cultural heritage located in Rio Grande do Norte.', es: 'Patrimonio cultural localizado en el estado de Rio Grande do Norte.' },
+    unesco: false
+  },
+  {
+    id: 'festa-do-divino-de-pirenopolis',
+    name: { pt: 'Festa do Divino de Pirenópolis', en: 'Festa do Divino of Pirenópolis', es: 'Festa do Divino de Pirenópolis' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Pirenópolis',
+    coordinates: { lat: -15.85, lng: -49.0 },
+    description: { pt: 'Enraizada no cotidiano dos moradores de Pirenópolis, a Festa do Divino determina os padrões de sociabilidade local, consolidando-se como elemento fundamental da identidade cultural da cidade. A primeira edição da festa aconteceu também em 1817, como uma forma de agradecimento pelas bênçãos do Divino Espírito Santo.', en: 'Rooted in the daily lives of Pirenópolis residents, this festival consolidates local sociability and identity. First held in 1817 to thank the Divine Holy Spirit for blessings.', es: 'Arraigada en la vida cotidiana de Pirenópolis, esta fiesta determina los patrones de sociabilidad e identidad local. Realizada por primera vez en 1817 como agradecimiento al Espíritu Santo.' },
+    unesco: false
+  },
+  {
+    id: 'festas-do-rosario-e-congadas-no-estado-de-goias',
+    name: { pt: 'Festas do Rosário e Congadas no Estado de Goiás', en: 'Rosary Festivals and Congadas in the State of Goiás', es: 'Fiestas del Rosario y Congadas en el Estado de Goiás' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Goiás',
+    coordinates: { lat: -16.69, lng: -49.25 },
+    description: { pt: 'Conjunto diversificado de saberes da ancestralidade afro-brasileira que são atualizados por meio da devoção ao Rosário. Essas tradições atravessaram mais de 300 anos de história, chegando ao século 21 com transformações e ressignificações, mas sempre mantendo uma identidade fundamental: a ancestralidade de matriz africana com canto, ritmo e dança.', en: 'A diverse set of Afro-Brazilian ancestral knowledge updated through devotion to the Rosary. These traditions blend over 300 years of history with African-matrix song, rhythm, and dance.', es: 'Conjunto diverso de saberes de la ancestralidad afrobrasileña actualizados mediante la devoción al Rosario. Tradiciones con más de 300 años que mantienen la matriz africana en canto, ritmo y danza.' },
+    unesco: false
+  },
+  {
+    id: 'festa-da-cacada-da-rainha-em-colinas-do-sul',
+    name: { pt: 'Festa da Caçada da Rainha em Colinas do Sul', en: 'Queen\'s Hunt Festival in Colinas do Sul', es: 'Fiesta de la Cacería de la Reina en Colinas do Sul' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Colinas do Sul, região turística da Chapada dos Veadeiros, no Nordeste goiano',
+    coordinates: { lat: -16.69, lng: -49.25 },
+    description: { pt: 'A Festa da Caçada da Rainha em Colinas do Sul é uma festa com sincretismo que abrange a junção da cultura e fé católica, mas no que se refere a fé de nossos devotos, já vimos muitos alcançarem milagres através da fé e devoção ao Divino Espírito Santo e Nossa Senhora do Rosário.', en: 'A syncretic festival merging culture and Catholic faith in Colinas do Sul, where devotees celebrate miracles through devotion to the Holy Spirit and Our Lady of the Rosary.', es: 'Fiesta sincrética que une cultura y fe católica en Colinas do Sul, donde los devotos celebran milagros mediante la devoción al Espíritu Santo y Nuestra Señora del Rosario.' },
+    unesco: false
+  },
+  {
+    id: 'roteiro-das-devocoes-em-goias',
+    name: { pt: 'Roteiro das Devoções em Goiás', en: 'Devotions Route in Goiás', es: 'Ruta de las Devociones en Goiás' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Goiás',
+    city: 'Goiás',
+    coordinates: { lat: -16.69, lng: -49.25 },
+    description: { pt: 'Inventário das manifestações de fé, festejos e ritos que compõem a identidade cultural e o patrimônio imaterial do estado de Goiás.', en: 'An inventory of faith manifestations, festivals, and rites that constitute the cultural identity and intangible heritage of the state of Goiás.', es: 'Inventario de manifestaciones de fe, festejos y ritos que conforman la identidad cultural y el patrimonio inmaterial del estado de Goiás.' },
+    unesco: false
+  },
+  {
+    id: 'festanca-de-vila-bela-da-santissima-trindade',
+    name: { pt: 'Festança de Vila Bela da Santíssima Trindade', en: 'Festança of Vila Bela da Santíssima Trindade', es: 'Festança de Vila Bela da Santíssima Trindade' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Mato Grosso',
+    city: 'Vila Bela da Santíssima Trindade',
+    coordinates: { lat: -15.6, lng: -56.1 },
+    description: { pt: 'Um conjunto de festas religiosas centenárias católicas, que se manifestam em um terreno de intrincada rede de relações interétnicas, de cisões territoriais e de agenciamento feminino. A festividade inclui as danças do Congo e do Chorado e também homenageia a Rainha Tereza de Benguela, líder do Quilombo do Quariterê.', en: 'Centuries-old Catholic religious festivals involving interethnic relations and female agency. Includes Congo and Chorado dances and honors Queen Tereza de Benguela, leader of the Quilombo do Quariterê.', es: 'Conjunto de fiestas religiosas centenarias que manifiestan relaciones interétnicas y agencia femenina. Incluye las danzas del Congo y Chorado y homenajea a la Reina Tereza de Benguela.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-das-paneleira-de-goiabeiras',
+    name: { pt: 'Ofício das Paneleira de Goiabeiras', en: 'Craft of the Clay Pot Makers of Goiabeiras', es: 'Oficio de las Alfareras de Goiabeiras' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Espírito Santo',
+    city: 'Espírito Santo',
+    coordinates: { lat: -20.32, lng: -40.34 },
+    description: { pt: 'Tradição familiar passada de geração em geração, o Ofício das Paneleiras de Goiabeiras. Elemento essencial do “prato típico capixaba", as panelas de barro, que são indispensáveis durante a realização das famosas moquecas de peixe.', en: 'A family tradition passed down through generations. These clay pots are essential for the traditional \'moqueca capixaba\' fish stew.', es: 'Tradición familiar transmitida por generaciones. Estas ollas de barro son elementos esenciales para preparar la tradicional \'moqueca capixaba\'.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-pomeranas-do-espirito-santo',
+    name: { pt: 'Comunidades Pomeranas do Espírito Santo', en: 'Pomeranian Communities of Espírito Santo', es: 'Comunidades Pomeranias de Espírito Santo' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Espírito Santo',
+    city: 'Espírito Santo',
+    coordinates: { lat: -20.32, lng: -40.34 },
+    description: { pt: 'O Povo Pomerano é originário da Pomerânia, território que não consta mais no mapa geopolítico da Europa. A região da Pomerânia localizava-se na costa sul do Mar Báltico e foi incorporada majoritariamente pela Polônia e, em menor parte, pela Alemanha.', en: 'The Pomeranian people originate from Pomerania, a territory formerly on the Baltic coast, now part of Poland and Germany.', es: 'El pueblo pomeranio es originario de Pomerania, territorio en la costa sur del Mar Báltico que fue incorporado mayoritariamente por Polonia y Alemania.' },
+    unesco: false
+  },
+  {
+    id: 'manifestacao-cultural-jongo-do-sudeste',
+    name: { pt: 'Manifestação Cultural: Jongo do Sudeste', en: 'Cultural Manifestation: Jongo do Sudeste', es: 'Manifestación Cultural: Jongo do Sudeste' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Espírito Santo',
+    city: 'Espirito Santo, Minas. São Paulo e Rio de Janeiro',
+    coordinates: { lat: -20.32, lng: -40.34 },
+    description: { pt: 'O jongo é um estilo musical que foi reconhecido e registrado pelo Iphan como patrimônio imaterial brasileiro. o Jongo foi registrado como uma forma de expressão de comunidades negras do Sudeste, formadas por descendentes de africanos escravizados.', en: 'Jongo is a musical style recognized by Iphan as Brazilian intangible heritage, expressed by Black communities in the Southeast descended from enslaved Africans.', es: 'El jongo es un estilo musical reconocido como patrimonio inmaterial brasileño, expresado por comunidades negras del sudeste descendientes de africanos esclavizados.' },
+    unesco: false
+  },
+  {
+    id: 'bandas-de-congo-e-ticumbi',
+    name: { pt: 'Bandas de Congo e Ticumbi', en: 'Congo and Ticumbi Bands', es: 'Bandas de Congo y Ticumbi' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Espírito Santo',
+    city: 'Espírito Santo',
+    coordinates: { lat: -20.32, lng: -40.34 },
+    description: { pt: 'Conhecidas como Alardo, Jongo, Reis de Boi e Ticumbi ou Baile de Congos, essas práticas são parte de comunidades remanescentes quilombolas. Todos os anos no auge do verão acontece na Vila de Itaúnas, município de Conceição da Barra (ES), a tradicional Festa de São Benedito e São Sebastião.', en: 'Also known as Alardo, Jongo, or Reis de Boi, these practices are part of quilombola remnant communities. The traditional Festival of Saint Benedict and Saint Sebastian occurs annually in Vila de Itaúnas.', es: 'Conocidas como Alardo, Jongo o Ticumbi, estas prácticas pertenecen a comunidades quilombolas. Cada año se celebra la tradicional Fiesta de San Benito y San Sebastián en Vila de Itaúnas.' },
+    unesco: false
+  },
+  {
+    id: 'ceramica-do-candeal',
+    name: { pt: 'Cerâmica do Candeal', en: 'Candeal Ceramics', es: 'Cerámica del Candeal' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'A cerâmica de candeal é um dos trabalhos artesanais mais famosos do norte de Minas Gerais. Ela enfeita casas e museus pelo mundo afora. As artesãs de Cônego Marinho entram pela mata com as ferramentas em punho, em busca da matéria prima. O barro é encontrado no leito de um córrego seco.', en: 'Famous craft from northern Minas Gerais found in homes and museums worldwide. Artisans from Cônego Marinho gather raw clay from dry creek beds in the forest.', es: 'Famosas artesanías del norte de Minas Gerais presentes en hogares y museos del mundo. Artesanas de Cônego Marinho recolectan el barro en lechos de arroyos secos del bosque.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-viola-de-10-cordas-no-alto-medio-sao-francisco',
+    name: { pt: 'Modo de Fazer Viola de 10 cordas no Alto-médio São Francisco', en: 'Way of Making the 10-String Viola in the Alto-médio São Francisco', es: 'Modo de Hacer la Viola de 10 cuerdas en el Alto-médio São Francisco' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Viola-de-cocho é um instrumento musical de forma e sonoridade sui generis produzido na região da bacia do Rio Paraguai – baixada cuiabana e adjacências – nos estados de Mato Grosso e Mato Grosso do Sul. Destaca-se como um instrumento fundamental nos gêneros musicais cururu e siriri, cultivados, sobretudo, em manifestações culturais ligadas à religiosidade e à brincadeira.', en: 'The Viola-de-cocho is a unique musical instrument from the Rio Paraguai basin (Mato Grosso and Mato Grosso do Sul), essential to cururu and siriri cultural festivities.', es: 'La Viola-de-cocho es un instrumento único de la cuenca del Rio Paraguai (Mato Grosso y Mato Grosso do Sul), fundamental en los géneros cururu y siriri y festividades religiosas.' },
+    unesco: false
+  },
+  {
+    id: 'toque-dos-sinos-linguagem-dos-sinos-e-oficio-dos-sineiros-de',
+    name: { pt: 'Toque dos Sinos (Linguagem dos Sinos) e oficio dos sineiros de Minas Gerais', en: 'Bell Ringing (Bell Language) and the Craft of Bell Ringers in Minas Gerais', es: 'Toque de Campanas (Lenguaje de las Campanas) y oficio de los campaneros de Minas Gerais' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Cidades Históricas de Minas',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'O Toque dos Sinos em Minas Gerais, também denominado Linguagem dos Sinos, é uma tradição da Igreja Católica que consiste em um sistema sonoro codificado, por meio do qual os sinos das igrejas comunicam eventos litúrgicos, sociais e comunitários.', en: 'A Catholic tradition in Minas Gerais consisting of a coded sound system where church bells communicate liturgical, social, and community events.', es: 'Tradición católica en Minas Gerais consistente en un sistema sonoro codificado mediante el cual las campanas comunican eventos litúrgicos, sociales y comunitarios.' },
+    unesco: false
+  },
+  {
+    id: 'oficio-do-fotografo-lambe-lambe',
+    name: { pt: 'Ofício do Fotógrafo Lambe-lambe', en: 'Craft of the Lambe-lambe Photographer', es: 'Oficio del Fotógrafo Lambe-lambe' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'O fotógrafo Lambe-lambe (português brasileiro) ou fotógrafo à la minute (português europeu) é um fotógrafo ambulante que exerce a sua atividade nos espaços públicos como jardins, praças, feiras. Presente a partir do século XIX nos espaços públicos, teve um papel importante na democratização da fotografia.', en: 'Street photographers active in public spaces like gardens and fairs since the 19th century. They played a vital role in the democratization of photography.', es: 'Fotógrafos ambulantes activos en espacios públicos como jardines y plazas desde el siglo XIX. Jugaron un papel importante en la democratización de la fotografía.' },
+    unesco: false
+  },
+  {
+    id: 'mestres-artifices-de-minas-gerais',
+    name: { pt: 'Mestres Artífices de Minas Gerais', en: 'Master Artisans of Minas Gerais', es: 'Maestros Artesanos de Minas Gerais' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Reconhecimento dos artesãos mineiros que preservam técnicas de talha, cantaria e ofícios tradicionais que moldaram o barroco no Brasil.', en: 'Recognition of artisans from Minas Gerais preserving carving, stonemasonry, and traditional crafts that shaped the Brazilian Baroque style.', es: 'Reconocimiento a los artesanos de Minas Gerais que preservan técnicas de talla, cantería y oficios tradicionales que moldearon el barroco en Brasil.' },
+    unesco: false
+  },
+  {
+    id: 'congadas-de-minas-gerais',
+    name: { pt: 'Congadas de Minas Gerais', en: 'Congadas of Minas Gerais', es: 'Congadas de Minas Gerais' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'A Congada é considerada uma expressão cultural e religiosa de grande importância e, geralmente, ocorre nos meses de maio, outubro e dezembro, mas pode ser realizada em outras datas. Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', en: 'A key cultural and religious expression where participants praise deities and saints of African and Catholic origin through music and dance.', es: 'Expresión cultural y religiosa clave donde los participantes alaban deidades y santos de origen africano y católico mediante música y danza.' },
+    unesco: false
+  },
+  {
+    id: 'memorias-e-cantos-de-mocambique-do-tonho-pretinho',
+    name: { pt: 'Memórias e Cantos de Moçambique do Tonho Pretinho', en: 'Memories and Chants of Moçambique by Tonho Pretinho', es: 'Memorias y Cantos de Moçambique de Tonho Pretinho' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Itapecerica',
+    coordinates: { lat: -20.47, lng: -45.12 },
+    description: { pt: 'Registra a tradição oral e musical do Moçambique em Itapecerica, celebrando a ancestralidade e devoção negra mineira.', en: 'Records the oral and musical Moçambique tradition in Itapecerica, celebrating the Black ancestry and devotion of Minas Gerais.', es: 'Registra la tradición oral y musical del Moçambique en Itapecerica, celebrando la ancestralidad y devoción negra de Minas Gerais.' },
+    unesco: false
+  },
+  {
+    id: 'saberes-do-sagrado-irmandade-do-rosario-e-o-registro-patrimo',
+    name: { pt: 'Saberes do Sagrado Irmandade do Rosário e o Registro Patrimonial', en: 'Knowledge of the Sacred Brotherhood of the Rosary and Heritage Registry', es: 'Saberes de lo Sagrado Hermandad del Rosario y el Registro Patrimonial' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Aparecida',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: 'Patrimônio cultural localizado em Aparecida, São Paulo.', en: 'Cultural heritage located in Aparecida, São Paulo.', es: 'Patrimonio cultural ubicado en Aparecida, São Paulo.' },
+    unesco: false
+  },
+  {
+    id: 'festa-do-divino-espirito-santo-em-paraty',
+    name: { pt: 'Festa do Divino Espírito Santo em Paraty', en: 'Feast of the Divine Holy Spirit in Paraty', es: 'Fiesta del Divino Espíritu Santo en Paraty' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Paraty',
+    coordinates: { lat: -23.22, lng: -44.71 },
+    description: { pt: 'Festa do Divino Espírito Santo de Paraty representa um exemplo significativo da diversidade das manifestações culturais brasileiras e da força das tradições que seguem sendo praticadas e transmitidas em contextos urbanos. https://bcr.iphan.gov.br/bens-culturais/festa-do-divino-espirito-santo-da-cidade-de-paraty-rj/#:~:text=Reconhecida%20como%20Patrim%C3%B4nio%20Cultural%20do,e%20transmitidas%20em%20contextos%20urbanos.', en: 'A significant example of Brazilian cultural diversity and the strength of traditions maintained and transmitted in urban contexts.', es: 'Ejemplo significativo de la diversidad cultural brasileña y de la fuerza de las tradiciones mantenidas y transmitidas en contextos urbanos.' },
+    unesco: false
+  },
+  {
+    id: 'festas-do-divino-maranhense-no-rio-de-janeiro',
+    name: { pt: 'Festas do Divino Maranhense no Rio de Janeiro', en: 'Festivals of the Divine Maranhense in Rio de Janeiro', es: 'Fiestas del Divino Maranhense en Rio de Janeiro' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'Referências culturais de migrantes maranhenses que levam para o Rio de Janeiro os festejos do Divino Espírito Santo, aos moldes da tradição Maranhense, criando novas dinâmicas e processos sociais a fim de manter e perpetuar sua devoção e raízes culturais.', en: 'Cultural references of Maranhão migrants in Rio de Janeiro who recreate Holy Spirit festivities to maintain their cultural roots.', es: 'Referencias culturales de migrantes de Maranhão en Rio de Janeiro que recrean los festejos del Divino Espíritu Santo para mantener sus raíces.' },
+    unesco: false
+  },
+  {
+    id: 'festa-de-nossa-senhora-da-conceicao',
+    name: { pt: 'Festa de Nossa Senhora da Conceição', en: 'Feast of Our Lady of the Conception', es: 'Fiesta de Nuestra Señora de la Concepción' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Recife',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Celebração ocorre no Morro da Conceição, bairro da Zona Norte do Recife. Além da programação religiosa, com procissões e missas, a festa também conta com apresentações musicais. O santuário onde acontece a festa abriga a imagem da santa durante todo o ano em uma estrutura de vidro, para que os fiéis possam ver a santa de dentro e de fora da edificação.', en: 'Celebration in Recife featuring processions, masses, and music. The sanctuary houses a glass-enclosed saint statue visible from inside and out.', es: 'Celebración en Recife con procesiones, misas y música. El santuario alberga una imagen de la virgen en una estructura de vidrio visible para los fieles.' },
+    unesco: false
+  },
+  {
+    id: 'folia-de-reis-no-estado-do-rio-de-janeiro',
+    name: { pt: 'Folia de Reis no estado do Rio de Janeiro', en: 'Folia de Reis in the State of Rio de Janeiro', es: 'Folia de Reis en el estado de Rio de Janeiro' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'A Folia de Reis nasceu da catequização por padres portugueses no Brasil, que contavam histórias bíblicas por meio da dramatização. Trata-se de uma encenação da viagem dos três reis magos ao local de nascimento de Jesus Cristo, para presenteá-lo com ouro, incenso e mirra. No cortejo, que entra na casa de devotos, são declamados cânticos em formato de repente.', en: 'A dramatization of the Three Wise Men\'s journey to Bethlehem. The procession visits homes with traditional songs and prayers.', es: 'Dramatización del viaje de los Reyes Magos a Belén. El cortejo visita casas de devotos con cánticos tradicionales y oraciones.' },
+    unesco: false
+  },
+  {
+    id: 'feira-de-sao-cristovao',
+    name: { pt: 'Feira de São Cristóvão', en: 'São Cristóvão Market', es: 'Feria de São Cristóvão' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Rio de Janeiro',
+    coordinates: { lat: -22.91, lng: -43.17 },
+    description: { pt: 'A Feira de São Cristóvão, também conhecida como Centro Luiz Gonzaga de Tradições Nordestinas, é o lugar perfeito para uma imersão na cultura, na gastronomia e nas tradições nordestinas. É um pedacinho do nordeste no coração do Rio de Janeiro. Com suas cores, cheiros, sons e sabores típicos, a feira encanta os visitantes com sua atmosfera vibrante e autêntica.', en: 'Also known as the Luiz Gonzaga Center, it is an immersion into Northeastern Brazilian culture, gastronomy, and music in the heart of Rio de Janeiro.', es: 'También conocida como Centro Luiz Gonzaga, es una inmersión en la cultura, gastronomía y música del noreste brasileño en el corazón de Rio de Janeiro.' },
+    unesco: false
+  },
+  {
+    id: 'veneravel-irmandade-de-sao-benedito-de-angra-dos-reis',
+    name: { pt: 'Venerável Irmandade de São Benedito de Angra dos Reis', en: 'Venerable Brotherhood of Saint Benedict of Angra dos Reis', es: 'Venerable Hermandad de San Benito de Angra dos Reis' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Rio de Janeiro',
+    city: 'Angra dos Reis',
+    coordinates: { lat: -23.01, lng: -44.32 },
+    description: { pt: 'A Festa de São Benedito, tradicional celebração realizada em Angra dos Reis. Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.', en: 'A 370-year-old tradition in Angra dos Reis honoring the city\'s second patron saint with a massive procession of faithful participants.', es: 'Tradición de 370 años en Angra dos Reis que honra al segundo patrono de la ciudad con una multitudinaria procesión de fieles.' },
+    unesco: false
+  },
+  {
+    id: 'celebracao-tooro-nagashi',
+    name: { pt: 'Celebração Tooro Nagashi', en: 'Tooro Nagashi Celebration', es: 'Celebración Tooro Nagashi' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Registro',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: 'O Tooro Nagashi é a celebração em homenagem aos antepassados, pioneira no país, traz anualmente as comemorações dos mais 130 anos das relações diplomáticas entre Brasil e Japão. Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'A pioneer Japanese-Brazilian celebration in Registro honoring ancestors and marking diplomatic relations between Brazil and Japan.', es: 'Celebración pionera en Registro que rinde homenaje a los antepasados y marca las relaciones diplomáticas entre Brasil y Japón.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-quilombolas-do-vale-do-ribeira',
+    name: { pt: 'Comunidades Quilombolas do Vale do Ribeira', en: 'Quilombola Communities of Vale do Ribeira', es: 'Comunidades Quilombolas de Vale do Ribeira' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Vale do Ribeira',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: '.', en: '.', es: '.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-afrodescentes-em-mogi-das-cruzes',
+    name: { pt: 'Comunidades Afrodescentes em Mogi das Cruzes', en: 'Afro-descendant Communities in Mogi das Cruzes', es: 'Comunidades Afrodescendientes en Mogi das Cruzes' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'Mogi das Cruzes',
+    coordinates: { lat: -23.52, lng: -46.19 },
+    description: { pt: 'Reconhecimento das práticas culturais, sociais e religiosas das comunidades negras que moldaram a identidade de Mogi das Cruzes.', en: 'Recognition of the cultural, social, and religious practices of the Black communities that shaped the identity of Mogi das Cruzes.', es: 'Reconocimiento de las prácticas culturales, sociales y religiosas de las comunidades negras que forjaron la identidad de Mogi das Cruzes.' },
+    unesco: false
+  },
+  {
+    id: 'pesca-da-tainha-na-ilha-do-mel',
+    name: { pt: 'Pesca da tainha na Ilha do Mel', en: 'Mullet Fishing in Ilha do Mel', es: 'Pesca de la Lisa en Ilha do Mel' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Paraná',
+    city: 'Ilha do Mel',
+    coordinates: { lat: -25.43, lng: -49.27 },
+    description: { pt: 'Durante a Festa de São Pedro Pescador, entre os pescadores, costumava-se cercar as tainhas, retirar de cada cento uma “tara” (tainha maior) e ofertar ao Santo. Ao final, era realizado um pequeno leilão entre os pescadores que com o dinheiro arrecadado compravam rojões para a festa. https://fundart.com.br/festa-de-sao-pedro-2014/tradicao-da-tainha/#:~:text=Durante%20a%20Festa%20de%20S%C3%A3o,compravam%20roj%C3%B5es%20para%20a%20festa.', en: 'Traditional practice during the Feast of São Pedro where fishermen set aside the largest mullets to auction, raising funds for fireworks.', es: 'Práctica tradicional durante la Fiesta de São Pedro donde los pescadores reservan las lisas más grandes para subastarlas y recaudar fondos para fuegos artificiales.' },
+    unesco: false
+  },
+  {
+    id: 'comunidade-mbya-guarani-em-sao-miguel-arcanjo',
+    name: { pt: 'Comunidade Mbyá-Guarani em São Miguel Arcanjo', en: 'Mbyá-Guarani Community in São Miguel Arcanjo', es: 'Comunidad Mbyá-Guaraní en São Miguel Arcanjo' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'São Miguel Arcanjo',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'O Sítio Arqueológico de São Miguel Arcanjo, popularmente conhecido como Ruínas de São Miguel das Missões, e originalmente chamado Misión de San Miguel Arcángel, é o conjunto de remanescentes da antiga redução jesuítica de São Miguel Arcanjo, integrante dos chamados Sete Povos das Missões. Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo', en: 'Archaeological site of the former Jesuit reduction of São Miguel Arcanjo, part of the Seven Peoples of the Missions in Rio Grande do Sul.', es: 'Sitio arqueológico de la antigua reducción jesuítica de São Miguel Arcanjo, parte de los Siete Pueblos de las Misiones en Rio Grande do Sul.' },
+    unesco: false
+  },
+  {
+    id: 'massacre-de-porongos',
+    name: { pt: 'Massacre de Porongos', en: 'Porongos Massacre', es: 'Masacre de Porongos' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'desconheço',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'Parece estar em processo de análise de Patrimônio', en: 'Status currently under review for heritage designation.', es: 'Estatus actualmente en proceso de análisis para patrimonio.' },
+    unesco: false
+  },
+  {
+    id: 'lidas-campeiras-do-municipio-de-bage',
+    name: { pt: 'Lidas campeiras do município de Bagé', en: 'Country Labors of the Municipality of Bagé', es: 'Faenas Camperas del Municipio de Bagé' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Bagé e Alto Camaquã',
+    coordinates: { lat: -30.03, lng: -51.23 },
+    description: { pt: 'Saberes e práticas tradicionais do pastoreio e manejo do gado no Pampa, fundamentais para a cultura gaúcha de Bagé.', en: 'Traditional knowledge and practices of herding and cattle management in the Pampa, fundamental to the Gaúcho culture of Bagé.', es: 'Saberes y prácticas tradicionales del pastoreo y manejo del ganado en la Pampa, fundamentales para la cultura Gaucha de Bagé.' },
+    unesco: false
+  },
+  {
+    id: 'base-luso-acoreana-no-litoral-catarinense',
+    name: { pt: 'Base Luso-Açoreana no Litoral Catarinense', en: 'Luso-Azorean Base on the Coast of Santa Catarina', es: 'Base Luso-Azoreana en el Litoral de Santa Catarina' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Santa Catarina',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Freguesias era como se chamavam pequenos aglomerados urbanos e rurais durante o período colonial em torno de uma igreja católica. Em Santa Catarina, desenvolveram-se para fortalecer e oficializar a ocupação do território, quando a Coroa Portuguesa ordenou que imigrantes oriundos dos Açores se estabelecessem em pontos estratégicos da região.', en: 'Small urban and rural clusters (parishes) established by immigrants from the Azores to strengthen Portuguese occupation in strategic coastal points.', es: 'Pequeños aglomerados urbanos y rurales (parroquias) establecidos por inmigrantes de las Azores para fortalecer la ocupación portuguesa en puntos estratégicos.' },
+    unesco: false
+  },
+  {
+    id: 'sertao-dos-valongos',
+    name: { pt: 'Sertão dos Valongos', en: 'Sertão dos Valongos', es: 'Sertão dos Valongos' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Porto Belo',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Comunidade do Sertão do Valongo faz divisa com a cidade de Tijucas e por lá o contraste social é claro. Ao contrário do glamour das praias vizinhas de Itapema e Balneário Camboriú, no “Sertão dos Pretos”, como já foi chamado, o trânsito ainda é de carros de boi e a tranquilidade impera. Casas de madeira misturam-se à imensidão verde das montanhas e pastos. https://ndmais.com.br/noticias/comunidade-no-sertao-do-valongo-em-porto-belo-guarda-memorias-dos-tempos-da-escravidao/', en: 'Traditional community in Porto Belo that preserves memories of slavery, characterized by ox carts and wooden houses amidst green mountains.', es: 'Comunidad tradicional en Porto Belo que preserva memorias de la esclavitud, caracterizada por carros de bueyes y casas de madera entre montañas verdes.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-remanescentes-do-quilombo-de-sao-roque',
+    name: { pt: 'Comunidades Remanescentes do Quilombo de São Roque', en: 'Remnant Communities of the São Roque Quilombo', es: 'Comunidades Remanentes del Quilombo de São Roque' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Praia Grande',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Presentes entre os municípios de Praia Grande (SC) e Mampituba (RS), desde o início do século XIX, o quilombo São Roque se destaca pelo fato de resultar da reunião de escravizados fugidos, que trabalhavam com a criação de gado e se moviam, durante uma parte do ano, para plantar no litoral.', en: 'Established by descendants of runaway enslaved people between Praia Grande and Mampituba, known for cattle ranching and seasonal planting.', es: 'Establecido por descendientes de personas esclavizadas fugitivas entre Praia Grande y Mampituba, conocido por la ganadería y siembra estacional.' },
+    unesco: false
+  },
+  {
+    id: 'quilombo-invernada-dos-negros',
+    name: { pt: 'Quilombo Invernada dos Negros', en: 'Invernada dos Negros Quilombo', es: 'Quilombo Invernada dos Negros' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Campos Novos',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'A Comunidade Remanescente de Quilombo Invernada dos Negros, ou apenas Invernada dos Negros, é uma comunidade quilombola reconhecida pelo Incra em 2008. Está localizada na localidade de Corredeira e Manoel Candido entre os municípios Campos Novos e Abdon Batista em Santa Catarina. https://pt.wikipedia.org/wiki/Comunidade_Remanescente_de_Quilombo_Invernada_dos_Negros#:~:text=A%20Comunidade%20Remanescente%20de%20Quilombo,Abdon%20Batista%20em%20Santa%20Catarina.', en: 'Quilombola community recognized in 2008, located between the municipalities of Campos Novos and Abdon Batista in Santa Catarina.', es: 'Comunidad quilombola reconocida en 2008, ubicada entre los municipios de Campos Novos y Abdon Batista en Santa Catarina.' },
+    unesco: false
+  },
+  {
+    id: 'comunidades-negras-de-santa-catarina',
+    name: { pt: 'Comunidades Negras de Santa Catarina', en: 'Black Communities of Santa Catarina', es: 'Comunidades Negras de Santa Catarina' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Santa Catarina',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Entre elas estão a Sertão de Valongo, localizada na cidade de Porto Belo; a Invernada dos Negros, em Campos Novos, e São Roque, situada entre os municípios de Praia Grande (SC) e Mampituba (RS). https://acervo.socioambiental.org/sites/default/files/documents/03d00261.pdf', en: 'Traditional Afro-descendant groups including those from Sertão de Valongo, Invernada dos Negros, and São Roque.', es: 'Grupos afrodescendientes tradicionales, incluyendo los de Sertão de Valongo, Invernada dos Negros y São Roque.' },
+    unesco: false
+  },
+  {
+    id: 'mestres-artifices-da-construcao-civil-tradicional',
+    name: { pt: 'Mestres Artífices da Construção Civil Tradicional', en: 'Master Artisans of Traditional Construction', es: 'Maestros Artesanos de la Construcción Civil Tradicional' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Santa Catarina',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'Patrimônio cultural localizado em Santa Catarina, Santa Catarina.', en: 'Cultural heritage of craftsmanship and construction techniques in the state of Santa Catarina.', es: 'Patrimonio cultural de técnicas de construcción y artesanía en el estado de Santa Catarina.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-preparo-queijo-kochkase',
+    name: { pt: 'Modo de Preparo Queijo Kochkase', en: 'Preparation Method of Kochkäse Cheese', es: 'Modo de Preparación del Queso Kochkäse' },
+    category: 'intangible',
+    region: 'sul',
+    state: 'Santa Catarina',
+    city: 'Blumenau',
+    coordinates: { lat: -27.6, lng: -48.55 },
+    description: { pt: 'O kochkäse é elaborado à partir do queijinho branco (queijo de leite cru coalhado, fervido a 40 graus por dois minutos e escorrido em saco de pano por sete horas). O queijinho branco é então esfarelado e maturado (envelhecido) por alguns dias até que atinja coloração amarelada. https://www.jornaldepomerode.com.br/amarelo-como-ouro-kochkase-um-tesouro-delicioso-da-culinaria-alema/', en: 'A German-influenced cheese made from raw milk curds, boiled, drained, and aged for several days until reaching a yellow color.', es: 'Queso de influencia alemana hecho de cuajada de leche cruda, hervida, escurrida y madurada por varios días hasta alcanzar un color amarillo.' },
+    unesco: false
+  },
+  {
+    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi',
+    name: { pt: 'Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi', en: 'Kusiwa Art – Body Painting and Wajãpi Graphic Art', es: 'Arte Kusiwa – Pintura Corporal y Arte Gráfico Wajãpi' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amapá',
+    city: 'Amapá',
+    coordinates: { lat: -0.03, lng: -51.07 },
+    description: { pt: 'A arte Kusiwa é um sistema de representação gráfico próprio dos povos indígenas Wajãpi, do Amapá, que sintetiza seu modo particular de conhecer, conceber e agir sobre o universo. Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.', en: 'Graphic representation system of the Wajãpi people of Amapá, synthesizing their knowledge and cosmic view. Inscribed as intangible heritage in 2002.', es: 'Sistema de representación gráfica de los Wajãpi de Amapá, que sintetiza su conocimiento y visión del universo. Inscrito como patrimonio inmaterial en 2002.' },
+    unesco: false
+  },
+  {
+    id: 'ritual-yaokwa-do-povo-indigena-enawene-nawe',
+    name: { pt: 'Ritual Yaokwa do Povo Índigena Enawene Nawe', en: 'Yaokwa Ritual of the Enawene Nawe Indigenous People', es: 'Ritual Yaokwa del Pueblo Indígena Enawene Nawe' },
+    category: 'intangible',
+    region: 'centro-oeste',
+    state: 'Mato Grosso do Sul',
+    city: 'Mato Grosso do Sul',
+    coordinates: { lat: -20.44, lng: -54.65 },
+    description: { pt: 'O Ritual Yaokwa é considerado a principal cerimônia do complexo calendário ritual dos Enawenê Nawê, povo indígena cujo território tradicional e terra Indígena estão localizados na região noroeste do estado de Mato Grosso.', en: 'The primary ceremony of the ritual calendar for the Enawene Nawe people in the northwest region of Mato Grosso.', es: 'La ceremonia principal del calendario ritual del pueblo Enawene Nawe en la región noroeste de Mato Grosso.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-renda-irlandesa',
+    name: { pt: 'Modo de Fazer Renda Irlandesa', en: 'Traditional Method of Making Irish Lace', es: 'Modo de Hacer Encaje Irlandés' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Sergipe',
+    city: 'Sergipe',
+    coordinates: { lat: -10.91, lng: -37.07 },
+    description: { pt: 'As rendeiras, atentas às mudanças, dedicam-se à confecção de peças menores destinadas ao lar, às igrejas, enquanto novas demandas apontam para outros mercados, transformando as rendas em aviamentos para peças de vestuário, com que se deslumbram as platéias dos desfiles de modas. “Top” em renda irlandesa. http://portal.iphan.gov.br/uploads/ckfinder/arquivos/Dossie_modo_fazer_renda_irlandesa(1).pdf', en: 'Lace-makers adapt to changes by creating smaller pieces for homes and churches, while entering fashion markets as trimmings for clothing featured on runways. A masterpiece of creative heritage.', es: 'Las encajeras se adaptan a los cambios creando piezas pequeñas para hogares e iglesias, mientras se expanden a mercados de moda como adornos para prendas en pasarelas. Una obra maestra del patrimonio creativo.' },
+    unesco: false
+  },
+  {
+    id: 'cultura-indigenas-do-alto-rio-negro-de-manaus',
+    name: { pt: 'Cultura Indígenas do Alto Rio Negro de Manaus', en: 'Indigenous Cultures of the Upper Rio Negro in Manaus', es: 'Culturas Indígenas del Alto Rio Negro de Manaus' },
+    category: 'intangible',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Manaus',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'Maior rio de águas pretas do mundo e principal afluente do Solimões, com quem se encontra em Manaus para formar o Amazonas, o Negro é um rio sagrado para nós povos indígenas. Suas águas misteriosas guardam histórias e mitos de criação. Uma grande cobra canoa subiu as águas do rio Negro para criar a humanidade. São Gabriel da Cachoeira, no alto Rio Negro, é um município que guarda sua tradição.', en: 'The Rio Negro, the largest blackwater river and main tributary of the Solimões, is sacred to indigenous peoples. Its waters hold creation myths, like the great canoe-snake that created humanity.', es: 'El Rio Negro, el mayor río de aguas negras y principal afluente del Solimões, es sagrado para los pueblos indígenas. Sus aguas guardan mitos de creación, como la gran serpiente-canoa que creó la humanidad.' },
+    unesco: false
+  },
+  {
+    id: 'samba-de-roda-do-reconcavo-baiano',
+    name: { pt: 'Samba de Roda do Recôncavo Baiano', en: 'Samba de Roda of Recôncavo Baiano', es: 'Samba de Roda del Recôncavo Baiano' },
+    category: 'intangible',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Bahia',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Um tesouro feito à mão! A renda irlandesa é Patrimônio Cultural Imaterial do Brasil e motivo de orgulho para Sergipe. Em cada ponto, um pedaço da história e da criatividade sergipanas. Mais que uma tradição artesanal, a renda irlandesa é também fonte de trabalho e renda para muitas famílias, fortalecendo a economia criativa do nosso estado', en: 'Irish lace is an Intangible Cultural Heritage of Brazil and a source of pride for Sergipe. More than a craft tradition, it is a source of income that strengthens the state\'s creative economy.', es: 'El encaje irlandés es Patrimonio Cultural Inmaterial de Brasil y orgullo de Sergipe. Más que tradición artesanal, es una fuente de ingresos que fortalece la economía creativa del estado.' },
+    unesco: false
+  },
+  {
+    id: 'modo-de-fazer-viola-de-cocho',
+    name: { pt: 'Modo de Fazer Viola de Cocho', en: 'Traditional Method of Making the Viola de Cocho', es: 'Modo de Hacer la Viola de Cocho' },
+    category: 'intangible',
+    region: 'sudeste',
+    state: 'Mato Grosso e Mato Grosso do Sul',
+    city: 'Bacia do Rio Paraguai',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'O Modo de Fazer Viola de Cocho, tradicional nos estados de Mato Grosso e Mato Grosso do Sul. A viola de cocho é um instrumento musical único, esculpido artesanalmente a partir de uma única tora de madeira. Seu nome vem do formato que lembra um cocho - recipiente usado para alimentar animais.', en: 'Traditional in Mato Grosso and Mato Grosso do Sul, this unique musical instrument is hand-carved from a single log. Its name refers to its resemblance to a trough (cocho) used for feeding animals.', es: 'Tradicional en Mato Grosso y Mato Grosso do Sul, este instrumento único se talla artesanalmente en un solo tronco. Su nombre alude a su parecido con un comedero (cocho) para animales.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-aparados-da-serra',
+    name: { pt: 'Parque Nacional Aparados da Serra', en: 'Aparados da Serra National Park', es: 'Parque Nacional Aparados da Serra' },
+    category: 'natural',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Cambará do Sul',
+    coordinates: { lat: -29.05, lng: -50.1 },
+    description: { pt: 'Faz parte do Geoparque Mundial da UNESCO - Caminho dos Cânions.', en: 'Part of the UNESCO Global Geoparque - Caminho dos Cânions.', es: 'Parte del Geoparque Mundial de la UNESCO - Caminho dos Cânions.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-da-serra-da-bocaina',
+    name: { pt: 'Parque Nacional da Serra da Bocaina', en: 'Serra da Bocaina National Park', es: 'Parque Nacional da Serra da Bocaina' },
+    category: 'natural',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'São José do Barreiro',
+    coordinates: { lat: -22.64, lng: -44.58 },
+    description: { pt: 'Mata Atlântica preservada entre São Paulo e Rio de Janeiro.', en: 'Preserved Atlantic Forest located between São Paulo and Rio de Janeiro.', es: 'Mata Atlántica preservada entre São Paulo y Rio de Janeiro.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-da-chapada-diamantina',
+    name: { pt: 'Parque Nacional da Chapada Diamantina', en: 'Chapada Diamantina National Park', es: 'Parque Nacional da Chapada Diamantina' },
+    category: 'natural',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Lençóis',
+    coordinates: { lat: -12.56, lng: -41.39 },
+    description: { pt: 'Planalto com cachoeiras, cavernas e formações rochosas únicas.', en: 'Highland plateau featuring waterfalls, caves, and unique rock formations.', es: 'Altiplano con cascadas, cuevas y formaciones rocosas únicas.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-dos-lencois-maranhenses',
+    name: { pt: 'Parque Nacional dos Lençóis Maranhenses', en: 'Lençóis Maranhenses National Park', es: 'Parque Nacional dos Lençóis Maranhenses' },
+    category: 'natural',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Barreirinhas',
+    coordinates: { lat: -2.74, lng: -42.83 },
+    description: { pt: 'Dunas e lagoas cristalinas em paisagem única no mundo.', en: 'Dunes and crystalline lagoons in a landscape unique in the world.', es: 'Dunas y lagunas cristalinas en un paisaje único en el mundo.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-anavilhanas',
+    name: { pt: 'Parque Nacional Anavilhanas', en: 'Anavilhanas National Park', es: 'Parque Nacional Anavilhanas' },
+    category: 'natural',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Novo Airão',
+    coordinates: { lat: -2.62, lng: -60.94 },
+    description: { pt: 'Um dos maiores arquipélagos fluviais do mundo, protegendo a biodiversidade amazônica e o ecossistema do Rio Negro.', en: 'One of the world\'s largest river archipelagos, protecting Amazonian biodiversity and the Rio Negro ecosystem.', es: 'Uno de los mayores archipiélagos fluviales del mundo, protegiendo la biodiversidad amazónica y el ecosistema del Rio Negro.' },
+    unesco: false
+  },
+  {
+    id: 'estacao-ecologica-do-taim',
+    name: { pt: 'Estação Ecológica do Taim', en: 'Taim Ecological Station', es: 'Estación Ecológica del Taim' },
+    category: 'natural',
+    region: 'sul',
+    state: 'Rio Grande do Sul',
+    city: 'Rio Grande',
+    coordinates: { lat: -32.03, lng: -52.1 },
+    description: { pt: 'Ecossistema de banhados no sul do Brasil, vital para a preservação de aves migratórias e da fauna da região pampeana.', en: 'Wetland ecosystem in Southern Brazil, vital for migratory birds and Pampa fauna preservation.', es: 'Ecosistema de humedales en el sur de Brasil, vital para aves migratorias y la fauna de la región pampeana.' },
+    unesco: false
+  },
+  {
+    id: 'estacao-ecologica-de-raso-de-catarina',
+    name: { pt: 'Estação Ecológica de Raso de Catarina', en: 'Raso de Catarina Ecological Station', es: 'Estación Ecológica de Raso de Catarina' },
+    category: 'natural',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Bahia',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'Área de preservação da Caatinga baiana, com desfiladeiros imponentes e refúgio da arara-azul-de-lear.', en: 'Preservation area for the Caatinga of Bahia, with imposing canyons and a sanctuary for the Lear\'s macaw.', es: 'Área de preservación de la Caatinga bahiana, con imponentes desfiladeros y refugio del guacamayo de Lear.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-da-serra-do-divisor',
+    name: { pt: 'Parque Nacional da Serra do Divisor', en: 'Serra do Divisor National Park', es: 'Parque Nacional da Serra do Divisor' },
+    category: 'natural',
+    region: 'norte',
+    state: 'Acre',
+    city: 'Acre',
+    coordinates: { lat: -9.97, lng: -67.81 },
+    description: { pt: 'Local de altíssima biodiversidade no Acre, marcado por relevo acidentado e fronteira ecológica com a região andina.', en: 'High biodiversity site in Acre, characterized by rugged terrain and an ecological border with the Andean region.', es: 'Sitio de altísima biodiversidad en Acre, marcado por relieve accidentado y frontera ecológica con la región andina.' },
+    unesco: false
+  },
+  {
+    id: 'parque-nacional-pico-da-neblina',
+    name: { pt: 'Parque Nacional Pico da Neblina', en: 'Pico da Neblina National Park', es: 'Parque Nacional Pico da Neblina' },
+    category: 'natural',
+    region: 'norte',
+    state: 'Amazonas',
+    city: 'Amazonas',
+    coordinates: { lat: -3.12, lng: -60.02 },
+    description: { pt: 'Abriga o ponto mais alto do Brasil em território yanomami, com ecossistemas únicos de montanha amazônica.', en: 'Home to Brazil\'s highest point in Yanomami territory, featuring unique Amazonian mountain ecosystems.', es: 'Alberga el punto más alto de Brasil en territorio Yanomami, con ecosistemas únicos de montaña amazónica.' },
+    unesco: false
+  },
+  {
+    id: 'atol-das-rocas',
+    name: { pt: 'Atol das Rocas', en: 'Rocas Atoll', es: 'Atol das Rocas' },
+    category: 'natural',
+    region: 'nordeste',
+    state: 'Rio Grande do Norte',
+    city: 'Rio Grande do Norte',
+    coordinates: { lat: -5.79, lng: -35.21 },
+    description: { pt: 'Único atol do Atlântico Sul, funciona como um santuário ecológico para a reprodução de espécies marinhas.', en: 'The only atoll in the South Atlantic, serving as an ecological sanctuary for marine species reproduction.', es: 'Único atolón del Atlántico Sur, funciona como santuario ecológico para la reproducción de especies marinas.' },
+    unesco: false
+  },
+  {
+    id: 'caverna-do-peruacuparque-estadual-veredas-do-peruacu',
+    name: { pt: 'Caverna do Peruaçu/Parque Estadual Veredas do Peruaçu', en: 'Peruaçu Cave / Veredas do Peruaçu State Park', es: 'Caverna do Peruaçu / Parque Estadual Veredas do Peruaçu' },
+    category: 'natural',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Complexo com grutas monumentais e registros rupestres milenares integrados à paisagem do cerrado mineiro.', en: 'Complex of monumental caves and ancient rock art integrated into the landscape of the Minas Gerais cerrado.', es: 'Complejo con grutas monumentales y registros rupestres milenarios integrados al paisaje del cerrado mineiro.' },
+    unesco: false
+  },
+  {
+    id: 'cachoeira-do-iauarete-lugar-sagrado-dos-povos-indigenas',
+    name: { pt: 'Cachoeira do Iauaretê Lugar sagrado dos povos indígenas', en: 'Iauaretê Waterfall - Sacred Site of Indigenous Peoples', es: 'Catarata de Iauaretê - Lugar sagrado de los pueblos indígenas' },
+    category: 'natural',
+    region: 'sudeste',
+    state: '',
+    city: '',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Local de importância mística e histórica para os povos Tukano e Aruak, onde a paisagem narra a origem do mundo.', en: 'A site of mystical and historical importance for the Tukano and Aruak peoples, where the landscape narrates the origin of the world.', es: 'Un sitio de importancia mística e histórica para los pueblos Tukano y Aruak, donde el paisaje narra el origen del mundo.' },
+    unesco: false
+  },
+  {
+    id: 'reserva-da-biosfera-caatinga',
+    name: { pt: 'Reserva da Biosfera - Caatinga', en: 'Caatinga Biosphere Reserve', es: 'Reserva de la Biosfera - Caatinga' },
+    category: 'natural',
+    region: 'sudeste',
+    state: 'Estados Nordeste',
+    city: 'Estados Nordestes',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'Vasta área dedicada à conservação do bioma semiárido brasileiro, protegendo sua flora e fauna exclusivas.', en: 'A vast area dedicated to the conservation of the Brazilian semi-arid biome, protecting its exclusive flora and fauna.', es: 'Vasta área dedicada a la conservación del bioma semiárido brasileño, protegiendo su flora y fauna exclusivas.' },
+    unesco: false
+  },
+  {
+    id: 'cinturao-verde-da-cidade-de-sao-paulo',
+    name: { pt: 'Cinturão Verde da Cidade de São Paulo', en: 'São Paulo City Green Belt', es: 'Cinturón Verde de la Ciudad de São Paulo' },
+    category: 'natural',
+    region: 'sudeste',
+    state: 'São Paulo',
+    city: 'São Paulo',
+    coordinates: { lat: -23.55, lng: -46.63 },
+    description: { pt: 'Reserva florestal que envolve a metrópole, essencial para o clima, abastecimento de água e preservação da Mata Atlântica.', en: 'A forest reserve surrounding the metropolis, essential for climate regulation, water supply, and Atlantic Forest preservation.', es: 'Reserva forestal que rodea la metrópoli, esencial para el clima, el suministro de agua y la preservación de la Mata Atlántica.' },
+    unesco: false
+  },
+  {
+    id: 'serra-do-espinhaco',
+    name: { pt: 'Serra do Espinhaço', en: 'Serra do Espinhaço', es: 'Serra do Espinhaço' },
+    category: 'natural',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'O patrimônio natural da Serra do Espinhaço é especial pela extraordinária capacidade de fascinar pessoas, sejam elas bandeirantes, garimpeiros, viajantes, cientistas ou um simples habitante de hoje ou de épocas remotas. https://santuariodocaraca.com.br/rppn-o-que-e/reserva-da-biosfera-da-serra-do-espinhaco/#:~:text=O%20patrim%C3%B4nio%20natural%20da%20Serra,hoje%20ou%20de%20%C3%A9pocas%20remotas.', en: 'The natural heritage of Serra do Espinhaço is known for its extraordinary power to fascinate explorers, scientists, and inhabitants since remote times.', es: 'El patrimonio natural de la Serra do Espinhaço destaca por su extraordinaria capacidad de fascinar a exploradores, científicos y habitantes desde épocas remotas.' },
+    unesco: false
+  },
+  {
+    id: 'samba-de-roda-do-reconcavo-baiano',
+    name: { pt: 'Samba de Roda do Recôncavo Baiano', en: 'Samba de Roda of Recôncavo Baiano', es: 'Samba de Roda del Recôncavo Baiano' },
+    category: 'cultural-humanity',
+    region: 'nordeste',
+    state: 'Bahia',
+    city: 'Bahia',
+    coordinates: { lat: -12.97, lng: -38.5 },
+    description: { pt: 'O samba de roda, originário da região do Recôncavo Baiano, foi o primeiro gênero musical brasileiro a se tornar patrimônio oral e imaterial da humanidade pela Unesco, em 2005. O samba de roda é uma expressão coreográfica musical, algo inseparável da dança, que é parte integrante da música, sendo também a música parte integrante da dança.', en: 'A musical and choreographic expression from Bahia where dance and music are inseparable; the first Brazilian genre to become UNESCO Intangible Heritage.', es: 'Expresión coreográfica y musical de Bahía donde la danza y la música son inseparables; el primer género brasileño en ser patrimonio inmaterial de la UNESCO.' },
     unesco: true
-  }
+  },
+  {
+    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi',
+    name: { pt: 'Arte Kusiwa pintura corporal e arte gráfica Wajãpi', en: 'Kusiwa Art - Wajãpi Body Painting and Graphic Art', es: 'Arte Kusiwa - Pintura corporal y arte gráfico Wajãpi' },
+    category: 'cultural-humanity',
+    region: 'norte',
+    state: 'Amapá',
+    city: 'Amapá',
+    coordinates: { lat: -0.03, lng: -51.07 },
+    description: { pt: 'A arte Kusiwa é um sistema de representação gráfico próprio dos povos indígenas Wajãpi, do Amapá, que sintetiza seu modo particular de conhecer, conceber e agir sobre o universo. Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.', en: 'A graphic representation system of the Wajãpi people from Amapá, synthesizing their unique way of conceiving and acting upon the universe.', es: 'Sistema de representación gráfica de los pueblos Wajãpi de Amapá, que sintetiza su modo particular de concebir y actuar sobre el universo.' },
+    unesco: true
+  },
+  {
+    id: 'celebracao-do-cirio-de-nossa-senhora-de-nazare-em-belem',
+    name: { pt: 'Celebração do Círio de Nossa Senhora de Nazaré em Belém', en: 'Círio de Nossa Senhora de Nazaré Celebration in Belém', es: 'Celebración del Círio de Nossa Senhora de Nazaré en Belém' },
+    category: 'cultural-humanity',
+    region: 'norte',
+    state: 'Pará',
+    city: 'Belém',
+    coordinates: { lat: -1.46, lng: -48.5 },
+    description: { pt: 'O Círio de Nazaré é uma celebração religiosa paraense que ocorre na segunda semana do mês de outubro, chegando a reunir cerca de 2 milhões de participantes anualmente. A cerimônia, que ocorre anualmente há 221 anos, atrai curiosos e devotos pagadores de promessas. https://brasil.un.org/pt-br/67841-c%C3%ADrio-de-nazar%C3%A9-%C3%A9-declarado-patrim%C3%B4nio-imaterial-da-humanidade-da-unesco#:~:text=O%20C%C3%ADrio%20de%20Nazar%C3%A9%20%C3%A9,e%20devotos%20pagadores%20de%20promessas.', en: 'A massive religious celebration in Pará held annually for over 200 years, attracting millions of devotees and observers every October.', es: 'Una masiva celebración religiosa en Pará que se realiza anualmente desde hace más de 200 años, atrayendo a millones de devotos cada octubre.' },
+    unesco: true
+  },
+  {
+    id: 'frevo-pernambucano',
+    name: { pt: 'Frevo Pernambucano', en: 'Pernambuco Frevo', es: 'Frevo de Pernambuco' },
+    category: 'cultural-humanity',
+    region: 'nordeste',
+    state: 'Pernambuco',
+    city: 'Pernambuco',
+    coordinates: { lat: -8.05, lng: -34.87 },
+    description: { pt: 'Ele é pernambucano, tem mais de 100 anos e tem energia pra dar e vender: pula, salta, canta e se agita num ritmo frenético. É famoso e importante, sua relevância para a cultura é reconhecida nacional e internacionalmente. https://www.neoenergia.com/en/w/frevo-patrimonio-cultural-imaterial-da-humanidade#:~:text=%E2%80%8B%20Ele%20%C3%A9%20pernambucano%2C%20tem,%C3%A9%20reconhecida%20nacional%20e%20internacionalmente.', en: 'A century-old, high-energy rhythm from Pernambuco involving frenetic dancing and jumps, recognized internationally as intangible cultural heritage.', es: 'Ritmo centenario de gran energía originario de Pernambuco, con saltos y movimientos frenéticos, reconocido internacionalmente como patrimonio cultural.' },
+    unesco: true
+  },
+  {
+    id: 'manifestacao-cultural-capoeira',
+    name: { pt: 'Manifestação Cultural:  Capoeira', en: 'Cultural Expression: Capoeira', es: 'Manifestación Cultural: Capoeira' },
+    category: 'cultural-humanity',
+    region: 'centro-oeste',
+    state: 'Distrito Federal',
+    city: 'Distrito Federal',
+    coordinates: { lat: -15.79, lng: -47.88 },
+    description: { pt: 'A capoeira foi reconhecida como Patrimônio Cultural Brasileiro, em 2008. Ela envolve canto, o uso de instrumentos típicos como o berimbau e o atabaque, em uma roda, onde os golpes de luta se confundem com a dança. Esta manifestação foi considerada crime e proibida no Brasil, antes de ser celebrada como bem cultural. https://cnm.org.br/comunicacao/noticias/manifesta%C3%A7%C3%A3o-importante-no-brasil-a-capoeira-pode-se-tornar-patrim%C3%B4nio-cultural-da-humanidade', en: 'A mix of martial arts, dance, and music involving instruments like the berimbau; once prohibited, it is now a celebrated Brazilian cultural heritage.', es: 'Mezcla de artes marciales, danza y música con instrumentos como el berimbau; antes prohibida, hoy es un celebrado patrimonio cultural brasileño.' },
+    unesco: true
+  },
+  {
+    id: 'manifestacao-cultural-bumba-meu-boi',
+    name: { pt: 'Manifestação Cultural: Bumba meu Boi', en: 'Cultural Expression: Bumba Meu Boi', es: 'Manifestación Cultural: Bumba Meu Boi' },
+    category: 'cultural-humanity',
+    region: 'nordeste',
+    state: 'Maranhão',
+    city: 'Maranhão',
+    coordinates: { lat: -2.53, lng: -44.28 },
+    description: { pt: 'O Complexo Cultural do Bumba Meu Boi do Maranhão recebeu oficialmente o título de Patrimônio Cultural Imaterial da Humanidade pela UNESCO em cerimônia realizada nessa quinta-feira, 14, na Capela de São Pedro, no bairro Madre Deus, em São Luís.', en: 'A cultural complex from Maranhão officially recognized by UNESCO as Intangible Cultural Heritage of Humanity during a ceremony in São Luís.', es: 'Complejo cultural de Maranhão reconocido oficialmente por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad en una ceremonia en São Luís.' },
+    unesco: true
+  },
+  {
+    id: 'modo-artesanal-de-fazer-queijo-de-minas-gerais',
+    name: { pt: 'Modo Artesanal de fazer queijo de Minas Gerais', en: 'Artisanal Method of Making Minas Gerais Cheese', es: 'Modo artesanal de hacer queso de Minas Gerais' },
+    category: 'cultural-humanity',
+    region: 'sudeste',
+    state: 'Minas Gerais',
+    city: 'Minas Gerais',
+    coordinates: { lat: -19.92, lng: -43.94 },
+    description: { pt: 'Feito a partir de técnicas ancestrais, relacionadas à produção de queijo de leite cru, o Queijo Minas Artesanal tornou-se uma importante atividade socioeconômica que promove inclusão e desenvolvimento local, em especial da agricultura familiar.', en: 'Ancestral raw milk cheese-making techniques that serve as a vital socio-economic activity, promoting local development and family farming.', es: 'Técnicas ancestrales de elaboración de queso con leche cruda que actúan como actividad socioeconómica vital, promoviendo el desarrollo local.' },
+    unesco: true
+  },
 ];
 
 // Helper functions
-export const getHeritagesByCategory = (category: HeritageCategory) => 
+export const getHeritagesByCategory = (category: HeritageCategory) =>
   heritages.filter(h => h.category === category);
 
-export const getHeritagesByRegion = (region: Region) => 
+export const getHeritagesByRegion = (region: Region) =>
   heritages.filter(h => h.region === region);
 
-export const getHeritagesByState = (state: string) => 
+export const getHeritagesByState = (state: string) =>
   heritages.filter(h => h.state === state);
 
-export const getUnescoHeritages = () => 
+export const getUnescoHeritages = () =>
   heritages.filter(h => h.unesco);
 
-export const getAllStates = () => 
+export const getAllStates = () =>
   [...new Set(heritages.map(h => h.state))].sort();
 
 export const getCategoryColor = (category: HeritageCategory): string => {
-  const colors = {
+  const colors: Record<HeritageCategory, string> = {
     world: 'heritage-world',
-    material: 'heritage-material', 
+    material: 'heritage-material',
     intangible: 'heritage-intangible',
-    natural: 'heritage-natural'
+    natural: 'heritage-natural',
+    'cultural-humanity': 'heritage-cultural-humanity'
   };
   return colors[category];
 };
 
 export const getCategoryIcon = (category: HeritageCategory): string => {
-  const icons = {
+  const icons: Record<HeritageCategory, string> = {
     world: '🏛️',
     material: '🏗️',
     intangible: '🎭',
-    natural: '🌿'
+    natural: '🌿',
+    'cultural-humanity': '🌍'
   };
   return icons[category];
 };

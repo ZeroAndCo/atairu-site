@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, MapPin, Sparkles, Building2, Music, TreePine } from 'lucide-react';
+import { Search, MapPin, Sparkles, Building2, Music, TreePine, Globe2 } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +29,7 @@ const Heritage = () => {
     { key: 'material' as HeritageCategory, icon: Building2, label: t('categories.material.name'), count: getHeritagesByCategory('material').length },
     { key: 'intangible' as HeritageCategory, icon: Music, label: t('categories.intangible.name'), count: getHeritagesByCategory('intangible').length },
     { key: 'natural' as HeritageCategory, icon: TreePine, label: t('categories.natural.name'), count: getHeritagesByCategory('natural').length },
+    { key: 'cultural-humanity' as HeritageCategory, icon: Globe2, label: t('categories.cultural-humanity.name'), count: getHeritagesByCategory('cultural-humanity').length },
   ];
 
   const filteredHeritages = useMemo(() => {
@@ -46,11 +47,12 @@ const Heritage = () => {
   }, [activeTab, search, currentLang]);
 
   const getCategoryBadgeColor = (category: HeritageCategory) => {
-    const colors = {
+    const colors: Record<HeritageCategory, string> = {
       world: 'bg-gold text-foreground',
       material: 'bg-terracotta text-white',
       intangible: 'bg-navy text-white',
-      natural: 'bg-forest text-white'
+      natural: 'bg-forest text-white',
+      'cultural-humanity': 'bg-purple-700 text-white'
     };
     return colors[category];
   };

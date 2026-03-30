@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, ChevronRight, Sparkles, TreePine, Building2, Music } from 'lucide-react';
+import { MapPin, ChevronRight, Sparkles, TreePine, Building2, Music, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -51,6 +51,13 @@ const Index = () => {
       color: 'bg-forest text-white',
       borderColor: 'border-forest',
       hoverBg: 'hover:bg-forest/5'
+    },
+    { 
+      key: 'cultural-humanity', 
+      icon: Globe2, 
+      color: 'bg-purple-700 text-white',
+      borderColor: 'border-purple-700',
+      hoverBg: 'hover:bg-purple-700/5'
     },
   ];
 
