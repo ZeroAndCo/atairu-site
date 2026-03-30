@@ -191,7 +191,17 @@ const MapPage = () => {
                 </SelectContent>
               </Select>
 
-              <Select value={regionFilter} onValueChange={(v) => {
+              <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+                <SelectTrigger className="w-36">
+                  <SelectValue placeholder={t('tags.all')} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t('tags.all')}</SelectItem>
+                  <SelectItem value="cultural">{t('tags.cultural')}</SelectItem>
+                  <SelectItem value="natural">{t('tags.natural')}</SelectItem>
+                </SelectContent>
+              </Select>
+
                 setRegionFilter(v as Region | 'all');
                 if (v !== 'all') {
                   setSearchParams({ region: v });
