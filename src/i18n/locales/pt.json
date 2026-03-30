@@ -117,6 +117,9 @@
     "cultural": "Cultural",
     "natural": "Natural"
   },
+  "heritage": {
+    "viewOnMap": "Ver no Mapa"
+  },
   "common": {
     "loading": "Carregando...",
     "error": "Erro ao carregar",
