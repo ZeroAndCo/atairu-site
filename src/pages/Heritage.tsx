@@ -208,7 +208,7 @@ const Heritage = () => {
                             <MapPin className="h-4 w-4 shrink-0" />
                             {heritage.city}, {heritage.state}
                           </p>
-                          <div className="flex-1">
+                          <div className="flex-1 mb-5">
                             <p className="text-sm text-foreground/80 line-clamp-3">
                               {heritage.description[currentLang]}
                             </p>
