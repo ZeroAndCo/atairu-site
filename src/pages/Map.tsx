@@ -357,7 +357,13 @@ const MapPage = () => {
                   {heritage.unesco && (
                     <span className="inline-block bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded">UNESCO</span>
                   )}
-                </div>
+                  <div className="flex gap-1 mt-1">
+                    {heritage.tags.map(tag => (
+                      <span key={tag} className="inline-block text-xs px-2 py-0.5 rounded border border-muted-foreground/30">
+                        {t(`tags.${tag}`)}
+                      </span>
+                    ))}
+                  </div>
               </Popup>
             </Marker>
           ))}
