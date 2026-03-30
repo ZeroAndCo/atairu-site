@@ -1762,14 +1762,14 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'festa-de-santana-de-caico',
-    name: { pt: 'Festa de Sant\'Ana de Caicó', en: 'Festival of Sant\'Ana de Caicó', es: 'Fiesta de Sant\'Ana de Caicó' },
+    name: { pt: 'Festa de SantAna de Caicó', en: 'Festival of SantAna de Caicó', es: 'Fiesta de SantAna de Caicó' },
     category: 'intangible',
     region: 'sudeste',
     state: 'RIo Grande do Norte',
     city: 'Caicó região do Seridó',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'A Festa de Sant\' Ana de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration Sant\'Ana, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a Sant\'Ana, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
-    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
+    description: { pt: 'A Festa de SantAna de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration SantAna, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a SantAna, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
+    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de SantAna, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2087,7 +2087,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'tabuleiro-das-baianas-em-salvador',
-    name: { pt: 'Tabuleiro das Baianas em Salvador', en: 'Baianas\' Table in Salvador', es: 'Tablero de las Baianas en Salvador' },
+    name: { pt: 'Tabuleiro das Baianas em Salvador', en: 'Baianas Table in Salvador', es: 'Tablero de las Baianas en Salvador' },
     category: 'intangible',
     region: 'nordeste',
     state: 'Bahia',
@@ -2464,7 +2464,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'festa-da-cacada-da-rainha-em-colinas-do-sul',
-    name: { pt: 'Festa da Caçada da Rainha em Colinas do Sul', en: 'Queen\'s Hunt Festival in Colinas do Sul', es: 'Fiesta de la Cacería de la Reina en Colinas do Sul' },
+    name: { pt: 'Festa da Caçada da Rainha em Colinas do Sul', en: 'Queens Hunt Festival in Colinas do Sul', es: 'Fiesta de la Cacería de la Reina en Colinas do Sul' },
     category: 'intangible',
     region: 'centro-oeste',
     state: 'Goiás',
