@@ -52,6 +52,13 @@ const Index = () => {
       borderColor: 'border-forest',
       hoverBg: 'hover:bg-forest/5'
     },
+    { 
+      key: 'cultural-humanity', 
+      icon: Globe2, 
+      color: 'bg-purple-700 text-white',
+      borderColor: 'border-purple-700',
+      hoverBg: 'hover:bg-purple-700/5'
+    },
   ];
 
   const featuredHeritages = heritages.filter(h => h.unesco).slice(0, 6);

@@ -44,11 +44,12 @@ L.Icon.Default.mergeOptions({
 
 // Custom marker icons by category
 const createCustomIcon = (category: HeritageCategory) => {
-  const colors = {
+  const colors: Record<HeritageCategory, string> = {
     world: '#d4a574',
     material: '#e07a5f',
     intangible: '#1d3557',
-    natural: '#1a4d2e'
+    natural: '#1a4d2e',
+    'cultural-humanity': '#7c3aed'
   };
 
   return L.divIcon({

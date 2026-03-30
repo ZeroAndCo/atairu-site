@@ -47,11 +47,12 @@ const Heritage = () => {
   }, [activeTab, search, currentLang]);
 
   const getCategoryBadgeColor = (category: HeritageCategory) => {
-    const colors = {
+    const colors: Record<HeritageCategory, string> = {
       world: 'bg-gold text-foreground',
       material: 'bg-terracotta text-white',
       intangible: 'bg-navy text-white',
-      natural: 'bg-forest text-white'
+      natural: 'bg-forest text-white',
+      'cultural-humanity': 'bg-purple-700 text-white'
     };
     return colors[category];
   };
