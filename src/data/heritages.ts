@@ -2792,7 +2792,7 @@ export const getUnescoHeritages = () =>
   heritages.filter(h => h.unesco);
 
 export const getAllStates = () =>
-  [...new Set(heritages.map(h => h.state))].sort();
+  [...new Set(heritages.map(h => h.state).filter(s => s !== ''))].sort();
 
 export const getCategoryColor = (category: HeritageCategory): string => {
   const colors: Record<HeritageCategory, string> = {
