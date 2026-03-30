@@ -214,39 +214,15 @@ const Index = () => {
           
           <SectionDivider color="terracotta" className="mb-8" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.slice(0, 3).map((category, index) => (
+          <div className="flex flex-wrap justify-center gap-6">
+            {categories.map((category, index) => (
               <motion.div
                 key={category.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-              >
-                <Card className={`h-full border-2 ${category.borderColor} ${category.hoverBg} hover:shadow-brand transition-all cursor-pointer`}>
-                  <CardContent className="p-6 text-center">
-                    <div className={`w-16 h-16 rounded-full ${category.color} flex items-center justify-center mx-auto mb-4`}>
-                      <category.icon className="h-8 w-8" />
-                    </div>
-                    <h3 className="font-serif text-xl font-semibold mb-2">
-                      {t(`categories.${category.key}.name`)}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {t(`categories.${category.key}.description`)}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-2xl lg:max-w-[66%] mx-auto">
-            {categories.slice(3).map((category, index) => (
-              <motion.div
-                key={category.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (index + 3) * 0.1 }}
+                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <Card className={`h-full border-2 ${category.borderColor} ${category.hoverBg} hover:shadow-brand transition-all cursor-pointer`}>
                   <CardContent className="p-6 text-center">
