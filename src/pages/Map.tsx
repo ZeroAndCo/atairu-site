@@ -98,6 +98,7 @@ const MapPage = () => {
   
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<HeritageCategory | 'all'>('all');
+  const [tagFilter, setTagFilter] = useState<HeritageTag | 'all'>('all');
   const [regionFilter, setRegionFilter] = useState<Region | 'all'>(
     (searchParams.get('region') as Region) || 'all'
   );
