@@ -2983,19 +2983,6 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'modo-de-fazer-viola-de-cocho',
-    name: { pt: 'Modo de Fazer Viola de Cocho', en: 'Traditional Method of Making the Viola de Cocho', es: 'Modo de Hacer la Viola de Cocho' },
-    category: 'intangible',
-    region: 'sudeste',
-    state: 'Mato Grosso e Mato Grosso do Sul',
-    city: 'Bacia do Rio Paraguai',
-    coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'O Modo de Fazer Viola de Cocho, tradicional nos estados de Mato Grosso e Mato Grosso do Sul.', en: 'Traditional in Mato Grosso and Mato Grosso do Sul, this unique musical instrument is hand-carved from a single log.', es: 'Tradicional en Mato Grosso y Mato Grosso do Sul, este instrumento único se talla artesanalmente en un solo tronco.' },
-    details: { pt: 'A viola de cocho é um instrumento musical único, esculpido artesanalmente a partir de uma única tora de madeira. Seu nome vem do formato que lembra um cocho - recipiente usado para alimentar animais.', en: 'Its name refers to its resemblance to a trough (cocho) used for feeding animals.', es: 'Su nombre alude a su parecido con un comedero (cocho) para animales.' },
-    unesco: false,
-    tags: ['cultural']
-  },
-  {
     id: 'parque-nacional-aparados-da-serra',
     name: { pt: 'Parque Nacional Aparados da Serra', en: 'Aparados da Serra National Park', es: 'Parque Nacional Aparados da Serra' },
     category: 'natural',
@@ -3035,7 +3022,7 @@ export const heritages: Heritage[] = [
     tags: ['natural']
   },
   {
-    id: 'parque-nacional-dos-lencois-maranhenses',
+    id: 'parque-nacional-dos-lencois-maranhenses-natural',
     name: { pt: 'Parque Nacional dos Lençóis Maranhenses', en: 'Lençóis Maranhenses National Park', es: 'Parque Nacional dos Lençóis Maranhenses' },
     category: 'natural',
     region: 'nordeste',
@@ -3191,7 +3178,7 @@ export const heritages: Heritage[] = [
     tags: ['natural']
   },
   {
-    id: 'samba-de-roda-do-reconcavo-baiano',
+    id: 'samba-de-roda-do-reconcavo-baiano-cultural-humanity',
     name: { pt: 'Samba de Roda do Recôncavo Baiano', en: 'Samba de Roda of Recôncavo Baiano', es: 'Samba de Roda del Recôncavo Baiano' },
     category: 'cultural-humanity',
     region: 'nordeste',
@@ -3204,7 +3191,7 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi',
+    id: 'arte-kusiwa-pintura-corporal-e-arte-grafica-wajapi-cultural-humanity',
     name: { pt: 'Arte Kusiwa pintura corporal e arte gráfica Wajãpi', en: 'Kusiwa Art - Wajãpi Body Painting and Graphic Art', es: 'Arte Kusiwa - Pintura corporal y arte gráfico Wajãpi' },
     category: 'cultural-humanity',
     region: 'norte',
