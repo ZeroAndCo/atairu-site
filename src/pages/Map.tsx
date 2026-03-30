@@ -124,12 +124,13 @@ const MapPage = () => {
         h.state.toLowerCase().includes(search.toLowerCase());
       
       const matchesCategory = categoryFilter === 'all' || h.category === categoryFilter;
+      const matchesTag = tagFilter === 'all' || h.tags.includes(tagFilter);
       const matchesRegion = regionFilter === 'all' || h.region === regionFilter;
       const matchesState = stateFilter === 'all' || h.state === stateFilter;
       
-      return matchesSearch && matchesCategory && matchesRegion && matchesState;
+      return matchesSearch && matchesCategory && matchesTag && matchesRegion && matchesState;
     });
-  }, [search, categoryFilter, regionFilter, stateFilter, currentLang]);
+  }, [search, categoryFilter, tagFilter, regionFilter, stateFilter, currentLang]);
 
   const clearFilters = () => {
     setSearch('');
