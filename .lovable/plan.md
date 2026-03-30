@@ -1,168 +1,67 @@
 
 
-## Ataîru - Institutional Website & Heritage Map
+# Update Heritage Data: Categories, Descriptions, and Classifications
 
-### 🎯 Project Overview
-A stunning trilingual institutional website showcasing Brazil's cultural and natural heritage, featuring an innovative dual-map experience and comprehensive heritage database covering all 5 regions of Brazil.
+## Summary
+Replace the current ~40 heritage items with ~300 from the CSV, add "Cultural da Humanidade" as a 5th category, auto-translate to EN/ES, and update category descriptions site-wide.
 
----
+## Scope Analysis
 
-### 🎨 Visual Identity
-- **Primary Colors**: Deep forest green (#1a4d2e), Terracotta coral (#e07a5f), Navy blue (#1d3557), Warm gold (#d4a574)
-- **Indigenous-inspired patterns** as decorative accents
-- **Your Ataîru logo** prominently featured
-- **Photography-forward design** highlighting Brazil's beauty
+The CSV contains approximately 300 heritage entries across 5 categories:
+- **Category 1 - Mundial/UNESCO**: ~27 entries (lines 2-27)
+- **Category 2 - Material**: ~96 entries (lines 29-147)
+- **Category 3 - Imaterial**: ~106 entries (lines 149-292)
+- **Category 4 - Natural**: ~15 entries (lines 294-308)
+- **Category 5 - Cultural da Humanidade**: ~7 entries (lines 310-316)
 
----
+**Key challenge**: ~80 entries have only a URL as their description (e.g., `http://portal.iphan.gov.br/...`). Scraping 80+ URLs in real-time is not feasible. Instead, I will use the AI Gateway script to generate brief placeholder descriptions based on the heritage name, city, and state for URL-only entries.
 
-### 📱 Site Structure
+## Implementation Steps
 
-#### **1. Homepage (Página Inicial)**
-- **Hero Section**: Full-screen with your tagline "Seu Companheiro de Viagem ao Coração do Brasil"
-- **Stylized Brazil Map**: Artistic illustrated map showing the 5 regions with animated pins - clicking a region reveals its states
-- **Quick Stats**: Number of heritage sites, UNESCO sites, regions covered
-- **Featured Heritages**: Rotating showcase of 4-6 highlighted sites
-- **Call-to-Action**: "Explore the Interactive Map" button
+### Step 1: Update Type System and Category Config
+- Add `'cultural-humanity'` to `HeritageCategory` type in `src/data/heritages.ts`
+- Add icon, color, and badge mappings for the new category
+- Add a new icon import (e.g., `Globe2` or `Heart`) for the category
 
-#### **2. About the Project (Sobre o Projeto)**
-- **Mission & Vision**: What Ataîru aims to achieve
-- **The Story**: Origin and inspiration behind the project
-- **Understanding Heritage**: Explanation of:
-  - Patrimônio Mundial (UNESCO World Heritage)
-  - Patrimônio Material (Tangible Heritage)
-  - Patrimônio Imaterial (Intangible Heritage)
-  - Parques Naturais (Natural Parks)
-- **Future Vision**: Roadmap to the full travel companion webapp
+### Step 2: Update Translation Files (pt.json, en.json, es.json)
+- Add `categories.cultural-humanity` with name and description in all 3 languages
+- Update existing category descriptions to use the richer text from the "Tipo de Patrimônio" CSV:
+  - **Mundial/UNESCO**: "Sítios reconhecidos pela UNESCO por seu valor universal excepcional. Pode ser Cultural, Natural ou ambos..."
+  - **Material**: "Bens tangíveis como edifícios históricos, monumentos e centros urbanos..."
+  - **Imaterial**: "Expressões culturais vivas como danças, manifestações, celebrações..."
+  - **Natural**: "Parques nacionais, reservas e áreas de preservação ambiental..."
+  - **Cultural da Humanidade**: "Abrange práticas, representações, expressões, conhecimentos e técnicas..."
 
-#### **3. Heritage Categories (Categorias de Patrimônio)**
-Four visual category pages with filtering:
+### Step 3: Generate Heritage Data (~300 entries)
+- Use the AI Gateway script to batch-process the CSV and generate:
+  - Clean heritage IDs (slugified names)
+  - Trilingual names (pt from CSV, en/es auto-translated)
+  - Trilingual descriptions (pt from CSV or AI-generated placeholder for URL-only, en/es auto-translated)
+  - Category mapping: "Mundial | UNESCO" → `'world'`, "Material" → `'material'`, "Imaterial" → `'intangible'`, "Natural" → `'natural'`, "Cultural da Humanidade" → `'cultural-humanity'`
+  - Region inference from state names
+  - Approximate coordinates (from city/state)
+  - UNESCO flag (true for category 1 items and some category 5 items)
+- Write the result as the new `src/data/heritages.ts`
 
-**🏛️ World Heritage (Patrimônio Mundial)**
-- Missões Jesuíticas Guaranis, Ouro Preto, Olinda, Brasília, Serra da Capivara, etc.
+### Step 4: Update UI Components
+- **Heritage.tsx**: Add the 5th tab for "Cultural da Humanidade" with appropriate icon and badge color
+- **Map.tsx**: Add the 5th category to filters, legend, and marker icons
+- **Index.tsx**: Update category cards on homepage to show all 5 categories
+- **About.tsx**: Add "Cultural da Humanidade" to the heritage explanation section
+- **BrazilMap.tsx**: No changes needed (region-based, not category-based)
 
-**🏗️ Material Heritage (Patrimônio Material)**
-- Historic centers, museums, churches, theaters, monuments
-- Organized by state with rich descriptions
+### Step 5: Update Helper Functions
+- Add `'cultural-humanity'` to `getCategoryColor`, `getCategoryIcon` mappings
+- Ensure `getHeritagesByCategory` works with the new category
 
-**🎭 Intangible Heritage (Patrimônio Imaterial)**
-- Cultural practices: Capoeira, Frevo, Maracatu, Bumba-meu-boi
-- Culinary traditions: Acarajé, Moqueca, Queijo Artesanal
-- Festivals: Círio de Nazaré, Festival de Parintins, São João
-- Crafts: Renda Irlandesa, Cerâmica Terena, Viola de Cocho
+## Technical Details
 
-**🌿 Natural Heritage (Parques Nacionais/Estaduais)**
-- National Parks: Iguaçu, Lençóis, Chapada Diamantina, Fernando de Noronha
-- State Parks and protected areas
-- Geoparks and ecological reserves
+- The heritage data file will grow significantly (~300 entries). Each entry has: id, trilingual name, category, region, state, city, coordinates, trilingual description, unesco flag
+- For URL-only entries, I'll generate a 1-2 sentence description based on the heritage name and location using the AI gateway
+- Coordinates will be approximate (city-level) for entries without precise location data
+- Some entries span multiple states (e.g., "País Todo") — these will use a representative city/coordinate
+- Duplicate entries between categories (e.g., Capoeira appears in both Imaterial and Cultural da Humanidade) will be handled by keeping both with different IDs
 
-#### **4. Interactive Heritage Map (Mapa Interativo)**
-**Dual Experience:**
-
-**A. Stylized Overview Map**
-- Beautiful illustrated Brazil map
-- 5 colored regions (Sul, Sudeste, Nordeste, Centro-Oeste, Norte)
-- Click a region → zooms to show states
-- Click a state → transitions to detailed interactive map
-
-**B. Full Interactive Map (Leaflet/OpenStreetMap)**
-- Zoomable, pannable real map
-- **Custom pin markers** in Ataîru style:
-  - 🟡 Gold pins: UNESCO World Heritage
-  - 🟢 Green pins: Natural Heritage/Parks
-  - 🟤 Terracotta pins: Material Heritage
-  - 🔵 Blue pins: Intangible Heritage (shown at city level)
-
-**Pin Click → Heritage Card:**
-- Heritage name (trilingual)
-- Location/State/Region
-- Category badge
-- Brief description
-- Photo (when available)
-- "Learn More" link to full details
-
-**Filtering Options:**
-- By Region (5 regions)
-- By State (27 states)
-- By Category (4 types)
-- Search by name
-
-#### **5. Team & Partners (Equipe e Parceiros)**
-- Team member cards with photos, roles, bios
-- Partner organization logos
-- Institutional supporters
-- Acknowledgments section
-
-#### **6. Contact (Contato)**
-- Contact form (Name, Email, Subject, Message)
-- Direct email address
-- Social media links (Instagram, Facebook, etc.)
-- Newsletter signup
-
----
-
-### 🌍 Trilingual System (PT/EN/ES)
-- **Language switcher** in navigation header
-- **All content translated**: 
-  - Site interface and navigation
-  - Heritage names and descriptions
-  - Category explanations
-- **URL structure**: `/pt/`, `/en/`, `/es/` prefixes
-- **Default**: Portuguese
-
----
-
-### 🗄️ Heritage Data Architecture
-Structured database ready for your 500+ heritage sites:
-
-```
-Heritage Entry:
-├── Name (PT/EN/ES)
-├── Category (World/Material/Intangible/Natural)
-├── Region (Sul/Sudeste/Nordeste/Centro-Oeste/Norte)
-├── State
-├── City/Location
-├── Coordinates (lat/lng)
-├── Description (PT/EN/ES)
-├── Image URL
-└── UNESCO status (yes/no)
-```
-
-**Initial Import**: Your complete list organized by the 27 states
-**Easy Updates**: Simple structure to add new sites anytime
-
----
-
-### 📱 Responsive Design
-- **Desktop**: Full map experience with side panels
-- **Tablet**: Adapted layout with collapsible filters
-- **Mobile**: Touch-optimized map, bottom sheet for heritage details
-- **Offline-ready**: Core data cached for tourists with poor connectivity
-
----
-
-### 🚀 Technical Approach
-- **Map**: Leaflet with OpenStreetMap (free, no API key needed)
-- **Translations**: i18n system for easy management
-- **Heritage Data**: JSON structure (easily upgradeable to database later)
-- **Images**: Optimized placeholder system until photos are added
-- **Performance**: Lazy loading for 500+ map markers
-
----
-
-### 📋 Content Priority for Launch
-**Phase 1 - Ready at Launch:**
-- All heritage locations plotted on map
-- Basic descriptions for each entry
-- Full trilingual navigation
-- All institutional pages complete
-
-**Phase 2 - Easy to Add Later:**
-- Detailed descriptions per heritage
-- Professional photography
-- Audio guides integration
-- User reviews/ratings
-
----
-
-This creates a beautiful institutional presence today while building the foundation for your complete travel companion webapp!
+## Estimated Effort
+This is a large data migration task. The bulk of the work is generating and formatting ~300 heritage entries with translations. Implementation will proceed in batches.
 
