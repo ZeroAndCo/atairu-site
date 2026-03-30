@@ -3187,7 +3187,7 @@ export const heritages: Heritage[] = [
     tags: ['natural']
   },
   {
-    id: 'samba-de-roda-do-reconcavo-baiano',
+    id: 'samba-de-roda-do-reconcavo-baiano-cultural-humanity',
     name: { pt: 'Samba de Roda do Recôncavo Baiano', en: 'Samba de Roda of Recôncavo Baiano', es: 'Samba de Roda del Recôncavo Baiano' },
     category: 'cultural-humanity',
     region: 'nordeste',
