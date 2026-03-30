@@ -257,11 +257,11 @@ const Heritage = () => {
               </DialogHeader>
               <div className="space-y-3 mt-2">
                 <p className="text-foreground/90">
-                  {selectedHeritage.description[currentLang]}
+                  {selectedHeritage.description[currentLang] || selectedHeritage.description.pt}
                 </p>
-                {selectedHeritage.details[currentLang] && (
+                {(selectedHeritage.details[currentLang] || selectedHeritage.details.pt) && (
                   <p className="text-muted-foreground text-sm">
-                    {selectedHeritage.details[currentLang]}
+                    {selectedHeritage.details[currentLang] || selectedHeritage.details.pt}
                   </p>
                 )}
               </div>
