@@ -27,6 +27,7 @@ import {
   heritages, 
   Heritage, 
   HeritageCategory, 
+  HeritageTag,
   Region, 
   getAllStates,
   getCategoryIcon,
@@ -97,6 +98,7 @@ const MapPage = () => {
   
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<HeritageCategory | 'all'>('all');
+  const [tagFilter, setTagFilter] = useState<HeritageTag | 'all'>('all');
   const [regionFilter, setRegionFilter] = useState<Region | 'all'>(
     (searchParams.get('region') as Region) || 'all'
   );
@@ -122,22 +124,24 @@ const MapPage = () => {
         h.state.toLowerCase().includes(search.toLowerCase());
       
       const matchesCategory = categoryFilter === 'all' || h.category === categoryFilter;
+      const matchesTag = tagFilter === 'all' || h.tags.includes(tagFilter);
       const matchesRegion = regionFilter === 'all' || h.region === regionFilter;
       const matchesState = stateFilter === 'all' || h.state === stateFilter;
       
-      return matchesSearch && matchesCategory && matchesRegion && matchesState;
+      return matchesSearch && matchesCategory && matchesTag && matchesRegion && matchesState;
     });
-  }, [search, categoryFilter, regionFilter, stateFilter, currentLang]);
+  }, [search, categoryFilter, tagFilter, regionFilter, stateFilter, currentLang]);
 
   const clearFilters = () => {
     setSearch('');
     setCategoryFilter('all');
+    setTagFilter('all');
     setRegionFilter('all');
     setStateFilter('all');
     setSearchParams({});
   };
 
-  const hasActiveFilters = search || categoryFilter !== 'all' || regionFilter !== 'all' || stateFilter !== 'all';
+  const hasActiveFilters = search || categoryFilter !== 'all' || tagFilter !== 'all' || regionFilter !== 'all' || stateFilter !== 'all';
 
   const mapConfig = regionCenters[regionFilter];
 
@@ -184,6 +188,17 @@ const MapPage = () => {
                   <SelectItem value="material">{t('categories.material.name')}</SelectItem>
                   <SelectItem value="intangible">{t('categories.intangible.name')}</SelectItem>
                   <SelectItem value="natural">{t('categories.natural.name')}</SelectItem>
+                </SelectContent>
+              </Select>
+
+              <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+                <SelectTrigger className="w-36">
+                  <SelectValue placeholder={t('tags.all')} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t('tags.all')}</SelectItem>
+                  <SelectItem value="cultural">{t('tags.cultural')}</SelectItem>
+                  <SelectItem value="natural">{t('tags.natural')}</SelectItem>
                 </SelectContent>
               </Select>
 
@@ -244,6 +259,17 @@ const MapPage = () => {
                       <SelectItem value="material">{t('categories.material.name')}</SelectItem>
                       <SelectItem value="intangible">{t('categories.intangible.name')}</SelectItem>
                       <SelectItem value="natural">{t('categories.natural.name')}</SelectItem>
+                    </SelectContent>
+                  </Select>
+
+                  <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t('tags.all')} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">{t('tags.all')}</SelectItem>
+                      <SelectItem value="cultural">{t('tags.cultural')}</SelectItem>
+                      <SelectItem value="natural">{t('tags.natural')}</SelectItem>
                     </SelectContent>
                   </Select>
 
@@ -331,6 +357,13 @@ const MapPage = () => {
                   {heritage.unesco && (
                     <span className="inline-block bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded">UNESCO</span>
                   )}
+                  <div className="flex gap-1 mt-1">
+                    {heritage.tags.map(tag => (
+                      <span key={tag} className="inline-block text-xs px-2 py-0.5 rounded border border-muted-foreground/30">
+                        {t(`tags.${tag}`)}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Popup>
             </Marker>
@@ -377,10 +410,15 @@ const MapPage = () => {
               <p className="text-foreground/80 mb-4">
                 {selectedHeritage.description[currentLang]}
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <span className={`inline-block px-2 py-1 rounded text-sm text-white bg-${getCategoryColor(selectedHeritage.category)}`}>
                   {t(`categories.${selectedHeritage.category}.name`)}
                 </span>
+                {selectedHeritage.tags.map(tag => (
+                  <span key={tag} className="inline-block px-2 py-1 rounded text-sm border border-muted-foreground/30">
+                    {t(`tags.${tag}`)}
+                  </span>
+                ))}
                 {selectedHeritage.unesco && (
                   <span className="inline-block px-2 py-1 rounded text-sm bg-amber-200 text-amber-900">UNESCO</span>
                 )}
