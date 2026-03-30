@@ -2627,7 +2627,7 @@ export const heritages: Heritage[] = [
     city: 'Minas Gerais',
     coordinates: { lat: -19.92, lng: -43.94 },
     description: { pt: 'A Congada é considerada uma expressão cultural e religiosa de grande importância e, geralmente, ocorre nos meses de maio, outubro e dezembro, mas pode ser realizada em outras datas.', en: 'A key cultural and religious expression where participants praise deities and saints of African and Catholic origin through music and dance.', es: 'Expresión cultural y religiosa clave donde los participantes alaban deidades y santos de origen africano y católico mediante música y danza.' },
-    details: { pt: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', en: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', es: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.' },
+    details: { pt: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', en: 'During its performance, participants praise deities and saints of African and/or Catholic origin.', es: 'Durante su realización, los participantes alaban divinidades y santos de origen africano y/o católico.' },
     unesco: false,
     tags: ['cultural']
   },
