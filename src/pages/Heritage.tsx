@@ -211,10 +211,8 @@ const Heritage = () => {
                           <p className="text-sm text-foreground/80 line-clamp-3 mb-4">
                             {heritage.description[currentLang]}
                           </p>
-                          <Button asChild variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10">
-                            <Link to={`/map?heritage=${heritage.id}`}>
-                              {t('map.viewDetails')}
-                            </Link>
+                          <Button variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10" onClick={() => setSelectedHeritage(heritage)}>
+                            {t('map.viewDetails')}
                           </Button>
                         </CardContent>
                       </Card>
