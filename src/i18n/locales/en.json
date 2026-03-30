@@ -112,6 +112,11 @@
     "followUs": "Follow Us",
     "rights": "All rights reserved"
   },
+  "tags": {
+    "all": "All types",
+    "cultural": "Cultural",
+    "natural": "Natural"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error loading",
