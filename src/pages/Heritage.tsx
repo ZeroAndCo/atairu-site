@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, MapPin, Sparkles, Building2, Music, TreePine } from 'lucide-react';
+import { Search, MapPin, Sparkles, Building2, Music, TreePine, Globe2 } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
