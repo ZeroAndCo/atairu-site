@@ -262,6 +262,17 @@ const MapPage = () => {
                     </SelectContent>
                   </Select>
 
+                  <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={t('tags.all')} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">{t('tags.all')}</SelectItem>
+                      <SelectItem value="cultural">{t('tags.cultural')}</SelectItem>
+                      <SelectItem value="natural">{t('tags.natural')}</SelectItem>
+                    </SelectContent>
+                  </Select>
+
                   <Select value={regionFilter} onValueChange={(v) => setRegionFilter(v as Region | 'all')}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('map.allRegions')} />
