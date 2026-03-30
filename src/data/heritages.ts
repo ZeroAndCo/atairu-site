@@ -27,7 +27,7 @@ export const heritages: Heritage[] = [
     city: 'São Miguel das Missões',
     coordinates: { lat: -28.56, lng: -54.56 },
     description: { pt: 'As Ruinas de São Miguel Arcanjo estão localizadas no município de São Miguel das Missões no Rio Grande do Sul.', en: 'The ruins of São Miguel Arcanjo, located in São Miguel das Missões, Rio Grande do Sul, are a protected national archaeological site and Brazilian Cultural Heritage.', es: 'Las ruinas de São Miguel Arcanjo, ubicadas en São Miguel das Missões, Rio Grande do Sul, son un sitio arqueológico protegido nacionalmente como Patrimonio Cultural de Brasil.' },
-    details: { pt: 'É um sítio arqueológico protegido nacionalmente como Patrimônio Cultural do Brasil.', en: '', es: '' },
+    details: { pt: 'É um sítio arqueológico protegido nacionalmente como Patrimônio Cultural do Brasil.', en: 'É um sítio arqueológico protegido nacionalmente como Patrimônio Cultural do Brasil.', es: 'É um sítio arqueológico protegido nacionalmente como Patrimônio Cultural do Brasil.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -53,7 +53,7 @@ export const heritages: Heritage[] = [
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
     description: { pt: 'Sítio arqueológico do antigo cais de desembarque de africanos escravizados.', en: 'Located in the port area of Rio de Janeiro, it was the primary landing point for enslaved Africans in the Americas and is a significant archaeological site.', es: 'Ubicado en la zona portuaria de Río de Janeiro, fue el principal punto de desembarque de africanos esclavizados en todas las Américas y es un importante sitio arqueológico.' },
-    details: { pt: '(Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', en: '', es: '' },
+    details: { pt: '(Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', en: '(Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', es: '(Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -66,7 +66,7 @@ export const heritages: Heritage[] = [
     city: 'Barra de Guaratiba',
     coordinates: { lat: -23.07, lng: -43.57 },
     description: { pt: 'Localizado em Barra de Guaratiba na cidade do Rio de Janeiro, o Sitio mistura mata atlântica nativa com projetos paisagísticos, em uma harmonia com formas sinuosas e intensa diversidade.', en: 'Located in Barra de Guaratiba, Rio de Janeiro, this World Heritage site blends native Atlantic Forest with modern landscape design and intense biodiversity.', es: 'Ubicado en Barra de Guaratiba, Río de Janeiro, este Patrimonio Mundial mezcla el bosque atlántico nativo con el paisajismo moderno y una intensa biodiversidad.' },
-    details: { pt: 'Foi o primeiro jardim tropical moderno a receber o reconhecimento internacional como Patrimônio Mundial.', en: '', es: '' },
+    details: { pt: 'Foi o primeiro jardim tropical moderno a receber o reconhecimento internacional como Patrimônio Mundial.', en: 'Foi o primeiro jardim tropical moderno a receber o reconhecimento internacional como Patrimônio Mundial.', es: 'Foi o primeiro jardim tropical moderno a receber o reconhecimento internacional como Patrimônio Mundial.' },
     unesco: true,
     tags: ['cultural', 'natural']
   },
@@ -105,7 +105,7 @@ export const heritages: Heritage[] = [
     city: 'Belo Horizonte',
     coordinates: { lat: -19.92, lng: -43.94 },
     description: { pt: 'Obras de Oscar Niemeyer e jardins de Burle Marx.', en: 'A visionary garden-city project in Belo Horizonte featuring architecture by Oscar Niemeyer and landscape gardens by Burle Marx.', es: 'Proyecto visionario de ciudad jardín en Belo Horizonte con arquitectura de Oscar Niemeyer y jardines de Burle Marx.' },
-    details: { pt: 'O Conjunto Arquitetônico da Pampulha era o centro de um projeto de cidade-jardim visionário criado em 1940 em Belo Horizonte, capital de Minas Gerais. Concebido em torno de um lago artificial, este centro cultural e de lazer inclui um casino, um salão de baile, o Iate Clube e a igreja São Francisco de Assis. Os edifícios foram concebidos pelo arquiteto Oscar Niemeyer, em colaboração com artistas inovadores.', en: '', es: '' },
+    details: { pt: 'O Conjunto Arquitetônico da Pampulha era o centro de um projeto de cidade-jardim visionário criado em 1940 em Belo Horizonte, capital de Minas Gerais. Concebido em torno de um lago artificial, este centro cultural e de lazer inclui um casino, um salão de baile, o Iate Clube e a igreja São Francisco de Assis. Os edifícios foram concebidos pelo arquiteto Oscar Niemeyer, em colaboração com artistas inovadores.', en: 'O Conjunto Arquitetônico da Pampulha era o centro de um projeto de cidade-jardim visionário criado em 1940 em Belo Horizonte, capital de Minas Gerais. Concebido em torno de um lago artificial, este centro cultural e de lazer inclui um casino, um salão de baile, o Iate Clube e a igreja São Francisco de Assis. Os edifícios foram concebidos pelo arquiteto Oscar Niemeyer, em colaboração com artistas inovadores.', es: 'O Conjunto Arquitetônico da Pampulha era o centro de um projeto de cidade-jardim visionário criado em 1940 em Belo Horizonte, capital de Minas Gerais. Concebido em torno de um lago artificial, este centro cultural e de lazer inclui um casino, um salão de baile, o Iate Clube e a igreja São Francisco de Assis. Os edifícios foram concebidos pelo arquiteto Oscar Niemeyer, em colaboração com artistas inovadores.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -144,7 +144,7 @@ export const heritages: Heritage[] = [
     city: 'Ilhas de Fernando de Noronha e Atol das Rocas',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Arquipélago com praias paradisíacas e rica vida marinha.', en: 'Archipelago with paradisiacal beaches and rich marine life on the South Atlantic submarine ridge.', es: 'Archipiélago con playas paradisíacas y rica vida marina en la dorsal submarina del Atlántico Sur.' },
-    details: { pt: '(Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', en: '', es: '' },
+    details: { pt: '(Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', en: '(Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', es: '(Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.' },
     unesco: true,
     tags: ['natural']
   },
@@ -183,7 +183,7 @@ export const heritages: Heritage[] = [
     city: 'Goiás',
     coordinates: { lat: -15.93, lng: -50.13 },
     description: { pt: 'Antiga capital do estado, preserva arquitetura colonial.', en: 'Former state capital preserving colonial architecture and traditional mining town urbanism.', es: 'Antigua capital estatal que preserva la arquitectura colonial y el urbanismo de las ciudades mineras.' },
-    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: '', es: '' },
+    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', es: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -196,7 +196,7 @@ export const heritages: Heritage[] = [
     city: 'Alto Paraíso do Goiás',
     coordinates: { lat: -16.69, lng: -49.25 },
     description: { pt: 'Cerrado preservado com cachoeiras e formações de cristal.', en: 'Preserved Cerrado ecosystem with waterfalls and diverse flora and fauna, serving as a biodiversity refuge.', es: 'Ecosistema de Cerrado preservado con cascadas y diversa flora y fauna, funcionando como refugio de biodiversidad.' },
-    details: { pt: 'Estes parques abrigam a flora, fauna e habitats característicos do “cerrado”, um dos ecossistemas tropicais mais antigos e diversificados do mundo. Os dois sítios protegidos tem servido de refúgio durante milênios a numerosas espécies nos períodos de mudança climática e se estima que serão indispensáveis para o mantimento da biodiversidade.', en: '', es: '' },
+    details: { pt: 'Estes parques abrigam a flora, fauna e habitats característicos do “cerrado”, um dos ecossistemas tropicais mais antigos e diversificados do mundo. Os dois sítios protegidos tem servido de refúgio durante milênios a numerosas espécies nos períodos de mudança climática e se estima que serão indispensáveis para o mantimento da biodiversidade.', en: 'Estes parques abrigam a flora, fauna e habitats característicos do “cerrado”, um dos ecossistemas tropicais mais antigos e diversificados do mundo. Os dois sítios protegidos tem servido de refúgio durante milênios a numerosas espécies nos períodos de mudança climática e se estima que serão indispensáveis para o mantimento da biodiversidade.', es: 'Estes parques abrigam a flora, fauna e habitats característicos do “cerrado”, um dos ecossistemas tropicais mais antigos e diversificados do mundo. Os dois sítios protegidos tem servido de refúgio durante milênios a numerosas espécies nos períodos de mudança climática e se estima que serão indispensáveis para o mantimento da biodiversidade.' },
     unesco: true,
     tags: ['natural']
   },
@@ -248,7 +248,7 @@ export const heritages: Heritage[] = [
     city: 'Congonhas',
     coordinates: { lat: -20.5, lng: -43.86 },
     description: { pt: 'Construído na segunda metade do século XVII, este santuário está situado na cidade de Congonhas, no estado de Minas Gerais.', en: 'An 18th-century complex in Congonhas, Minas Gerais, featuring a Rococo church, prophets\' statues, and Way of the Cross chapels with Aleijadinho\'s Baroque masterpieces.', es: 'Complejo del siglo XVIII en Congonhas, Minas Gerais, con una iglesia rococó, estatuas de profetas y capillas del Vía Crucis con obras maestras barrocas de Aleijadinho.' },
-    details: { pt: 'Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.', en: '', es: '' },
+    details: { pt: 'Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.', en: 'Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.', es: 'Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -261,7 +261,7 @@ export const heritages: Heritage[] = [
     city: 'Diamantina',
     coordinates: { lat: -18.25, lng: -43.6 },
     description: { pt: 'Diamantina é uma cidade colonial engastada como uma pedra preciosa em um inóspito maciço montanhoso.', en: 'A colonial city set in a rocky mountain range, testifying to the 18th-century diamond mining adventure and human cultural achievement.', es: 'Ciudad colonial engastada en un macizo montañoso, testimonio de la aventura de los mineros de diamantes del siglo XVIII y de la realización cultural humana.' },
-    details: { pt: 'É um testemunho da aventura dos mineradores de diamantes do século XVIII, assim como do influxo exercido pelas realizações culturais e artísticas do ser humano em seu marco de vida.', en: '', es: '' },
+    details: { pt: 'É um testemunho da aventura dos mineradores de diamantes do século XVIII, assim como do influxo exercido pelas realizações culturais e artísticas do ser humano em seu marco de vida.', en: 'É um testemunho da aventura dos mineradores de diamantes do século XVIII, assim como do influxo exercido pelas realizações culturais e artísticas do ser humano em seu marco de vida.', es: 'É um testemunho da aventura dos mineradores de diamantes do século XVIII, assim como do influxo exercido pelas realizações culturais e artísticas do ser humano em seu marco de vida.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -274,7 +274,7 @@ export const heritages: Heritage[] = [
     city: 'São Paulo e Paraná',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Estas reservas estão situadas nos Estados de Paraná e São Paulo e oferecem um dos melhores e mais vastos exemplos do bosque atlântico brasileiro.', en: 'Located in Paraná and São Paulo, these 25 protected areas totaling 470,000 hectares represent the biological evolution of the Brazilian Atlantic forest.', es: 'Ubicadas en Paraná y São Paulo, estas 25 zonas protegidas de 470.000 hectáreas representan la evolución biológica del bosque atlántico brasileño.' },
-    details: { pt: 'As 25 zonas protegidas que formam o sítio somam uma superfície de 470.000 hectares e ilustram a riqueza biológica e a evolução dos últimos vestígios do mata atlântica.', en: '', es: '' },
+    details: { pt: 'As 25 zonas protegidas que formam o sítio somam uma superfície de 470.000 hectares e ilustram a riqueza biológica e a evolução dos últimos vestígios do mata atlântica.', en: 'As 25 zonas protegidas que formam o sítio somam uma superfície de 470.000 hectares e ilustram a riqueza biológica e a evolução dos últimos vestígios do mata atlântica.', es: 'As 25 zonas protegidas que formam o sítio somam uma superfície de 470.000 hectares e ilustram a riqueza biológica e a evolução dos últimos vestígios do mata atlântica.' },
     unesco: true,
     tags: ['natural']
   },
@@ -287,7 +287,7 @@ export const heritages: Heritage[] = [
     city: 'Bahia e Espírito Santo',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'As reservas da Costa do Descobrimento estão situadas entre os Estados de Bahia e Espírito Santo.', en: 'Eight protected areas in Bahia and Espírito Santo covering 112,000 hectares of rainforest and restingas, hosting immense biodiversity and endemic species.', es: 'Ocho zonas protegidas en Bahia y Espírito Santo con 112.000 hectáreas de selva y restingas, que albergan una inmensa biodiversidad y especies endémicas.' },
-    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados (“restingas”). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: '', es: '' },
+    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados (“restingas”). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados (“restingas”). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', es: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados (“restingas”). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente' },
     unesco: true,
     tags: ['natural']
   },
@@ -300,7 +300,7 @@ export const heritages: Heritage[] = [
     city: 'Amazonas',
     coordinates: { lat: -3.12, lng: -60.02 },
     description: { pt: 'Este sítio de mais de seis milhões de hectares é a zona protegida mais vasta da bacia do Amazonas e uma das regiões do planeta da mais rica biodiversidade.', en: 'The largest protected area in the Amazon Basin, exceeding six million hectares, including Jaú and Anavilhanas National Parks and Amanã and Mamirauá reserves.', es: 'La mayor zona protegida de la cuenca del Amazonas, con más de seis millones de hectáreas, incluyendo los parques de Jaú y Anavilhanas y las reservas Amanã y Mamirauá.' },
-    details: { pt: 'Compõe o Parque Nacional do Jaú, o Parque Nacional de Anavilhanas, a Reserva de Desenvolvimento Sustentável Amanã, área de demonstração da Reserva de Desenvolvimento Sustentável Mamirauá.', en: '', es: '' },
+    details: { pt: 'Compõe o Parque Nacional do Jaú, o Parque Nacional de Anavilhanas, a Reserva de Desenvolvimento Sustentável Amanã, área de demonstração da Reserva de Desenvolvimento Sustentável Mamirauá.', en: 'Compõe o Parque Nacional do Jaú, o Parque Nacional de Anavilhanas, a Reserva de Desenvolvimento Sustentável Amanã, área de demonstração da Reserva de Desenvolvimento Sustentável Mamirauá.', es: 'Compõe o Parque Nacional do Jaú, o Parque Nacional de Anavilhanas, a Reserva de Desenvolvimento Sustentável Amanã, área de demonstração da Reserva de Desenvolvimento Sustentável Mamirauá.' },
     unesco: true,
     tags: ['natural']
   },
@@ -326,7 +326,7 @@ export const heritages: Heritage[] = [
     city: 'Paraty e Ilha Grande',
     coordinates: { lat: -22.91, lng: -43.17 },
     description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural.', en: 'Brazil\'s first mixed World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
-    details: { pt: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', en: '', es: '' },
+    details: { pt: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', en: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', es: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.' },
     unesco: true,
     tags: ['cultural', 'natural']
   },
@@ -352,7 +352,7 @@ export const heritages: Heritage[] = [
     city: 'Norte do Estado',
     coordinates: { lat: -19.92, lng: -43.94 },
     description: { pt: 'Localizado no norte de Minas Gerais, os sistemas de cavernas horizontais do parque, formados em rochas carbonáticas, revelam espeleotemas impressionantes, dolinas desmoronadas, arcos calcários e rios subterrâneos.', en: 'Located in northern Minas Gerais, it features horizontal cave systems, speleothems, limestone arches, and underground rivers reflecting Plio-Pleistocene geological changes.', es: 'Ubicado al norte de Minas Gerais, presenta sistemas de cuevas, espeleotemas, arcos de piedra caliza y ríos subterráneos que reflejan cambios geológicos del Plio-Pleistoceno.' },
-    details: { pt: 'Desenvolvido no estável cráton do São Francisco, a paisagem reflete as principais mudanças climáticas e geológicas do Plio-Pleistoceno.', en: '', es: '' },
+    details: { pt: 'Desenvolvido no estável cráton do São Francisco, a paisagem reflete as principais mudanças climáticas e geológicas do Plio-Pleistoceno.', en: 'Desenvolvido no estável cráton do São Francisco, a paisagem reflete as principais mudanças climáticas e geológicas do Plio-Pleistoceno.', es: 'Desenvolvido no estável cráton do São Francisco, a paisagem reflete as principais mudanças climáticas e geológicas do Plio-Pleistoceno.' },
     unesco: true,
     tags: ['natural']
   },
@@ -365,7 +365,7 @@ export const heritages: Heritage[] = [
     city: 'Pelotas',
     coordinates: { lat: -31.77, lng: -52.34 },
     description: { pt: 'A cidade de Pelotas está localizada na região sul do estado do Rio Grande do Sul.', en: 'A historic area in southern Rio Grande do Sul featuring eclectic architecture that reflects the 19th-century wealth of the jerked beef aristocracy.', es: 'Conjunto histórico en el sur de Rio Grande do Sul con arquitectura ecléctica que refleja la riqueza de la aristocracia del charqui del siglo XIX.' },
-    details: { pt: 'Seu conjunto histórico e sua arquitetura eclética é reconhecido Patrimônio Cultural do Brasil englobando o centro histórico, refletindo a riqueza da aristocracia do charque do século XIX.', en: '', es: '' },
+    details: { pt: 'Seu conjunto histórico e sua arquitetura eclética é reconhecido Patrimônio Cultural do Brasil englobando o centro histórico, refletindo a riqueza da aristocracia do charque do século XIX.', en: 'Seu conjunto histórico e sua arquitetura eclética é reconhecido Patrimônio Cultural do Brasil englobando o centro histórico, refletindo a riqueza da aristocracia do charque do século XIX.', es: 'Seu conjunto histórico e sua arquitetura eclética é reconhecido Patrimônio Cultural do Brasil englobando o centro histórico, refletindo a riqueza da aristocracia do charque do século XIX.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -378,7 +378,7 @@ export const heritages: Heritage[] = [
     city: 'Antônio Prado',
     coordinates: { lat: -30.03, lng: -51.23 },
     description: { pt: 'O conjunto histórico de Antônio Prado, localizado na serra gaúcha, é formado pelo estilo colonial de casario de madeira e alvenaria.', en: 'A historic town in the Gaúcho highlands featuring wood and masonry colonial architecture from 1886, preserving the legacy of Italian immigration.', es: 'Ciudad histórica en la sierra gaúcha con arquitectura colonial de madera y mampostería de 1886, preservando el legado de la inmigración italiana.' },
-    details: { pt: 'A cidade remete às vilas europeias e pelo seu valor histórico foi reconhecida como Patrimônio Cultural do Brasil. Fundada em 1886 foi a sexta e última das chamadas “antigas colônias da imigração italiana”.', en: '', es: '' },
+    details: { pt: 'A cidade remete às vilas europeias e pelo seu valor histórico foi reconhecida como Patrimônio Cultural do Brasil. Fundada em 1886 foi a sexta e última das chamadas “antigas colônias da imigração italiana”.', en: 'A cidade remete às vilas europeias e pelo seu valor histórico foi reconhecida como Patrimônio Cultural do Brasil. Fundada em 1886 foi a sexta e última das chamadas “antigas colônias da imigração italiana”.', es: 'A cidade remete às vilas europeias e pelo seu valor histórico foi reconhecida como Patrimônio Cultural do Brasil. Fundada em 1886 foi a sexta e última das chamadas “antigas colônias da imigração italiana”.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -443,7 +443,7 @@ export const heritages: Heritage[] = [
     city: 'Belém',
     coordinates: { lat: -1.46, lng: -48.5 },
     description: { pt: 'Entre os primeiros conjuntos arquitetônicos, urbanísticos e paisagísticos tombados estão o Cemitério de Nossa Senhora da Soledade, a Praça Frei Caetano Brandão', en: 'Among the first protected architectural complexes are the Cemetery of Nossa Senhora da Soledade, Frei Caetano Brandão Square, and the Ver-o-Peso Market with its adjacent areas, including the Meat and Fish Markets.', es: 'Entre los primeros conjuntos arquitectónicos protegidos están el Cementerio de Nossa Senhora da Soledade, la Plaza Frei Caetano Brandão y el Mercado Ver-o-Peso con sus áreas adyacentes, incluyendo los mercados de Carne y Pescado.' },
-    details: { pt: 'ex-Largo da Sé) e o Mercado Ver o Peso com suas áreas adjacentes (Praça Pedro II e Boulevard Castilhos França, inclusive o Mercado de Carne e o Mercado Bolonha de Peixe', en: '', es: '' },
+    details: { pt: 'ex-Largo da Sé) e o Mercado Ver o Peso com suas áreas adjacentes (Praça Pedro II e Boulevard Castilhos França, inclusive o Mercado de Carne e o Mercado Bolonha de Peixe', en: 'ex-Largo da Sé) e o Mercado Ver o Peso com suas áreas adjacentes (Praça Pedro II e Boulevard Castilhos França, inclusive o Mercado de Carne e o Mercado Bolonha de Peixe', es: 'ex-Largo da Sé) e o Mercado Ver o Peso com suas áreas adjacentes (Praça Pedro II e Boulevard Castilhos França, inclusive o Mercado de Carne e o Mercado Bolonha de Peixe' },
     unesco: false,
     tags: ['cultural']
   },
@@ -482,7 +482,7 @@ export const heritages: Heritage[] = [
     city: 'Marechal Deodoro',
     coordinates: { lat: -9.67, lng: -35.74 },
     description: { pt: 'O conjunto arquitetônico e urbanístico de Marechal Deodoro, no Estado Alagoas, foi tombado pelo Iphan, em 2009.', en: 'The protected architectural and urban ensemble of Marechal Deodoro (2009) includes three areas: the Center, Carmo, and Taperagua, all significant for their historical importance and landscape relevance.', es: 'El conjunto arquitectónico de Marechal Deodoro (2009) involucra tres áreas: el Centro, la zona del Carmo y Taperagua, todas con elementos de gran importancia histórica y relevancia paisajística.' },
-    details: { pt: 'A área definida para proteção envolve três locais descontinuados - o Centro, a área do Carmo e a área de Taperagua - todos com elementos de interesse, devido à sua importância histórica e relevância paisagística.', en: '', es: '' },
+    details: { pt: 'A área definida para proteção envolve três locais descontinuados - o Centro, a área do Carmo e a área de Taperagua - todos com elementos de interesse, devido à sua importância histórica e relevância paisagística.', en: 'A área definida para proteção envolve três locais descontinuados - o Centro, a área do Carmo e a área de Taperagua - todos com elementos de interesse, devido à sua importância histórica e relevância paisagística.', es: 'A área definida para proteção envolve três locais descontinuados - o Centro, a área do Carmo e a área de Taperagua - todos com elementos de interesse, devido à sua importância histórica e relevância paisagística.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1613,7 +1613,7 @@ export const heritages: Heritage[] = [
     city: 'Pelotas',
     coordinates: { lat: -31.77, lng: -52.34 },
     description: { pt: 'A prática doceira é um legado cultural desta região do Sul do Brasil revelando uma variedade de saberes que são transmitidos de geração para geração.', en: 'A cultural legacy of Southern Brazil blending Portuguese, African, and Germanic influences in the artisanal production of fine sweets and fruit preserves.', es: 'Legado cultural del sur de Brasil que mezcla influencias portuguesas, africanas y germánicas en la elaboración artesanal de dulces finos y de frutas.' },
-    details: { pt: 'O modo de fazer doces finos de mesa e os doces de frutas mistura influências dos mais diversos grupos sociais que contribuíram com o desenvolvimento econômico e cultural desta região como os portugueses, africanos e germânicos.', en: '', es: '' },
+    details: { pt: 'O modo de fazer doces finos de mesa e os doces de frutas mistura influências dos mais diversos grupos sociais que contribuíram com o desenvolvimento econômico e cultural desta região como os portugueses, africanos e germânicos.', en: 'O modo de fazer doces finos de mesa e os doces de frutas mistura influências dos mais diversos grupos sociais que contribuíram com o desenvolvimento econômico e cultural desta região como os portugueses, africanos e germânicos.', es: 'O modo de fazer doces finos de mesa e os doces de frutas mistura influências dos mais diversos grupos sociais que contribuíram com o desenvolvimento econômico e cultural desta região como os portugueses, africanos e germânicos.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1626,7 +1626,7 @@ export const heritages: Heritage[] = [
     city: 'Brasil Todo',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Símbolo da identidade brasileira, considerada luta, arte, dança, esporte e folclore, carrega uma filosofia ancestral do povo africano.', en: 'An Afro-Brazilian art form combining martial arts, dance, and philosophy, developed by enslaved people as a strategy for resilience and solidarity.', es: 'Arte afrobrasileño que combina lucha, danza y filosofía, desarrollado por personas esclavizadas como una estrategia de sociabilidad y resistencia.' },
-    details: { pt: 'Originada no século XVII, período escravocrata, desenvolveu-se como um modo de sociabilidade e solidariedade construída pelos africanos escravizados, uma estratégia social para lidar com o controle da violência.', en: '', es: '' },
+    details: { pt: 'Originada no século XVII, período escravocrata, desenvolveu-se como um modo de sociabilidade e solidariedade construída pelos africanos escravizados, uma estratégia social para lidar com o controle da violência.', en: 'Originada no século XVII, período escravocrata, desenvolveu-se como um modo de sociabilidade e solidariedade construída pelos africanos escravizados, uma estratégia social para lidar com o controle da violência.', es: 'Originada no século XVII, período escravocrata, desenvolveu-se como um modo de sociabilidade e solidariedade construída pelos africanos escravizados, uma estratégia social para lidar com o controle da violência.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1639,7 +1639,7 @@ export const heritages: Heritage[] = [
     city: 'São Miguel das Missões',
     coordinates: { lat: -28.56, lng: -54.56 },
     description: { pt: 'Situado no município de São Miguel das Missões (RS) abriga os remanescentes do antigo povoado e sua importância histórica e simbólica conquistou reconhecimento nacional e internacional.', en: 'Located in São Miguel das Missões, it is a living space integrating sacred narratives, worldviews, and daily learning for the Guarani people.', es: 'Ubicada en São Miguel das Missões, es un espacio vivo que integra narrativas sagradas, cosmovisiones y el aprendizaje diario del pueblo Guarani.' },
-    details: { pt: 'É um lugar de referência por ser um espaço vivo que articula concepções relativas ao bem-viver, integra narrativas sobre a trajetória desse povo e é diariamente vivenciada como lugar de atividades diversas e de aprendizado para os mais jovens. A Tava é reconhecida como Patrimônio Imaterial do Brasil.', en: '', es: '' },
+    details: { pt: 'É um lugar de referência por ser um espaço vivo que articula concepções relativas ao bem-viver, integra narrativas sobre a trajetória desse povo e é diariamente vivenciada como lugar de atividades diversas e de aprendizado para os mais jovens. A Tava é reconhecida como Patrimônio Imaterial do Brasil.', en: 'É um lugar de referência por ser um espaço vivo que articula concepções relativas ao bem-viver, integra narrativas sobre a trajetória desse povo e é diariamente vivenciada como lugar de atividades diversas e de aprendizado para os mais jovens. A Tava é reconhecida como Patrimônio Imaterial do Brasil.', es: 'É um lugar de referência por ser um espaço vivo que articula concepções relativas ao bem-viver, integra narrativas sobre a trajetória desse povo e é diariamente vivenciada como lugar de atividades diversas e de aprendizado para os mais jovens. A Tava é reconhecida como Patrimônio Imaterial do Brasil.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1652,7 +1652,7 @@ export const heritages: Heritage[] = [
     city: 'São Francisco do Sul',
     coordinates: { lat: -26.24, lng: -48.64 },
     description: { pt: 'Fortemente enraizado na cultura do Rio Grande do Sul e tradicionalmente ligado à pecuária extensiva e aos tropeiros, o modo de fazer queijo artesanal serrano e um Patrimônio Cultural Imaterial estadual.', en: 'Rooted in Rio Grande do Sul, this artisanal cheese-making tradition is linked to cattle ranching and the historical paths of the \'tropeiros\'.', es: 'Arraigado en Rio Grande do Sul, este método artesanal de elaboración de queso está vinculado a la ganadería y a la historia de los \'tropeiros\'.' },
-    details: { pt: 'A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.', en: '', es: '' },
+    details: { pt: 'A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.', en: 'A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.', es: 'A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1665,7 +1665,7 @@ export const heritages: Heritage[] = [
     city: 'Rolante',
     coordinates: { lat: -30.03, lng: -51.23 },
     description: { pt: 'Os saberes culinários transmitidos de geração em geração têm origem nas receitas trazidas por imigrantes durante o processo de colonização do Rio Grande do Sul, ao longo do século XIX.', en: 'A culinary knowledge brought by 19th-century immigrants to Rio Grande do Sul, adapted over time with local ingredients and social practices.', es: 'Saber culinario traído por inmigrantes del siglo XIX a Rio Grande do Sul, adaptado con el tiempo a los ingredientes y prácticas locales.' },
-    details: { pt: 'Com o tempo, a cuca passou por alterações em sua receita original, ajustando-se às práticas agrícolas já presentes na região, cultivadas tanto pelas populações originárias quanto por colonos portugueses. O modo de fazer cuca é um Patrimônio Cultural Imaterial do Estado.', en: '', es: '' },
+    details: { pt: 'Com o tempo, a cuca passou por alterações em sua receita original, ajustando-se às práticas agrícolas já presentes na região, cultivadas tanto pelas populações originárias quanto por colonos portugueses. O modo de fazer cuca é um Patrimônio Cultural Imaterial do Estado.', en: 'Com o tempo, a cuca passou por alterações em sua receita original, ajustando-se às práticas agrícolas já presentes na região, cultivadas tanto pelas populações originárias quanto por colonos portugueses. O modo de fazer cuca é um Patrimônio Cultural Imaterial do Estado.', es: 'Com o tempo, a cuca passou por alterações em sua receita original, ajustando-se às práticas agrícolas já presentes na região, cultivadas tanto pelas populações originárias quanto por colonos portugueses. O modo de fazer cuca é um Patrimônio Cultural Imaterial do Estado.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1678,7 +1678,7 @@ export const heritages: Heritage[] = [
     city: 'Rio Grande do Sul',
     coordinates: { lat: -30.03, lng: -51.23 },
     description: { pt: 'Símbolo do Rio Grande do Sul este reconhecimento destaca e valoriza os diversos guardiões e produtores que mantêm vivas e atualizadas as práticas tradicionais associadas à erva-mate.', en: 'A symbol of Rio Grande do Sul, this system values the guardians and producers who maintain the traditional practices associated with yerba mate.', es: 'Símbolo de Rio Grande do Sul, este sistema valora a los guardianes y productores que mantienen vivas las prácticas tradicionales de la yerba mate.' },
-    details: { pt: 'O sistema é entendido como uma articulação de visões de mundo, tradições, modos de vida.', en: '', es: '' },
+    details: { pt: 'O sistema é entendido como uma articulação de visões de mundo, tradições, modos de vida.', en: 'O sistema é entendido como uma articulação de visões de mundo, tradições, modos de vida.', es: 'O sistema é entendido como uma articulação de visões de mundo, tradições, modos de vida.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1769,7 +1769,7 @@ export const heritages: Heritage[] = [
     city: 'Caicó região do Seridó',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'A Festa de Sant\' Ana de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration Sant\'Ana, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a Sant\'Ana, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
-    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: '', es: '' },
+    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', es: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1860,7 +1860,7 @@ export const heritages: Heritage[] = [
     city: 'Acre',
     coordinates: { lat: -9.97, lng: -67.81 },
     description: { pt: 'Está na lista para ser patrimônio. Ainda não é patrimônio. O consumo da ayahuasca, antes limitado apenas a algumas tribos indígenas na Amazônia, ao longo dos anos, expandiu-se também para o meio urbano, mormente com o crescimento das religiões ayahuasqueiras criadas a partir da década de 30', en: 'A traditional drink from Amazonian tribes now expanded to urban religious practices such as Santo Daime and União do Vegetal.', es: 'Bebida tradicional de tribus amazónicas expandida a prácticas religiosas urbanas como el Santo Daime y la União do Vegetal.' },
-    details: { pt: 'Santo Daime, Barquinha e União do Vegetal', en: '', es: '' },
+    details: { pt: 'Santo Daime, Barquinha e União do Vegetal', en: 'Santo Daime, Barquinha e União do Vegetal', es: 'Santo Daime, Barquinha e União do Vegetal' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1873,7 +1873,7 @@ export const heritages: Heritage[] = [
     city: 'Goiás, Tocantis e Pará',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Denominadas na língua nativa ritxoko (na fala feminina) ou Ritxoko (na fala masculina), as bonecas Karajá são consideradas representações culturais que comportam significados sociais profundos.', en: 'Called ritxoko, these dolls represent social and mythological meanings, serving as socialization tools for Karajá children.', es: 'Llamadas ritxoko, estas muñecas representan significados sociales y mitológicos, sirviendo como herramientas de socialización para niños Karajá.' },
-    details: { pt: 'Com motivos mitológicos, de rituais, da vida cotidiana e da fauna, são importantes instrumentos de socialização das crianças indígenas que, brincando, se veem nesses objetos e aprendem a ser Karajá.', en: '', es: '' },
+    details: { pt: 'Com motivos mitológicos, de rituais, da vida cotidiana e da fauna, são importantes instrumentos de socialização das crianças indígenas que, brincando, se veem nesses objetos e aprendem a ser Karajá.', en: 'Com motivos mitológicos, de rituais, da vida cotidiana e da fauna, são importantes instrumentos de socialização das crianças indígenas que, brincando, se veem nesses objetos e aprendem a ser Karajá.', es: 'Com motivos mitológicos, de rituais, da vida cotidiana e da fauna, são importantes instrumentos de socialização das crianças indígenas que, brincando, se veem nesses objetos e aprendem a ser Karajá.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1886,7 +1886,7 @@ export const heritages: Heritage[] = [
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'O gênero literário, que também é ofício e meio de sobrevivência para inúmeros cidadãos brasileiros, a Literatura de Cordel.', en: 'A literary genre and craft disseminated throughout Brazil, deeply rooted in Northern and Northeastern migration patterns.', es: 'Género literario y oficio difundido por todo Brasil, con raíces en la migración del Norte y Nordeste.' },
-    details: { pt: 'Apesar de ter começado no Norte e no Nordeste do país, o cordel hoje é disseminado por todo o Brasil, principalmente por causa do processo de migração de populações.http://portal.iphan.gov.br/noticias/detalhes/4833/literatura-de-cordel-e-reconhecida-como-patrimonio-cultural-do-brasil', en: '', es: '' },
+    details: { pt: 'Apesar de ter começado no Norte e no Nordeste do país, o cordel hoje é disseminado por todo o Brasil, principalmente por causa do processo de migração de populações.http://portal.iphan.gov.br/noticias/detalhes/4833/literatura-de-cordel-e-reconhecida-como-patrimonio-cultural-do-brasil', en: 'Apesar de ter começado no Norte e no Nordeste do país, o cordel hoje é disseminado por todo o Brasil, principalmente por causa do processo de migração de populações.http://portal.iphan.gov.br/noticias/detalhes/4833/literatura-de-cordel-e-reconhecida-como-patrimonio-cultural-do-brasil', es: 'Apesar de ter começado no Norte e no Nordeste do país, o cordel hoje é disseminado por todo o Brasil, principalmente por causa do processo de migração de populações.http://portal.iphan.gov.br/noticias/detalhes/4833/literatura-de-cordel-e-reconhecida-como-patrimonio-cultural-do-brasil' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1899,7 +1899,7 @@ export const heritages: Heritage[] = [
     city: 'Marajó',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'O reconhecimento das festividades do Glorioso São Sebastião como Patrimônio Cultural do Brasil, em 2013, reforçou a importância dessa celebração como expressão de fé, pertencimento e continuidade histórica.', en: 'A cultural heritage celebration representing faith, belonging, and historical continuity for Marajó communities.', es: 'Celebración de patrimonio cultural que representa fe, pertenencia y continuidad histórica para las comunidades de Marajó.' },
-    details: { pt: 'A festa se consolidou como parte da memória coletiva e da vida social das comunidades marajoaras.', en: '', es: '' },
+    details: { pt: 'A festa se consolidou como parte da memória coletiva e da vida social das comunidades marajoaras.', en: 'A festa se consolidou como parte da memória coletiva e da vida social das comunidades marajoaras.', es: 'A festa se consolidou como parte da memória coletiva e da vida social das comunidades marajoaras.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1912,7 +1912,7 @@ export const heritages: Heritage[] = [
     city: 'Cidades do Nordeste',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'O Teatro de Bonecos Popular do Nordeste é um teatro que não precisa de palco nem cortina, mas que diverte, emociona e provoca.', en: 'Popular puppet theater known as Mamulengo or Babau, characterized by its improvisational and enchanting nature.', es: 'Teatro de títeres popular conocido como Mamulengo o Babau, caracterizado por su improvisación y encanto.' },
-    details: { pt: 'Conhecido por nomes como Mamulengo, Babau, João Redondo ou Cassimiro Coco, ele se espalha por vários estados, sempre com a mesma força de encantar.', en: '', es: '' },
+    details: { pt: 'Conhecido por nomes como Mamulengo, Babau, João Redondo ou Cassimiro Coco, ele se espalha por vários estados, sempre com a mesma força de encantar.', en: 'Conhecido por nomes como Mamulengo, Babau, João Redondo ou Cassimiro Coco, ele se espalha por vários estados, sempre com a mesma força de encantar.', es: 'Conhecido por nomes como Mamulengo, Babau, João Redondo ou Cassimiro Coco, ele se espalha por vários estados, sempre com a mesma força de encantar.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1925,7 +1925,7 @@ export const heritages: Heritage[] = [
     city: 'Amazonas',
     coordinates: { lat: -3.12, lng: -60.02 },
     description: { pt: 'No norte do Amazonas, nas regiões do Médio e Alto Rio Negro, comunidades indígenas mantêm um jeito próprio de plantar, colher e preparar alimentos, passado de geração em geração.', en: 'Indigenous ancestral knowledge of planting and harvesting in the Amazon, recognized as cultural heritage since 2010.', es: 'Saberes ancestrales indígenas de siembra y cosecha en la Amazonía, reconocidos como patrimonio cultural desde 2010.' },
-    details: { pt: 'Esse modo de viver é conhecido como Sistema Agrícola Tradicional do Rio Negro, reconhecido como Patrimônio Cultural do Brasil desde 2010.', en: '', es: '' },
+    details: { pt: 'Esse modo de viver é conhecido como Sistema Agrícola Tradicional do Rio Negro, reconhecido como Patrimônio Cultural do Brasil desde 2010.', en: 'Esse modo de viver é conhecido como Sistema Agrícola Tradicional do Rio Negro, reconhecido como Patrimônio Cultural do Brasil desde 2010.', es: 'Esse modo de viver é conhecido como Sistema Agrícola Tradicional do Rio Negro, reconhecido como Patrimônio Cultural do Brasil desde 2010.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1951,7 +1951,7 @@ export const heritages: Heritage[] = [
     city: 'Amapa',
     coordinates: { lat: -0.03, lng: -51.07 },
     description: { pt: 'Em 2018, o Marabaixo foi registrado como Patrimônio Cultural do Brasil.', en: 'A cultural expression from Amapá representing Black identity, resistance, and celebration through music and dance circles.', es: 'Expresión cultural de Amapá que representa la identidad negra, resistencia y celebración a través de ruedas de música y danza.' },
-    details: { pt: 'Seu valor está no que ele representa para o povo negro do Amapá: memória, identidade, resistência e celebração. Cada roda de Marabaixo é uma afirmação viva da cultura construída nas comunidades. https://bcr.iphan.gov.br/bens-culturais/marabaixo/#:~:text=Em%202018%2C%20o%20Marabaixo%20foi,da%20cultura%20constru%C3%ADda%20nas%20comunidades.', en: '', es: '' },
+    details: { pt: 'Seu valor está no que ele representa para o povo negro do Amapá: memória, identidade, resistência e celebração. Cada roda de Marabaixo é uma afirmação viva da cultura construída nas comunidades. https://bcr.iphan.gov.br/bens-culturais/marabaixo/#:~:text=Em%202018%2C%20o%20Marabaixo%20foi,da%20cultura%20constru%C3%ADda%20nas%20comunidades.', en: 'Seu valor está no que ele representa para o povo negro do Amapá: memória, identidade, resistência e celebração. Cada roda de Marabaixo é uma afirmação viva da cultura construída nas comunidades. https://bcr.iphan.gov.br/bens-culturais/marabaixo/#:~:text=Em%202018%2C%20o%20Marabaixo%20foi,da%20cultura%20constru%C3%ADda%20nas%20comunidades.', es: 'Seu valor está no que ele representa para o povo negro do Amapá: memória, identidade, resistência e celebração. Cada roda de Marabaixo é uma afirmação viva da cultura construída nas comunidades. https://bcr.iphan.gov.br/bens-culturais/marabaixo/#:~:text=Em%202018%2C%20o%20Marabaixo%20foi,da%20cultura%20constru%C3%ADda%20nas%20comunidades.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1964,7 +1964,7 @@ export const heritages: Heritage[] = [
     city: 'Ilha do Marajó',
     coordinates: { lat: -1.46, lng: -48.5 },
     description: { pt: 'A cultura da Ilha do Marajó é um fascinante mosaico que reflete a rica herança histórica e a diversidade natural desse extraordinário destino amazônico.', en: 'A cultural mosaic with pre-Columbian roots reflecting the historical heritage and natural diversity of the Marajó Island.', es: 'Mosaico cultural con raíces precolombinas que refleja la herencia histórica y la diversidad natural de la Isla de Marajó.' },
-    details: { pt: 'Com raízes que remontam à era pré- colombiana, a cultura marajoara é um tesouro de tradições preservadas ao longo dos séculos. https://visitbrasil.com/pt/location/ilha-de-marajo/#:~:text=A%20cultura%20da%20Ilha%20do,preservadas%20ao%20longo%20dos%20s%C3%A9culos.', en: '', es: '' },
+    details: { pt: 'Com raízes que remontam à era pré- colombiana, a cultura marajoara é um tesouro de tradições preservadas ao longo dos séculos. https://visitbrasil.com/pt/location/ilha-de-marajo/#:~:text=A%20cultura%20da%20Ilha%20do,preservadas%20ao%20longo%20dos%20s%C3%A9culos.', en: 'Com raízes que remontam à era pré- colombiana, a cultura marajoara é um tesouro de tradições preservadas ao longo dos séculos. https://visitbrasil.com/pt/location/ilha-de-marajo/#:~:text=A%20cultura%20da%20Ilha%20do,preservadas%20ao%20longo%20dos%20s%C3%A9culos.', es: 'Com raízes que remontam à era pré- colombiana, a cultura marajoara é um tesouro de tradições preservadas ao longo dos séculos. https://visitbrasil.com/pt/location/ilha-de-marajo/#:~:text=A%20cultura%20da%20Ilha%20do,preservadas%20ao%20longo%20dos%20s%C3%A9culos.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2016,7 +2016,7 @@ export const heritages: Heritage[] = [
     city: 'Belém',
     coordinates: { lat: -1.46, lng: -48.5 },
     description: { pt: 'Também é Patrimônio Material', en: 'Also designated as Material Heritage due to the market\'s architecture.', es: 'También designado como Patrimonio Material por la arquitectura del mercado.' },
-    details: { pt: 'Arquitetura do Mercado', en: '', es: '' },
+    details: { pt: 'Arquitetura do Mercado', en: 'Arquitetura do Mercado', es: 'Arquitetura do Mercado' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2042,7 +2042,7 @@ export const heritages: Heritage[] = [
     city: 'Municípios: Ananás, Araguatins, Itaguatins, Luzinópolis, Praia Norte, Santa Terezinha e São Sebastião do Tocantins.',
     coordinates: { lat: -10.18, lng: -48.33 },
     description: { pt: 'O Babaçu é uma espécie de grande importância econômica e cultural para as regiões norte e nordeste do Brasil.', en: 'The Babaçu palm, called \'mother\' by coconut-breaking communities, provides food, shelter, and livelihoods for families in the Mata dos Cocais region.', es: 'La palmera Babaçu, llamada \'madre\' por las comunidades recolectoras, proporciona alimento, refugio y sustento a las familias de la región de Mata dos Cocais.' },
-    details: { pt: 'A palmeira chamada de “mãe” pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf', en: '', es: '' },
+    details: { pt: 'A palmeira chamada de “mãe” pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf', en: 'A palmeira chamada de “mãe” pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf', es: 'A palmeira chamada de “mãe” pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2055,7 +2055,7 @@ export const heritages: Heritage[] = [
     city: 'Natividade',
     coordinates: { lat: -10.18, lng: -48.33 },
     description: { pt: 'A Ourivesaria de Natividade, expressão artesanal que preserva técnicas seculares de produção em ouro e prata no sudeste tocantinense.', en: 'Artisanal gold and silver craft from southeast Tocantins using secular techniques to create traditional jewelry like crucifixes and necklaces.', es: 'Artesanía en oro y plata del sureste de Tocantins que utiliza técnicas seculares para crear joyas tradicionales como crucifijos y collares.' },
-    details: { pt: 'A arte é um bem cultural definido pela produção e uso de um conjunto de joias artesanais - feitas com ouro e prata extraídos da própria região - como crucifixos, colares, cordões, gargantilhas, brincos, pingentes, pulseiras e anéis. https://www.gov.br/iphan/pt-br/assuntos/noticias/ourivesaria-de-natividade-to-e-registrada-como-patrimonio-cultural-do-brasil', en: '', es: '' },
+    details: { pt: 'A arte é um bem cultural definido pela produção e uso de um conjunto de joias artesanais - feitas com ouro e prata extraídos da própria região - como crucifixos, colares, cordões, gargantilhas, brincos, pingentes, pulseiras e anéis. https://www.gov.br/iphan/pt-br/assuntos/noticias/ourivesaria-de-natividade-to-e-registrada-como-patrimonio-cultural-do-brasil', en: 'A arte é um bem cultural definido pela produção e uso de um conjunto de joias artesanais - feitas com ouro e prata extraídos da própria região - como crucifixos, colares, cordões, gargantilhas, brincos, pingentes, pulseiras e anéis. https://www.gov.br/iphan/pt-br/assuntos/noticias/ourivesaria-de-natividade-to-e-registrada-como-patrimonio-cultural-do-brasil', es: 'A arte é um bem cultural definido pela produção e uso de um conjunto de joias artesanais - feitas com ouro e prata extraídos da própria região - como crucifixos, colares, cordões, gargantilhas, brincos, pingentes, pulseiras e anéis. https://www.gov.br/iphan/pt-br/assuntos/noticias/ourivesaria-de-natividade-to-e-registrada-como-patrimonio-cultural-do-brasil' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2081,7 +2081,7 @@ export const heritages: Heritage[] = [
     city: 'Rio Real',
     coordinates: { lat: -12.97, lng: -38.5 },
     description: { pt: 'Cerâmica de Rio Real, produção de cerâmica deste município, do norte da Bahia e considerado um dos mais importantes pólos artesanais do estado.', en: 'Traditional ceramic production from northern Bahia, representing an important artisanal hub and the preservation of ancestral knowledge.', es: 'Producción cerámica tradicional del norte de Bahía, que representa un importante núcleo artesanal y la preservación de conocimientos ancestrales.' },
-    details: { pt: 'Rio Real tem um significado cultural muito grande e o momento é de fortalecer o trabalho de resgate das tradições e de valorização para que a transmissão desses conhecimentos não se perca.', en: '', es: '' },
+    details: { pt: 'Rio Real tem um significado cultural muito grande e o momento é de fortalecer o trabalho de resgate das tradições e de valorização para que a transmissão desses conhecimentos não se perca.', en: 'Rio Real tem um significado cultural muito grande e o momento é de fortalecer o trabalho de resgate das tradições e de valorização para que a transmissão desses conhecimentos não se perca.', es: 'Rio Real tem um significado cultural muito grande e o momento é de fortalecer o trabalho de resgate das tradições e de valorização para que a transmissão desses conhecimentos não se perca.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2185,7 +2185,7 @@ export const heritages: Heritage[] = [
     city: 'Barbalha, região Cariri - Fortaleza',
     coordinates: { lat: -3.72, lng: -38.52 },
     description: { pt: 'A Festa do Pau da Bandeira de Santo Antônio de Barbalha é a reafirmação identitária da região do Cariri e por envolver noções de reciprocidade, sacrifício e sociabilidade.', en: 'A celebration reaffirming the identity of the Cariri region through reciprocity and devotion to Saint Anthony, dating back to the 18th century.', es: 'Una celebración que reafirma la identidad de la región de Cariri a través de la reciprocidad y devoción a San Antonio, datada desde el siglo XVIII.' },
-    details: { pt: 'A devoção a Santo Antônio na cidade de Barbalha remonta, pelo menos, ao século XVIII, quando é erigida a capela em sua homenagem. A festa tem uma data de início móvel.', en: '', es: '' },
+    details: { pt: 'A devoção a Santo Antônio na cidade de Barbalha remonta, pelo menos, ao século XVIII, quando é erigida a capela em sua homenagem. A festa tem uma data de início móvel.', en: 'A devoção a Santo Antônio na cidade de Barbalha remonta, pelo menos, ao século XVIII, quando é erigida a capela em sua homenagem. A festa tem uma data de início móvel.', es: 'A devoção a Santo Antônio na cidade de Barbalha remonta, pelo menos, ao século XVIII, quando é erigida a capela em sua homenagem. A festa tem uma data de início móvel.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2198,7 +2198,7 @@ export const heritages: Heritage[] = [
     city: 'Maranhão',
     coordinates: { lat: -2.53, lng: -44.28 },
     description: { pt: 'É uma forma de expressão de matriz afro-brasileira que envolve dança circular, canto e percussão de tambores que ocorre na maioria dos municípios do Maranhão.', en: 'An Afro-Brazilian expression involving circular dance, singing, and percussion in Maranhão, symbolizing identity and Black resistance.', es: 'Expresión afrobrasileña que integra danza circular, canto y percusión en Maranhão, simbolizando identidad y resistencia afrodescendiente.' },
-    details: { pt: 'Referencial de identidade e resistência cultural dos negros maranhenses que compartilham um passado comum.', en: '', es: '' },
+    details: { pt: 'Referencial de identidade e resistência cultural dos negros maranhenses que compartilham um passado comum.', en: 'Referencial de identidade e resistência cultural dos negros maranhenses que compartilham um passado comum.', es: 'Referencial de identidade e resistência cultural dos negros maranhenses que compartilham um passado comum.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2211,7 +2211,7 @@ export const heritages: Heritage[] = [
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'O choro musicado pelo conjunto de bandolim, flauta, violão 7 Cordas, pandeiro, cavaquinho e clarinete em rodas por todo o país.', en: 'Instrumental music played in circles with mandolin, flute, and guitars, considered the most authentic Brazilian musical genre.', es: 'Música instrumental tocada en ruedas con mandolina, flauta y guitarras, considerada el género musical más brasileño.' },
-    details: { pt: 'O choro é gênero musical considerado mais brasileiro.', en: '', es: '' },
+    details: { pt: 'O choro é gênero musical considerado mais brasileiro.', en: 'O choro é gênero musical considerado mais brasileiro.', es: 'O choro é gênero musical considerado mais brasileiro.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2237,7 +2237,7 @@ export const heritages: Heritage[] = [
     city: 'Maranhão',
     coordinates: { lat: -2.53, lng: -44.28 },
     description: { pt: 'Com história que remonta a 1920, os blocos tradicionais são um tipo de grupo carnavalesco em São Luís que possui diversas peculiaridades, como as vestimentas e até o som que produzem.', en: 'Unique carnival groups from São Luís known for their specific costumes, history since 1920, and distinct rhythmic sounds.', es: 'Grupos carnavalescos exclusivos de São Luís conocidos por sus vestimentas, historia desde 1920 y ritmos distintivos.' },
-    details: { pt: 'Na capital maranhense existem, atualmente, 30 blocos. Cada bloco tradicional possui um figurino próprio que carrega vivacidade e ritmo.', en: '', es: '' },
+    details: { pt: 'Na capital maranhense existem, atualmente, 30 blocos. Cada bloco tradicional possui um figurino próprio que carrega vivacidade e ritmo.', en: 'Na capital maranhense existem, atualmente, 30 blocos. Cada bloco tradicional possui um figurino próprio que carrega vivacidade e ritmo.', es: 'Na capital maranhense existem, atualmente, 30 blocos. Cada bloco tradicional possui um figurino próprio que carrega vivacidade e ritmo.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2250,7 +2250,7 @@ export const heritages: Heritage[] = [
     city: 'Campina Grande',
     coordinates: { lat: -7.12, lng: -34.84 },
     description: { pt: 'A chamada Feira das Feiras é um lugar de referência, de criação, de expressão, de sociabilidade e de identidade do povo nordestino.', en: 'A landmark of Northeastern identity, where history, commerce, and culture blend through unique colors, aromas, and sounds.', es: 'Un referente de la identidad del noreste brasileño, donde la historia, el comercio y la cultura se mezclan entre aromas y sonidos.' },
-    details: { pt: 'Suas cores, aromas, personagens e sons inconfundíveis são a marca de uma cidade que tem sua história e seu traçado misturados com os de seu centro mercadológico e também cultural.', en: '', es: '' },
+    details: { pt: 'Suas cores, aromas, personagens e sons inconfundíveis são a marca de uma cidade que tem sua história e seu traçado misturados com os de seu centro mercadológico e também cultural.', en: 'Suas cores, aromas, personagens e sons inconfundíveis são a marca de uma cidade que tem sua história e seu traçado misturados com os de seu centro mercadológico e também cultural.', es: 'Suas cores, aromas, personagens e sons inconfundíveis são a marca de uma cidade que tem sua história e seu traçado misturados com os de seu centro mercadológico e também cultural.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2263,7 +2263,7 @@ export const heritages: Heritage[] = [
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'As parteiras tradicionais são descritas como “mestras do ofício do partejar, detentoras de um repertório de saberes e práticas acerca de todas as etapas da gestação (pré-natal, parto e pós-parto)”.', en: 'Masters of birthing who hold traditional knowledge regarding all stages of pregnancy, prenatal care, and postnatal support.', es: 'Maestras del oficio de partear, poseedoras de saberes tradicionales sobre todas las etapas del embarazo y el cuidado posparto.' },
-    details: { pt: 'Limitar seu papel à assistência no nascimento de crianças, portanto, seria reducionista.', en: '', es: '' },
+    details: { pt: 'Limitar seu papel à assistência no nascimento de crianças, portanto, seria reducionista.', en: 'Limitar seu papel à assistência no nascimento de crianças, portanto, seria reducionista.', es: 'Limitar seu papel à assistência no nascimento de crianças, portanto, seria reducionista.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2328,7 +2328,7 @@ export const heritages: Heritage[] = [
     city: 'Pernambuco',
     coordinates: { lat: -8.05, lng: -34.87 },
     description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil.', en: 'A tribute to Brazil\'s first inhabitants, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
-    details: { pt: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', en: '', es: '' },
+    details: { pt: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', en: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', es: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2341,7 +2341,7 @@ export const heritages: Heritage[] = [
     city: 'Pernambuco',
     coordinates: { lat: -8.05, lng: -34.87 },
     description: { pt: 'Maracatu de Baque Virado / Maracatu Nação: é mais tradicional e tem uma sonoridade mais grave e intensa, devido ao estilo de toque dos instrumentos.', en: 'Different styles of Maracatu, ranging from the solemn ancestral rhythms of Baque Virado to the rural Baque Solto.', es: 'Diferentes estilos de Maracatu, desde los ritmos solemnes ancestrales de Baque Virado hasta el Baque Solto rural.' },
-    details: { pt: 'A principal diferença em relação ao Maracatu de Rua é que o Baque Virado possui uma estrutura musical mais elaborada e uma dança mais solene. https://bcr.iphan.gov.br/bens-culturais/maracatu-baque-solto/', en: '', es: '' },
+    details: { pt: 'A principal diferença em relação ao Maracatu de Rua é que o Baque Virado possui uma estrutura musical mais elaborada e uma dança mais solene. https://bcr.iphan.gov.br/bens-culturais/maracatu-baque-solto/', en: 'A principal diferença em relação ao Maracatu de Rua é que o Baque Virado possui uma estrutura musical mais elaborada e uma dança mais solene. https://bcr.iphan.gov.br/bens-culturais/maracatu-baque-solto/', es: 'A principal diferença em relação ao Maracatu de Rua é que o Baque Virado possui uma estrutura musical mais elaborada e uma dança mais solene. https://bcr.iphan.gov.br/bens-culturais/maracatu-baque-solto/' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2523,7 +2523,7 @@ export const heritages: Heritage[] = [
     city: 'Espírito Santo',
     coordinates: { lat: -20.32, lng: -40.34 },
     description: { pt: 'O Povo Pomerano é originário da Pomerânia, território que não consta mais no mapa geopolítico da Europa.', en: 'The Pomeranian people originate from Pomerania, a territory formerly on the Baltic coast, now part of Poland and Germany.', es: 'El pueblo pomeranio es originario de Pomerania, territorio en la costa sur del Mar Báltico que fue incorporado mayoritariamente por Polonia y Alemania.' },
-    details: { pt: 'A região da Pomerânia localizava-se na costa sul do Mar Báltico e foi incorporada majoritariamente pela Polônia e, em menor parte, pela Alemanha.', en: '', es: '' },
+    details: { pt: 'A região da Pomerânia localizava-se na costa sul do Mar Báltico e foi incorporada majoritariamente pela Polônia e, em menor parte, pela Alemanha.', en: 'A região da Pomerânia localizava-se na costa sul do Mar Báltico e foi incorporada majoritariamente pela Polônia e, em menor parte, pela Alemanha.', es: 'A região da Pomerânia localizava-se na costa sul do Mar Báltico e foi incorporada majoritariamente pela Polônia e, em menor parte, pela Alemanha.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2536,7 +2536,7 @@ export const heritages: Heritage[] = [
     city: 'Espirito Santo, Minas. São Paulo e Rio de Janeiro',
     coordinates: { lat: -20.32, lng: -40.34 },
     description: { pt: 'O jongo é um estilo musical que foi reconhecido e registrado pelo Iphan como patrimônio imaterial brasileiro.', en: 'Jongo is a musical style recognized by Iphan as Brazilian intangible heritage, expressed by Black communities in the Southeast descended from enslaved Africans.', es: 'El jongo es un estilo musical reconocido como patrimonio inmaterial brasileño, expresado por comunidades negras del sudeste descendientes de africanos esclavizados.' },
-    details: { pt: 'o Jongo foi registrado como uma forma de expressão de comunidades negras do Sudeste, formadas por descendentes de africanos escravizados.', en: '', es: '' },
+    details: { pt: 'o Jongo foi registrado como uma forma de expressão de comunidades negras do Sudeste, formadas por descendentes de africanos escravizados.', en: 'o Jongo foi registrado como uma forma de expressão de comunidades negras do Sudeste, formadas por descendentes de africanos escravizados.', es: 'o Jongo foi registrado como uma forma de expressão de comunidades negras do Sudeste, formadas por descendentes de africanos escravizados.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2575,7 +2575,7 @@ export const heritages: Heritage[] = [
     city: 'Minas Gerais',
     coordinates: { lat: -19.92, lng: -43.94 },
     description: { pt: 'Viola-de-cocho é um instrumento musical de forma e sonoridade sui generis produzido na região da bacia do Rio Paraguai – baixada cuiabana e adjacências – nos estados de Mato Grosso e Mato Grosso do Sul.', en: 'The Viola-de-cocho is a unique musical instrument from the Rio Paraguai basin (Mato Grosso and Mato Grosso do Sul), essential to cururu and siriri cultural festivities.', es: 'La Viola-de-cocho es un instrumento único de la cuenca del Rio Paraguai (Mato Grosso y Mato Grosso do Sul), fundamental en los géneros cururu y siriri y festividades religiosas.' },
-    details: { pt: 'Destaca-se como um instrumento fundamental nos gêneros musicais cururu e siriri, cultivados, sobretudo, em manifestações culturais ligadas à religiosidade e à brincadeira.', en: '', es: '' },
+    details: { pt: 'Destaca-se como um instrumento fundamental nos gêneros musicais cururu e siriri, cultivados, sobretudo, em manifestações culturais ligadas à religiosidade e à brincadeira.', en: 'Destaca-se como um instrumento fundamental nos gêneros musicais cururu e siriri, cultivados, sobretudo, em manifestações culturais ligadas à religiosidade e à brincadeira.', es: 'Destaca-se como um instrumento fundamental nos gêneros musicais cururu e siriri, cultivados, sobretudo, em manifestações culturais ligadas à religiosidade e à brincadeira.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2627,7 +2627,7 @@ export const heritages: Heritage[] = [
     city: 'Minas Gerais',
     coordinates: { lat: -19.92, lng: -43.94 },
     description: { pt: 'A Congada é considerada uma expressão cultural e religiosa de grande importância e, geralmente, ocorre nos meses de maio, outubro e dezembro, mas pode ser realizada em outras datas.', en: 'A key cultural and religious expression where participants praise deities and saints of African and Catholic origin through music and dance.', es: 'Expresión cultural y religiosa clave donde los participantes alaban deidades y santos de origen africano y católico mediante música y danza.' },
-    details: { pt: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', en: '', es: '' },
+    details: { pt: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', en: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.', es: 'Durante sua realização, os participantes louvam divindades e santos de origem africana e/ou católica.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2718,7 +2718,7 @@ export const heritages: Heritage[] = [
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
     description: { pt: 'A Feira de São Cristóvão, também conhecida como Centro Luiz Gonzaga de Tradições Nordestinas, é o lugar perfeito para uma imersão na cultura, na gastronomia e nas tradições nordestinas.', en: 'Also known as the Luiz Gonzaga Center, it is an immersion into Northeastern Brazilian culture, gastronomy, and music in the heart of Rio de Janeiro.', es: 'También conocida como Centro Luiz Gonzaga, es una inmersión en la cultura, gastronomía y música del noreste brasileño en el corazón de Rio de Janeiro.' },
-    details: { pt: 'É um pedacinho do nordeste no coração do Rio de Janeiro. Com suas cores, cheiros, sons e sabores típicos, a feira encanta os visitantes com sua atmosfera vibrante e autêntica.', en: '', es: '' },
+    details: { pt: 'É um pedacinho do nordeste no coração do Rio de Janeiro. Com suas cores, cheiros, sons e sabores típicos, a feira encanta os visitantes com sua atmosfera vibrante e autêntica.', en: 'É um pedacinho do nordeste no coração do Rio de Janeiro. Com suas cores, cheiros, sons e sabores típicos, a feira encanta os visitantes com sua atmosfera vibrante e autêntica.', es: 'É um pedacinho do nordeste no coração do Rio de Janeiro. Com suas cores, cheiros, sons e sabores típicos, a feira encanta os visitantes com sua atmosfera vibrante e autêntica.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2731,7 +2731,7 @@ export const heritages: Heritage[] = [
     city: 'Angra dos Reis',
     coordinates: { lat: -23.01, lng: -44.32 },
     description: { pt: 'A Festa de São Benedito, tradicional celebração realizada em Angra dos Reis.', en: 'A 370-year-old tradition in Angra dos Reis honoring the city\'s second patron saint with a massive procession of faithful participants.', es: 'Tradición de 370 años en Angra dos Reis que honra al segundo patrono de la ciudad con una multitudinaria procesión de fieles.' },
-    details: { pt: 'Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.', en: '', es: '' },
+    details: { pt: 'Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.', en: 'Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.', es: 'Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2744,7 +2744,7 @@ export const heritages: Heritage[] = [
     city: 'Registro',
     coordinates: { lat: -23.55, lng: -46.63 },
     description: { pt: 'O Tooro Nagashi é a celebração em homenagem aos antepassados, pioneira no país, traz anualmente as comemorações dos mais 130 anos das relações diplomáticas entre Brasil e Japão.', en: 'A pioneer Japanese-Brazilian celebration in Registro honoring ancestors and marking diplomatic relations between Brazil and Japan.', es: 'Celebración pionera en Registro que rinde homenaje a los antepasados y marca las relaciones diplomáticas entre Brasil y Japón.' },
-    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: '', es: '' },
+    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', es: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2783,7 +2783,7 @@ export const heritages: Heritage[] = [
     city: 'Ilha do Mel',
     coordinates: { lat: -25.43, lng: -49.27 },
     description: { pt: 'Durante a Festa de São Pedro Pescador, entre os pescadores, costumava-se cercar as tainhas, retirar de cada cento uma “tara” (tainha maior) e ofertar ao Santo.', en: 'Traditional practice during the Feast of São Pedro where fishermen set aside the largest mullets to auction, raising funds for fireworks.', es: 'Práctica tradicional durante la Fiesta de São Pedro donde los pescadores reservan las lisas más grandes para subastarlas y recaudar fondos para fuegos artificiales.' },
-    details: { pt: 'Ao final, era realizado um pequeno leilão entre os pescadores que com o dinheiro arrecadado compravam rojões para a festa. https://fundart.com.br/festa-de-sao-pedro-2014/tradicao-da-tainha/#:~:text=Durante%20a%20Festa%20de%20S%C3%A3o,compravam%20roj%C3%B5es%20para%20a%20festa.', en: '', es: '' },
+    details: { pt: 'Ao final, era realizado um pequeno leilão entre os pescadores que com o dinheiro arrecadado compravam rojões para a festa. https://fundart.com.br/festa-de-sao-pedro-2014/tradicao-da-tainha/#:~:text=Durante%20a%20Festa%20de%20S%C3%A3o,compravam%20roj%C3%B5es%20para%20a%20festa.', en: 'Ao final, era realizado um pequeno leilão entre os pescadores que com o dinheiro arrecadado compravam rojões para a festa. https://fundart.com.br/festa-de-sao-pedro-2014/tradicao-da-tainha/#:~:text=Durante%20a%20Festa%20de%20S%C3%A3o,compravam%20roj%C3%B5es%20para%20a%20festa.', es: 'Ao final, era realizado um pequeno leilão entre os pescadores que com o dinheiro arrecadado compravam rojões para a festa. https://fundart.com.br/festa-de-sao-pedro-2014/tradicao-da-tainha/#:~:text=Durante%20a%20Festa%20de%20S%C3%A3o,compravam%20roj%C3%B5es%20para%20a%20festa.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2796,7 +2796,7 @@ export const heritages: Heritage[] = [
     city: 'São Miguel Arcanjo',
     coordinates: { lat: -30.03, lng: -51.23 },
     description: { pt: 'O Sítio Arqueológico de São Miguel Arcanjo, popularmente conhecido como Ruínas de São Miguel das Missões, e originalmente chamado Misión de San Miguel Arcángel, é o conjunto de remanescentes da antiga redução jesuítica de São Miguel Arcanjo, integrante dos chamados Sete Povos das Missões.', en: 'Archaeological site of the former Jesuit reduction of São Miguel Arcanjo, part of the Seven Peoples of the Missions in Rio Grande do Sul.', es: 'Sitio arqueológico de la antigua reducción jesuítica de São Miguel Arcanjo, parte de los Siete Pueblos de las Misiones en Rio Grande do Sul.' },
-    details: { pt: 'Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo', en: '', es: '' },
+    details: { pt: 'Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo', en: 'Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo', es: 'Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2835,7 +2835,7 @@ export const heritages: Heritage[] = [
     city: 'Santa Catarina',
     coordinates: { lat: -27.6, lng: -48.55 },
     description: { pt: 'Freguesias era como se chamavam pequenos aglomerados urbanos e rurais durante o período colonial em torno de uma igreja católica.', en: 'Small urban and rural clusters (parishes) established by immigrants from the Azores to strengthen Portuguese occupation in strategic coastal points.', es: 'Pequeños aglomerados urbanos y rurales (parroquias) establecidos por inmigrantes de las Azores para fortalecer la ocupación portuguesa en puntos estratégicos.' },
-    details: { pt: 'Em Santa Catarina, desenvolveram-se para fortalecer e oficializar a ocupação do território, quando a Coroa Portuguesa ordenou que imigrantes oriundos dos Açores se estabelecessem em pontos estratégicos da região.', en: '', es: '' },
+    details: { pt: 'Em Santa Catarina, desenvolveram-se para fortalecer e oficializar a ocupação do território, quando a Coroa Portuguesa ordenou que imigrantes oriundos dos Açores se estabelecessem em pontos estratégicos da região.', en: 'Em Santa Catarina, desenvolveram-se para fortalecer e oficializar a ocupação do território, quando a Coroa Portuguesa ordenou que imigrantes oriundos dos Açores se estabelecessem em pontos estratégicos da região.', es: 'Em Santa Catarina, desenvolveram-se para fortalecer e oficializar a ocupação do território, quando a Coroa Portuguesa ordenou que imigrantes oriundos dos Açores se estabelecessem em pontos estratégicos da região.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2848,7 +2848,7 @@ export const heritages: Heritage[] = [
     city: 'Porto Belo',
     coordinates: { lat: -27.6, lng: -48.55 },
     description: { pt: 'Comunidade do Sertão do Valongo faz divisa com a cidade de Tijucas e por lá o contraste social é claro.', en: 'Traditional community in Porto Belo that preserves memories of slavery, characterized by ox carts and wooden houses amidst green mountains.', es: 'Comunidad tradicional en Porto Belo que preserva memorias de la esclavitud, caracterizada por carros de bueyes y casas de madera entre montañas verdes.' },
-    details: { pt: 'Ao contrário do glamour das praias vizinhas de Itapema e Balneário Camboriú, no “Sertão dos Pretos”, como já foi chamado, o trânsito ainda é de carros de boi e a tranquilidade impera. Casas de madeira misturam-se à imensidão verde das montanhas e pastos. https://ndmais.com.br/noticias/comunidade-no-sertao-do-valongo-em-porto-belo-guarda-memorias-dos-tempos-da-escravidao/', en: '', es: '' },
+    details: { pt: 'Ao contrário do glamour das praias vizinhas de Itapema e Balneário Camboriú, no “Sertão dos Pretos”, como já foi chamado, o trânsito ainda é de carros de boi e a tranquilidade impera. Casas de madeira misturam-se à imensidão verde das montanhas e pastos. https://ndmais.com.br/noticias/comunidade-no-sertao-do-valongo-em-porto-belo-guarda-memorias-dos-tempos-da-escravidao/', en: 'Ao contrário do glamour das praias vizinhas de Itapema e Balneário Camboriú, no “Sertão dos Pretos”, como já foi chamado, o trânsito ainda é de carros de boi e a tranquilidade impera. Casas de madeira misturam-se à imensidão verde das montanhas e pastos. https://ndmais.com.br/noticias/comunidade-no-sertao-do-valongo-em-porto-belo-guarda-memorias-dos-tempos-da-escravidao/', es: 'Ao contrário do glamour das praias vizinhas de Itapema e Balneário Camboriú, no “Sertão dos Pretos”, como já foi chamado, o trânsito ainda é de carros de boi e a tranquilidade impera. Casas de madeira misturam-se à imensidão verde das montanhas e pastos. https://ndmais.com.br/noticias/comunidade-no-sertao-do-valongo-em-porto-belo-guarda-memorias-dos-tempos-da-escravidao/' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2874,7 +2874,7 @@ export const heritages: Heritage[] = [
     city: 'Campos Novos',
     coordinates: { lat: -27.6, lng: -48.55 },
     description: { pt: 'A Comunidade Remanescente de Quilombo Invernada dos Negros, ou apenas Invernada dos Negros, é uma comunidade quilombola reconhecida pelo Incra em 2008.', en: 'Quilombola community recognized in 2008, located between the municipalities of Campos Novos and Abdon Batista in Santa Catarina.', es: 'Comunidad quilombola reconocida en 2008, ubicada entre los municipios de Campos Novos y Abdon Batista en Santa Catarina.' },
-    details: { pt: 'Está localizada na localidade de Corredeira e Manoel Candido entre os municípios Campos Novos e Abdon Batista em Santa Catarina. https://pt.wikipedia.org/wiki/Comunidade_Remanescente_de_Quilombo_Invernada_dos_Negros#:~:text=A%20Comunidade%20Remanescente%20de%20Quilombo,Abdon%20Batista%20em%20Santa%20Catarina.', en: '', es: '' },
+    details: { pt: 'Está localizada na localidade de Corredeira e Manoel Candido entre os municípios Campos Novos e Abdon Batista em Santa Catarina. https://pt.wikipedia.org/wiki/Comunidade_Remanescente_de_Quilombo_Invernada_dos_Negros#:~:text=A%20Comunidade%20Remanescente%20de%20Quilombo,Abdon%20Batista%20em%20Santa%20Catarina.', en: 'Está localizada na localidade de Corredeira e Manoel Candido entre os municípios Campos Novos e Abdon Batista em Santa Catarina. https://pt.wikipedia.org/wiki/Comunidade_Remanescente_de_Quilombo_Invernada_dos_Negros#:~:text=A%20Comunidade%20Remanescente%20de%20Quilombo,Abdon%20Batista%20em%20Santa%20Catarina.', es: 'Está localizada na localidade de Corredeira e Manoel Candido entre os municípios Campos Novos e Abdon Batista em Santa Catarina. https://pt.wikipedia.org/wiki/Comunidade_Remanescente_de_Quilombo_Invernada_dos_Negros#:~:text=A%20Comunidade%20Remanescente%20de%20Quilombo,Abdon%20Batista%20em%20Santa%20Catarina.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2913,7 +2913,7 @@ export const heritages: Heritage[] = [
     city: 'Blumenau',
     coordinates: { lat: -27.6, lng: -48.55 },
     description: { pt: 'O kochkäse é elaborado à partir do queijinho branco (queijo de leite cru coalhado, fervido a 40 graus por dois minutos e escorrido em saco de pano por sete horas).', en: 'A German-influenced cheese made from raw milk curds, boiled, drained, and aged for several days until reaching a yellow color.', es: 'Queso de influencia alemana hecho de cuajada de leche cruda, hervida, escurrida y madurada por varios días hasta alcanzar un color amarillo.' },
-    details: { pt: 'O queijinho branco é então esfarelado e maturado (envelhecido) por alguns dias até que atinja coloração amarelada. https://www.jornaldepomerode.com.br/amarelo-como-ouro-kochkase-um-tesouro-delicioso-da-culinaria-alema/', en: '', es: '' },
+    details: { pt: 'O queijinho branco é então esfarelado e maturado (envelhecido) por alguns dias até que atinja coloração amarelada. https://www.jornaldepomerode.com.br/amarelo-como-ouro-kochkase-um-tesouro-delicioso-da-culinaria-alema/', en: 'O queijinho branco é então esfarelado e maturado (envelhecido) por alguns dias até que atinja coloração amarelada. https://www.jornaldepomerode.com.br/amarelo-como-ouro-kochkase-um-tesouro-delicioso-da-culinaria-alema/', es: 'O queijinho branco é então esfarelado e maturado (envelhecido) por alguns dias até que atinja coloração amarelada. https://www.jornaldepomerode.com.br/amarelo-como-ouro-kochkase-um-tesouro-delicioso-da-culinaria-alema/' },
     unesco: false,
     tags: ['cultural']
   },
@@ -3199,7 +3199,7 @@ export const heritages: Heritage[] = [
     city: 'Bahia',
     coordinates: { lat: -12.97, lng: -38.5 },
     description: { pt: 'O samba de roda, originário da região do Recôncavo Baiano, foi o primeiro gênero musical brasileiro a se tornar patrimônio oral e imaterial da humanidade pela Unesco, em 2005.', en: 'A musical and choreographic expression from Bahia where dance and music are inseparable; the first Brazilian genre to become UNESCO Intangible Heritage.', es: 'Expresión coreográfica y musical de Bahía donde la danza y la música son inseparables; el primer género brasileño en ser patrimonio inmaterial de la UNESCO.' },
-    details: { pt: 'O samba de roda é uma expressão coreográfica musical, algo inseparável da dança, que é parte integrante da música, sendo também a música parte integrante da dança.', en: '', es: '' },
+    details: { pt: 'O samba de roda é uma expressão coreográfica musical, algo inseparável da dança, que é parte integrante da música, sendo também a música parte integrante da dança.', en: 'O samba de roda é uma expressão coreográfica musical, algo inseparável da dança, que é parte integrante da música, sendo também a música parte integrante da dança.', es: 'O samba de roda é uma expressão coreográfica musical, algo inseparável da dança, que é parte integrante da música, sendo também a música parte integrante da dança.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -3212,7 +3212,7 @@ export const heritages: Heritage[] = [
     city: 'Amapá',
     coordinates: { lat: -0.03, lng: -51.07 },
     description: { pt: 'A arte Kusiwa é um sistema de representação gráfico próprio dos povos indígenas Wajãpi, do Amapá, que sintetiza seu modo particular de conhecer, conceber e agir sobre o universo.', en: 'A graphic representation system of the Wajãpi people from Amapá, synthesizing their unique way of conceiving and acting upon the universe.', es: 'Sistema de representación gráfica de los pueblos Wajãpi de Amapá, que sintetiza su modo particular de concebir y actuar sobre el universo.' },
-    details: { pt: 'Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.', en: '', es: '' },
+    details: { pt: 'Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.', en: 'Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.', es: 'Como patrimônio imaterial, a Arte Kusiwa – Pintura Corporal e Arte Gráfica Wajãpi foi inscrita no Livro de Registro das Formas de Expressão, em 2002.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -3225,7 +3225,7 @@ export const heritages: Heritage[] = [
     city: 'Belém',
     coordinates: { lat: -1.46, lng: -48.5 },
     description: { pt: 'O Círio de Nazaré é uma celebração religiosa paraense que ocorre na segunda semana do mês de outubro, chegando a reunir cerca de 2 milhões de participantes anualmente.', en: 'A massive religious celebration in Pará held annually for over 200 years, attracting millions of devotees and observers every October.', es: 'Una masiva celebración religiosa en Pará que se realiza anualmente desde hace más de 200 años, atrayendo a millones de devotos cada octubre.' },
-    details: { pt: 'A cerimônia, que ocorre anualmente há 221 anos, atrai curiosos e devotos pagadores de promessas. https://brasil.un.org/pt-br/67841-c%C3%ADrio-de-nazar%C3%A9-%C3%A9-declarado-patrim%C3%B4nio-imaterial-da-humanidade-da-unesco#:~:text=O%20C%C3%ADrio%20de%20Nazar%C3%A9%20%C3%A9,e%20devotos%20pagadores%20de%20promessas.', en: '', es: '' },
+    details: { pt: 'A cerimônia, que ocorre anualmente há 221 anos, atrai curiosos e devotos pagadores de promessas. https://brasil.un.org/pt-br/67841-c%C3%ADrio-de-nazar%C3%A9-%C3%A9-declarado-patrim%C3%B4nio-imaterial-da-humanidade-da-unesco#:~:text=O%20C%C3%ADrio%20de%20Nazar%C3%A9%20%C3%A9,e%20devotos%20pagadores%20de%20promessas.', en: 'A cerimônia, que ocorre anualmente há 221 anos, atrai curiosos e devotos pagadores de promessas. https://brasil.un.org/pt-br/67841-c%C3%ADrio-de-nazar%C3%A9-%C3%A9-declarado-patrim%C3%B4nio-imaterial-da-humanidade-da-unesco#:~:text=O%20C%C3%ADrio%20de%20Nazar%C3%A9%20%C3%A9,e%20devotos%20pagadores%20de%20promessas.', es: 'A cerimônia, que ocorre anualmente há 221 anos, atrai curiosos e devotos pagadores de promessas. https://brasil.un.org/pt-br/67841-c%C3%ADrio-de-nazar%C3%A9-%C3%A9-declarado-patrim%C3%B4nio-imaterial-da-humanidade-da-unesco#:~:text=O%20C%C3%ADrio%20de%20Nazar%C3%A9%20%C3%A9,e%20devotos%20pagadores%20de%20promessas.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -3238,7 +3238,7 @@ export const heritages: Heritage[] = [
     city: 'Pernambuco',
     coordinates: { lat: -8.05, lng: -34.87 },
     description: { pt: 'Ele é pernambucano, tem mais de 100 anos e tem energia pra dar e vender: pula, salta, canta e se agita num ritmo frenético.', en: 'A century-old, high-energy rhythm from Pernambuco involving frenetic dancing and jumps, recognized internationally as intangible cultural heritage.', es: 'Ritmo centenario de gran energía originario de Pernambuco, con saltos y movimientos frenéticos, reconocido internacionalmente como patrimonio cultural.' },
-    details: { pt: 'É famoso e importante, sua relevância para a cultura é reconhecida nacional e internacionalmente. https://www.neoenergia.com/en/w/frevo-patrimonio-cultural-imaterial-da-humanidade#:~:text=%E2%80%8B%20Ele%20%C3%A9%20pernambucano%2C%20tem,%C3%A9%20reconhecida%20nacional%20e%20internacionalmente.', en: '', es: '' },
+    details: { pt: 'É famoso e importante, sua relevância para a cultura é reconhecida nacional e internacionalmente. https://www.neoenergia.com/en/w/frevo-patrimonio-cultural-imaterial-da-humanidade#:~:text=%E2%80%8B%20Ele%20%C3%A9%20pernambucano%2C%20tem,%C3%A9%20reconhecida%20nacional%20e%20internacionalmente.', en: 'É famoso e importante, sua relevância para a cultura é reconhecida nacional e internacionalmente. https://www.neoenergia.com/en/w/frevo-patrimonio-cultural-imaterial-da-humanidade#:~:text=%E2%80%8B%20Ele%20%C3%A9%20pernambucano%2C%20tem,%C3%A9%20reconhecida%20nacional%20e%20internacionalmente.', es: 'É famoso e importante, sua relevância para a cultura é reconhecida nacional e internacionalmente. https://www.neoenergia.com/en/w/frevo-patrimonio-cultural-imaterial-da-humanidade#:~:text=%E2%80%8B%20Ele%20%C3%A9%20pernambucano%2C%20tem,%C3%A9%20reconhecida%20nacional%20e%20internacionalmente.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -3251,7 +3251,7 @@ export const heritages: Heritage[] = [
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'A capoeira foi reconhecida como Patrimônio Cultural Brasileiro, em 2008.', en: 'A mix of martial arts, dance, and music involving instruments like the berimbau; once prohibited, it is now a celebrated Brazilian cultural heritage.', es: 'Mezcla de artes marciales, danza y música con instrumentos como el berimbau; antes prohibida, hoy es un celebrado patrimonio cultural brasileño.' },
-    details: { pt: 'Ela envolve canto, o uso de instrumentos típicos como o berimbau e o atabaque, em uma roda, onde os golpes de luta se confundem com a dança. Esta manifestação foi considerada crime e proibida no Brasil, antes de ser celebrada como bem cultural. https://cnm.org.br/comunicacao/noticias/manifesta%C3%A7%C3%A3o-importante-no-brasil-a-capoeira-pode-se-tornar-patrim%C3%B4nio-cultural-da-humanidade', en: '', es: '' },
+    details: { pt: 'Ela envolve canto, o uso de instrumentos típicos como o berimbau e o atabaque, em uma roda, onde os golpes de luta se confundem com a dança. Esta manifestação foi considerada crime e proibida no Brasil, antes de ser celebrada como bem cultural. https://cnm.org.br/comunicacao/noticias/manifesta%C3%A7%C3%A3o-importante-no-brasil-a-capoeira-pode-se-tornar-patrim%C3%B4nio-cultural-da-humanidade', en: 'Ela envolve canto, o uso de instrumentos típicos como o berimbau e o atabaque, em uma roda, onde os golpes de luta se confundem com a dança. Esta manifestação foi considerada crime e proibida no Brasil, antes de ser celebrada como bem cultural. https://cnm.org.br/comunicacao/noticias/manifesta%C3%A7%C3%A3o-importante-no-brasil-a-capoeira-pode-se-tornar-patrim%C3%B4nio-cultural-da-humanidade', es: 'Ela envolve canto, o uso de instrumentos típicos como o berimbau e o atabaque, em uma roda, onde os golpes de luta se confundem com a dança. Esta manifestação foi considerada crime e proibida no Brasil, antes de ser celebrada como bem cultural. https://cnm.org.br/comunicacao/noticias/manifesta%C3%A7%C3%A3o-importante-no-brasil-a-capoeira-pode-se-tornar-patrim%C3%B4nio-cultural-da-humanidade' },
     unesco: true,
     tags: ['cultural']
   },
