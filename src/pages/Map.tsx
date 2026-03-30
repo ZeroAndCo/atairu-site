@@ -410,10 +410,15 @@ const MapPage = () => {
               <p className="text-foreground/80 mb-4">
                 {selectedHeritage.description[currentLang]}
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <span className={`inline-block px-2 py-1 rounded text-sm text-white bg-${getCategoryColor(selectedHeritage.category)}`}>
                   {t(`categories.${selectedHeritage.category}.name`)}
                 </span>
+                {selectedHeritage.tags.map(tag => (
+                  <span key={tag} className="inline-block px-2 py-1 rounded text-sm border border-muted-foreground/30">
+                    {t(`tags.${tag}`)}
+                  </span>
+                ))}
                 {selectedHeritage.unesco && (
                   <span className="inline-block px-2 py-1 rounded text-sm bg-amber-200 text-amber-900">UNESCO</span>
                 )}
