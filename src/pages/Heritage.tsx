@@ -227,6 +227,54 @@ const Heritage = () => {
       
       {/* Bottom Pattern Border */}
       <PatternBorder variant={1} height={20} opacity={0.9} />
+
+      {/* Details Modal */}
+      <Dialog open={!!selectedHeritage} onOpenChange={(open) => !open && setSelectedHeritage(null)}>
+        <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto">
+          {selectedHeritage && (
+            <>
+              <DialogHeader>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  <Badge className={getCategoryBadgeColor(selectedHeritage.category)}>
+                    {t(`categories.${selectedHeritage.category}.name`)}
+                  </Badge>
+                  {selectedHeritage.unesco && (
+                    <Badge className="bg-gold text-foreground">UNESCO</Badge>
+                  )}
+                  {selectedHeritage.tags.map(tag => (
+                    <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
+                      {t(`tags.${tag}`)}
+                    </Badge>
+                  ))}
+                </div>
+                <DialogTitle className="font-serif text-xl">
+                  {selectedHeritage.name[currentLang]}
+                </DialogTitle>
+                <DialogDescription className="flex items-center gap-1">
+                  <MapPin className="h-4 w-4" />
+                  {selectedHeritage.city}, {selectedHeritage.state}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-3 mt-2">
+                <p className="text-foreground/90">
+                  {selectedHeritage.description[currentLang]}
+                </p>
+                {selectedHeritage.details[currentLang] && (
+                  <p className="text-muted-foreground text-sm">
+                    {selectedHeritage.details[currentLang]}
+                  </p>
+                )}
+              </div>
+              <Button asChild className="w-full mt-4 bg-forest hover:bg-forest/90 text-white">
+                <Link to={`/map?heritage=${selectedHeritage.id}`}>
+                  <MapPin className="h-4 w-4 mr-2" />
+                  {t('heritage.viewOnMap')}
+                </Link>
+              </Button>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 };
