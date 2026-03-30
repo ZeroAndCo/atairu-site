@@ -29,6 +29,7 @@ const Heritage = () => {
     { key: 'material' as HeritageCategory, icon: Building2, label: t('categories.material.name'), count: getHeritagesByCategory('material').length },
     { key: 'intangible' as HeritageCategory, icon: Music, label: t('categories.intangible.name'), count: getHeritagesByCategory('intangible').length },
     { key: 'natural' as HeritageCategory, icon: TreePine, label: t('categories.natural.name'), count: getHeritagesByCategory('natural').length },
+    { key: 'cultural-humanity' as HeritageCategory, icon: Globe2, label: t('categories.cultural-humanity.name'), count: getHeritagesByCategory('cultural-humanity').length },
   ];
 
   const filteredHeritages = useMemo(() => {
