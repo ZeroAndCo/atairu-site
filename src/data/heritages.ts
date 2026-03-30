@@ -3031,7 +3031,7 @@ export const heritages: Heritage[] = [
     tags: ['natural']
   },
   {
-    id: 'parque-nacional-dos-lencois-maranhenses',
+    id: 'parque-nacional-dos-lencois-maranhenses-natural',
     name: { pt: 'Parque Nacional dos Lençóis Maranhenses', en: 'Lençóis Maranhenses National Park', es: 'Parque Nacional dos Lençóis Maranhenses' },
     category: 'natural',
     region: 'nordeste',
