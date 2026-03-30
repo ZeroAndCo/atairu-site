@@ -2983,10 +2983,6 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'modo-de-fazer-viola-de-cocho',
-    name: { pt: 'Modo de Fazer Viola de Cocho', en: 'Traditional Method of Making the Viola de Cocho', es: 'Modo de Hacer la Viola de Cocho' },
-    category: 'intangible',
-    region: 'sudeste',
     state: 'Mato Grosso e Mato Grosso do Sul',
     city: 'Bacia do Rio Paraguai',
     coordinates: { lat: -15.79, lng: -47.88 },
