@@ -178,8 +178,8 @@ const Heritage = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: Math.min(index * 0.05, 0.5) }}
                     >
-                      <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group">
-                        <div className="h-40 bg-muted flex items-center justify-center relative">
+                      <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group flex flex-col">
+                        <div className="h-40 bg-muted flex items-center justify-center relative shrink-0">
                           <span className="text-5xl group-hover:scale-110 transition-transform">
                             {getCategoryIcon(heritage.category)}
                           </span>
@@ -200,18 +200,18 @@ const Heritage = () => {
                             ))}
                           </div>
                         </div>
-                        <CardContent className="p-5">
+                        <CardContent className="p-5 flex flex-col flex-1">
                           <h3 className="font-serif text-lg font-semibold mb-2 line-clamp-2">
                             {heritage.name[currentLang]}
                           </h3>
                           <p className="text-muted-foreground text-sm mb-3 flex items-center gap-1">
-                            <MapPin className="h-4 w-4" />
+                            <MapPin className="h-4 w-4 shrink-0" />
                             {heritage.city}, {heritage.state}
                           </p>
-                          <p className="text-sm text-foreground/80 line-clamp-3 mb-4">
+                          <p className="text-sm text-foreground/80 line-clamp-3 mb-4 flex-1">
                             {heritage.description[currentLang]}
                           </p>
-                          <Button variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10" onClick={() => setSelectedHeritage(heritage)}>
+                          <Button variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10 mt-auto" onClick={() => setSelectedHeritage(heritage)}>
                             {t('map.viewDetails')}
                           </Button>
                         </CardContent>

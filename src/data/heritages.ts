@@ -183,7 +183,7 @@ export const heritages: Heritage[] = [
     city: 'Goiás',
     coordinates: { lat: -15.93, lng: -50.13 },
     description: { pt: 'Antiga capital do estado, preserva arquitetura colonial.', en: 'Former state capital preserving colonial architecture and traditional mining town urbanism.', es: 'Antigua capital estatal que preserva la arquitectura colonial y el urbanismo de las ciudades mineras.' },
-    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: 'Goiás bears witness to the occupation and colonization of Brazil\'s interior during the 18th and 19th centuries. Its urban layout is characteristic of organically developed mining towns adapted to their surroundings. Although modest, the architecture of its public and private buildings displays great harmony, resulting from the coherent use of local materials and techniques.', es: 'Goiás constituye un testimonio de la ocupación y colonización del interior de Brasil en los siglos XVIII y XIX. Su trazado urbano es característico de las ciudades mineras de desarrollo orgánico, adaptadas a su entorno. Aunque modesta, la arquitectura de sus edificios públicos y privados presenta una gran armonía, fruto del uso coherente de materiales y técnicas locales.' },
+    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: 'Goiás bears witness to the occupation and colonization of the interior of Brazil during the 18th and 19th centuries. Its urban layout is characteristic of organically developed mining towns adapted to their surroundings. Although modest, the architecture of its public and private buildings displays great harmony, resulting from the coherent use of local materials and techniques.', es: 'Goiás constituye un testimonio de la ocupación y colonización del interior de Brasil en los siglos XVIII y XIX. Su trazado urbano es característico de las ciudades mineras de desarrollo orgánico, adaptadas a su entorno. Aunque modesta, la arquitectura de sus edificios públicos y privados presenta una gran armonía, fruto del uso coherente de materiales y técnicas locales.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -221,7 +221,7 @@ export const heritages: Heritage[] = [
     state: 'Mato Grosso e Mato Grosso do Sul',
     city: 'Poconé',
     coordinates: { lat: -17.88, lng: -57.4 },
-    description: { pt: 'Maior planície alagável do mundo, rica em biodiversidade.', en: 'The world\'s largest wetland, rich in biodiversity.', es: 'La llanura aluvial más grande del mundo, rica en biodiversidad.' },
+    description: { pt: 'Maior planície alagável do mundo, rica em biodiversidade.', en: 'The the largest in the world wetland, rich in biodiversity.', es: 'La llanura aluvial más grande del mundo, rica en biodiversidad.' },
     details: { pt: '(A reserva do Pantanal compreende quatro zonas protegidas, com uma superfície total de 187.818 hectares. Situada no extremo sul oriental do Estado de Mato Grosso, esta zona de conservação abarca as cabeceiras dos rios Cuiabá e Paraguai.', en: 'This 187,818-hectare conservation area in Mato Grosso encompasses the headwaters of the Cuiabá and Paraguay rivers.', es: 'Esta zona de conservación de 187.818 hectáreas en Mato Grosso abarca las cabeceras de los ríos Cuiabá y Paraguay.' },
     unesco: true,
     tags: ['natural']
@@ -234,7 +234,7 @@ export const heritages: Heritage[] = [
     state: 'Amazonas',
     city: 'Novo Airão',
     coordinates: { lat: -2.62, lng: -60.94 },
-    description: { pt: 'Maior parque de floresta tropical do mundo, Patrimônio Natural.', en: 'The world\'s largest tropical forest park, recognized as a Natural Heritage site.', es: 'El parque de selva tropical más grande del mundo, reconocido como Patrimonio Natural.' },
+    description: { pt: 'Maior parque de floresta tropical do mundo, Patrimônio Natural.', en: 'The the largest in the world tropical forest park, recognized as a Natural Heritage site.', es: 'El parque de selva tropical más grande del mundo, reconocido como Patrimonio Natural.' },
     details: { pt: '', en: '', es: '' },
     unesco: true,
     tags: ['natural']
@@ -247,7 +247,7 @@ export const heritages: Heritage[] = [
     state: 'Minas Gerais',
     city: 'Congonhas',
     coordinates: { lat: -20.5, lng: -43.86 },
-    description: { pt: 'Construído na segunda metade do século XVII, este santuário está situado na cidade de Congonhas, no estado de Minas Gerais.', en: 'An 18th-century complex in Congonhas, Minas Gerais, featuring a Rococo church, prophets\' statues, and Way of the Cross chapels with Aleijadinho\'s Baroque masterpieces.', es: 'Complejo del siglo XVIII en Congonhas, Minas Gerais, con una iglesia rococó, estatuas de profetas y capillas del Vía Crucis con obras maestras barrocas de Aleijadinho.' },
+    description: { pt: 'Construído na segunda metade do século XVII, este santuário está situado na cidade de Congonhas, no estado de Minas Gerais.', en: 'An 18th-century complex in Congonhas, Minas Gerais, featuring a Rococo church, prophets statues, and Way of the Cross chapels with Aleijadinho Baroque masterpieces.', es: 'Complejo del siglo XVIII en Congonhas, Minas Gerais, con una iglesia rococó, estatuas de profetas y capillas del Vía Crucis con obras maestras barrocas de Aleijadinho.' },
     details: { pt: 'Consta de uma igreja com uma suntuosa decoração interior ao estilo rococó italiano, uma escada ornada com estátuas de profetas e sete capelas de uma via cruzis com grupos escultóricos policromos de Aleijadinho, que são obras primas de uma arte barroca, expressiva e de grande originalidade.', en: 'It features a church with sumptuous Italian Rococo interior decoration, a stairway adorned with statues of prophets, and seven Way of the Cross chapels with polychrome sculptural groups by Aleijadinho, which are masterpieces of expressive and highly original Baroque art.', es: 'Consta de una iglesia con una suntuosa decoración interior al estilo rococó italiano, una escalinata adornada con estatuas de profetas y siete capillas del Vía Crucis con grupos escultóricos policromados de Aleijadinho, que son obras maestras del arte barroco expresivo y de gran originalidad.' },
     unesco: true,
     tags: ['cultural']
@@ -287,7 +287,7 @@ export const heritages: Heritage[] = [
     city: 'Bahia e Espírito Santo',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'As reservas da Costa do Descobrimento estão situadas entre os Estados de Bahia e Espírito Santo.', en: 'Eight protected areas in Bahia and Espírito Santo covering 112,000 hectares of rainforest and restingas, hosting immense biodiversity and endemic species.', es: 'Ocho zonas protegidas en Bahia y Espírito Santo con 112.000 hectáreas de selva y restingas, que albergan una inmensa biodiversidad y especies endémicas.' },
-    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados ("restingas"). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'Eight separate protected areas totaling 112,000 hectares of Atlantic Forest and associated shrublands ("restingas"). The humid forests along Brazil\'s Atlantic coast harbor the richest biodiversity on the planet, sheltering a wide range of endemic species.', es: 'Son ocho zonas protegidas separadas que suman 112.000 hectáreas de Mata Atlántica y arbustos asociados ("restingas"). Los bosques húmedos de la costa atlántica de Brasil poseen la biodiversidad más rica del planeta y albergan una amplia gama de especies endémicas.' },
+    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados ("restingas"). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'Eight separate protected areas totaling 112,000 hectares of Atlantic Forest and associated shrublands ("restingas"). The humid forests along the Atlantic coast of Brazil harbor the richest biodiversity on the planet, sheltering a wide range of endemic species.', es: 'Son ocho zonas protegidas separadas que suman 112.000 hectáreas de Mata Atlántica y arbustos asociados ("restingas"). Los bosques húmedos de la costa atlántica de Brasil poseen la biodiversidad más rica del planeta y albergan una amplia gama de especies endémicas.' },
     unesco: true,
     tags: ['natural']
   },
@@ -325,7 +325,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Paraty e Ilha Grande',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural.', en: 'Brazil\'s first mixed World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
+    description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural.', en: 'the first mixed heritage site of Brazil World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
     details: { pt: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', en: 'Paraty and Ilha Grande encompass an area with diverse ecological reserves, natural beauty, cultural manifestations, a preserved historic center, and archaeological evidence.', es: 'Paraty e Ilha Grande abarca un área con diversas reservas ecológicas, bellezas naturales, manifestaciones culturales, un conjunto histórico preservado y testimonios arqueológicos.' },
     unesco: true,
     tags: ['cultural', 'natural']
@@ -338,7 +338,7 @@ export const heritages: Heritage[] = [
     state: 'Maranhão',
     city: 'Maranhão',
     coordinates: { lat: -2.53, lng: -44.28 },
-    description: { pt: 'O Parque Nacional dos Lençóis Maranhenses (PNLM), criado pelo Decreto 86.060, em 2 de junho de 1981, é caracterizado como o maior campo de dunas de areia da América do Sul. Compreende uma área de 155 mil hectares, dos quais 90 mil consistem em dunas móveis e lagoas formadas por essas dunas.', en: 'South America\'s largest field of sand dunes, spanning 155,000 hectares with seasonal lagoons formed between mobile dunes.', es: 'El mayor campo de dunas de arena de Sudamérica, con 155.000 hectáreas y lagunas estacionales formadas entre dunas móviles.' },
+    description: { pt: 'O Parque Nacional dos Lençóis Maranhenses (PNLM), criado pelo Decreto 86.060, em 2 de junho de 1981, é caracterizado como o maior campo de dunas de areia da América do Sul. Compreende uma área de 155 mil hectares, dos quais 90 mil consistem em dunas móveis e lagoas formadas por essas dunas.', en: 'South the largest in South America field of sand dunes, spanning 155,000 hectares with seasonal lagoons formed between mobile dunes.', es: 'El mayor campo de dunas de arena de Sudamérica, con 155.000 hectáreas y lagunas estacionales formadas entre dunas móviles.' },
     details: { pt: '', en: '', es: '' },
     unesco: true,
     tags: ['natural']
@@ -468,7 +468,7 @@ export const heritages: Heritage[] = [
     state: 'Tocantins',
     city: 'Porto Nacional',
     coordinates: { lat: -10.18, lng: -48.33 },
-    description: { pt: 'O centro histórico de Porto Nacional, em Tocantins, foi tombado pelo Iphan, em 2008.', en: 'Listed by Iphan in 2008, Porto Nacional\'s historic center covers 250 buildings and surrounding squares near the Cathedral of Nossa Senhora das Mercês, featuring structures built by Dominican friars.', es: 'El centro histórico de Porto Nacional fue protegido por el Iphan en 2008.' },
+    description: { pt: 'O centro histórico de Porto Nacional, em Tocantins, foi tombado pelo Iphan, em 2008.', en: 'Listed by Iphan in 2008, Porto Nacional historic center covers 250 buildings and surrounding squares near the Cathedral of Nossa Senhora das Mercês, featuring structures built by Dominican friars.', es: 'El centro histórico de Porto Nacional fue protegido por el Iphan en 2008.' },
     details: { pt: 'A área delimitada abrange cerca de 250 edificações, conjuntos de ruas, largos e praças, incluindo a Avenida Beira Lago e o entorno da Catedral Nossa Senhora das Mercês. Na cidade, destacam-se as edificações construídas pelos freis dominicanos como a Catedral das Mercês, além de espaços públicos e residências.', en: '', es: 'Abarca unas 250 edificaciones y plazas, incluyendo la Avenida Beira Lago y la Catedral de Nossa Senhora das Mercês, construida por frailes dominicos.' },
     unesco: false,
     tags: ['cultural']
@@ -507,7 +507,7 @@ export const heritages: Heritage[] = [
     state: 'Alagoas',
     city: 'Piranhas',
     coordinates: { lat: -9.67, lng: -35.74 },
-    description: { pt: 'Localizada no sertão do Estado de Alagoas, Piranhas se divide em "cidade de baixo e cidade de cima", em uma região de caatinga cortada pelos rios São Francisco, Boa Vista (ou Piranhas), Urucu e Capiá.', en: 'Located in the Alagoas backlands, Piranhas is divided into the \'lower city\' and \'upper city\' within a caatinga region crossed by the São Francisco and Piranhas rivers.', es: 'Ubicada en el sertón de Alagoas, Piranhas se divide en "ciudad baja y ciudad alta", en una región de caatinga atravesada por los ríos São Francisco y Piranhas.' },
+    description: { pt: 'Localizada no sertão do Estado de Alagoas, Piranhas se divide em "cidade de baixo e cidade de cima", em uma região de caatinga cortada pelos rios São Francisco, Boa Vista (ou Piranhas), Urucu e Capiá.', en: 'Located in the Alagoas backlands, Piranhas is divided into the "lower city" and "upper city" within a caatinga region crossed by the São Francisco and Piranhas rivers.', es: 'Ubicada en el sertón de Alagoas, Piranhas se divide en "ciudad baja y ciudad alta", en una región de caatinga atravesada por los ríos São Francisco y Piranhas.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -520,7 +520,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Cachoeira',
     coordinates: { lat: -12.62, lng: -38.95 },
-    description: { pt: 'Importante reduto histórico do Recôncavo Baiano, destaca-se por sua arquitetura colonial preservada e papel crucial nas lutas pela independência do Brasil.', en: 'An important historical stronghold in the Recôncavo Baiano, it is noted for its preserved colonial architecture and crucial role in Brazil\'s independence struggles.', es: 'Importante baluarte histórico del Recôncavo Baiano, destaca por su arquitectura colonial preservada y su papel crucial en las luchas por la independencia de Brasil.' },
+    description: { pt: 'Importante reduto histórico do Recôncavo Baiano, destaca-se por sua arquitetura colonial preservada e papel crucial nas lutas pela independência do Brasil.', en: 'An important historical stronghold in the Recôncavo Baiano, it is noted for its preserved colonial architecture and crucial role in the independence of Brazil struggles.', es: 'Importante baluarte histórico del Recôncavo Baiano, destaca por su arquitectura colonial preservada y su papel crucial en las luchas por la independencia de Brasil.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -533,7 +533,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Andaraí',
     coordinates: { lat: -12.81, lng: -41.33 },
-    description: { pt: 'Conhecida como a \'Machu Picchu baiana\', a vila de Igatu abriga ruínas de pedra que remetem ao auge do ciclo do garimpo de diamantes na Chapada Diamantina.', en: 'Known as the \'Bahian Machu Picchu\', Igatu features stone ruins from the peak of the diamond mining cycle in the Chapada Diamantina.', es: 'Conocida como el \'Machu Picchu bahiano\', la aldea de Igatu alberga ruinas de piedra del auge del ciclo del diamante en la Chapada Diamantina.' },
+    description: { pt: 'Conhecida como a "Machu Picchu baiana", a vila de Igatu abriga ruínas de pedra que remetem ao auge do ciclo do garimpo de diamantes na Chapada Diamantina.', en: 'Known as the "Bahian Machu Picchu", Igatu features stone ruins from the peak of the diamond mining cycle in the Chapada Diamantina.', es: 'Conocida como el "Machu Picchu bahiano", la aldea de Igatu alberga ruinas de piedra del auge del ciclo del diamante en la Chapada Diamantina.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -546,7 +546,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Itaparica',
     coordinates: { lat: -12.89, lng: -38.68 },
-    description: { pt: 'Unindo beleza natural e história, a ilha preserva um conjunto arquitetônico colonial e a primeira igreja matriz do país, além de fortificações estratégicas.', en: 'Combining natural beauty and history, the island preserves a colonial architectural ensemble, the country\'s first parish church, and strategic fortifications.', es: 'Uniendo belleza natural e historia, la isla preserva un conjunto arquitectónico colonial, la primera iglesia matriz del país y fortificaciones estratégicas.' },
+    description: { pt: 'Unindo beleza natural e história, a ilha preserva um conjunto arquitetônico colonial e a primeira igreja matriz do país, além de fortificações estratégicas.', en: 'Combining natural beauty and history, the island preserves a colonial architectural ensemble, the the first in the country parish church, and strategic fortifications.', es: 'Uniendo belleza natural e historia, la isla preserva un conjunto arquitectónico colonial, la primera iglesia matriz del país y fortificaciones estratégicas.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -624,7 +624,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'São Felix',
     coordinates: { lat: -12.61, lng: -38.97 },
-    description: { pt: 'Situada à margem do Rio Paraguaçu, compõe com Cachoeira um cenário vital da industrialização baiana e da cultura fumageira regional.', en: 'Located on the banks of the Paraguaçu River, it forms with Cachoeira a vital landscape of Bahia\'s industrialization and regional tobacco culture.', es: 'Situada a orillas del río Paraguaçu, conforma junto a Cachoeira un escenario vital de la industrialización bahiana y de la cultura tabacalera regional.' },
+    description: { pt: 'Situada à margem do Rio Paraguaçu, compõe com Cachoeira um cenário vital da industrialização baiana e da cultura fumageira regional.', en: 'Located on the banks of the Paraguaçu River, it forms with Cachoeira a vital landscape of Bahia industrialization and regional tobacco culture.', es: 'Situada a orillas del río Paraguaçu, conforma junto a Cachoeira un escenario vital de la industrialización bahiana y de la cultura tabacalera regional.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -637,7 +637,7 @@ export const heritages: Heritage[] = [
     state: 'Ceará',
     city: 'Aracati',
     coordinates: { lat: -4.56, lng: -37.77 },
-    description: { pt: 'Jaguarão é conhecida por seu rico patrimônio histórico e arquitetônico, com um conjunto de edificações coloniais, ecléticas, art déco e modernistas que refletem a diversidade cultural da região.', en: 'Known for its rich history and architecture, featuring colonial, eclectic, Art Deco, and modernist buildings reflecting the region\'s cultural diversity.', es: 'Conocida por su rico patrimonio histórico y arquitectónico, con edificios coloniales, eclécticos, art déco y modernistas que reflejan la diversidad cultural regional.' },
+    description: { pt: 'Jaguarão é conhecida por seu rico patrimônio histórico e arquitetônico, com um conjunto de edificações coloniais, ecléticas, art déco e modernistas que refletem a diversidade cultural da região.', en: 'Known for its rich history and architecture, featuring colonial, eclectic, Art Deco, and modernist buildings reflecting the the region cultural diversity.', es: 'Conocida por su rico patrimonio histórico y arquitectónico, con edificios coloniales, eclécticos, art déco y modernistas que reflejan la diversidad cultural regional.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -728,7 +728,7 @@ export const heritages: Heritage[] = [
     state: 'Paraíba',
     city: 'João Pessoa',
     coordinates: { lat: -7.12, lng: -34.84 },
-    description: { pt: 'Um dos conjuntos urbanos mais antigos do Brasil, mescla construções barrocas, ecléticas e art déco em um traçado histórico preservado.', en: 'One of Brazil\'s oldest urban complexes, blending Baroque, eclectic, and Art Deco buildings within a preserved historical layout.', es: 'Uno de los conjuntos urbanos más antiguos de Brasil, mezcla construcciones barrocas, eclécticas y art déco en un trazado histórico preservado.' },
+    description: { pt: 'Um dos conjuntos urbanos mais antigos do Brasil, mescla construções barrocas, ecléticas e art déco em um traçado histórico preservado.', en: 'One of the oldest urban area of Brazil complexes, blending Baroque, eclectic, and Art Deco buildings within a preserved historical layout.', es: 'Uno de los conjuntos urbanos más antiguos de Brasil, mezcla construcciones barrocas, eclécticas y art déco en un trazado histórico preservado.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -754,7 +754,7 @@ export const heritages: Heritage[] = [
     state: 'Pernambuco',
     city: 'Igarassu',
     coordinates: { lat: -7.83, lng: -34.91 },
-    description: { pt: 'Uma das vilas mais antigas do Brasil, possui o conjunto de Santos Cosme e Damião, considerada a igreja mais antiga em funcionamento no país.', en: 'One of Brazil\'s oldest towns, featuring the Santos Cosme e Damião complex, considered the oldest functioning church in the country.', es: 'Una de las villas más antiguas de Brasil, posee el conjunto de Santos Cosme e Damião, considerada la iglesia más antigua en funcionamiento del país.' },
+    description: { pt: 'Uma das vilas mais antigas do Brasil, possui o conjunto de Santos Cosme e Damião, considerada a igreja mais antiga em funcionamento no país.', en: 'One of the oldest towns in Brazil, featuring the Santos Cosme e Damião complex, considered the oldest functioning church in the country.', es: 'Una de las villas más antiguas de Brasil, posee el conjunto de Santos Cosme e Damião, considerada la iglesia más antigua en funcionamiento del país.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -871,7 +871,7 @@ export const heritages: Heritage[] = [
     state: 'Goiás',
     city: 'Goiania',
     coordinates: { lat: -16.69, lng: -49.25 },
-    description: { pt: 'Um dos mais importantes acervos de arquitetura Art Déco do mundo, refletindo o projeto modernista da fundação da capital na década de 1930.', en: 'One of the world\'s most important Art Deco architectural collections, reflecting the modernist design of the capital\'s foundation in the 1930s.', es: 'Uno de los acervos arquitectónicos Art Déco más importantes del mundo, reflejando el proyecto modernista de la fundación de la capital en la década de 1930.' },
+    description: { pt: 'Um dos mais importantes acervos de arquitetura Art Déco do mundo, refletindo o projeto modernista da fundação da capital na década de 1930.', en: 'One of the the most important in the world important Art Deco architectural collections, reflecting the modernist design of the the capital foundation in the 1930s.', es: 'Uno de los acervos arquitectónicos Art Déco más importantes del mundo, reflejando el proyecto modernista de la fundación de la capital en la década de 1930.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -936,7 +936,7 @@ export const heritages: Heritage[] = [
     state: 'Mato Grosso',
     city: 'Cáceres',
     coordinates: { lat: -16.07, lng: -57.68 },
-    description: { pt: 'Conhecida como a \'Princesinha do Paraguai\', destaca-se pelo traçado urbano regular e por casarões que mesclam estilos neoclássico e eclético.', en: 'Known as the \'Princess of the Paraguay\', it stands out for its regular urban layout and mansions blending neoclassical and eclectic styles.', es: 'Conocida como la \'Princesita del Paraguay\', destaca por su trazado urbano regular y casonas que mezclan estilos neoclásico y ecléctico.' },
+    description: { pt: 'Conhecida como a "Princesinha do Paraguai", destaca-se pelo traçado urbano regular e por casarões que mesclam estilos neoclássico e eclético.', en: 'Known as the "Princess of the Paraguay", it stands out for its regular urban layout and mansions blending neoclassical and eclectic styles.', es: 'Conocida como la "Princesita del Paraguay", destaca por su trazado urbano regular y casonas que mezclan estilos neoclásico y ecléctico.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -988,7 +988,7 @@ export const heritages: Heritage[] = [
     state: 'Minas Gerais',
     city: 'Mariana',
     coordinates: { lat: -20.38, lng: -43.42 },
-    description: { pt: 'Primeira capital mineira, possui um riquíssimo conjunto barroco com igrejas monumentais e o traçado urbano planejado mais antigo do estado.', en: 'The first capital of Minas Gerais, it possesses a rich baroque collection with monumental churches and the state\'s oldest planned urban layout.', es: 'Primera capital de Minas Gerais, posee un riquísimo conjunto barroco con iglesias monumentales y el trazado urbano planificado más antiguo del estado.' },
+    description: { pt: 'Primeira capital mineira, possui um riquíssimo conjunto barroco com igrejas monumentais e o traçado urbano planejado mais antigo do estado.', en: 'The first capital of Minas Gerais, it possesses a rich baroque collection with monumental churches and the the oldest in the state planned urban layout.', es: 'Primera capital de Minas Gerais, posee un riquísimo conjunto barroco con iglesias monumentales y el trazado urbano planificado más antiguo del estado.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1040,7 +1040,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Angra dos Reis',
     coordinates: { lat: -23.01, lng: -44.32 },
-    description: { pt: 'Exemplo de vila operária ligada ao ciclo do café, preserva harmonia entre arquitetura colonial e a paisagem natural litorânea fluminense.', en: 'An example of a workers\' village linked to the coffee cycle, it preserves harmony between colonial architecture and the coastal landscape of Rio de Janeiro state.', es: 'Ejemplo de villa obrera ligada al ciclo del café, preserva la armonía entre la arquitectura colonial y el paisaje natural costero de Río de Janeiro.' },
+    description: { pt: 'Exemplo de vila operária ligada ao ciclo do café, preserva harmonia entre arquitetura colonial e a paisagem natural litorânea fluminense.', en: 'An example of a workers village linked to the coffee cycle, it preserves harmony between colonial architecture and the coastal landscape of Rio de Janeiro state.', es: 'Ejemplo de villa obrera ligada al ciclo del café, preserva la armonía entre la arquitectura colonial y el paisaje natural costero de Río de Janeiro.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1079,7 +1079,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Petrópolis',
     coordinates: { lat: -22.51, lng: -43.18 },
-    description: { pt: 'A \'Cidade Imperial\' abriga o Palácio de Verão de D.', en: 'The \'Imperial City\' houses the Summer Palace of D.', es: 'La \'Ciudad Imperial\' alberga el Palacio de Verano de D.' },
+    description: { pt: 'A "Cidade Imperial" abriga o Palácio de Verão de D.', en: 'The "Imperial City" houses the Summer Palace of D.', es: 'La "Ciudad Imperial" alberga el Palacio de Verano de D.' },
     details: { pt: 'Pedro II e um vasto acervo arquitetônico neoclássico de valor histórico nacional.', en: 'Pedro II and a vast neoclassical architectural collection of national historical value.', es: 'Pedro II y un vasto acervo arquitectónico neoclásico de valor histórico nacional.' },
     unesco: false,
     tags: ['cultural']
@@ -1170,7 +1170,7 @@ export const heritages: Heritage[] = [
     state: 'Paraná',
     city: 'Lapa',
     coordinates: { lat: -25.77, lng: -49.72 },
-    description: { pt: 'Cenário do Cerco da Lapa, preserva ruas de paralelepípedo e edifícios que marcam a resistência histórica e a cultura tropeira.', en: 'Setting of the Siege of Lapa, it preserves cobblestone streets and buildings marking historical resistance and \'tropeiro\' culture.', es: 'Escenario del Cerco de Lapa, preserva calles empedradas y edificios que marcan la resistencia histórica y la cultura tropeira.' },
+    description: { pt: 'Cenário do Cerco da Lapa, preserva ruas de paralelepípedo e edifícios que marcam a resistência histórica e a cultura tropeira.', en: 'Setting of the Siege of Lapa, it preserves cobblestone streets and buildings marking historical resistance and "tropeiro" culture.', es: 'Escenario del Cerco de Lapa, preserva calles empedradas y edificios que marcan la resistencia histórica y la cultura tropeira.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1417,7 +1417,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Preserva a residência e o acervo pessoal do \'Pai da República\', oferecendo um retrato fiel da vida doméstica e política no final do Império.', en: 'Preserves the residence and personal collection of the \'Father of the Republic\', offering a faithful portrait of domestic and political life at the end of the Empire.', es: 'Preserva la residencia y el acervo personal del \'Padre de la República\', ofreciendo un retrato fiel de la vida doméstica y política a finales del Imperio.' },
+    description: { pt: 'Preserva a residência e o acervo pessoal do "Pai da República", oferecendo um retrato fiel da vida doméstica e política no final do Império.', en: 'Preserves the residence and personal collection of the "Father of the Republic", offering a faithful portrait of domestic and political life at the end of the Empire.', es: 'Preserva la residencia y el acervo personal del "Padre de la República", ofreciendo un retrato fiel de la vida doméstica y política a finales del Imperio.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1456,7 +1456,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Instalado em fortificações coloniais no Rio de Janeiro, abriga um imenso acervo que narra a formação do Brasil desde antes da colonização.', en: 'Set in colonial fortifications in Rio de Janeiro, it houses a vast collection narrating Brazil\'s formation since before colonization.', es: 'Instalado en fortificaciones coloniales en Rio de Janeiro, alberga un inmenso acervo que narra la formación de Brasil desde antes de la colonización.' },
+    description: { pt: 'Instalado em fortificações coloniais no Rio de Janeiro, abriga um imenso acervo que narra a formação do Brasil desde antes da colonização.', en: 'Set in colonial fortifications in Rio de Janeiro, it houses a vast collection narrating the formation of Brazil since before colonization.', es: 'Instalado en fortificaciones coloniales en Rio de Janeiro, alberga un inmenso acervo que narra la formación de Brasil desde antes de la colonización.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1482,7 +1482,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Instituição que preserva a vida e a obra do maior compositor das Américas, Heitor Villa-Lobos, promovendo a música erudita brasileira.', en: 'Institution preserving the life and work of the Americas\' greatest composer, Heitor Villa-Lobos, promoting Brazilian classical music.', es: 'Institución que preserva la vida y obra del mayor compositor de las Américas, Heitor Villa-Lobos, promoviendo la música clásica brasileña.' },
+    description: { pt: 'Instituição que preserva a vida e a obra do maior compositor das Américas, Heitor Villa-Lobos, promovendo a música erudita brasileira.', en: 'Institution preserving the life and work of the Americas greatest composer, Heitor Villa-Lobos, promoting Brazilian classical music.', es: 'Institución que preserva la vida y obra del mayor compositor de las Américas, Heitor Villa-Lobos, promoviendo la música clásica brasileña.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1495,7 +1495,7 @@ export const heritages: Heritage[] = [
     state: 'Santa Catarina',
     city: 'Florianópolis',
     coordinates: { lat: -27.6, lng: -48.55 },
-    description: { pt: 'Sediado na casa natal do artista em Florianópolis, o museu é dedicado à memória do pintor e ao ensino das artes visuais.', en: 'Housed in the artist\'s birthplace in Florianópolis, the museum is dedicated to the painter\'s memory and visual arts education.', es: 'Sede de la casa natal del artista en Florianópolis, el museo está dedicado a la memoria del pintor y a la enseñanza de las artes visuales.' },
+    description: { pt: 'Sediado na casa natal do artista em Florianópolis, o museu é dedicado à memória do pintor e ao ensino das artes visuais.', en: 'Housed in the the artist birthplace in Florianópolis, the museum is dedicated to the the painter memory and visual arts education.', es: 'Sede de la casa natal del artista en Florianópolis, el museo está dedicado a la memoria del pintor y a la enseñanza de las artes visuales.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1573,7 +1573,7 @@ export const heritages: Heritage[] = [
     state: 'Santa Catarina e Rio Grande do Sul',
     city: 'Santa Catarina e Rio Grande do Sul',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'Canoa pranchão utilizada nos estados do Rio Grande do Sul e Santa Catarina.', en: 'A \'pranchão\' style canoe used in the states of Rio Grande do Sul and Santa Catarina.', es: 'Canoa tipo \'pranchão\' utilizada en los estados de Rio Grande do Sul y Santa Catarina.' },
+    description: { pt: 'Canoa pranchão utilizada nos estados do Rio Grande do Sul e Santa Catarina.', en: 'A "pranchão" style canoe used in the states of Rio Grande do Sul and Santa Catarina.', es: 'Canoa tipo "pranchão" utilizada en los estados de Rio Grande do Sul y Santa Catarina.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1586,7 +1586,7 @@ export const heritages: Heritage[] = [
     state: 'Distrito Federal',
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'A Constituição de 88 definiu que os quilombolas, as comunidades quilombolas, suas reminiscências históricas, seus bens, já são patrimônio cultural', en: 'The 1988 Constitution established that Quilombos, their descendant communities, historical memories, and assets are part of Brazil\'s cultural heritage.', es: 'La Constitución de 1988 definió que los Quilombos, sus comunidades, sus reminiscencias históricas y sus bienes son parte del patrimonio cultural brasileño.' },
+    description: { pt: 'A Constituição de 88 definiu que os quilombolas, as comunidades quilombolas, suas reminiscências históricas, seus bens, já são patrimônio cultural', en: 'The 1988 Constitution established that Quilombos, their descendant communities, historical memories, and assets are part of the cultural heritage of Brazil.', es: 'La Constitución de 1988 definió que los Quilombos, sus comunidades, sus reminiscencias históricas y sus bienes son parte del patrimonio cultural brasileño.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1651,7 +1651,7 @@ export const heritages: Heritage[] = [
     state: 'Rio Grande do Sul',
     city: 'São Francisco do Sul',
     coordinates: { lat: -26.24, lng: -48.64 },
-    description: { pt: 'Fortemente enraizado na cultura do Rio Grande do Sul e tradicionalmente ligado à pecuária extensiva e aos tropeiros, o modo de fazer queijo artesanal serrano e um Patrimônio Cultural Imaterial estadual.', en: 'Rooted in Rio Grande do Sul, this artisanal cheese-making tradition is linked to cattle ranching and the historical paths of the \'tropeiros\'.', es: 'Arraigado en Rio Grande do Sul, este método artesanal de elaboración de queso está vinculado a la ganadería y a la historia de los \'tropeiros\'.' },
+    description: { pt: 'Fortemente enraizado na cultura do Rio Grande do Sul e tradicionalmente ligado à pecuária extensiva e aos tropeiros, o modo de fazer queijo artesanal serrano e um Patrimônio Cultural Imaterial estadual.', en: 'Rooted in Rio Grande do Sul, this artisanal cheese-making tradition is linked to cattle ranching and the historical paths of the "tropeiros".', es: 'Arraigado en Rio Grande do Sul, este método artesanal de elaboración de queso está vinculado a la ganadería y a la historia de los "tropeiros".' },
     details: { pt: 'A produção do queijo teve início há mais de dois séculos junto com o estabelecimento das primeiras fazendas na região dos Campos de Cima da Serra. Apesar das inovações tecnológicas, os produtores seguem preservando a essência e os métodos tradicionais.', en: 'Cheese production began over two centuries ago with the establishment of the first farms in the Campos de Cima da Serra region. Despite technological innovations, producers continue to preserve the essence and traditional methods.', es: 'La producción de queso comenzó hace más de dos siglos con el establecimiento de las primeras haciendas en la región de Campos de Cima da Serra. A pesar de las innovaciones tecnológicas, los productores siguen preservando la esencia y los métodos tradicionales.' },
     unesco: false,
     tags: ['cultural']
@@ -1703,7 +1703,7 @@ export const heritages: Heritage[] = [
     state: 'Rio Grande do Sul',
     city: 'Rio Grande do Sul',
     coordinates: { lat: -30.03, lng: -51.23 },
-    description: { pt: 'O bugio é um gênero musical executado no acordeão, no qual o instrumentista realiza um toque característico denominado "sincopado".', en: 'An accordion-based musical genre from Rio Grande do Sul with a syncopated rhythm inspired by the sound of the native \'bugio\'', es: 'Género musical de acordeón de Rio Grande do Sul con un ritmo sincopado inspirado en el sonido del mono aullador nativo' },
+    description: { pt: 'O bugio é um gênero musical executado no acordeão, no qual o instrumentista realiza um toque característico denominado "sincopado".', en: 'An accordion-based musical genre from Rio Grande do Sul with a syncopated rhythm inspired by the sound of the native "bugio"', es: 'Género musical de acordeón de Rio Grande do Sul con un ritmo sincopado inspirado en el sonido del mono aullador nativo' },
     details: { pt: 'Esse ritmo é caracterizado pela execução de som em um tempo fraco que se prolonga até o tempo forte, constituindo um compasso binário simples. Há uma unanimidade quanto ao fato de que esse toque característico no instrumento foi desenvolvido a partir da imitação do som produzido pelo macaco bugio, animal nativo de diversas regiões do Estado.', en: 'howler monkey', es: 'bugio' },
     unesco: false,
     tags: ['cultural']
@@ -1762,14 +1762,14 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'festa-de-santana-de-caico',
-    name: { pt: 'Festa de Sant\'Ana de Caicó', en: 'Festival of Sant\'Ana de Caicó', es: 'Fiesta de Sant\'Ana de Caicó' },
+    name: { pt: 'Festa de SantAna de Caicó', en: 'Festival of SantAna de Caicó', es: 'Fiesta de SantAna de Caicó' },
     category: 'intangible',
     region: 'sudeste',
     state: 'RIo Grande do Norte',
     city: 'Caicó região do Seridó',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'A Festa de Sant\' Ana de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration Sant\'Ana, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a Sant\'Ana, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
-    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
+    description: { pt: 'A Festa de SantAna de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration SantAna, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a SantAna, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
+    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de SantAna, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1976,8 +1976,8 @@ export const heritages: Heritage[] = [
     state: 'Pará',
     city: 'Cidades do Pará',
     coordinates: { lat: -1.46, lng: -48.5 },
-    description: { pt: 'Mais do que farinha: um jeito de viver É no engenho que acontece a farinhada, que é como um mutirão: vizinhos e parentes se reúnem para trabalhos juntos, cada um contribuindo com o que sabe.', en: 'More than flour, it\'s a way of life in the \'engenho\' mills.', es: 'Más que harina, es una forma de vida en los \'engenhos\'.' },
-    details: { pt: 'Enquanto uns raspam e lavam a mandioca, outros operam a prensa, controlam o forno ou peneiram a massa. E enquanto se trabalha, também se canta.https://www.gov.br/iphan/pt-br/assuntos/noticias/iphan-aprova-registro-dos-saberes-e-praticas-tradicionais-associados-aos-engenhos-de-farinha-de-mandioca-de-sc', en: 'Neighbors and relatives gather for \'farinhada\' communal work, scraping, washing, pressing, and sifting while singing.', es: 'Vecinos y familiares se reúnen para la \'farinhada\', un trabajo comunitario donde raspan, lavan, prensan y tamizan mientras cantan.' },
+    description: { pt: 'Mais do que farinha: um jeito de viver É no engenho que acontece a farinhada, que é como um mutirão: vizinhos e parentes se reúnem para trabalhos juntos, cada um contribuindo com o que sabe.', en: 'More than flour, it is a way of life in the "engenho" mills.', es: 'Más que harina, es una forma de vida en los "engenhos".' },
+    details: { pt: 'Enquanto uns raspam e lavam a mandioca, outros operam a prensa, controlam o forno ou peneiram a massa. E enquanto se trabalha, também se canta.https://www.gov.br/iphan/pt-br/assuntos/noticias/iphan-aprova-registro-dos-saberes-e-praticas-tradicionais-associados-aos-engenhos-de-farinha-de-mandioca-de-sc', en: 'Neighbors and relatives gather for "farinhada" communal work, scraping, washing, pressing, and sifting while singing.', es: 'Vecinos y familiares se reúnen para la "farinhada", un trabajo comunitario donde raspan, lavan, prensan y tamizan mientras cantan.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2015,7 +2015,7 @@ export const heritages: Heritage[] = [
     state: 'Pará',
     city: 'Belém',
     coordinates: { lat: -1.46, lng: -48.5 },
-    description: { pt: 'Também é Patrimônio Material', en: 'Also designated as Material Heritage due to the market\'s architecture.', es: 'También designado como Patrimonio Material por la arquitectura del mercado.' },
+    description: { pt: 'Também é Patrimônio Material', en: 'Also designated as Material Heritage due to the the market architecture.', es: 'También designado como Patrimonio Material por la arquitectura del mercado.' },
     details: { pt: 'Arquitetura do Mercado', en: 'Market architecture.', es: 'Arquitectura del Mercado.' },
     unesco: false,
     tags: ['cultural']
@@ -2029,7 +2029,7 @@ export const heritages: Heritage[] = [
     city: 'Margens do Rio Guripi',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Os Tembé constituem o ramo ocidental dos Tenetehara.', en: 'The Tembé belong to the Tenetehara branch.', es: 'Los Tembé pertenecen a la rama Tenetehara.' },
-    details: { pt: 'O grupo oriental é conhecido por Guajajara. Sua autodenominação é Tenetehara, que significa gente, índios em geral ou, mais especificamente, Tembé e Guajajara. Tembé, ou sua variante Timbé, constitui um nome que provavelmente lhes foi atribuído pelos regionais. De acordo com o lingüista Max Boudin, timbeb significaria "nariz chato".', en: 'Their name means \'people\' or \'Indians\'. According to linguist Max Boudin, Tembé likely means \'flat nose\'.', es: 'Su nombre significa \'gente\' o \'indios\'. Según el lingüista Max Boudin, Tembé probablemente significa \'nariz chata\'.' },
+    details: { pt: 'O grupo oriental é conhecido por Guajajara. Sua autodenominação é Tenetehara, que significa gente, índios em geral ou, mais especificamente, Tembé e Guajajara. Tembé, ou sua variante Timbé, constitui um nome que provavelmente lhes foi atribuído pelos regionais. De acordo com o lingüista Max Boudin, timbeb significaria "nariz chato".', en: 'Their name means "people" or "Indians". According to linguist Max Boudin, Tembé likely means "flat nose".', es: 'Su nombre significa "gente" o "indios". Según el lingüista Max Boudin, Tembé probablemente significa "nariz chata".' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2041,7 +2041,7 @@ export const heritages: Heritage[] = [
     state: 'Tocantins',
     city: 'Municípios: Ananás, Araguatins, Itaguatins, Luzinópolis, Praia Norte, Santa Terezinha e São Sebastião do Tocantins.',
     coordinates: { lat: -10.18, lng: -48.33 },
-    description: { pt: 'O Babaçu é uma espécie de grande importância econômica e cultural para as regiões norte e nordeste do Brasil.', en: 'The Babaçu palm, called \'mother\' by coconut-breaking communities, provides food, shelter, and livelihoods for families in the Mata dos Cocais region.', es: 'La palmera Babaçu, llamada \'madre\' por las comunidades recolectoras, proporciona alimento, refugio y sustento a las familias de la región de Mata dos Cocais.' },
+    description: { pt: 'O Babaçu é uma espécie de grande importância econômica e cultural para as regiões norte e nordeste do Brasil.', en: 'The Babaçu palm, called "mother" by coconut-breaking communities, provides food, shelter, and livelihoods for families in the Mata dos Cocais region.', es: 'La palmera Babaçu, llamada "madre" por las comunidades recolectoras, proporciona alimento, refugio y sustento a las familias de la región de Mata dos Cocais.' },
     details: { pt: 'A palmeira chamada de "mãe" pelas comunidades de Quebradeiras de Coco, fornece alimento, abrigo e sustento para milhares de famílias que habitam a região conhecida como Mata dos Cocais. http://portal.iphan.gov.br/uploads/publicacao/universo_cultural_da_palmeira_babacu.pdf', en: 'The palm tree, called "mother" by the Coconut Breaker communities, provides food, shelter, and sustenance for thousands of families in the region known as Mata dos Cocais.', es: 'La palmera, llamada "madre" por las comunidades de Quebradeiras de Coco, proporciona alimento, abrigo y sustento para miles de familias que habitan la región conocida como Mata dos Cocais.' },
     unesco: false,
     tags: ['cultural']
@@ -2087,7 +2087,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'tabuleiro-das-baianas-em-salvador',
-    name: { pt: 'Tabuleiro das Baianas em Salvador', en: 'Baianas\' Table in Salvador', es: 'Tablero de las Baianas en Salvador' },
+    name: { pt: 'Tabuleiro das Baianas em Salvador', en: 'Baianas Table in Salvador', es: 'Tablero de las Baianas en Salvador' },
     category: 'intangible',
     region: 'nordeste',
     state: 'Bahia',
@@ -2158,7 +2158,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Municípios de Euclides da Cunha, Monte Santo e Canudos',
     coordinates: { lat: -12.97, lng: -38.5 },
-    description: { pt: 'A cultura do interior da Bahia, é a cultura sertaneja, cultura interiorana marcada pela cultura do couro, culinária da região, festas e manifestações rurais e o vaqueiro, que lida com o gado no sertão baiano desde 1550 onde surgiu durante o povoamento e avanço da pecuária para o interior do estado, foi a primeira fixação do homem no interior da Bahia e de todo interior do Nordeste brasileiro.', en: 'The rural culture of inland Bahia, characterized by leatherwork, regional cuisine, rural festivals, and the figure of the \'vaqueiro\' cowboy since 1550.', es: 'La cultura rural del interior de Bahía, caracterizada por el cuero, la gastronomía regional, fiestas rurales y la figura del vaquero desde 1550.' },
+    description: { pt: 'A cultura do interior da Bahia, é a cultura sertaneja, cultura interiorana marcada pela cultura do couro, culinária da região, festas e manifestações rurais e o vaqueiro, que lida com o gado no sertão baiano desde 1550 onde surgiu durante o povoamento e avanço da pecuária para o interior do estado, foi a primeira fixação do homem no interior da Bahia e de todo interior do Nordeste brasileiro.', en: 'The rural culture of inland Bahia, characterized by leatherwork, regional cuisine, rural festivals, and the figure of the "vaqueiro" cowboy since 1550.', es: 'La cultura rural del interior de Bahía, caracterizada por el cuero, la gastronomía regional, fiestas rurales y la figura del vaquero desde 1550.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -2327,7 +2327,7 @@ export const heritages: Heritage[] = [
     state: 'Pernambuco',
     city: 'Pernambuco',
     coordinates: { lat: -8.05, lng: -34.87 },
-    description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil.', en: 'A tribute to Brazil\'s first inhabitants, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
+    description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil.', en: 'A tribute to the first inhabitants of Brazil, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
     details: { pt: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', en: 'The groups - some over 100 years old and still active - perform in the streets, mainly during carnival, dressed in feathers and beadwork in a carnival reinterpretation of traditional indigenous costumes, and dance nimbly to the different rhythms representing themes of indigenous rituals.', es: 'Los grupos – algunos con más de 100 años y aún activos – se presentan en las calles – principalmente en carnaval – vestidos con plumas y pedrería, en una relectura carnavalesca de los trajes indígenas tradicionales, y bailan con agilidad los diferentes toques que representan temas de rituales de la población indígena.' },
     unesco: false,
     tags: ['cultural']
@@ -2464,7 +2464,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'festa-da-cacada-da-rainha-em-colinas-do-sul',
-    name: { pt: 'Festa da Caçada da Rainha em Colinas do Sul', en: 'Queen\'s Hunt Festival in Colinas do Sul', es: 'Fiesta de la Cacería de la Reina en Colinas do Sul' },
+    name: { pt: 'Festa da Caçada da Rainha em Colinas do Sul', en: 'Queens Hunt Festival in Colinas do Sul', es: 'Fiesta de la Cacería de la Reina en Colinas do Sul' },
     category: 'intangible',
     region: 'centro-oeste',
     state: 'Goiás',
@@ -2510,7 +2510,7 @@ export const heritages: Heritage[] = [
     city: 'Espírito Santo',
     coordinates: { lat: -20.32, lng: -40.34 },
     description: { pt: 'Tradição familiar passada de geração em geração, o Ofício das Paneleiras de Goiabeiras.', en: 'A family tradition passed down through generations.', es: 'Tradición familiar transmitida por generaciones.' },
-    details: { pt: 'Elemento essencial do "prato típico capixaba", as panelas de barro, que são indispensáveis durante a realização das famosas moquecas de peixe.', en: 'These clay pots are essential for the traditional \'moqueca capixaba\' fish stew.', es: 'Estas ollas de barro son elementos esenciales para preparar la tradicional \'moqueca capixaba\'.' },
+    details: { pt: 'Elemento essencial do "prato típico capixaba", as panelas de barro, que são indispensáveis durante a realização das famosas moquecas de peixe.', en: 'These clay pots are essential for the traditional "moqueca capixaba" fish stew.', es: 'Estas ollas de barro son elementos esenciales para preparar la tradicional "moqueca capixaba".' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2704,7 +2704,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'A Folia de Reis nasceu da catequização por padres portugueses no Brasil, que contavam histórias bíblicas por meio da dramatização.', en: 'A dramatization of the Three Wise Men\'s journey to Bethlehem.', es: 'Dramatización del viaje de los Reyes Magos a Belén.' },
+    description: { pt: 'A Folia de Reis nasceu da catequização por padres portugueses no Brasil, que contavam histórias bíblicas por meio da dramatização.', en: 'A dramatization of the Three Wise Men journey to Bethlehem.', es: 'Dramatización del viaje de los Reyes Magos a Belén.' },
     details: { pt: 'Trata-se de uma encenação da viagem dos três reis magos ao local de nascimento de Jesus Cristo, para presenteá-lo com ouro, incenso e mirra. No cortejo, que entra na casa de devotos, são declamados cânticos em formato de repente.', en: 'The procession visits homes with traditional songs and prayers.', es: 'El cortejo visita casas de devotos con cánticos tradicionales y oraciones.' },
     unesco: false,
     tags: ['cultural']
@@ -2730,7 +2730,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Angra dos Reis',
     coordinates: { lat: -23.01, lng: -44.32 },
-    description: { pt: 'A Festa de São Benedito, tradicional celebração realizada em Angra dos Reis.', en: 'A 370-year-old tradition in Angra dos Reis honoring the city\'s second patron saint with a massive procession of faithful participants.', es: 'Tradición de 370 años en Angra dos Reis que honra al segundo patrono de la ciudad con una multitudinaria procesión de fieles.' },
+    description: { pt: 'A Festa de São Benedito, tradicional celebração realizada em Angra dos Reis.', en: 'A 370-year-old tradition in Angra dos Reis honoring the the second patron of the city patron saint with a massive procession of faithful participants.', es: 'Tradición de 370 años en Angra dos Reis que honra al segundo patrono de la ciudad con una multitudinaria procesión de fieles.' },
     details: { pt: 'Completando 370 anos em 2022, a festa de São Benedito é um marco na cidade e reúne milhares de fiéis em uma procissão pelas ruas, celebrando o segundo padroeiro de Angra dos Reis.', en: 'Completing 370 years in 2022, the feast of São Benedito is a landmark in the city and gathers thousands of faithful in a procession through the streets.', es: 'Cumpliendo 370 años en 2022, la fiesta de São Benedito es un hito en la ciudad y reúne a miles de fieles en una procesión por las calles.' },
     unesco: false,
     tags: ['cultural']
@@ -2744,7 +2744,7 @@ export const heritages: Heritage[] = [
     city: 'Registro',
     coordinates: { lat: -23.55, lng: -46.63 },
     description: { pt: 'O Tooro Nagashi é a celebração em homenagem aos antepassados, pioneira no país, traz anualmente as comemorações dos mais 130 anos das relações diplomáticas entre Brasil e Japão.', en: 'A pioneer Japanese-Brazilian celebration in Registro honoring ancestors and marking diplomatic relations between Brazil and Japan.', es: 'Celebración pionera en Registro que rinde homenaje a los antepasados y marca las relaciones diplomáticas entre Brasil y Japón.' },
-    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'During the three days of programming, more than 25,000 people are expected - equivalent to 42% of the city\'s population of 60,000 inhabitants.', es: 'Durante los tres días de programación, se esperan más de 25 mil personas, equivalente al 42% de la población de la ciudad de 60 mil habitantes.' },
+    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'During the three days of programming, more than 25,000 people are expected - equivalent to 42% of the the city population of 60,000 inhabitants.', es: 'Durante los tres días de programación, se esperan más de 25 mil personas, equivalente al 42% de la población de la ciudad de 60 mil habitantes.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2978,7 +2978,7 @@ export const heritages: Heritage[] = [
     city: 'Bahia',
     coordinates: { lat: -12.97, lng: -38.5 },
     description: { pt: 'Um tesouro feito à mão! A renda irlandesa é Patrimônio Cultural Imaterial do Brasil e motivo de orgulho para Sergipe.', en: 'Irish lace is an Intangible Cultural Heritage of Brazil and a source of pride for Sergipe.', es: 'El encaje irlandés es Patrimonio Cultural Inmaterial de Brasil y orgullo de Sergipe.' },
-    details: { pt: 'Em cada ponto, um pedaço da história e da criatividade sergipanas. Mais que uma tradição artesanal, a renda irlandesa é também fonte de trabalho e renda para muitas famílias, fortalecendo a economia criativa do nosso estado', en: 'More than a craft tradition, it is a source of income that strengthens the state\'s creative economy.', es: 'Más que tradición artesanal, es una fuente de ingresos que fortalece la economía creativa del estado.' },
+    details: { pt: 'Em cada ponto, um pedaço da história e da criatividade sergipanas. Mais que uma tradição artesanal, a renda irlandesa é também fonte de trabalho e renda para muitas famílias, fortalecendo a economia criativa do nosso estado', en: 'More than a craft tradition, it is a source of income that strengthens the the state creative economy.', es: 'Más que tradición artesanal, es una fuente de ingresos que fortalece la economía creativa del estado.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -3055,7 +3055,7 @@ export const heritages: Heritage[] = [
     state: 'Amazonas',
     city: 'Novo Airão',
     coordinates: { lat: -2.62, lng: -60.94 },
-    description: { pt: 'Um dos maiores arquipélagos fluviais do mundo, protegendo a biodiversidade amazônica e o ecossistema do Rio Negro.', en: 'One of the world\'s largest river archipelagos, protecting Amazonian biodiversity and the Rio Negro ecosystem.', es: 'Uno de los mayores archipiélagos fluviales del mundo, protegiendo la biodiversidad amazónica y el ecosistema del Rio Negro.' },
+    description: { pt: 'Um dos maiores arquipélagos fluviais do mundo, protegendo a biodiversidade amazônica e o ecossistema do Rio Negro.', en: 'One of the the largest in the world river archipelagos, protecting Amazonian biodiversity and the Rio Negro ecosystem.', es: 'Uno de los mayores archipiélagos fluviales del mundo, protegiendo la biodiversidad amazónica y el ecosistema del Rio Negro.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['natural']
@@ -3081,7 +3081,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Bahia',
     coordinates: { lat: -12.97, lng: -38.5 },
-    description: { pt: 'Área de preservação da Caatinga baiana, com desfiladeiros imponentes e refúgio da arara-azul-de-lear.', en: 'Preservation area for the Caatinga of Bahia, with imposing canyons and a sanctuary for the Lear\'s macaw.', es: 'Área de preservación de la Caatinga bahiana, con imponentes desfiladeros y refugio del guacamayo de Lear.' },
+    description: { pt: 'Área de preservação da Caatinga baiana, com desfiladeiros imponentes e refúgio da arara-azul-de-lear.', en: 'Preservation area for the Caatinga of Bahia, with imposing canyons and a sanctuary for the Lear macaw.', es: 'Área de preservación de la Caatinga bahiana, con imponentes desfiladeros y refugio del guacamayo de Lear.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['natural']
@@ -3107,7 +3107,7 @@ export const heritages: Heritage[] = [
     state: 'Amazonas',
     city: 'Amazonas',
     coordinates: { lat: -3.12, lng: -60.02 },
-    description: { pt: 'Abriga o ponto mais alto do Brasil em território yanomami, com ecossistemas únicos de montanha amazônica.', en: 'Home to Brazil\'s highest point in Yanomami territory, featuring unique Amazonian mountain ecosystems.', es: 'Alberga el punto más alto de Brasil en territorio Yanomami, con ecosistemas únicos de montaña amazónica.' },
+    description: { pt: 'Abriga o ponto mais alto do Brasil em território yanomami, com ecossistemas únicos de montanha amazônica.', en: 'Home to the highest point in Brazil in Yanomami territory, featuring unique Amazonian mountain ecosystems.', es: 'Alberga el punto más alto de Brasil en territorio Yanomami, con ecosistemas únicos de montaña amazónica.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['natural']
