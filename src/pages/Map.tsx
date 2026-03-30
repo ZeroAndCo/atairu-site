@@ -202,6 +202,7 @@ const MapPage = () => {
                 </SelectContent>
               </Select>
 
+              <Select value={regionFilter} onValueChange={(v) => {
                 setRegionFilter(v as Region | 'all');
                 if (v !== 'all') {
                   setSearchParams({ region: v });
