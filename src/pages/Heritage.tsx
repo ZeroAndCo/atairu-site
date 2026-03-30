@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, MapPin, Sparkles, Building2, Music, TreePine, Globe2 } from 'lucide-react';
+import { Search, MapPin, Sparkles, Building2, Music, TreePine, Globe2, Leaf, Landmark } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +13,7 @@ import { PatternBorder } from '@/components/ui/PatternBorder';
 import { 
   heritages, 
   HeritageCategory,
+  HeritageTag,
   getHeritagesByCategory,
   getCategoryIcon 
 } from '@/data/heritages';
@@ -22,6 +23,7 @@ const Heritage = () => {
   const currentLang = i18n.language as 'pt' | 'en' | 'es';
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState<HeritageCategory | 'all'>('all');
+  const [activeTag, setActiveTag] = useState<HeritageTag | 'all'>('all');
 
   const categories = [
     { key: 'all' as const, icon: null, label: 'Todos', count: heritages.length },
@@ -35,6 +37,10 @@ const Heritage = () => {
   const filteredHeritages = useMemo(() => {
     let filtered = activeTab === 'all' ? heritages : getHeritagesByCategory(activeTab);
     
+    if (activeTag !== 'all') {
+      filtered = filtered.filter(h => h.tags.includes(activeTag));
+    }
+    
     if (search) {
       filtered = filtered.filter(h => 
         h.name[currentLang].toLowerCase().includes(search.toLowerCase()) ||
@@ -44,7 +50,7 @@ const Heritage = () => {
     }
     
     return filtered;
-  }, [activeTab, search, currentLang]);
+  }, [activeTab, activeTag, search, currentLang]);
 
   const getCategoryBadgeColor = (category: HeritageCategory) => {
     const colors: Record<HeritageCategory, string> = {
@@ -55,6 +61,12 @@ const Heritage = () => {
       'cultural-humanity': 'bg-purple-700 text-white'
     };
     return colors[category];
+  };
+
+  const getTagBadgeStyle = (tag: HeritageTag) => {
+    return tag === 'cultural' 
+      ? 'border-terracotta/60 text-terracotta bg-terracotta/10'
+      : 'border-forest/60 text-forest bg-forest/10';
   };
 
   return (
@@ -97,7 +109,37 @@ const Heritage = () => {
             </div>
           </div>
 
-          {/* Tabs */}
+          {/* Tag filter chips */}
+          <div className="flex justify-center gap-2 mb-6">
+            <Button
+              variant={activeTag === 'all' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setActiveTag('all')}
+              className={activeTag === 'all' ? 'bg-forest hover:bg-forest/90 text-white' : ''}
+            >
+              {t('tags.all')}
+            </Button>
+            <Button
+              variant={activeTag === 'cultural' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setActiveTag('cultural')}
+              className={activeTag === 'cultural' ? 'bg-terracotta hover:bg-terracotta/90 text-white' : ''}
+            >
+              <Landmark className="h-4 w-4 mr-1" />
+              {t('tags.cultural')}
+            </Button>
+            <Button
+              variant={activeTag === 'natural' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setActiveTag('natural')}
+              className={activeTag === 'natural' ? 'bg-forest hover:bg-forest/90 text-white' : ''}
+            >
+              <Leaf className="h-4 w-4 mr-1" />
+              {t('tags.natural')}
+            </Button>
+          </div>
+
+          {/* Category Tabs */}
           <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as HeritageCategory | 'all')} className="w-full">
             <TabsList className="flex flex-wrap h-auto gap-2 bg-transparent justify-center mb-8">
               {categories.map((cat) => (
@@ -116,6 +158,11 @@ const Heritage = () => {
             </TabsList>
 
             <TabsContent value={activeTab}>
+              {/* Results count */}
+              <p className="text-center text-muted-foreground text-sm mb-6">
+                {filteredHeritages.length} {t('stats.heritages').toLowerCase()}
+              </p>
+
               {filteredHeritages.length === 0 ? (
                 <div className="text-center py-12">
                   <p className="text-muted-foreground">{t('map.noResults')}</p>
@@ -142,6 +189,14 @@ const Heritage = () => {
                               UNESCO
                             </Badge>
                           )}
+                          {/* Tag badges */}
+                          <div className="absolute bottom-3 left-3 flex gap-1">
+                            {heritage.tags.map(tag => (
+                              <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
+                                {t(`tags.${tag}`)}
+                              </Badge>
+                            ))}
+                          </div>
                         </div>
                         <CardContent className="p-5">
                           <h3 className="font-serif text-lg font-semibold mb-2 line-clamp-2">

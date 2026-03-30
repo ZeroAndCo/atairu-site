@@ -27,6 +27,7 @@ import {
   heritages, 
   Heritage, 
   HeritageCategory, 
+  HeritageTag,
   Region, 
   getAllStates,
   getCategoryIcon,
