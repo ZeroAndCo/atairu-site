@@ -23,19 +23,23 @@
     "title": "Categorías de Patrimonio",
     "world": {
       "name": "Patrimonio Mundial",
-      "description": "Sitios reconocidos por la UNESCO por su valor universal excepcional"
+      "description": "Sitios reconocidos por la UNESCO por su valor universal excepcional. Puede ser Cultural, Natural o ambos. Compuesto por monumentos, conjuntos de construcciones y sitios arqueológicos de importancia fundamental para la memoria, la identidad y la creatividad de los pueblos y la riqueza de las culturas."
     },
     "material": {
       "name": "Patrimonio Material",
-      "description": "Bienes tangibles como edificios históricos, monumentos y centros urbanos"
+      "description": "Bienes tangibles de valor histórico, artístico, arqueológico o etnográfico. Incluye colecciones, obras de arte, acervos documentales, archivísticos, fotográficos, sitios arqueológicos, estaciones ferroviarias, fuertes, conjuntos urbanos o ciudades enteras."
     },
     "intangible": {
       "name": "Patrimonio Inmaterial",
-      "description": "Expresiones culturales vivas como danzas, fiestas, gastronomía y artesanía"
+      "description": "Expresiones culturales vivas como danzas, manifestaciones, celebraciones. Se encuentran en los saberes, oficios y modos de hacer; en las celebraciones; formas de expresión escénicas, plásticas, musicales o lúdicas; y en los lugares como mercados, ferias y santuarios que albergan prácticas culturales colectivas."
     },
     "natural": {
       "name": "Patrimonio Natural",
-      "description": "Parques nacionales, reservas y áreas de preservación ambiental"
+      "description": "Parques nacionales, reservas y áreas de preservación ambiental. Formado por monumentos naturales constituidos por formaciones físicas y biológicas, formaciones geológicas y fisiográficas, además de sitios naturales."
+    },
+    "cultural-humanity": {
+      "name": "Patrimonio Cultural de la Humanidad",
+      "description": "Abarca prácticas, representaciones, expresiones, conocimientos y técnicas – junto con los instrumentos, objetos, artefactos y espacios culturales que les son asociados – que las comunidades, los grupos y, en algunos casos, los individuos reconocen como parte integrante de su Patrimonio Cultural."
     }
   },
   "regions": {
@@ -66,7 +70,8 @@
       "world": "Patrimonio Mundial UNESCO - Sitios de valor universal excepcional reconocidos internacionalmente.",
       "material": "Patrimonio Material - Bienes físicos que representan hitos históricos y arquitectónicos.",
       "intangible": "Patrimonio Inmaterial - Tradiciones, saberes y expresiones culturales transmitidas entre generaciones.",
-      "natural": "Patrimonio Natural - Áreas protegidas que preservan ecosistemas y biodiversidad únicos."
+      "natural": "Patrimonio Natural - Áreas protegidas que preservan ecosistemas y biodiversidad únicos.",
+      "cultural-humanity": "Patrimonio Cultural de la Humanidad - Prácticas, representaciones y expresiones reconocidas por las comunidades como parte integrante de su patrimonio cultural."
     }
   },
   "map": {
