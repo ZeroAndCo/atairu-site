@@ -135,12 +135,13 @@ const MapPage = () => {
   const clearFilters = () => {
     setSearch('');
     setCategoryFilter('all');
+    setTagFilter('all');
     setRegionFilter('all');
     setStateFilter('all');
     setSearchParams({});
   };
 
-  const hasActiveFilters = search || categoryFilter !== 'all' || regionFilter !== 'all' || stateFilter !== 'all';
+  const hasActiveFilters = search || categoryFilter !== 'all' || tagFilter !== 'all' || regionFilter !== 'all' || stateFilter !== 'all';
 
   const mapConfig = regionCenters[regionFilter];
 
