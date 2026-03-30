@@ -183,7 +183,7 @@ export const heritages: Heritage[] = [
     city: 'Goiás',
     coordinates: { lat: -15.93, lng: -50.13 },
     description: { pt: 'Antiga capital do estado, preserva arquitetura colonial.', en: 'Former state capital preserving colonial architecture and traditional mining town urbanism.', es: 'Antigua capital estatal que preserva la arquitectura colonial y el urbanismo de las ciudades mineras.' },
-    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: 'Goiás bears witness to the occupation and colonization of Brazil\'s interior during the 18th and 19th centuries. Its urban layout is characteristic of organically developed mining towns adapted to their surroundings. Although modest, the architecture of its public and private buildings displays great harmony, resulting from the coherent use of local materials and techniques.', es: 'Goiás constituye un testimonio de la ocupación y colonización del interior de Brasil en los siglos XVIII y XIX. Su trazado urbano es característico de las ciudades mineras de desarrollo orgánico, adaptadas a su entorno. Aunque modesta, la arquitectura de sus edificios públicos y privados presenta una gran armonía, fruto del uso coherente de materiales y técnicas locales.' },
+    details: { pt: 'Goiás constitui um testemunho da ocupação e colonização do interior de Brasil nos séculos XVIII e XIX. Seu desenho urbano é característico das cidades mineras de desenvolvimento orgânico, adaptadas a seu entorno. Ainda que modesta, a arquitetura de seus edifícios públicos e privados apresentam uma grande harmonia, que é fruto, entre outros fatores, de um emprego coerente de materiais e técnicas locais.', en: 'Goiás bears witness to the occupation and colonization of the interior of Brazil during the 18th and 19th centuries. Its urban layout is characteristic of organically developed mining towns adapted to their surroundings. Although modest, the architecture of its public and private buildings displays great harmony, resulting from the coherent use of local materials and techniques.', es: 'Goiás constituye un testimonio de la ocupación y colonización del interior de Brasil en los siglos XVIII y XIX. Su trazado urbano es característico de las ciudades mineras de desarrollo orgánico, adaptadas a su entorno. Aunque modesta, la arquitectura de sus edificios públicos y privados presenta una gran armonía, fruto del uso coherente de materiales y técnicas locales.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -287,7 +287,7 @@ export const heritages: Heritage[] = [
     city: 'Bahia e Espírito Santo',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'As reservas da Costa do Descobrimento estão situadas entre os Estados de Bahia e Espírito Santo.', en: 'Eight protected areas in Bahia and Espírito Santo covering 112,000 hectares of rainforest and restingas, hosting immense biodiversity and endemic species.', es: 'Ocho zonas protegidas en Bahia y Espírito Santo con 112.000 hectáreas de selva y restingas, que albergan una inmensa biodiversidad y especies endémicas.' },
-    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados ("restingas"). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'Eight separate protected areas totaling 112,000 hectares of Atlantic Forest and associated shrublands ("restingas"). The humid forests along Brazil\'s Atlantic coast harbor the richest biodiversity on the planet, sheltering a wide range of endemic species.', es: 'Son ocho zonas protegidas separadas que suman 112.000 hectáreas de Mata Atlántica y arbustos asociados ("restingas"). Los bosques húmedos de la costa atlántica de Brasil poseen la biodiversidad más rica del planeta y albergan una amplia gama de especies endémicas.' },
+    details: { pt: 'São oito zonas protegidas, separadas entre si , que somam 112.000 hectares de mata atlântica e arbustos associados ("restingas"). Os bosques úmidos da costa atlântica do Brasil possuem a biodiversidade mais rica do planeta. O sitio abriga uma ampla gama de espécies endêmicas e ilustra um modelo de evolução de grande interesse para a ciência e a conservação do meio ambiente', en: 'Eight separate protected areas totaling 112,000 hectares of Atlantic Forest and associated shrublands ("restingas"). The humid forests along the Atlantic coast of Brazil harbor the richest biodiversity on the planet, sheltering a wide range of endemic species.', es: 'Son ocho zonas protegidas separadas que suman 112.000 hectáreas de Mata Atlántica y arbustos asociados ("restingas"). Los bosques húmedos de la costa atlántica de Brasil poseen la biodiversidad más rica del planeta y albergan una amplia gama de especies endémicas.' },
     unesco: true,
     tags: ['natural']
   },
@@ -325,7 +325,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Paraty e Ilha Grande',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural.', en: 'Brazil\'s first mixed World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
+    description: { pt: 'Primeiro sítio misto brasileiro reconhecido internacionalmente como Patrimônio Cultural e Natural.', en: 'the first mixed heritage site of Brazil World Heritage site, combining ecological reserves, natural beauty, cultural expressions, and preserved colonial history.', es: 'Primer sitio mixto de Brasil reconocido como Patrimonio Cultural y Natural, que une reservas ecológicas, belleza natural e historia colonial preservada.' },
     details: { pt: 'Paraty e Ilha Grande abrange uma área com diversas reservas ecológicas, belezas naturais, manifestações culturais, conjunto histórico preservado e testemunhos arqueológicos.', en: 'Paraty and Ilha Grande encompass an area with diverse ecological reserves, natural beauty, cultural manifestations, a preserved historic center, and archaeological evidence.', es: 'Paraty e Ilha Grande abarca un área con diversas reservas ecológicas, bellezas naturales, manifestaciones culturales, un conjunto histórico preservado y testimonios arqueológicos.' },
     unesco: true,
     tags: ['cultural', 'natural']
@@ -520,7 +520,7 @@ export const heritages: Heritage[] = [
     state: 'Bahia',
     city: 'Cachoeira',
     coordinates: { lat: -12.62, lng: -38.95 },
-    description: { pt: 'Importante reduto histórico do Recôncavo Baiano, destaca-se por sua arquitetura colonial preservada e papel crucial nas lutas pela independência do Brasil.', en: 'An important historical stronghold in the Recôncavo Baiano, it is noted for its preserved colonial architecture and crucial role in Brazil\'s independence struggles.', es: 'Importante baluarte histórico del Recôncavo Baiano, destaca por su arquitectura colonial preservada y su papel crucial en las luchas por la independencia de Brasil.' },
+    description: { pt: 'Importante reduto histórico do Recôncavo Baiano, destaca-se por sua arquitetura colonial preservada e papel crucial nas lutas pela independência do Brasil.', en: 'An important historical stronghold in the Recôncavo Baiano, it is noted for its preserved colonial architecture and crucial role in the independence of Brazil struggles.', es: 'Importante baluarte histórico del Recôncavo Baiano, destaca por su arquitectura colonial preservada y su papel crucial en las luchas por la independencia de Brasil.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -728,7 +728,7 @@ export const heritages: Heritage[] = [
     state: 'Paraíba',
     city: 'João Pessoa',
     coordinates: { lat: -7.12, lng: -34.84 },
-    description: { pt: 'Um dos conjuntos urbanos mais antigos do Brasil, mescla construções barrocas, ecléticas e art déco em um traçado histórico preservado.', en: 'One of Brazil\'s oldest urban complexes, blending Baroque, eclectic, and Art Deco buildings within a preserved historical layout.', es: 'Uno de los conjuntos urbanos más antiguos de Brasil, mezcla construcciones barrocas, eclécticas y art déco en un trazado histórico preservado.' },
+    description: { pt: 'Um dos conjuntos urbanos mais antigos do Brasil, mescla construções barrocas, ecléticas e art déco em um traçado histórico preservado.', en: 'One of the oldest urban area of Brazil complexes, blending Baroque, eclectic, and Art Deco buildings within a preserved historical layout.', es: 'Uno de los conjuntos urbanos más antiguos de Brasil, mezcla construcciones barrocas, eclécticas y art déco en un trazado histórico preservado.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -754,7 +754,7 @@ export const heritages: Heritage[] = [
     state: 'Pernambuco',
     city: 'Igarassu',
     coordinates: { lat: -7.83, lng: -34.91 },
-    description: { pt: 'Uma das vilas mais antigas do Brasil, possui o conjunto de Santos Cosme e Damião, considerada a igreja mais antiga em funcionamento no país.', en: 'One of Brazil\'s oldest towns, featuring the Santos Cosme e Damião complex, considered the oldest functioning church in the country.', es: 'Una de las villas más antiguas de Brasil, posee el conjunto de Santos Cosme e Damião, considerada la iglesia más antigua en funcionamiento del país.' },
+    description: { pt: 'Uma das vilas mais antigas do Brasil, possui o conjunto de Santos Cosme e Damião, considerada a igreja mais antiga em funcionamento no país.', en: 'One of the oldest towns in Brazil, featuring the Santos Cosme e Damião complex, considered the oldest functioning church in the country.', es: 'Una de las villas más antiguas de Brasil, posee el conjunto de Santos Cosme e Damião, considerada la iglesia más antigua en funcionamiento del país.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1456,7 +1456,7 @@ export const heritages: Heritage[] = [
     state: 'Rio de Janeiro',
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
-    description: { pt: 'Instalado em fortificações coloniais no Rio de Janeiro, abriga um imenso acervo que narra a formação do Brasil desde antes da colonização.', en: 'Set in colonial fortifications in Rio de Janeiro, it houses a vast collection narrating Brazil\'s formation since before colonization.', es: 'Instalado en fortificaciones coloniales en Rio de Janeiro, alberga un inmenso acervo que narra la formación de Brasil desde antes de la colonización.' },
+    description: { pt: 'Instalado em fortificações coloniais no Rio de Janeiro, abriga um imenso acervo que narra a formação do Brasil desde antes da colonização.', en: 'Set in colonial fortifications in Rio de Janeiro, it houses a vast collection narrating the formation of Brazil since before colonization.', es: 'Instalado en fortificaciones coloniales en Rio de Janeiro, alberga un inmenso acervo que narra la formación de Brasil desde antes de la colonización.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -1586,7 +1586,7 @@ export const heritages: Heritage[] = [
     state: 'Distrito Federal',
     city: 'Distrito Federal',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'A Constituição de 88 definiu que os quilombolas, as comunidades quilombolas, suas reminiscências históricas, seus bens, já são patrimônio cultural', en: 'The 1988 Constitution established that Quilombos, their descendant communities, historical memories, and assets are part of Brazil\'s cultural heritage.', es: 'La Constitución de 1988 definió que los Quilombos, sus comunidades, sus reminiscencias históricas y sus bienes son parte del patrimonio cultural brasileño.' },
+    description: { pt: 'A Constituição de 88 definiu que os quilombolas, as comunidades quilombolas, suas reminiscências históricas, seus bens, já são patrimônio cultural', en: 'The 1988 Constitution established that Quilombos, their descendant communities, historical memories, and assets are part of the cultural heritage of Brazil.', es: 'La Constitución de 1988 definió que los Quilombos, sus comunidades, sus reminiscencias históricas y sus bienes son parte del patrimonio cultural brasileño.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -2327,7 +2327,7 @@ export const heritages: Heritage[] = [
     state: 'Pernambuco',
     city: 'Pernambuco',
     coordinates: { lat: -8.05, lng: -34.87 },
-    description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil.', en: 'A tribute to Brazil\'s first inhabitants, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
+    description: { pt: 'Os caboclinhos são classificados pelos brincantes como uma homenagem aos primeiros habitantes do território que veio a se chamar Brasil.', en: 'A tribute to the first inhabitants of Brazil, where groups perform agile dances with feathers and stones during Carnival.', es: 'Homenaje a los primeros habitantes de Brasil, donde grupos realizan danzas ágiles con plumas y piedras en Carnaval.' },
     details: { pt: 'Os grupos – alguns com mais de 100 anos e ainda ativos – se apresentam nas ruas – principalmente no carnaval - vestidos com penas e pedrarias, em uma releitura carnavalesca dos trajes indígenas tradicionais, e dançam com agilidade os diferentes toques que representam temas de rituais da população indígena.', en: 'The groups - some over 100 years old and still active - perform in the streets, mainly during carnival, dressed in feathers and beadwork in a carnival reinterpretation of traditional indigenous costumes, and dance nimbly to the different rhythms representing themes of indigenous rituals.', es: 'Los grupos – algunos con más de 100 años y aún activos – se presentan en las calles – principalmente en carnaval – vestidos con plumas y pedrería, en una relectura carnavalesca de los trajes indígenas tradicionales, y bailan con agilidad los diferentes toques que representan temas de rituales de la población indígena.' },
     unesco: false,
     tags: ['cultural']
@@ -2744,7 +2744,7 @@ export const heritages: Heritage[] = [
     city: 'Registro',
     coordinates: { lat: -23.55, lng: -46.63 },
     description: { pt: 'O Tooro Nagashi é a celebração em homenagem aos antepassados, pioneira no país, traz anualmente as comemorações dos mais 130 anos das relações diplomáticas entre Brasil e Japão.', en: 'A pioneer Japanese-Brazilian celebration in Registro honoring ancestors and marking diplomatic relations between Brazil and Japan.', es: 'Celebración pionera en Registro que rinde homenaje a los antepasados y marca las relaciones diplomáticas entre Brasil y Japón.' },
-    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'During the three days of programming, more than 25,000 people are expected - equivalent to 42% of the city\'s population of 60,000 inhabitants.', es: 'Durante los tres días de programación, se esperan más de 25 mil personas, equivalente al 42% de la población de la ciudad de 60 mil habitantes.' },
+    details: { pt: 'Durante os três dias de programação, são esperadas mais de 25 mil pessoas – o equivalente a 42% da população da cidade de Registro, interior de SP.', en: 'During the three days of programming, more than 25,000 people are expected - equivalent to 42% of the the city population of 60,000 inhabitants.', es: 'Durante los tres días de programación, se esperan más de 25 mil personas, equivalente al 42% de la población de la ciudad de 60 mil habitantes.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -3107,7 +3107,7 @@ export const heritages: Heritage[] = [
     state: 'Amazonas',
     city: 'Amazonas',
     coordinates: { lat: -3.12, lng: -60.02 },
-    description: { pt: 'Abriga o ponto mais alto do Brasil em território yanomami, com ecossistemas únicos de montanha amazônica.', en: 'Home to Brazil\'s highest point in Yanomami territory, featuring unique Amazonian mountain ecosystems.', es: 'Alberga el punto más alto de Brasil en territorio Yanomami, con ecosistemas únicos de montaña amazónica.' },
+    description: { pt: 'Abriga o ponto mais alto do Brasil em território yanomami, com ecossistemas únicos de montanha amazônica.', en: 'Home to the highest point in Brazil in Yanomami territory, featuring unique Amazonian mountain ecosystems.', es: 'Alberga el punto más alto de Brasil en territorio Yanomami, con ecosistemas únicos de montaña amazónica.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['natural']
