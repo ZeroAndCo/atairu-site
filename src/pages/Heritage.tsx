@@ -208,9 +208,11 @@ const Heritage = () => {
                             <MapPin className="h-4 w-4 shrink-0" />
                             {heritage.city}, {heritage.state}
                           </p>
-                          <p className="text-sm text-foreground/80 line-clamp-3 mb-4 flex-1">
-                            {heritage.description[currentLang]}
-                          </p>
+                          <div className="flex-1">
+                            <p className="text-sm text-foreground/80 line-clamp-3">
+                              {heritage.description[currentLang]}
+                            </p>
+                          </div>
                           <Button variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10 mt-auto" onClick={() => setSelectedHeritage(heritage)}>
                             {t('map.viewDetails')}
                           </Button>
