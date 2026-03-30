@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, ChevronRight, Sparkles, TreePine, Building2, Music } from 'lucide-react';
+import { MapPin, ChevronRight, Sparkles, TreePine, Building2, Music, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
