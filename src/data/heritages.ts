@@ -40,7 +40,7 @@ export const heritages: Heritage[] = [
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
     description: { pt: 'Paisagem cultural entre o mar e a montanha, Patrimônio Mundial.', en: 'World Heritage cultural landscape.', es: 'Paisaje cultural, Patrimonio Mundial.' },
-    details: { pt: '(A cidade do Rio de Janeiro conquistou de forma inédita o título de primeira paisagem cultural urbana reconhecida como Patrimônio Mundial pela Unesco. A paisagem cultural do Rio é única no mundo e representa um exemplo excepcional dos desafios, das contradições e da criatividade do povo brasileiro.', en: 'Rio de Janeiro was the first city to have its urban landscape recognized by UNESCO, representing the creativity and challenges of the Brazilian people.', es: 'Río de Janeiro fue la primera ciudad en tener su paisaje urbano reconocido por la UNESCO, representando la creatividad y los desafíos del pueblo brasileño.' },
+    details: { pt: 'A cidade do Rio de Janeiro conquistou de forma inédita o título de primeira paisagem cultural urbana reconhecida como Patrimônio Mundial pela Unesco. A paisagem cultural do Rio é única no mundo e representa um exemplo excepcional dos desafios, das contradições e da criatividade do povo brasileiro.', en: 'Rio de Janeiro was the first city to have its urban landscape recognized by UNESCO, representing the creativity and challenges of the Brazilian people.', es: 'Río de Janeiro fue la primera ciudad en tener su paisaje urbano reconocido por la UNESCO, representando la creatividad y los desafíos del pueblo brasileño.' },
     unesco: true,
     tags: ['cultural', 'natural']
   },
@@ -53,7 +53,7 @@ export const heritages: Heritage[] = [
     city: 'Rio de Janeiro',
     coordinates: { lat: -22.91, lng: -43.17 },
     description: { pt: 'Sítio arqueológico do antigo cais de desembarque de africanos escravizados.', en: 'Located in the port area of Rio de Janeiro, it was the primary landing point for enslaved Africans in the Americas and is a significant archaeological site.', es: 'Ubicado en la zona portuaria de Río de Janeiro, fue el principal punto de desembarque de africanos esclavizados en todas las Américas y es un importante sitio arqueológico.' },
-    details: { pt: '(Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', en: 'Located in the port area of Rio de Janeiro, Valongo Wharf was the main disembarkation point for enslaved Africans in all of the Americas.', es: 'Ubicado en la zona portuaria de Río de Janeiro, el Muelle de Valongo fue el principal punto de desembarque de africanos esclavizados en todas las Américas.' },
+    details: { pt: 'Localizado na região portuária da cidade do Rio de Janeiro, o Cais do Valongo foi o principal cais de desembarque de africanos escravizados em todas as Américas.', en: 'Located in the port area of Rio de Janeiro, Valongo Wharf was the main disembarkation point for enslaved Africans in all of the Americas.', es: 'Ubicado en la zona portuaria de Río de Janeiro, el Muelle de Valongo fue el principal punto de desembarque de africanos esclavizados en todas las Américas.' },
     unesco: true,
     tags: ['cultural']
   },
@@ -144,7 +144,7 @@ export const heritages: Heritage[] = [
     city: 'Ilhas de Fernando de Noronha e Atol das Rocas',
     coordinates: { lat: -15.79, lng: -47.88 },
     description: { pt: 'Arquipélago com praias paradisíacas e rica vida marinha.', en: 'Archipelago with paradisiacal beaches and rich marine life on the South Atlantic submarine ridge.', es: 'Archipiélago con playas paradisíacas y rica vida marina en la dorsal submarina del Atlántico Sur.' },
-    details: { pt: '(Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', en: 'Peaks of the great South Atlantic submarine ridge emerging off the coast of Brazil, the Fernando de Noronha archipelago and the Rocas Atoll represent a large part of the island surface area in the region.', es: 'Cimas de la gran dorsal submarina del Atlántico Sur que emerge frente a las costas de Brasil, el archipiélago de Fernando de Noronha y el Atolón de las Rocas representan una gran parte de la superficie insular de la región.' },
+    details: { pt: 'Cimas da grande dorsal submarina do Atlântico Sul que emerge frente nas costas do Brasil, o arquipélago de Fernando de Noronha e o Atol das Rocas representam uma grande parte da superfície insular da região.', en: 'Peaks of the great South Atlantic submarine ridge emerging off the coast of Brazil, the Fernando de Noronha archipelago and the Rocas Atoll represent a large part of the island surface area in the region.', es: 'Cimas de la gran dorsal submarina del Atlántico Sur que emerge frente a las costas de Brasil, el archipiélago de Fernando de Noronha y el Atolón de las Rocas representan una gran parte de la superficie insular de la región.' },
     unesco: true,
     tags: ['natural']
   },
@@ -222,7 +222,7 @@ export const heritages: Heritage[] = [
     city: 'Poconé',
     coordinates: { lat: -17.88, lng: -57.4 },
     description: { pt: 'Maior planície alagável do mundo, rica em biodiversidade.', en: 'The the largest in the world wetland, rich in biodiversity.', es: 'La llanura aluvial más grande del mundo, rica en biodiversidad.' },
-    details: { pt: '(A reserva do Pantanal compreende quatro zonas protegidas, com uma superfície total de 187.818 hectares. Situada no extremo sul oriental do Estado de Mato Grosso, esta zona de conservação abarca as cabeceiras dos rios Cuiabá e Paraguai.', en: 'This 187,818-hectare conservation area in Mato Grosso encompasses the headwaters of the Cuiabá and Paraguay rivers.', es: 'Esta zona de conservación de 187.818 hectáreas en Mato Grosso abarca las cabeceras de los ríos Cuiabá y Paraguay.' },
+    details: { pt: 'A reserva do Pantanal compreende quatro zonas protegidas, com uma superfície total de 187.818 hectares. Situada no extremo sul oriental do Estado de Mato Grosso, esta zona de conservação abarca as cabeceiras dos rios Cuiabá e Paraguai.', en: 'This 187,818-hectare conservation area in Mato Grosso encompasses the headwaters of the Cuiabá and Paraguay rivers.', es: 'Esta zona de conservación de 187.818 hectáreas en Mato Grosso abarca las cabeceras de los ríos Cuiabá y Paraguay.' },
     unesco: true,
     tags: ['natural']
   },
