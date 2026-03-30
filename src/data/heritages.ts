@@ -2983,15 +2983,6 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    state: 'Mato Grosso e Mato Grosso do Sul',
-    city: 'Bacia do Rio Paraguai',
-    coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'O Modo de Fazer Viola de Cocho, tradicional nos estados de Mato Grosso e Mato Grosso do Sul.', en: 'Traditional in Mato Grosso and Mato Grosso do Sul, this unique musical instrument is hand-carved from a single log.', es: 'Tradicional en Mato Grosso y Mato Grosso do Sul, este instrumento único se talla artesanalmente en un solo tronco.' },
-    details: { pt: 'A viola de cocho é um instrumento musical único, esculpido artesanalmente a partir de uma única tora de madeira. Seu nome vem do formato que lembra um cocho - recipiente usado para alimentar animais.', en: 'Its name refers to its resemblance to a trough (cocho) used for feeding animals.', es: 'Su nombre alude a su parecido con un comedero (cocho) para animales.' },
-    unesco: false,
-    tags: ['cultural']
-  },
-  {
     id: 'parque-nacional-aparados-da-serra',
     name: { pt: 'Parque Nacional Aparados da Serra', en: 'Aparados da Serra National Park', es: 'Parque Nacional Aparados da Serra' },
     category: 'natural',
