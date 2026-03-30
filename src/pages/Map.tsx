@@ -364,6 +364,7 @@ const MapPage = () => {
                       </span>
                     ))}
                   </div>
+                </div>
               </Popup>
             </Marker>
           ))}
