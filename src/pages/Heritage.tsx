@@ -266,16 +266,11 @@ const Heritage = () => {
           {selectedHeritage && (
             <>
               <DialogHeader>
-                <HeritageMarks heritage={selectedHeritage} size="md" className="mb-3" />
+                <HeritageMarks heritage={selectedHeritage} size="md" variant="primary-only" className="mb-3" />
                 <div className="flex flex-wrap gap-2 mb-2">
                   <Badge className={getCategoryBadgeColor(selectedHeritage.category)}>
                     {t(`categories.${selectedHeritage.category}.name`)}
                   </Badge>
-                  {isMistoHeritage(selectedHeritage) && (
-                    <Badge variant="outline" className="text-xs border-heritage-misto/60 text-heritage-misto bg-heritage-misto/10">
-                      {t('tags.misto')}
-                    </Badge>
-                  )}
                   {selectedHeritage.tags.map(tag => (
                     <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
                       {t(`tags.${tag}`)}
