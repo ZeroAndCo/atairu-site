@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Patrimônio Misto — Sinalização Turística (Contran)">
+  <title>Patrimônio Misto (Contran)</title>
+  <rect width="200" height="200" fill="#6B3A1F"/>
+  <rect x="28" y="28" width="144" height="144" fill="#FFFFFF"/>
+  <g fill="#111111">
+    <!-- Tree (left) -->
+    <rect x="58" y="120" width="9" height="36"/>
+    <circle cx="62.5" cy="98" r="20"/>
+    <circle cx="48" cy="108" r="14"/>
+    <circle cx="77" cy="108" r="14"/>
+    <!-- Monument (right) — simple church silhouette -->
+    <rect x="108" y="100" width="48" height="56"/>
+    <polygon points="108,100 156,100 132,72"/>
+    <rect x="128" y="116" width="8" height="20" fill="#FFFFFF"/>
+    <rect x="116" y="138" width="32" height="18" fill="#FFFFFF"/>
+    <!-- Ground -->
+    <rect x="36" y="156" width="128" height="6"/>
+  </g>
+</svg>

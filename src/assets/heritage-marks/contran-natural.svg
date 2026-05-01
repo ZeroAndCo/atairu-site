@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Patrimônio Natural — Sinalização Turística (Contran)">
+  <title>Patrimônio Natural (Contran)</title>
+  <rect width="200" height="200" fill="#6B3A1F"/>
+  <rect x="28" y="28" width="144" height="144" fill="#FFFFFF"/>
+  <g fill="#111111">
+    <!-- Left tree -->
+    <rect x="68" y="118" width="10" height="38"/>
+    <circle cx="73" cy="92" r="22"/>
+    <circle cx="58" cy="104" r="16"/>
+    <circle cx="88" cy="104" r="16"/>
+    <!-- Right tree -->
+    <rect x="122" y="118" width="10" height="38"/>
+    <circle cx="127" cy="92" r="22"/>
+    <circle cx="112" cy="104" r="16"/>
+    <circle cx="142" cy="104" r="16"/>
+    <!-- Ground -->
+    <rect x="36" y="156" width="128" height="6"/>
+  </g>
+</svg>
