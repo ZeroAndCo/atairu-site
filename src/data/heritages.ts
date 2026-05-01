@@ -207,8 +207,8 @@ export const heritages: Heritage[] = [
     tags: ['natural']
   },
   {
-    id: 'cidadde-de-brasilia',
-    name: { pt: 'Cidadde de Brasília', en: 'Brasília', es: 'Brasilia' },
+    id: 'cidade-de-brasilia',
+    name: { pt: 'Cidade de Brasília', en: 'Brasília', es: 'Brasilia' },
     category: 'world',
     region: 'centro-oeste',
     state: 'Distrito Federal',
