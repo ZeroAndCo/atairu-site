@@ -206,19 +206,8 @@ const Heritage = () => {
                           <Badge className={`absolute top-3 right-3 ${getCategoryBadgeColor(heritage.category)}`}>
                             {t(`categories.${heritage.category}.name`)}
                           </Badge>
-                          {/* Official heritage marks (UNESCO, IPHAN, Contran) */}
-                          <HeritageMarks
-                            heritage={heritage}
-                            size="sm"
-                            className="absolute top-3 left-3"
-                          />
                           {/* Tag badges */}
                           <div className="absolute bottom-3 left-3 flex gap-1">
-                            {isMistoHeritage(heritage) && (
-                              <Badge variant="outline" className="text-xs border-heritage-misto/60 text-heritage-misto bg-heritage-misto/10">
-                                {t('tags.misto')}
-                              </Badge>
-                            )}
                             {heritage.tags.map(tag => (
                               <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
                                 {t(`tags.${tag}`)}
@@ -227,13 +216,23 @@ const Heritage = () => {
                           </div>
                         </div>
                         <CardContent className="p-5 flex flex-col flex-1">
-                          <h3 className="font-serif text-lg font-semibold mb-2 line-clamp-2">
-                            {heritage.name[currentLang]}
-                          </h3>
-                          <p className="text-muted-foreground text-sm mb-3 flex items-center gap-1">
-                            <MapPin className="h-4 w-4 shrink-0" />
-                            {heritage.city}, {heritage.state}
-                          </p>
+                          <div className="flex items-start gap-3 mb-3">
+                            <HeritageMarks
+                              heritage={heritage}
+                              size="md"
+                              variant="primary-only"
+                              className="mt-0.5"
+                            />
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-serif text-lg font-semibold mb-1 line-clamp-2">
+                                {heritage.name[currentLang]}
+                              </h3>
+                              <p className="text-muted-foreground text-sm flex items-center gap-1">
+                                <MapPin className="h-4 w-4 shrink-0" />
+                                {heritage.city}, {heritage.state}
+                              </p>
+                            </div>
+                          </div>
                           <div className="flex-1 mb-5">
                             <p className="text-sm text-foreground/80 line-clamp-3">
                               {heritage.description[currentLang]}
