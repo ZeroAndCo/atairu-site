@@ -23,6 +23,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { SEO } from '@/components/SEO';
 import { 
   heritages, 
   Heritage, 
@@ -33,10 +34,13 @@ import {
   getCategoryIcon,
   getCategoryColor
 } from '@/data/heritages';
+import { trackEvent } from '@/lib/analytics';
+import { getMapStructuredData } from '@/lib/seo';
+import { getSupportedLanguage } from '@/lib/site';
 import 'leaflet/dist/leaflet.css';
 
 // Fix for default marker icons in react-leaflet
-delete (L.Icon.Default.prototype as any)._getIconUrl;
+delete (L.Icon.Default.prototype as { _getIconUrl?: string })._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
@@ -94,7 +98,7 @@ const MapController = ({ center, zoom }: { center: [number, number]; zoom: numbe
 const MapPage = () => {
   const { t, i18n } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentLang = i18n.language as 'pt' | 'en' | 'es';
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
   
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<HeritageCategory | 'all'>('all');
@@ -139,14 +143,67 @@ const MapPage = () => {
     setRegionFilter('all');
     setStateFilter('all');
     setSearchParams({});
+    trackEvent('map_filter_used', {
+      filter_type: 'clear_all',
+      filter_value: 'all',
+    });
   };
 
   const hasActiveFilters = search || categoryFilter !== 'all' || tagFilter !== 'all' || regionFilter !== 'all' || stateFilter !== 'all';
 
   const mapConfig = regionCenters[regionFilter];
 
+  const applyCategoryFilter = (value: HeritageCategory | 'all') => {
+    setCategoryFilter(value);
+    trackEvent('map_filter_used', {
+      filter_type: 'category',
+      filter_value: value,
+    });
+  };
+
+  const applyTagFilter = (value: HeritageTag | 'all') => {
+    setTagFilter(value);
+    trackEvent('map_filter_used', {
+      filter_type: 'tag',
+      filter_value: value,
+    });
+  };
+
+  const applyRegionFilter = (value: Region | 'all') => {
+    setRegionFilter(value);
+
+    if (value !== 'all') {
+      setSearchParams({ region: value });
+    } else {
+      setSearchParams({});
+    }
+
+    trackEvent('map_filter_used', {
+      filter_type: 'region',
+      filter_value: value,
+    });
+  };
+
+  const applyStateFilter = (value: string) => {
+    setStateFilter(value);
+    trackEvent('map_filter_used', {
+      filter_type: 'state',
+      filter_value: value,
+    });
+  };
+
+  const openHeritageDetails = (heritage: Heritage, source: 'marker' | 'sheet') => {
+    setSelectedHeritage(heritage);
+    trackEvent('heritage_detail_opened', {
+      heritage_id: heritage.id,
+      category: heritage.category,
+      source,
+    });
+  };
+
   return (
     <Layout>
+      <SEO routeKey="map" language={currentLang} structuredData={getMapStructuredData(currentLang)} />
       {/* Header */}
       <section className="py-8 bg-muted/50">
         <div className="container mx-auto px-4">
@@ -178,7 +235,7 @@ const MapPage = () => {
 
             {/* Desktop Filters */}
             <div className="hidden md:flex gap-3">
-              <Select value={categoryFilter} onValueChange={(v) => setCategoryFilter(v as HeritageCategory | 'all')}>
+              <Select value={categoryFilter} onValueChange={(v) => applyCategoryFilter(v as HeritageCategory | 'all')}>
                 <SelectTrigger className="w-48">
                   <SelectValue placeholder={t('map.allCategories')} />
                 </SelectTrigger>
@@ -191,7 +248,7 @@ const MapPage = () => {
                 </SelectContent>
               </Select>
 
-              <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+              <Select value={tagFilter} onValueChange={(v) => applyTagFilter(v as HeritageTag | 'all')}>
                 <SelectTrigger className="w-36">
                   <SelectValue placeholder={t('tags.all')} />
                 </SelectTrigger>
@@ -202,14 +259,7 @@ const MapPage = () => {
                 </SelectContent>
               </Select>
 
-              <Select value={regionFilter} onValueChange={(v) => {
-                setRegionFilter(v as Region | 'all');
-                if (v !== 'all') {
-                  setSearchParams({ region: v });
-                } else {
-                  setSearchParams({});
-                }
-              }}>
+              <Select value={regionFilter} onValueChange={(v) => applyRegionFilter(v as Region | 'all')}>
                 <SelectTrigger className="w-44">
                   <SelectValue placeholder={t('map.allRegions')} />
                 </SelectTrigger>
@@ -223,7 +273,7 @@ const MapPage = () => {
                 </SelectContent>
               </Select>
 
-              <Select value={stateFilter} onValueChange={setStateFilter}>
+              <Select value={stateFilter} onValueChange={applyStateFilter}>
                 <SelectTrigger className="w-52">
                   <SelectValue placeholder={t('map.allStates')} />
                 </SelectTrigger>
@@ -249,7 +299,7 @@ const MapPage = () => {
                   <SheetTitle>{t('map.filter')}</SheetTitle>
                 </SheetHeader>
                 <div className="space-y-4 mt-6">
-                  <Select value={categoryFilter} onValueChange={(v) => setCategoryFilter(v as HeritageCategory | 'all')}>
+                  <Select value={categoryFilter} onValueChange={(v) => applyCategoryFilter(v as HeritageCategory | 'all')}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('map.allCategories')} />
                     </SelectTrigger>
@@ -262,7 +312,7 @@ const MapPage = () => {
                     </SelectContent>
                   </Select>
 
-                  <Select value={tagFilter} onValueChange={(v) => setTagFilter(v as HeritageTag | 'all')}>
+                  <Select value={tagFilter} onValueChange={(v) => applyTagFilter(v as HeritageTag | 'all')}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('tags.all')} />
                     </SelectTrigger>
@@ -273,7 +323,7 @@ const MapPage = () => {
                     </SelectContent>
                   </Select>
 
-                  <Select value={regionFilter} onValueChange={(v) => setRegionFilter(v as Region | 'all')}>
+                  <Select value={regionFilter} onValueChange={(v) => applyRegionFilter(v as Region | 'all')}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('map.allRegions')} />
                     </SelectTrigger>
@@ -287,7 +337,7 @@ const MapPage = () => {
                     </SelectContent>
                   </Select>
 
-                  <Select value={stateFilter} onValueChange={setStateFilter}>
+                  <Select value={stateFilter} onValueChange={applyStateFilter}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('map.allStates')} />
                     </SelectTrigger>
@@ -337,7 +387,7 @@ const MapPage = () => {
               position={[heritage.coordinates.lat, heritage.coordinates.lng]}
               icon={createCustomIcon(heritage.category)}
               eventHandlers={{
-                click: () => setSelectedHeritage(heritage)
+                click: () => openHeritageDetails(heritage, 'marker')
               }}
             >
               <Popup>

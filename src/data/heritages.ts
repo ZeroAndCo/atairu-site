@@ -137,7 +137,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'ilhas-atlanticas-brasileiras-reservas-de-fernando-de-noronha',
-    name: { pt: 'Ilhas atlânticas brasileiras: Reservas de Fernando de Noronha e Atol das Rocas', en: 'Brazilian Atlantic Islands: Fernando de Noronha and Atol das Rocas Reserves', es: 'Islas atlánticas brasileñas: Reservas de Fernando de Noronha y Atol de las Rocas' },
+    name: { pt: 'Ilhas Atlânticas Brasileiras: Reservas de Fernando de Noronha e Atol das Rocas', en: 'Brazilian Atlantic Islands: Fernando de Noronha and Atol das Rocas Reserves', es: 'Islas Atlánticas Brasileñas: Reservas de Fernando de Noronha y Atol de las Rocas' },
     category: 'world',
     region: 'sudeste',
     state: 'Pernambuco e Rio Grande do Norte',
@@ -189,7 +189,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'zonas-protegidas-do-cerrado-parques-nacionais-de-chapada-dos',
-    name: { pt: 'Zonas protegidas do Cerrado: Parques nacionais de Chapada dos Veadeiros e das Emas', en: 'Cerrado Protected Areas: Chapada dos Veadeiros and Emas National Parks', es: 'Zonas protegidas del Cerrado: Parques nacionales de Chapada dos Veadeiros y las Emas' },
+    name: { pt: 'Zonas Protegidas do Cerrado: Parques Nacionais de Chapada dos Veadeiros e das Emas', en: 'Cerrado Protected Areas: Chapada dos Veadeiros and Emas National Parks', es: 'Zonas Protegidas del Cerrado: Parques Nacionales de Chapada dos Veadeiros y las Emas' },
     category: 'world',
     region: 'centro-oeste',
     state: 'Goiás',
@@ -851,8 +851,8 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'coumba-de-goias',
-    name: { pt: 'Coumbá de Goiás', en: 'Corumbá de Goiás', es: 'Corumbá de Goiás' },
+    id: 'corumba-de-goias',
+    name: { pt: 'Corumbá de Goiás', en: 'Corumbá de Goiás', es: 'Corumbá de Goiás' },
     category: 'material',
     region: 'centro-oeste',
     state: 'Goiás',
@@ -869,7 +869,7 @@ export const heritages: Heritage[] = [
     category: 'material',
     region: 'centro-oeste',
     state: 'Goiás',
-    city: 'Goiania',
+    city: 'Goiânia',
     coordinates: { lat: -16.69, lng: -49.25 },
     description: { pt: 'Um dos mais importantes acervos de arquitetura Art Déco do mundo, refletindo o projeto modernista da fundação da capital na década de 1930.', en: 'One of the the most important in the world important Art Deco architectural collections, reflecting the modernist design of the the capital foundation in the 1930s.', es: 'Uno de los acervos arquitectónicos Art Déco más importantes del mundo, reflejando el proyecto modernista de la fundación de la capital en la década de 1930.' },
     details: { pt: '', en: '', es: '' },
@@ -1099,7 +1099,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'aldeia-carapicuiba',
-    name: { pt: 'Aldeia Carapicuibá', en: 'Carapicuíba Village', es: 'Aldea Carapicuíba' },
+    name: { pt: 'Aldeia Carapicuíba', en: 'Carapicuíba Village', es: 'Aldea Carapicuíba' },
     category: 'material',
     region: 'sudeste',
     state: 'São Paulo',
@@ -1709,8 +1709,8 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'boi-de-mamao-patrimonio-imaterial-de-santa-catarina',
-    name: { pt: 'Boi de Mamão Patrimônio Imaterial de Santa Catarina', en: 'Boi de Mamão', es: 'Boi de Mamão' },
+    id: 'boi-de-mamao',
+    name: { pt: 'Boi de Mamão de Santa Catarina', en: 'Boi de Mamão', es: 'Boi de Mamão' },
     category: 'intangible',
     region: 'sul',
     state: 'Santa Catarina',
@@ -1762,14 +1762,14 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'festa-de-santana-de-caico',
-    name: { pt: 'Festa de SantAna de Caicó', en: 'Festival of SantAna de Caicó', es: 'Fiesta de SantAna de Caicó' },
+    name: { pt: 'Festa de Sant\'Ana de Caicó', en: 'Festival of Sant\'Ana de Caicó', es: 'Fiesta de Sant\'Ana de Caicó' },
     category: 'intangible',
     region: 'sudeste',
     state: 'RIo Grande do Norte',
     city: 'Caicó região do Seridó',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'A Festa de SantAna de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration SantAna, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a SantAna, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
-    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de SantAna, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
+    description: { pt: 'A Festa de Sant\'Ana de Caicó ocorre há mais de 260 anos e está profundamente enraizada na história do município de Caicó, em particular, e do sertão potiguar, o Seridó, em geral.', en: 'A 260-year-old tradition in the Seridó region celebration Sant\'Ana, deeply linked to the history of the Potiguar hinterland.', es: 'Tradición de 260 años en la región de Seridó que celebra a Sant\'Ana, profundamente vinculada a la historia del interior de Rio Grande do Norte.' },
+    details: { pt: 'A celebração anual acontece na quinta-feira anterior ao dia 26 de julho, dia de Sant\'Ana, e se estende até o domingo seguinte.https://bcr.iphan.gov.br/bens-culturais/festa-de-santana-de-caico-rn/', en: 'The annual celebration takes place on the Thursday before July 26th, the feast day of Saint Anne, and extends until the following Sunday.', es: 'La celebración anual ocurre el jueves anterior al 26 de julio, día de Santa Ana, y se extiende hasta el domingo siguiente.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -1982,15 +1982,15 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'cuias-do-baixo-amazonas-padroes-graficos-de-ornamentacao-das',
-    name: { pt: 'Cuias do Baixo Amazonas - Padrões Gráficos de Ornamentação das Cuias de Monte Alegre e Santarém', en: 'Lower Amazon Gourds - Graphic Ornamentation Patterns of Monte Alegre and Santarém', es: 'Calebasas del Bajo Amazonas - Patrones Gráficos de Ornamentación de Monte Alegre y Santarém' },
+    id: 'cuias-do-baixo-amazonas',
+    name: { pt: 'Cuias do Baixo Amazonas', en: 'Lower Amazon Gourds', es: 'Calebasas del Bajo Amazonas' },
     category: 'intangible',
     region: 'norte',
     state: 'Amazonas',
     city: 'Amazonas',
     coordinates: { lat: -3.12, lng: -60.02 },
-    description: { pt: 'Simples, tingidas, lisas ou ricamente ornamentadas, as cuias fazem parte de uma das classes de utensílios mais importantes na vida amazônica.', en: 'Simple, dyed, smooth, or richly decorated, gourds (cuias) are essential utensils in Amazonian life.', es: 'Simples, teñidas, lisas o ricamente ornamentadas, las calebasas (cuias) son utensilios esenciales en la vida amazónica.' },
-    details: { pt: '', en: '', es: '' },
+    description: { pt: 'Padrões Gráficos de Ornamentação das Cuias de Monte Alegre e Santarém', en: 'Graphic Ornamentation Patterns of Monte Alegre and Santarém', es: 'Patrones Gráficos de Ornamentación de Monte Alegre y Santarém' },
+    details: { pt: 'Simples, tingidas, lisas ou ricamente ornamentadas, as cuias fazem parte de uma das classes de utensílios mais importantes na vida amazônica.', en: 'Simple, dyed, smooth, or richly decorated, gourds (cuias) are essential utensils in Amazonian life.', es: 'Simples, teñidas, lisas o ricamente ornamentadas, las calebasas (cuias) son utensilios esenciales en la vida amazónica.' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2125,19 +2125,6 @@ export const heritages: Heritage[] = [
     tags: ['cultural']
   },
   {
-    id: 'acaraje-em-salvador',
-    name: { pt: 'Acarajé em Salvador', en: 'Acarajé in Salvador', es: 'Acarajé en Salvador' },
-    category: 'intangible',
-    region: 'nordeste',
-    state: 'Bahia',
-    city: 'Salvador',
-    coordinates: { lat: -12.97, lng: -38.5 },
-    description: { pt: 'Lista para se tornar patrimônio, ainda não é', en: 'Candidate for heritage status; not yet officially registered.', es: 'Candidato a patrimonio; aún no registrado oficialmente.' },
-    details: { pt: '', en: '', es: '' },
-    unesco: false,
-    tags: ['cultural']
-  },
-  {
     id: 'festa-do-senhor-bom-jesus-do-bonfim',
     name: { pt: 'Festa do Senhor Bom Jesus do Bonfim', en: 'Festival of Senhor Bom Jesus do Bonfim', es: 'Fiesta del Señor Bom Jesus do Bonfim' },
     category: 'intangible',
@@ -2217,7 +2204,7 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'bebida-cajuina',
-    name: { pt: '- Bebida: Cajuina', en: 'Beverage: Cajuína', es: 'Bebida: Cajuína' },
+    name: { pt: 'Bebida: Cajuina', en: 'Beverage: Cajuína', es: 'Bebida: Cajuína' },
     category: 'intangible',
     region: 'sudeste',
     state: 'Estados do Nordeste',
@@ -2756,7 +2743,7 @@ export const heritages: Heritage[] = [
     state: 'São Paulo',
     city: 'Vale do Ribeira',
     coordinates: { lat: -23.55, lng: -46.63 },
-    description: { pt: '.', en: '.', es: '.' },
+    description: { pt: 'O Sistema Agrícola Tradicional Quilombola (SATQ) do Vale do Ribeira, herança dos povos indígenas e dos africanos escravizados que ocuparam o Vale do Ribeira, o Sistema Agrícola Itinerante (SAI), conhecido popularmente como roça-de-toco ou coivara, é uma forma de agricultura antiga praticada pelos povos tradicionais em florestas tropicais e se baseia no rodízio das áreas de plantio, unindo produção e conservação. ', en: '.', es: '.' },
     details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
@@ -2797,19 +2784,6 @@ export const heritages: Heritage[] = [
     coordinates: { lat: -30.03, lng: -51.23 },
     description: { pt: 'O Sítio Arqueológico de São Miguel Arcanjo, popularmente conhecido como Ruínas de São Miguel das Missões, e originalmente chamado Misión de San Miguel Arcángel, é o conjunto de remanescentes da antiga redução jesuítica de São Miguel Arcanjo, integrante dos chamados Sete Povos das Missões.', en: 'Archaeological site of the former Jesuit reduction of São Miguel Arcanjo, part of the Seven Peoples of the Missions in Rio Grande do Sul.', es: 'Sitio arqueológico de la antigua reducción jesuítica de São Miguel Arcanjo, parte de los Siete Pueblos de las Misiones en Rio Grande do Sul.' },
     details: { pt: 'Localiza-se no município de São Miguel das Missões, na região Noroeste do estado do Rio Grande do Sul, no Brasil. https://pt.wikipedia.org/wiki/S%C3%ADtio_Arqueol%C3%B3gico_de_S%C3%A3o_Miguel_Arcanjo', en: 'It is located in the municipality of São Miguel das Missões, in the Northwest region of the state of Rio Grande do Sul, Brazil.', es: 'Se localiza en el municipio de São Miguel das Missões, en la región Noroeste del estado de Rio Grande do Sul, Brasil.' },
-    unesco: false,
-    tags: ['cultural']
-  },
-  {
-    id: 'massacre-de-porongos',
-    name: { pt: 'Massacre de Porongos', en: 'Porongos Massacre', es: 'Masacre de Porongos' },
-    category: 'intangible',
-    region: 'sul',
-    state: 'Rio Grande do Sul',
-    city: 'desconheço',
-    coordinates: { lat: -30.03, lng: -51.23 },
-    description: { pt: 'Parece estar em processo de análise de Patrimônio', en: 'Status currently under review for heritage designation.', es: 'Estatus actualmente en proceso de análisis para patrimonio.' },
-    details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
   },
@@ -2888,19 +2862,6 @@ export const heritages: Heritage[] = [
     coordinates: { lat: -27.6, lng: -48.55 },
     description: { pt: 'Entre elas estão a Sertão de Valongo, localizada na cidade de Porto Belo; a Invernada dos Negros, em Campos Novos, e São Roque, situada entre os municípios de Praia Grande (SC) e Mampituba (RS).', en: 'Traditional Afro-descendant groups including those from Sertão de Valongo, Invernada dos Negros, and São Roque.', es: 'Grupos afrodescendientes tradicionales, incluyendo los de Sertão de Valongo, Invernada dos Negros y São Roque.' },
     details: { pt: 'https://acervo.socioambiental.org/sites/default/files/documents/03d00261.pdf', en: '', es: '' },
-    unesco: false,
-    tags: ['cultural']
-  },
-  {
-    id: 'mestres-artifices-da-construcao-civil-tradicional',
-    name: { pt: 'Mestres Artífices da Construção Civil Tradicional', en: 'Master Artisans of Traditional Construction', es: 'Maestros Artesanos de la Construcción Civil Tradicional' },
-    category: 'intangible',
-    region: 'sul',
-    state: 'Santa Catarina',
-    city: 'Santa Catarina',
-    coordinates: { lat: -27.6, lng: -48.55 },
-    description: { pt: 'Patrimônio cultural localizado em Santa Catarina, Santa Catarina.', en: 'Cultural heritage of craftsmanship and construction techniques in the state of Santa Catarina.', es: 'Patrimonio cultural de técnicas de construcción y artesanía en el estado de Santa Catarina.' },
-    details: { pt: '', en: '', es: '' },
     unesco: false,
     tags: ['cultural']
   },
@@ -3140,14 +3101,14 @@ export const heritages: Heritage[] = [
   },
   {
     id: 'cachoeira-do-iauarete-lugar-sagrado-dos-povos-indigenas',
-    name: { pt: 'Cachoeira do Iauaretê Lugar sagrado dos povos indígenas', en: 'Iauaretê Waterfall - Sacred Site of Indigenous Peoples', es: 'Catarata de Iauaretê - Lugar sagrado de los pueblos indígenas' },
+    name: { pt: 'Cachoeira do Iauaretê', en: 'Iauaretê Waterfall', es: 'Catarata de Iauaretê' },
     category: 'natural',
     region: 'sudeste',
-    state: '',
-    city: '',
+    state: 'Amazonas',
+    city: 'São Gabriel da Cachoeira',
     coordinates: { lat: -15.79, lng: -47.88 },
-    description: { pt: 'Local de importância mística e histórica para os povos Tukano e Aruak, onde a paisagem narra a origem do mundo.', en: 'A site of mystical and historical importance for the Tukano and Aruak peoples, where the landscape narrates the origin of the world.', es: 'Un sitio de importancia mística e histórica para los pueblos Tukano y Aruak, donde el paisaje narra el origen del mundo.' },
-    details: { pt: '', en: '', es: '' },
+    description: { pt: 'Lugar sagrado dos povos indígenas', en: 'A sacred site for indigenous peoples', es: 'Lugar sagrado de los pueblos indígenas' },
+    details: { pt: 'Local de importância mística e histórica para os povos Tukano e Aruak, onde a paisagem narra a origem do mundo.', en: 'A site of mystical and historical importance for the Tukano and Aruak peoples, where the landscape narrates the origin of the world.', es: 'Un sitio de importancia mística e histórica para los pueblos Tukano y Aruak, donde el paisaje narra el origen del mundo.' },
     unesco: false,
     tags: ['natural']
   },

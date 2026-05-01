@@ -5,12 +5,14 @@ import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { PatternBorder } from '@/components/ui/PatternBorder';
 import { SectionDivider } from '@/components/ui/SectionDivider';
+import { SEO } from '@/components/SEO';
+import { getSupportedLanguage } from '@/lib/site';
 import adrianePhoto from '@/assets/team/adriane.jpeg';
 import fernandaPhoto from '@/assets/team/fernanda.jpeg';
 import nelmaPhoto from '@/assets/team/nelma.jpeg';
 
 const Team = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const teamMembers = [
     {
@@ -60,10 +62,11 @@ const Team = () => {
     },
   ];
 
-  const currentLang = useTranslation().i18n.language as 'pt' | 'en' | 'es';
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
 
   return (
     <Layout>
+      <SEO routeKey="team" language={currentLang} />
       {/* Hero */}
       <section className="py-16 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-15" />

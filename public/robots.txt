@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://fabiobeider.github.io/atairu-site/sitemap.xml

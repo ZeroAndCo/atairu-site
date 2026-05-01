@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { trackEvent } from '@/lib/analytics';
 import logo from '@/assets/logo-atairu.png';
 
 const languages = [
@@ -34,6 +35,10 @@ export const Header = () => {
   ];
 
   const changeLanguage = (lang: string) => {
+    trackEvent('language_changed', {
+      from_lang: i18n.language,
+      to_lang: lang,
+    });
     i18n.changeLanguage(lang);
   };
 

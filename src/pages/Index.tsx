@@ -9,12 +9,15 @@ import { Layout } from '@/components/layout/Layout';
 import { BrazilMap } from '@/components/home/BrazilMap';
 import { PatternBorder } from '@/components/ui/PatternBorder';
 import { SectionDivider } from '@/components/ui/SectionDivider';
+import { SEO } from '@/components/SEO';
 import { heritages, getUnescoHeritages, getCategoryIcon } from '@/data/heritages';
+import { getOrganizationStructuredData, getWebsiteStructuredData } from '@/lib/seo';
+import { getSupportedLanguage } from '@/lib/site';
 import brazilMapHero from '@/assets/brazil-map-hero.png';
 
 const Index = () => {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language as 'pt' | 'en' | 'es';
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
 
   const stats = [
     { value: heritages.length + '+', label: t('stats.heritages'), color: 'text-forest' },
@@ -65,6 +68,11 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEO
+        routeKey="home"
+        language={currentLang}
+        structuredData={[getOrganizationStructuredData(), getWebsiteStructuredData()]}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center bg-cream overflow-hidden">
         {/* Background Pattern */}

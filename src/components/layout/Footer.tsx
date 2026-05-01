@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Mail } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 import logo from '@/assets/logo-atairu.png';
 
 export const Footer = () => {
@@ -68,6 +69,12 @@ export const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  onClick={() =>
+                    trackEvent('contact_cta_clicked', {
+                      location: 'footer',
+                      method: social.label.toLowerCase(),
+                    })
+                  }
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 >
                   <social.icon className="h-5 w-5" />

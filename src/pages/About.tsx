@@ -5,9 +5,12 @@ import { Layout } from '@/components/layout/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { PatternBorder } from '@/components/ui/PatternBorder';
 import { SectionDivider } from '@/components/ui/SectionDivider';
+import { SEO } from '@/components/SEO';
+import { getSupportedLanguage } from '@/lib/site';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
 
   const heritageTypes = [
     { icon: Sparkles, key: 'world', color: 'bg-gold text-foreground', borderColor: 'border-gold' },
@@ -19,6 +22,7 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO routeKey="about" language={currentLang} />
       {/* Hero */}
       <section className="relative py-20 bg-forest overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-15" />

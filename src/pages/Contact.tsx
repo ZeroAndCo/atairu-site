@@ -9,11 +9,15 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { PatternBorder } from '@/components/ui/PatternBorder';
+import { SEO } from '@/components/SEO';
 import { useToast } from '@/hooks/use-toast';
+import { trackEvent } from '@/lib/analytics';
+import { getSupportedLanguage } from '@/lib/site';
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -26,6 +30,9 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackEvent('contact_form_submitted', {
+      location: 'contact_form',
+    });
     toast({
       title: t('contact.success'),
       description: 'Obrigado pelo contato!'
@@ -35,6 +42,9 @@ const Contact = () => {
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackEvent('newsletter_subscribed', {
+      location: 'contact_newsletter',
+    });
     toast({
       title: t('contact.newsletter.title'),
       description: 'Inscrição realizada com sucesso!'
@@ -48,6 +58,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO routeKey="contact" language={currentLang} />
       {/* Hero */}
       <section className="py-16 bg-gold relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-15" />
@@ -190,6 +201,12 @@ const Contact = () => {
                         key={social.label}
                         href={social.href}
                         aria-label={social.label}
+                        onClick={() =>
+                          trackEvent('contact_cta_clicked', {
+                            location: 'contact_social',
+                            method: social.label.toLowerCase(),
+                          })
+                        }
                         className="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center hover:bg-navy hover:text-white transition-colors"
                       >
                         <social.icon className="h-6 w-6" />
@@ -207,6 +224,12 @@ const Contact = () => {
                   </h3>
                   <a 
                     href="mailto:contato@atairu.tur.br"
+                    onClick={() =>
+                      trackEvent('contact_cta_clicked', {
+                        location: 'contact_email_card',
+                        method: 'email',
+                      })
+                    }
                     className="text-forest hover:underline font-medium"
                   >
                     contato@atairu.tur.br

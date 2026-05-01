@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { PatternBorder } from '@/components/ui/PatternBorder';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { SEO } from '@/components/SEO';
 import { 
   heritages, 
   HeritageCategory,
@@ -18,10 +19,13 @@ import {
   getHeritagesByCategory,
   getCategoryIcon 
 } from '@/data/heritages';
+import { trackEvent } from '@/lib/analytics';
+import { getHeritageCollectionStructuredData } from '@/lib/seo';
+import { getSupportedLanguage } from '@/lib/site';
 
 const Heritage = () => {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language as 'pt' | 'en' | 'es';
+  const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState<HeritageCategory | 'all'>('all');
   const [activeTag, setActiveTag] = useState<HeritageTag | 'all'>('all');
@@ -71,8 +75,22 @@ const Heritage = () => {
       : 'border-forest/60 text-forest bg-forest/10';
   };
 
+  const openHeritageDetails = (heritage: typeof heritages[0], source: 'grid' | 'map-link') => {
+    setSelectedHeritage(heritage);
+    trackEvent('heritage_detail_opened', {
+      heritage_id: heritage.id,
+      category: heritage.category,
+      source,
+    });
+  };
+
   return (
     <Layout>
+      <SEO
+        routeKey="heritage"
+        language={currentLang}
+        structuredData={getHeritageCollectionStructuredData(currentLang)}
+      />
       {/* Hero */}
       <section className="py-16 bg-terracotta relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-15" />
@@ -213,7 +231,12 @@ const Heritage = () => {
                               {heritage.description[currentLang]}
                             </p>
                           </div>
-                          <Button variant="outline" size="sm" className="w-full border-forest text-forest hover:bg-forest/10 mt-auto" onClick={() => setSelectedHeritage(heritage)}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full border-forest text-forest hover:bg-forest/10 mt-auto"
+                            onClick={() => openHeritageDetails(heritage, 'grid')}
+                          >
                             {t('map.viewDetails')}
                           </Button>
                         </CardContent>
@@ -268,7 +291,16 @@ const Heritage = () => {
                 )}
               </div>
               <Button asChild className="w-full mt-4 bg-forest hover:bg-forest/90 text-white">
-                <Link to={`/map?heritage=${selectedHeritage.id}`}>
+                <Link
+                  to={`/map?heritage=${selectedHeritage.id}`}
+                  onClick={() =>
+                    trackEvent('heritage_detail_opened', {
+                      heritage_id: selectedHeritage.id,
+                      category: selectedHeritage.category,
+                      source: 'map-link',
+                    })
+                  }
+                >
                   <MapPin className="h-4 w-4 mr-2" />
                   {t('heritage.viewOnMap')}
                 </Link>
