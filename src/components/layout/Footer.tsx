@@ -85,7 +85,10 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-primary-foreground/20">
+        <div className="mt-12 pt-6 border-t border-primary-foreground/20 space-y-3">
+          <p className="text-center text-primary-foreground/70 text-xs leading-relaxed max-w-3xl mx-auto">
+            {t('footerCredit')}
+          </p>
           <p className="text-center text-primary-foreground/60 text-sm">
             © {new Date().getFullYear()} Ataîru. {t('footer.rights')}.
           </p>

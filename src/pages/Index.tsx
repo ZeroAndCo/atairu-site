@@ -285,9 +285,7 @@ const Index = () => {
                     <span className="text-6xl group-hover:scale-110 transition-transform">
                       {getCategoryIcon(heritage.category)}
                     </span>
-                    <Badge className="absolute top-3 right-3 bg-gold text-foreground">
-                      UNESCO
-                    </Badge>
+                    <HeritageMarks heritage={heritage} size="sm" className="absolute top-3 right-3" />
                   </div>
                   <CardContent className="p-5">
                     <h3 className="font-serif text-lg font-semibold mb-2 line-clamp-2">
