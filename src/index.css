@@ -6,17 +6,29 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --forest: 145 51% 20%;
-    --forest-light: 145 40% 30%;
-    --terracotta: 14 68% 62%;
-    --terracotta-dark: 14 60% 50%;
-    --navy: 210 52% 22%;
-    --navy-light: 210 45% 35%;
-    --gold: 32 52% 64%;
-    --gold-light: 38 55% 75%;
+    /* Core Brand Colors — rebased to the official Pantones used in
+       Brazilian heritage signage (IPHAN/UNESCO 2013, IPHAN 2017, Contran). */
+    --forest: 122 47% 45%;          /* Pantone 375C — Patrimônio Natural */
+    --forest-light: 122 47% 55%;
+    --terracotta: 15 57% 53%;       /* Pantone 167C — Patrimônio Misto */
+    --terracotta-dark: 15 57% 43%;
+    --navy: 200 60% 14%;            /* IPHAN mandala ground */
+    --navy-light: 200 45% 28%;
+    --gold: 45 68% 47%;             /* Pantone 871C — Patrimônio Cultural */
+    --gold-light: 45 68% 60%;
     --cream: 40 33% 96%;
     --cream-dark: 40 20% 90%;
+
+    /* Official heritage marks palette */
+    --unesco-brown: 19 56% 27%;     /* Pantone 4695C */
+    --unesco-gold: 45 68% 47%;      /* Pantone 871C */
+    --heritage-green: 122 47% 45%;  /* Pantone 375C */
+    --heritage-terracotta: 15 57% 53%; /* Pantone 167C */
+    --iphan-navy: 200 60% 14%;
+    --iphan-yellow: 43 100% 59%;
+    --iphan-blue: 194 91% 47%;
+    --iphan-green: 145 60% 45%;
+    --cool-gray-11: 0 0% 25%;       /* Pantone Cool Gray 11C */
 
     /* Semantic Tokens */
     --background: 40 33% 96%;
@@ -49,11 +61,16 @@
 
     --radius: 0.75rem;
 
-    /* Category Colors */
-    --heritage-world: 32 52% 64%;
-    --heritage-material: 14 68% 62%;
-    --heritage-intangible: 210 52% 45%;
-    --heritage-natural: 145 51% 35%;
+    /* Category Colors — aligned with the three official manuals.
+       Cultural family (world, material, intangible, cultural-humanity) →
+       UNESCO brown for the World Heritage tier and IPHAN gold for the
+       national tier; Natural → Pantone 375C; Misto → Pantone 167C. */
+    --heritage-world: 19 56% 27%;          /* unesco-brown */
+    --heritage-material: 45 68% 47%;       /* unesco-gold */
+    --heritage-intangible: 45 68% 47%;     /* unesco-gold */
+    --heritage-natural: 122 47% 45%;       /* heritage-green */
+    --heritage-cultural-humanity: 19 56% 27%;
+    --heritage-misto: 15 57% 53%;
 
     /* Sidebar */
     --sidebar-background: 145 51% 15%;
