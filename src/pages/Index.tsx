@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, ChevronRight, Sparkles, TreePine, Building2, Music, Globe2 } from 'lucide-react';
+import { MapPin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,6 +11,7 @@ import { PatternBorder } from '@/components/ui/PatternBorder';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { SEO } from '@/components/SEO';
 import { heritages, getUnescoHeritages, getCategoryIcon } from '@/data/heritages';
+import { HeritageMark, HeritageMarks, type HeritageMarkKind } from '@/components/heritage/HeritageMark';
 import { getOrganizationStructuredData, getWebsiteStructuredData } from '@/lib/seo';
 import { getSupportedLanguage } from '@/lib/site';
 import brazilMapHero from '@/assets/brazil-map-hero.png';
@@ -26,41 +27,41 @@ const Index = () => {
     { value: 27, label: t('stats.states'), color: 'text-navy' },
   ];
 
-  const categories = [
-    { 
-      key: 'world', 
-      icon: Sparkles, 
-      color: 'bg-gold text-foreground',
-      borderColor: 'border-gold',
-      hoverBg: 'hover:bg-gold/5'
+  const categories: Array<{
+    key: 'world' | 'material' | 'intangible' | 'natural' | 'cultural-humanity';
+    mark: HeritageMarkKind;
+    borderColor: string;
+    hoverBg: string;
+  }> = [
+    {
+      key: 'world',
+      mark: 'unesco',
+      borderColor: 'border-unesco-brown',
+      hoverBg: 'hover:bg-unesco-brown/5',
     },
-    { 
-      key: 'material', 
-      icon: Building2, 
-      color: 'bg-terracotta text-white',
-      borderColor: 'border-terracotta',
-      hoverBg: 'hover:bg-terracotta/5'
+    {
+      key: 'material',
+      mark: 'iphan',
+      borderColor: 'border-unesco-gold',
+      hoverBg: 'hover:bg-unesco-gold/5',
     },
-    { 
-      key: 'intangible', 
-      icon: Music, 
-      color: 'bg-navy text-white',
-      borderColor: 'border-navy',
-      hoverBg: 'hover:bg-navy/5'
+    {
+      key: 'intangible',
+      mark: 'iphan',
+      borderColor: 'border-unesco-gold',
+      hoverBg: 'hover:bg-unesco-gold/5',
     },
-    { 
-      key: 'natural', 
-      icon: TreePine, 
-      color: 'bg-forest text-white',
-      borderColor: 'border-forest',
-      hoverBg: 'hover:bg-forest/5'
+    {
+      key: 'natural',
+      mark: 'contran-natural',
+      borderColor: 'border-heritage-natural',
+      hoverBg: 'hover:bg-heritage-natural/5',
     },
-    { 
-      key: 'cultural-humanity', 
-      icon: Globe2, 
-      color: 'bg-purple-700 text-white',
-      borderColor: 'border-purple-700',
-      hoverBg: 'hover:bg-purple-700/5'
+    {
+      key: 'cultural-humanity',
+      mark: 'unesco',
+      borderColor: 'border-unesco-brown',
+      hoverBg: 'hover:bg-unesco-brown/5',
     },
   ];
 
