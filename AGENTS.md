@@ -25,3 +25,15 @@ Recent commits use short, imperative summaries such as `Adjust heritage cards la
 
 ## Configuration Notes
 This project uses npm even though Bun lockfiles are present. Prefer npm scripts for consistency unless the repo owners direct otherwise.
+
+## Heritage Visual Identity
+
+The site honors three official Brazilian heritage visual systems. Do not freestyle these.
+
+- **UNESCO World Heritage** (Pantone 4695C brown + Pantone 871C gold). Use `<HeritageMark kind="unesco" />` whenever `heritage.unesco === true`. The emblem ring text stays trilingual pt/fr/en — never translate it.
+- **Patrimônio Cultural Brasileiro / IPHAN, 2017** (mandala on `--iphan-navy`). Use `<HeritageMark kind="iphan" />` for items where `isIphanRegistered(heritage)` is true.
+- **Sinalização Turística / Contran** (brown tile + black-on-white pictogram). Use `contran-cultural`, `contran-natural`, or `contran-misto` to mirror the roadside tourist signs visitors recognize.
+
+Color tokens in `src/index.css` are derived from the Pantone values published in the IPHAN/UNESCO 2013 manual. Use the `unesco-*`, `iphan-*`, `heritage-*` and `cool-gray-11` tokens — do not introduce arbitrary hex/HSL for heritage UI.
+
+Marks must never be recolored, rotated, or co-mingled with third-party logos in the same composition.

@@ -49,12 +49,13 @@ L.Icon.Default.mergeOptions({
 
 // Custom marker icons by category
 const createCustomIcon = (category: HeritageCategory) => {
+  // Aligned with the official Brazilian heritage palette (Pantone-based).
   const colors: Record<HeritageCategory, string> = {
-    world: '#d4a574',
-    material: '#e07a5f',
-    intangible: '#1d3557',
-    natural: '#1a4d2e',
-    'cultural-humanity': '#7c3aed'
+    world: '#6B3A1F',              // unesco-brown
+    material: '#C9A227',            // unesco-gold
+    intangible: '#C9A227',          // unesco-gold
+    natural: '#3DA940',             // heritage-green (Pantone 375C)
+    'cultural-humanity': '#6B3A1F', // unesco-brown
   };
 
   return L.divIcon({
@@ -407,7 +408,7 @@ const MapPage = () => {
                     {heritage.description[currentLang]}
                   </p>
                   {heritage.unesco && (
-                    <span className="inline-block bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded">UNESCO</span>
+                    <span className="inline-block bg-unesco-brown text-white text-xs px-2 py-0.5 rounded">UNESCO</span>
                   )}
                   <div className="flex gap-1 mt-1">
                     {heritage.tags.map(tag => (
@@ -472,7 +473,7 @@ const MapPage = () => {
                   </span>
                 ))}
                 {selectedHeritage.unesco && (
-                  <span className="inline-block px-2 py-1 rounded text-sm bg-amber-200 text-amber-900">UNESCO</span>
+                  <span className="inline-block px-2 py-1 rounded text-sm bg-unesco-brown text-white">UNESCO</span>
                 )}
               </div>
             </div>
