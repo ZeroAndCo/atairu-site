@@ -17,8 +17,10 @@ import {
   HeritageCategory,
   HeritageTag,
   getHeritagesByCategory,
-  getCategoryIcon 
+  getCategoryIcon,
+  isMistoHeritage,
 } from '@/data/heritages';
+import { HeritageMarks } from '@/components/heritage/HeritageMark';
 import { trackEvent } from '@/lib/analytics';
 import { getHeritageCollectionStructuredData } from '@/lib/seo';
 import { getSupportedLanguage } from '@/lib/site';
@@ -60,19 +62,19 @@ const Heritage = () => {
 
   const getCategoryBadgeColor = (category: HeritageCategory) => {
     const colors: Record<HeritageCategory, string> = {
-      world: 'bg-gold text-foreground',
-      material: 'bg-terracotta text-white',
-      intangible: 'bg-navy text-white',
-      natural: 'bg-forest text-white',
-      'cultural-humanity': 'bg-purple-700 text-white'
+      world: 'bg-unesco-brown text-white',
+      material: 'bg-unesco-gold text-cool-gray-11',
+      intangible: 'bg-unesco-gold text-cool-gray-11',
+      natural: 'bg-heritage-natural text-white',
+      'cultural-humanity': 'bg-unesco-brown text-white',
     };
     return colors[category];
   };
 
   const getTagBadgeStyle = (tag: HeritageTag) => {
-    return tag === 'cultural' 
-      ? 'border-terracotta/60 text-terracotta bg-terracotta/10'
-      : 'border-forest/60 text-forest bg-forest/10';
+    return tag === 'cultural'
+      ? 'border-unesco-gold/60 text-unesco-gold bg-unesco-gold/10'
+      : 'border-heritage-natural/60 text-heritage-natural bg-heritage-natural/10';
   };
 
   const openHeritageDetails = (heritage: typeof heritages[0], source: 'grid' | 'map-link') => {
