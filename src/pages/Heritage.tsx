@@ -18,7 +18,7 @@ import {
   HeritageTag,
   getHeritagesByCategory,
   getCategoryIcon,
-  isMistoHeritage,
+  
 } from '@/data/heritages';
 import { HeritageMarks } from '@/components/heritage/HeritageMark';
 import { trackEvent } from '@/lib/analytics';
