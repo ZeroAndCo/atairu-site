@@ -206,13 +206,19 @@ const Heritage = () => {
                           <Badge className={`absolute top-3 right-3 ${getCategoryBadgeColor(heritage.category)}`}>
                             {t(`categories.${heritage.category}.name`)}
                           </Badge>
-                          {heritage.unesco && (
-                            <Badge className="absolute top-3 left-3 bg-gold text-foreground">
-                              UNESCO
-                            </Badge>
-                          )}
+                          {/* Official heritage marks (UNESCO, IPHAN, Contran) */}
+                          <HeritageMarks
+                            heritage={heritage}
+                            size="sm"
+                            className="absolute top-3 left-3"
+                          />
                           {/* Tag badges */}
                           <div className="absolute bottom-3 left-3 flex gap-1">
+                            {isMistoHeritage(heritage) && (
+                              <Badge variant="outline" className="text-xs border-heritage-misto/60 text-heritage-misto bg-heritage-misto/10">
+                                {t('tags.misto')}
+                              </Badge>
+                            )}
                             {heritage.tags.map(tag => (
                               <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
                                 {t(`tags.${tag}`)}
