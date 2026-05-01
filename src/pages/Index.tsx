@@ -235,8 +235,8 @@ const Index = () => {
               >
                 <Card className={`h-full border-2 ${category.borderColor} ${category.hoverBg} hover:shadow-brand transition-all cursor-pointer`}>
                   <CardContent className="p-6 text-center">
-                    <div className={`w-16 h-16 rounded-full ${category.color} flex items-center justify-center mx-auto mb-4`}>
-                      <category.icon className="h-8 w-8" />
+                    <div className="flex items-center justify-center mx-auto mb-4">
+                      <HeritageMark kind={category.mark} size="lg" />
                     </div>
                     <h3 className="font-serif text-xl font-semibold mb-2">
                       {t(`categories.${category.key}.name`)}
