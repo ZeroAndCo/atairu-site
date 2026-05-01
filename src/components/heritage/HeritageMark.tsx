@@ -6,7 +6,7 @@ import {
   isMistoHeritage,
 } from '@/data/heritages';
 import unescoMark from '@/assets/heritage-marks/unesco-world-heritage.svg';
-import iphanMark from '@/assets/heritage-marks/iphan-patrimonio-cultural.svg';
+import iphanMark from '@/assets/heritage-marks/iphan-patrimonio-cultural.png';
 import contranCultural from '@/assets/heritage-marks/contran-cultural.svg';
 import contranNatural from '@/assets/heritage-marks/contran-natural.svg';
 import contranMisto from '@/assets/heritage-marks/contran-misto.svg';
