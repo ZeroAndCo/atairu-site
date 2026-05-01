@@ -7,10 +7,10 @@
   <!-- Pictogram: two hands holding a colonial window -->
   <g fill="#111111">
     <!-- Window frame -->
-    <rect x="86" y="56" width="28" height="56" stroke="#111111" strokeWidth="3" fill="#FFFFFF"/>
+    <rect x="86" y="56" width="28" height="56" stroke="#111111" stroke-width="3" fill="#FFFFFF"/>
     <!-- Window panes -->
-    <line x1="100" y1="56" x2="100" y2="112" stroke="#111111" strokeWidth="2"/>
-    <line x1="86" y1="84" x2="114" y2="84" stroke="#111111" strokeWidth="2"/>
+    <line x1="100" y1="56" x2="100" y2="112" stroke="#111111" stroke-width="2"/>
+    <line x1="86" y1="84" x2="114" y2="84" stroke="#111111" stroke-width="2"/>
     <!-- Window pediment -->
     <polygon points="82,56 118,56 110,46 90,46"/>
     <!-- Hands base -->
