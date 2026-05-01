@@ -115,11 +115,20 @@
   "tags": {
     "all": "Todos los tipos",
     "cultural": "Cultural",
-    "natural": "Natural"
+    "natural": "Natural",
+    "misto": "Mixto"
   },
   "heritage": {
     "viewOnMap": "Ver en el Mapa"
   },
+  "marks": {
+    "unesco": { "label": "Patrimonio Mundial UNESCO" },
+    "iphan": { "label": "Patrimonio Cultural Brasileño (IPHAN)" },
+    "contran-cultural": { "label": "Patrimonio Cultural — Señalización Turística" },
+    "contran-natural": { "label": "Patrimonio Natural — Señalización Turística" },
+    "contran-misto": { "label": "Patrimonio Mixto — Señalización Turística" }
+  },
+  "footerCredit": "Identidad visual basada en las Orientaciones Técnicas para Señalización del Patrimonio Mundial en Brasil (IPHAN/UNESCO, 2013), el emblema del Patrimonio Cultural Brasileño (IPHAN, 2017) y la Guía Brasileña de Señalización Turística (Contran).",
   "common": {
     "loading": "Cargando...",
     "error": "Error al cargar",

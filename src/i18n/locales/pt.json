@@ -115,11 +115,20 @@
   "tags": {
     "all": "Todos os tipos",
     "cultural": "Cultural",
-    "natural": "Natural"
+    "natural": "Natural",
+    "misto": "Misto"
   },
   "heritage": {
     "viewOnMap": "Ver no Mapa"
   },
+  "marks": {
+    "unesco": { "label": "Patrimônio Mundial UNESCO" },
+    "iphan": { "label": "Patrimônio Cultural Brasileiro (IPHAN)" },
+    "contran-cultural": { "label": "Patrimônio Cultural — Sinalização Turística" },
+    "contran-natural": { "label": "Patrimônio Natural — Sinalização Turística" },
+    "contran-misto": { "label": "Patrimônio Misto — Sinalização Turística" }
+  },
+  "footerCredit": "Identidade visual baseada nas Orientações Técnicas para Sinalização do Patrimônio Mundial no Brasil (IPHAN/UNESCO, 2013), no emblema do Patrimônio Cultural Brasileiro (IPHAN, 2017) e no Guia Brasileiro de Sinalização Turística (Contran).",
   "common": {
     "loading": "Carregando...",
     "error": "Erro ao carregar",
