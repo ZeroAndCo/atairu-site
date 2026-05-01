@@ -84,7 +84,21 @@ export default {
           material: "hsl(var(--heritage-material))",
           intangible: "hsl(var(--heritage-intangible))",
           natural: "hsl(var(--heritage-natural))",
+          "cultural-humanity": "hsl(var(--heritage-cultural-humanity))",
+          misto: "hsl(var(--heritage-misto))",
         },
+        // Official Brazilian heritage palette (Pantones)
+        unesco: {
+          brown: "hsl(var(--unesco-brown))",
+          gold: "hsl(var(--unesco-gold))",
+        },
+        iphan: {
+          navy: "hsl(var(--iphan-navy))",
+          yellow: "hsl(var(--iphan-yellow))",
+          blue: "hsl(var(--iphan-blue))",
+          green: "hsl(var(--iphan-green))",
+        },
+        "cool-gray-11": "hsl(var(--cool-gray-11))",
       },
       fontFamily: {
         sans: ['Calibri', 'Trebuchet MS', 'system-ui', 'sans-serif'],

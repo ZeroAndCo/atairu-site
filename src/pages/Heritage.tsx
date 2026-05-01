@@ -17,8 +17,10 @@ import {
   HeritageCategory,
   HeritageTag,
   getHeritagesByCategory,
-  getCategoryIcon 
+  getCategoryIcon,
+  isMistoHeritage,
 } from '@/data/heritages';
+import { HeritageMarks } from '@/components/heritage/HeritageMark';
 import { trackEvent } from '@/lib/analytics';
 import { getHeritageCollectionStructuredData } from '@/lib/seo';
 import { getSupportedLanguage } from '@/lib/site';
@@ -60,19 +62,19 @@ const Heritage = () => {
 
   const getCategoryBadgeColor = (category: HeritageCategory) => {
     const colors: Record<HeritageCategory, string> = {
-      world: 'bg-gold text-foreground',
-      material: 'bg-terracotta text-white',
-      intangible: 'bg-navy text-white',
-      natural: 'bg-forest text-white',
-      'cultural-humanity': 'bg-purple-700 text-white'
+      world: 'bg-unesco-brown text-white',
+      material: 'bg-unesco-gold text-cool-gray-11',
+      intangible: 'bg-unesco-gold text-cool-gray-11',
+      natural: 'bg-heritage-natural text-white',
+      'cultural-humanity': 'bg-unesco-brown text-white',
     };
     return colors[category];
   };
 
   const getTagBadgeStyle = (tag: HeritageTag) => {
-    return tag === 'cultural' 
-      ? 'border-terracotta/60 text-terracotta bg-terracotta/10'
-      : 'border-forest/60 text-forest bg-forest/10';
+    return tag === 'cultural'
+      ? 'border-unesco-gold/60 text-unesco-gold bg-unesco-gold/10'
+      : 'border-heritage-natural/60 text-heritage-natural bg-heritage-natural/10';
   };
 
   const openHeritageDetails = (heritage: typeof heritages[0], source: 'grid' | 'map-link') => {
@@ -204,13 +206,19 @@ const Heritage = () => {
                           <Badge className={`absolute top-3 right-3 ${getCategoryBadgeColor(heritage.category)}`}>
                             {t(`categories.${heritage.category}.name`)}
                           </Badge>
-                          {heritage.unesco && (
-                            <Badge className="absolute top-3 left-3 bg-gold text-foreground">
-                              UNESCO
-                            </Badge>
-                          )}
+                          {/* Official heritage marks (UNESCO, IPHAN, Contran) */}
+                          <HeritageMarks
+                            heritage={heritage}
+                            size="sm"
+                            className="absolute top-3 left-3"
+                          />
                           {/* Tag badges */}
                           <div className="absolute bottom-3 left-3 flex gap-1">
+                            {isMistoHeritage(heritage) && (
+                              <Badge variant="outline" className="text-xs border-heritage-misto/60 text-heritage-misto bg-heritage-misto/10">
+                                {t('tags.misto')}
+                              </Badge>
+                            )}
                             {heritage.tags.map(tag => (
                               <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>
                                 {t(`tags.${tag}`)}
@@ -259,12 +267,15 @@ const Heritage = () => {
           {selectedHeritage && (
             <>
               <DialogHeader>
+                <HeritageMarks heritage={selectedHeritage} size="md" className="mb-3" />
                 <div className="flex flex-wrap gap-2 mb-2">
                   <Badge className={getCategoryBadgeColor(selectedHeritage.category)}>
                     {t(`categories.${selectedHeritage.category}.name`)}
                   </Badge>
-                  {selectedHeritage.unesco && (
-                    <Badge className="bg-gold text-foreground">UNESCO</Badge>
+                  {isMistoHeritage(selectedHeritage) && (
+                    <Badge variant="outline" className="text-xs border-heritage-misto/60 text-heritage-misto bg-heritage-misto/10">
+                      {t('tags.misto')}
+                    </Badge>
                   )}
                   {selectedHeritage.tags.map(tag => (
                     <Badge key={tag} variant="outline" className={`text-xs ${getTagBadgeStyle(tag)}`}>

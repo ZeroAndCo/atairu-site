@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Patrimônio Cultural — Sinalização Turística (Contran)">
+  <title>Patrimônio Cultural (Contran)</title>
+  <!-- Brown tile -->
+  <rect width="200" height="200" fill="#6B3A1F"/>
+  <!-- White inner square -->
+  <rect x="28" y="28" width="144" height="144" fill="#FFFFFF"/>
+  <!-- Pictogram: two hands holding a colonial window -->
+  <g fill="#111111">
+    <!-- Window frame -->
+    <rect x="86" y="56" width="28" height="56" stroke="#111111" strokeWidth="3" fill="#FFFFFF"/>
+    <!-- Window panes -->
+    <line x1="100" y1="56" x2="100" y2="112" stroke="#111111" strokeWidth="2"/>
+    <line x1="86" y1="84" x2="114" y2="84" stroke="#111111" strokeWidth="2"/>
+    <!-- Window pediment -->
+    <polygon points="82,56 118,56 110,46 90,46"/>
+    <!-- Hands base -->
+    <path d="M 50 130
+             C 50 118, 60 110, 72 112
+             L 92 116
+             C 96 117, 100 118, 100 122
+             L 100 142
+             C 100 150, 92 156, 82 156
+             L 60 156
+             C 54 156, 50 150, 50 144 Z"/>
+    <path d="M 150 130
+             C 150 118, 140 110, 128 112
+             L 108 116
+             C 104 117, 100 118, 100 122
+             L 100 142
+             C 100 150, 108 156, 118 156
+             L 140 156
+             C 146 156, 150 150, 150 144 Z"/>
+    <!-- Wrists -->
+    <rect x="48" y="150" width="24" height="14" rx="2"/>
+    <rect x="128" y="150" width="24" height="14" rx="2"/>
+  </g>
+</svg>

@@ -115,11 +115,20 @@
   "tags": {
     "all": "All types",
     "cultural": "Cultural",
-    "natural": "Natural"
+    "natural": "Natural",
+    "misto": "Mixed"
   },
   "heritage": {
     "viewOnMap": "View on Map"
   },
+  "marks": {
+    "unesco": { "label": "UNESCO World Heritage" },
+    "iphan": { "label": "Brazilian Cultural Heritage (IPHAN)" },
+    "contran-cultural": { "label": "Cultural Heritage — Tourist Signage" },
+    "contran-natural": { "label": "Natural Heritage — Tourist Signage" },
+    "contran-misto": { "label": "Mixed Heritage — Tourist Signage" }
+  },
+  "footerCredit": "Visual identity based on the Technical Guidelines for Signage of World Heritage in Brazil (IPHAN/UNESCO, 2013), the Brazilian Cultural Heritage emblem (IPHAN, 2017), and the Brazilian Tourist Signage Guide (Contran).",
   "common": {
     "loading": "Loading...",
     "error": "Error loading",

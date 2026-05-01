@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Patrimônio Cultural Brasileiro emblem (IPHAN)">
+  <title>Patrimônio Cultural Brasileiro</title>
+  <!-- Dark navy ground -->
+  <rect width="200" height="200" fill="#0E2A38"/>
+  <!-- Mandala: 36 petals in 3 colors, alternating yellow / blue / green -->
+  <g transform="translate(100 100)">
+    <!-- Petals -->
+    <g>
+      <!-- Each petal is an elongated diamond. Generated with rotations of 10 deg. -->
+      <!-- Color cycle: yellow #FFC72C, blue #0AB6E6, green #2EB872 -->
+      <!-- 36 petals: indices 0..35 -->
+      <g id="petals">
+        <!-- We render via repeated <use>; SVG does not support loops, so list explicitly. -->
+      </g>
+    </g>
+    <!-- Inline petals (kept simple by hand-listing 36) -->
+    <!-- Petal shape: diamond from r=24 to r=58, half-width 5 -->
+    <g>
+      <g transform="rotate(0)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(10)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(20)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(30)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(40)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(50)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(60)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(70)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(80)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(90)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(100)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(110)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(120)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(130)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(140)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(150)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(160)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(170)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(180)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(190)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(200)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(210)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(220)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(230)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(240)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(250)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(260)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(270)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(280)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(290)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(300)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(310)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(320)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+      <g transform="rotate(330)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#FFC72C"/></g>
+      <g transform="rotate(340)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#0AB6E6"/></g>
+      <g transform="rotate(350)"><polygon points="0,-58 5,-41 0,-24 -5,-41" fill="#2EB872"/></g>
+    </g>
+  </g>
+</svg>

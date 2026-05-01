@@ -13,6 +13,12 @@ export interface Heritage {
   description: { pt: string; en: string; es: string; };
   details: { pt: string; en: string; es: string; };
   unesco: boolean;
+  /**
+   * True when the site is also tombado/registrado pelo IPHAN.
+   * If omitted, falls back to a heuristic based on category + tags
+   * (see {@link isIphanRegistered}). Set explicitly to override.
+   */
+  iphanRegistered?: boolean;
   tags: HeritageTag[];
   imageUrl?: string;
 }
@@ -3273,3 +3279,33 @@ export const getCategoryIcon = (category: HeritageCategory): string => {
   };
   return icons[category];
 };
+
+/**
+ * Whether a heritage item is registered with IPHAN (Brazilian Cultural
+ * Heritage). When the data does not specify it, we infer:
+ *   - material / intangible → true (these categories exist because IPHAN
+ *     registers them)
+ *   - world / cultural-humanity → true when the item carries the cultural
+ *     tag (most UNESCO cultural sites in Brazil are also tombados nacionalmente)
+ *   - natural → false unless explicitly set (national parks are managed by
+ *     ICMBio, not IPHAN, unless the landscape is also tombado)
+ */
+export const isIphanRegistered = (heritage: Heritage): boolean => {
+  if (typeof heritage.iphanRegistered === 'boolean') {
+    return heritage.iphanRegistered;
+  }
+  if (heritage.category === 'material' || heritage.category === 'intangible') {
+    return true;
+  }
+  if (heritage.category === 'world' || heritage.category === 'cultural-humanity') {
+    return heritage.tags.includes('cultural');
+  }
+  return false;
+};
+
+/**
+ * Whether the heritage qualifies as "Misto" per the IPHAN/UNESCO manual
+ * (both Cultural and Natural). Used to pick the terracotta accent.
+ */
+export const isMistoHeritage = (heritage: Heritage): boolean =>
+  heritage.tags.includes('cultural') && heritage.tags.includes('natural');
