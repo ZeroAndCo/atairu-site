@@ -295,7 +295,7 @@ const Index = () => {
                       📍 {heritage.city}, {heritage.state}
                     </p>
                     <p className="text-sm text-foreground/80 line-clamp-3">
-                      {heritage.description[currentLang]}
+                      {heritage.summary[currentLang]}
                     </p>
                   </CardContent>
                 </Card>

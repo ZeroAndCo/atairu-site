@@ -235,7 +235,7 @@ const Heritage = () => {
                           </div>
                           <div className="flex-1 mb-5">
                             <p className="text-sm text-foreground/80 line-clamp-3">
-                              {heritage.description[currentLang]}
+                              {heritage.summary[currentLang]}
                             </p>
                           </div>
                           <Button
@@ -287,10 +287,10 @@ const Heritage = () => {
               </DialogHeader>
               <div className="space-y-3 mt-2">
                 <p className="text-foreground/90">
-                  {selectedHeritage.description[currentLang] || selectedHeritage.description.pt}
+                  {selectedHeritage.summary[currentLang] || selectedHeritage.summary.pt}
                 </p>
                 {(selectedHeritage.details[currentLang] || selectedHeritage.details.pt) && (
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-sm whitespace-pre-line">
                     {selectedHeritage.details[currentLang] || selectedHeritage.details.pt}
                   </p>
                 )}
