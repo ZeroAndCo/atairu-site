@@ -405,7 +405,7 @@ const MapPage = () => {
                     📍 {heritage.city}, {heritage.state}
                   </p>
                   <p className="text-xs mb-2">
-                    {heritage.description[currentLang]}
+                    {heritage.summary[currentLang]}
                   </p>
                   {heritage.unesco && (
                     <span className="inline-block bg-unesco-brown text-white text-xs px-2 py-0.5 rounded">UNESCO</span>
@@ -461,7 +461,7 @@ const MapPage = () => {
                 </div>
               </div>
               <p className="text-foreground/80 mb-4">
-                {selectedHeritage.description[currentLang]}
+                {selectedHeritage.summary[currentLang]}
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className={`inline-block px-2 py-1 rounded text-sm text-white bg-${getCategoryColor(selectedHeritage.category)}`}>
