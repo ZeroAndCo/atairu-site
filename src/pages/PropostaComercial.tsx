@@ -283,7 +283,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
           {['plataforma de patrimônio', 'hub de experiências culturais', 'ecossistema de turismo sustentável', 'plataforma de inteligência territorial', 'infraestrutura para promoção internacional do Brasil'].map((t) => (
-            <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
+            <div key={t} className="bg-cream text-navy rounded-xl p-5 text-center font-semibold shadow-md">
               {t}
             </div>
           ))}
