@@ -75,7 +75,7 @@ const PropostaComercial = () => {
         />
         <div className="absolute inset-0 pattern-indigenous opacity-25" />
         <div className="relative z-10 text-center">
-          <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-10 drop-shadow-2xl" />
+          <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-2 drop-shadow-2xl" />
           <SectionTag color="cream">Apresentação Comercial e Estratégica</SectionTag>
           <h1
             className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight"
@@ -108,7 +108,7 @@ const PropostaComercial = () => {
 
       {/* 3 — O Brasil que o mundo ainda não conhece */}
       <Slide bg="bg-background">
-        <SectionTag color="forest">01 · O Brasil que o mundo ainda não conhece</SectionTag>
+        <SectionTag color="forest">O Brasil que o mundo ainda não conhece</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-8 leading-tight" style={headingFont}>
           Um dos patrimônios mais ricos do planeta — ainda fragmentado.
         </h2>
@@ -166,7 +166,7 @@ const PropostaComercial = () => {
 
       {/* 5 — Contexto global */}
       <Slide bg="bg-cream">
-        <SectionTag color="forest">02 · Contexto global e oportunidade</SectionTag>
+        <SectionTag color="forest">Contexto global e oportunidade</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-8 leading-tight" style={headingFont}>
           O turismo internacional vive uma transformação estrutural.
         </h2>
@@ -202,7 +202,7 @@ const PropostaComercial = () => {
 
       {/* 6 — O que é o Ataîru */}
       <Slide bg="bg-background">
-        <SectionTag color="terracotta">03 · O que é o Ataîru</SectionTag>
+        <SectionTag color="terracotta">O que é o Ataîru</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-8 leading-tight" style={headingFont}>
           Uma plataforma digital para conectar viajantes à essência do Brasil.
         </h2>
@@ -215,7 +215,7 @@ const PropostaComercial = () => {
             const tones = ['forest', 'terracotta', 'gold', 'navy'];
             const c = tones[i % tones.length];
             return (
-              <div key={t} className={`bg-${c}/10 border-2 border-${c}/30 rounded-xl px-4 py-3 text-sm font-semibold text-${c} text-center`}>
+              <div key={t} className={`bg-${c} text-cream rounded-xl px-4 py-3 text-sm font-semibold text-center shadow-sm`}>
                 {t}
               </div>
             );
@@ -230,7 +230,7 @@ const PropostaComercial = () => {
 
       {/* 7 — Visão estratégica */}
       <Slide bg="bg-cream">
-        <SectionTag color="forest">04 · Visão estratégica</SectionTag>
+        <SectionTag color="forest">Visão estratégica</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Quatro dimensões, simultaneamente.
         </h2>
@@ -255,7 +255,7 @@ const PropostaComercial = () => {
 
       {/* 8 — Problema que resolve */}
       <Slide bg="bg-background">
-        <SectionTag color="terracotta">05 · O problema que o Ataîru resolve</SectionTag>
+        <SectionTag color="terracotta">O problema que o Ataîru resolve</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Hoje o patrimônio brasileiro sofre com fragmentação digital.
         </h2>
@@ -277,13 +277,13 @@ const PropostaComercial = () => {
 
       {/* 9 — Posicionamento */}
       <Slide bg="bg-forest text-cream">
-        <SectionTag color="cream">06 · Posicionamento</SectionTag>
+        <SectionTag color="cream">Posicionamento</SectionTag>
         <h2 className="text-3xl md:text-6xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
           Ataîru é a <span className="text-gold">infraestrutura digital</span> do turismo cultural brasileiro.
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
           {['plataforma de patrimônio', 'hub de experiências culturais', 'ecossistema de turismo sustentável', 'plataforma de inteligência territorial', 'infraestrutura para promoção internacional do Brasil'].map((t) => (
-            <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
+            <div key={t} className="bg-cream text-navy rounded-xl p-5 text-center font-semibold shadow-md">
               {t}
             </div>
           ))}
@@ -292,7 +292,7 @@ const PropostaComercial = () => {
 
       {/* 10 — Estrutura em camadas */}
       <Slide bg="bg-cream">
-        <SectionTag color="navy">07 · Estrutura da plataforma</SectionTag>
+        <SectionTag color="navy">Estrutura da plataforma</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Desenvolvida em camadas, agregadas ao longo do tempo.
         </h2>
@@ -319,7 +319,7 @@ const PropostaComercial = () => {
 
       {/* 11 — Roadmap */}
       <Slide bg="bg-background">
-        <SectionTag color="forest">08 · Roadmap estratégico do produto</SectionTag>
+        <SectionTag color="forest">Roadmap estratégico do produto</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Quatro fases de evolução, do produto ao ecossistema.
         </h2>
@@ -349,7 +349,7 @@ const PropostaComercial = () => {
 
       {/* 12 — O grande ativo */}
       <Slide bg="bg-terracotta text-cream">
-        <SectionTag color="cream">09 · O grande ativo</SectionTag>
+        <SectionTag color="cream">O grande ativo</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-8 leading-tight" style={headingFont}>
           O banco vivo de patrimônios culturais e naturais brasileiros.
         </h2>
@@ -370,7 +370,7 @@ const PropostaComercial = () => {
 
       {/* 13 — Financiamento & Receita */}
       <Slide bg="bg-cream">
-        <SectionTag color="navy">10 · Financiamento & Receita</SectionTag>
+        <SectionTag color="navy">Financiamento & Receita</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Estruturado em quatro camadas de financiamento e receita.
         </h2>
@@ -400,7 +400,7 @@ const PropostaComercial = () => {
 
       {/* 14 — Ecossistema de parcerias */}
       <Slide bg="bg-background">
-        <SectionTag color="terracotta">12 · Ecossistema de parcerias</SectionTag>
+        <SectionTag color="terracotta">Ecossistema de parcerias</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           O Ataîru quer conectar quatro mundos.
         </h2>
@@ -424,7 +424,7 @@ const PropostaComercial = () => {
 
       {/* 15 — Alinhamento estratégico */}
       <Slide bg="bg-cream">
-        <SectionTag color="forest">13 · Alinhamento estratégico</SectionTag>
+        <SectionTag color="forest">Alinhamento estratégico</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Profundamente alinhado às agendas do Brasil.
         </h2>
@@ -446,7 +446,7 @@ const PropostaComercial = () => {
 
       {/* 16 — Mercados internacionais */}
       <Slide bg="bg-navy text-cream">
-        <SectionTag color="cream">14 · Mercados internacionais prioritários</SectionTag>
+        <SectionTag color="cream">Mercados internacionais prioritários</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
           Alinhado aos Mercados de Crescimento da Embratur.
         </h2>
@@ -468,7 +468,7 @@ const PropostaComercial = () => {
 
       {/* 17 — Comunicação */}
       <Slide bg="bg-background">
-        <SectionTag color="terracotta">15 · Comunicação</SectionTag>
+        <SectionTag color="terracotta">Comunicação</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-8 leading-tight" style={headingFont}>
           Multicanal, digital, integrada a todos os stakeholders.
         </h2>
@@ -496,7 +496,7 @@ const PropostaComercial = () => {
 
       {/* 18 — Impacto esperado */}
       <Slide bg="bg-cream">
-        <SectionTag color="forest">16 · Impacto esperado</SectionTag>
+        <SectionTag color="forest">Impacto esperado</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Quatro dimensões de impacto.
         </h2>
@@ -520,7 +520,7 @@ const PropostaComercial = () => {
 
       {/* 19 — Indicadores */}
       <Slide bg="bg-background">
-        <SectionTag color="navy">17 · Indicadores e métricas</SectionTag>
+        <SectionTag color="navy">Indicadores e métricas</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           O que vamos medir.
         </h2>
@@ -541,7 +541,7 @@ const PropostaComercial = () => {
 
       {/* 20 — Ondas de evolução */}
       <Slide bg="bg-cream">
-        <SectionTag color="terracotta">18 · Ondas de evolução</SectionTag>
+        <SectionTag color="terracotta">Ondas de evolução</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Ondas sucessivas de investimento e produto.
         </h2>
@@ -580,7 +580,7 @@ const PropostaComercial = () => {
 
       {/* 21 — Cotas de patrocínio */}
       <Slide bg="bg-background">
-        <SectionTag color="gold">20 · Cotas de patrocínio</SectionTag>
+        <SectionTag color="gold">Cotas de patrocínio</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
           Quatro fases, dois formatos de cota por fase.
         </h2>
@@ -623,7 +623,7 @@ const PropostaComercial = () => {
 
       {/* 22 — Por que */}
       <Slide bg="bg-gradient-warm text-cream">
-        <SectionTag color="cream">21 · Por que o Ataîru</SectionTag>
+        <SectionTag color="cream">Por que o Ataîru</SectionTag>
         <h2 className="text-3xl md:text-6xl font-bold mt-6 mb-8 leading-tight" style={headingFont}>
           Porque o patrimônio cultural brasileiro é um dos ativos mais valiosos do país.
         </h2>
@@ -647,7 +647,7 @@ const PropostaComercial = () => {
         <div className="absolute inset-0 pattern-indigenous opacity-30" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <img src={logo} alt="Ataîru" className="w-40 md:w-48 mx-auto mb-8 drop-shadow-2xl" />
-          <SectionTag color="cream">22 · Convite final</SectionTag>
+          <SectionTag color="cream">Convite final</SectionTag>
           <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
             O Ataîru é um convite.
           </h2>
