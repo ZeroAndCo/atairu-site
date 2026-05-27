@@ -211,11 +211,15 @@ const PropostaComercial = () => {
             'patrimônios culturais', 'patrimônios naturais', 'parques', 'manifestações culturais',
             'gastronomia', 'artesanato', 'comunidades', 'guias locais',
             'roteiros', 'experiências', 'pequenos negócios', 'dados estratégicos',
-          ].map((t) => (
-            <div key={t} className="bg-card border border-border rounded-xl px-4 py-3 text-sm text-foreground text-center">
-              {t}
-            </div>
-          ))}
+          ].map((t, i) => {
+            const tones = ['forest', 'terracotta', 'gold', 'navy'];
+            const c = tones[i % tones.length];
+            return (
+              <div key={t} className={`bg-${c}/10 border-2 border-${c}/30 rounded-xl px-4 py-3 text-sm font-semibold text-${c} text-center`}>
+                {t}
+              </div>
+            );
+          })}
         </div>
         <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
           <p className="text-xl md:text-3xl font-bold leading-tight" style={headingFont}>
