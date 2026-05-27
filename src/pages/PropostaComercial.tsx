@@ -28,7 +28,7 @@ const SectionTag = ({ children, color = 'forest' }: { children: React.ReactNode;
     gold: 'bg-gold/20 text-[hsl(var(--unesco-brown))]',
     terracotta: 'bg-terracotta/15 text-terracotta',
     navy: 'bg-navy/15 text-navy',
-    cream: 'bg-cream/20 text-cream',
+    cream: 'bg-cream/25 text-cream border border-cream/40',
   };
   return (
     <span
@@ -65,10 +65,17 @@ const PropostaComercial = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* 1 — Cover */}
-      <Slide bg="bg-gradient-hero" className="text-cream relative overflow-hidden">
-        <div className="absolute inset-0 pattern-indigenous opacity-40" />
+      <Slide bg="bg-navy text-cream relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(ellipse at 20% 20%, hsl(15 57% 53% / 0.35) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(45 68% 47% / 0.25) 0%, transparent 55%), linear-gradient(135deg, hsl(200 60% 10%) 0%, hsl(200 60% 14%) 60%, hsl(145 51% 18%) 100%)',
+          }}
+        />
+        <div className="absolute inset-0 pattern-indigenous opacity-25" />
         <div className="relative z-10 text-center">
-          <img src={logo} alt="Ataîru" className="w-24 h-24 mx-auto mb-8 rounded-2xl shadow-2xl bg-cream p-2" />
+          <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-10 drop-shadow-2xl" />
           <SectionTag color="cream">Apresentação Comercial e Estratégica</SectionTag>
           <h1
             className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight"
@@ -88,7 +95,7 @@ const PropostaComercial = () => {
       {/* 2 — Tagline */}
       <Slide bg="bg-cream">
         <div className="text-center max-w-4xl mx-auto">
-          <img src={logo} alt="" className="w-16 h-16 mx-auto mb-8" />
+          <img src={logo} alt="" className="w-32 md:w-40 mx-auto mb-8" />
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight" style={headingFont}>
             Seu companheiro de viagem ao <span className="text-terracotta">coração do Brasil</span>.
           </h2>
@@ -146,7 +153,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-4 mb-10">
           {['experiência', 'pertencimento', 'conexão humana', 'autenticidade', 'sustentabilidade', 'desenvolvimento territorial'].map((w) => (
-            <div key={w} className="bg-cream/10 backdrop-blur-sm border border-cream/15 rounded-xl px-6 py-5 text-center text-cream/90 capitalize">
+            <div key={w} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-6 py-5 text-center text-cream/90 capitalize">
               {w}
             </div>
           ))}
@@ -204,11 +211,15 @@ const PropostaComercial = () => {
             'patrimônios culturais', 'patrimônios naturais', 'parques', 'manifestações culturais',
             'gastronomia', 'artesanato', 'comunidades', 'guias locais',
             'roteiros', 'experiências', 'pequenos negócios', 'dados estratégicos',
-          ].map((t) => (
-            <div key={t} className="bg-card border border-border rounded-xl px-4 py-3 text-sm text-foreground text-center">
-              {t}
-            </div>
-          ))}
+          ].map((t, i) => {
+            const tones = ['forest', 'terracotta', 'gold', 'navy'];
+            const c = tones[i % tones.length];
+            return (
+              <div key={t} className={`bg-${c}/10 border-2 border-${c}/30 rounded-xl px-4 py-3 text-sm font-semibold text-${c} text-center`}>
+                {t}
+              </div>
+            );
+          })}
         </div>
         <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
           <p className="text-xl md:text-3xl font-bold leading-tight" style={headingFont}>
@@ -272,7 +283,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
           {['plataforma de patrimônio', 'hub de experiências culturais', 'ecossistema de turismo sustentável', 'plataforma de inteligência territorial', 'infraestrutura para promoção internacional do Brasil'].map((t) => (
-            <div key={t} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl p-5 text-center text-cream/95">
+            <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
               {t}
             </div>
           ))}
@@ -441,7 +452,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {['Canadá', 'México', 'Colômbia', 'Peru', 'Holanda', 'Suíça', 'Itália'].map((c) => (
-            <div key={c} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl p-5 text-center">
+            <div key={c} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center">
               <MapPin className="w-5 h-5 mx-auto mb-2 text-gold" />
               <span className="font-semibold" style={headingFont}>{c}</span>
             </div>
@@ -635,14 +646,14 @@ const PropostaComercial = () => {
       <Slide bg="bg-gradient-hero text-cream relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-30" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <img src={logo} alt="Ataîru" className="w-24 h-24 mx-auto mb-8 rounded-2xl shadow-2xl bg-cream p-2" />
+          <img src={logo} alt="Ataîru" className="w-40 md:w-48 mx-auto mb-8 drop-shadow-2xl" />
           <SectionTag color="cream">22 · Convite final</SectionTag>
           <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
             O Ataîru é um convite.
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
             {['descobrir o Brasil', 'fortalecer territórios', 'preservar patrimônios', 'conectar culturas', 'desenvolver economias locais', 'transformar o turismo cultural'].map((t) => (
-              <div key={t} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl px-4 py-3 text-cream capitalize">
+              <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-4 py-3 text-cream capitalize">
                 {t}
               </div>
             ))}
