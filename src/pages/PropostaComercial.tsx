@@ -215,7 +215,7 @@ const PropostaComercial = () => {
             const tones = ['forest', 'terracotta', 'gold', 'navy'];
             const c = tones[i % tones.length];
             return (
-              <div key={t} className={`bg-${c}/10 border-2 border-${c}/30 rounded-xl px-4 py-3 text-sm font-semibold text-${c} text-center`}>
+              <div key={t} className={`bg-${c} text-cream rounded-xl px-4 py-3 text-sm font-semibold text-center shadow-sm`}>
                 {t}
               </div>
             );
