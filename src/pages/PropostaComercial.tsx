@@ -153,7 +153,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-4 mb-10">
           {['experiência', 'pertencimento', 'conexão humana', 'autenticidade', 'sustentabilidade', 'desenvolvimento territorial'].map((w) => (
-            <div key={w} className="bg-cream/10 backdrop-blur-sm border border-cream/15 rounded-xl px-6 py-5 text-center text-cream/90 capitalize">
+            <div key={w} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-6 py-5 text-center text-cream/90 capitalize">
               {w}
             </div>
           ))}
@@ -283,7 +283,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
           {['plataforma de patrimônio', 'hub de experiências culturais', 'ecossistema de turismo sustentável', 'plataforma de inteligência territorial', 'infraestrutura para promoção internacional do Brasil'].map((t) => (
-            <div key={t} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl p-5 text-center text-cream/95">
+            <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
               {t}
             </div>
           ))}
@@ -452,7 +452,7 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {['Canadá', 'México', 'Colômbia', 'Peru', 'Holanda', 'Suíça', 'Itália'].map((c) => (
-            <div key={c} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl p-5 text-center">
+            <div key={c} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center">
               <MapPin className="w-5 h-5 mx-auto mb-2 text-gold" />
               <span className="font-semibold" style={headingFont}>{c}</span>
             </div>
@@ -653,7 +653,7 @@ const PropostaComercial = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
             {['descobrir o Brasil', 'fortalecer territórios', 'preservar patrimônios', 'conectar culturas', 'desenvolver economias locais', 'transformar o turismo cultural'].map((t) => (
-              <div key={t} className="bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl px-4 py-3 text-cream capitalize">
+              <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-4 py-3 text-cream capitalize">
                 {t}
               </div>
             ))}
