@@ -95,7 +95,7 @@ const PropostaComercial = () => {
       {/* 2 — Tagline */}
       <Slide bg="bg-cream">
         <div className="text-center max-w-4xl mx-auto">
-          <img src={logo} alt="" className="w-16 h-16 mx-auto mb-8" />
+          <img src={logo} alt="" className="w-32 md:w-40 mx-auto mb-8" />
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight" style={headingFont}>
             Seu companheiro de viagem ao <span className="text-terracotta">coração do Brasil</span>.
           </h2>
@@ -642,7 +642,7 @@ const PropostaComercial = () => {
       <Slide bg="bg-gradient-hero text-cream relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-30" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <img src={logo} alt="Ataîru" className="w-24 h-24 mx-auto mb-8 rounded-2xl shadow-2xl bg-cream p-2" />
+          <img src={logo} alt="Ataîru" className="w-40 md:w-48 mx-auto mb-8 drop-shadow-2xl" />
           <SectionTag color="cream">22 · Convite final</SectionTag>
           <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
             O Ataîru é um convite.
