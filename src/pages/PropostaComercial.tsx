@@ -1,42 +1,24 @@
-import { useEffect } from 'react';
-import {
-  Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database,
-  Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3,
-  ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone,
-} from 'lucide-react';
-import logo from '@/assets/logo-atairu.png';
+import { useEffect } from "react";
+import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone } from "lucide-react";
+import logo from "@/assets/logo-atairu.png";
 
 const headingFont = { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' };
 
-const Slide = ({
-  children,
-  bg = 'bg-cream',
-  className = '',
-}: {
-  children: React.ReactNode;
-  bg?: string;
-  className?: string;
-}) => (
+const Slide = ({ children, bg = "bg-cream", className = "" }: { children: React.ReactNode; bg?: string; className?: string }) => (
   <section className={`min-h-screen w-full flex items-center py-20 ${bg} ${className}`}>
     <div className="container mx-auto px-6 md:px-10 max-w-6xl w-full">{children}</div>
   </section>
 );
 
-const SectionTag = ({ children, color = 'forest' }: { children: React.ReactNode; color?: string }) => {
+const SectionTag = ({ children, color = "forest" }: { children: React.ReactNode; color?: string }) => {
   const map: Record<string, string> = {
-    forest: 'bg-forest/15 text-forest',
-    gold: 'bg-gold/20 text-[hsl(var(--unesco-brown))]',
-    terracotta: 'bg-terracotta/15 text-terracotta',
-    navy: 'bg-navy/15 text-navy',
-    cream: 'bg-cream/25 text-cream border border-cream/40',
+    forest: "bg-forest/15 text-forest",
+    gold: "bg-gold/20 text-[hsl(var(--unesco-brown))]",
+    terracotta: "bg-terracotta/15 text-terracotta",
+    navy: "bg-navy/15 text-navy",
+    cream: "bg-cream/25 text-cream border border-cream/40",
   };
-  return (
-    <span
-      className={`inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase ${map[color]}`}
-    >
-      {children}
-    </span>
-  );
+  return <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase ${map[color]}`}>{children}</span>;
 };
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
@@ -49,11 +31,11 @@ const Bullet = ({ children }: { children: React.ReactNode }) => (
 const PropostaComercial = () => {
   useEffect(() => {
     const prev = document.title;
-    document.title = 'Ataîru — Apresentação Comercial';
+    document.title = "Ataîru — Apresentação Comercial";
 
-    const meta = document.createElement('meta');
-    meta.name = 'robots';
-    meta.content = 'noindex, nofollow';
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, nofollow";
     document.head.appendChild(meta);
 
     return () => {
@@ -70,22 +52,17 @@ const PropostaComercial = () => {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at 20% 20%, hsl(15 57% 53% / 0.35) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(45 68% 47% / 0.25) 0%, transparent 55%), linear-gradient(135deg, hsl(200 60% 10%) 0%, hsl(200 60% 14%) 60%, hsl(145 51% 18%) 100%)',
+              "radial-gradient(ellipse at 20% 20%, hsl(15 57% 53% / 0.35) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(45 68% 47% / 0.25) 0%, transparent 55%), linear-gradient(135deg, hsl(200 60% 10%) 0%, hsl(200 60% 14%) 60%, hsl(145 51% 18%) 100%)",
           }}
         />
         <div className="absolute inset-0 pattern-indigenous opacity-25" />
         <div className="relative z-10 text-center">
           <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-2 drop-shadow-2xl" />
           <SectionTag color="cream">Apresentação Comercial e Estratégica</SectionTag>
-          <h1
-            className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight"
-            style={headingFont}
-          >
+          <h1 className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight" style={headingFont}>
             ATAÎRU
           </h1>
-          <p className="text-xl md:text-2xl text-cream/90 font-light max-w-2xl mx-auto leading-relaxed">
-            Plataforma de Turismo Cultural e Sustentável do Brasil
-          </p>
+          <p className="text-xl md:text-2xl text-cream/90 font-light max-w-2xl mx-auto leading-relaxed">Plataforma de Turismo Cultural e Sustentável do Brasil</p>
           <div className="mt-16 animate-bounce">
             <ArrowDown className="w-8 h-8 mx-auto text-cream/70" />
           </div>
@@ -99,10 +76,7 @@ const PropostaComercial = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight" style={headingFont}>
             Seu companheiro de viagem ao <span className="text-terracotta">coração do Brasil</span>.
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            A infraestrutura digital que conecta o patrimônio cultural e natural brasileiro
-            ao turismo nacional e internacional.
-          </p>
+          <p className="text-xl text-muted-foreground leading-relaxed">A infraestrutura digital que conecta o patrimônio cultural e natural brasileiro ao turismo nacional e internacional.</p>
         </div>
       </Slide>
 
@@ -114,30 +88,36 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {[
-            { n: '16', label: 'Patrimônios Culturais Mundiais', icon: Landmark },
-            { n: '08', label: 'Parques de Patrimônio Natural', icon: Leaf },
-            { n: '06', label: 'Bens Imateriais da Humanidade', icon: Sparkles },
+            { n: "16", label: "Patrimônios Culturais Mundiais", icon: Landmark },
+            { n: "08", label: "Parques de Patrimônio Natural", icon: Leaf },
+            { n: "06", label: "Bens Imateriais da Humanidade", icon: Sparkles },
           ].map((s, i) => (
             <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-brand/20">
               <s.icon className="w-8 h-8 text-forest mb-4" />
-              <div className="text-5xl font-bold text-primary mb-2" style={headingFont}>{s.n}</div>
+              <div className="text-5xl font-bold text-primary mb-2" style={headingFont}>
+                {s.n}
+              </div>
               <p className="text-muted-foreground">{s.label}</p>
             </div>
           ))}
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="font-bold text-forest mb-3 text-lg" style={headingFont}>O que o Brasil oferece</h3>
+            <h3 className="font-bold text-forest mb-3 text-lg" style={headingFont}>
+              O que o Brasil oferece
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['patrimônios históricos', 'patrimônios naturais', 'patrimônios culturais e imateriais', 'biomas únicos', 'tradições vivas e gastronomias regionais', 'festas populares e saberes ancestrais', 'comunidades tradicionais'].map((b) => (
+              {["patrimônios históricos", "patrimônios naturais", "patrimônios culturais e imateriais", "biomas únicos", "tradições vivas e gastronomias regionais", "festas populares e saberes ancestrais", "comunidades tradicionais"].map((b) => (
                 <Bullet key={b}>{b}</Bullet>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-terracotta mb-3 text-lg" style={headingFont}>O que ainda falta</h3>
+            <h3 className="font-bold text-terracotta mb-3 text-lg" style={headingFont}>
+              O que ainda falta
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['informação fragmentada', 'pouca digitalização', 'desconexão da experiência turística internacional', 'ausência de integração tecnológica que transforme patrimônio em jornada'].map((b) => (
+              {["informação fragmentada", "pouca digitalização", "desconexão da experiência turística internacional", "ausência de integração tecnológica que transforme patrimônio em jornada"].map((b) => (
                 <Bullet key={b}>{b}</Bullet>
               ))}
             </ul>
@@ -152,15 +132,14 @@ const PropostaComercial = () => {
           Deixou de ser visitação. Hoje é <span className="text-gold">experiência</span>.
         </h2>
         <div className="grid md:grid-cols-3 gap-4 mb-10">
-          {['experiência', 'pertencimento', 'conexão humana', 'autenticidade', 'sustentabilidade', 'desenvolvimento territorial'].map((w) => (
+          {["experiência", "pertencimento", "conexão humana", "autenticidade", "sustentabilidade", "desenvolvimento territorial"].map((w) => (
             <div key={w} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-6 py-5 text-center text-cream/90 capitalize">
               {w}
             </div>
           ))}
         </div>
         <p className="text-xl text-cream/80 max-w-3xl">
-          Nesse contexto, o <strong className="text-gold">Ataîru</strong> nasce para conectar
-          o Brasil profundo ao turismo contemporâneo.
+          Nesse contexto, o <strong className="text-gold">Ataîru</strong> nasce para conectar o Brasil profundo ao turismo contemporâneo.
         </p>
       </Slide>
 
@@ -173,29 +152,33 @@ const PropostaComercial = () => {
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           <div className="bg-gradient-warm text-cream rounded-2xl p-8">
             <TrendingUp className="w-10 h-10 mb-4" />
-            <div className="text-5xl font-bold mb-2" style={headingFont}>≈ 6,66 mi</div>
+            <div className="text-5xl font-bold mb-2" style={headingFont}>
+              ≈ 6,66 mi
+            </div>
             <p className="opacity-90">turistas estrangeiros no Brasil em 2024 — recorde histórico, +12,6% vs. 2023.</p>
           </div>
           <div className="bg-card border border-border rounded-2xl p-8">
             <Globe2 className="w-10 h-10 text-forest mb-4" />
-            <h3 className="font-bold text-primary text-xl mb-2" style={headingFont}>O viajante global busca</h3>
-            <p className="text-muted-foreground">
-              autenticidade, experiências locais, culturas vivas, sustentabilidade, gastronomia,
-              natureza e conexão emocional com destinos.
-            </p>
+            <h3 className="font-bold text-primary text-xl mb-2" style={headingFont}>
+              O viajante global busca
+            </h3>
+            <p className="text-muted-foreground">autenticidade, experiências locais, culturas vivas, sustentabilidade, gastronomia, natureza e conexão emocional com destinos.</p>
           </div>
         </div>
         <div className="bg-forest/10 rounded-2xl p-8 border-l-4 border-forest">
-          <h3 className="font-bold text-forest mb-3 text-lg" style={headingFont}>Vantagens competitivas únicas do Brasil</h3>
+          <h3 className="font-bold text-forest mb-3 text-lg" style={headingFont}>
+            Vantagens competitivas únicas do Brasil
+          </h3>
           <ul className="grid md:grid-cols-2 gap-2 text-foreground">
-            {['uma das maiores biodiversidades do mundo', 'diversidade cultural incomparável', 'patrimônio reconhecido internacionalmente', 'enorme potencial de turismo cultural e natural', 'crescimento consistente do turismo internacional'].map((b) => (
-              <Bullet key={b}>{b}</Bullet>
-            ))}
+            {["uma das maiores biodiversidades do mundo", "diversidade cultural incomparável", "patrimônio reconhecido internacionalmente", "enorme potencial de turismo cultural e natural", "crescimento consistente do turismo internacional"].map(
+              (b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ),
+            )}
           </ul>
         </div>
         <p className="text-lg text-muted-foreground mt-8 max-w-3xl">
-          Ainda não existe no país uma infraestrutura digital capaz de organizar, conectar,
-          promover, distribuir e monetizar o patrimônio brasileiro como experiência turística escalável.
+          Ainda não existe no país uma infraestrutura digital capaz de organizar, conectar, promover, distribuir e monetizar o patrimônio brasileiro como experiência turística escalável.
           <strong className="text-primary"> É esse espaço que o Ataîru ocupa.</strong>
         </p>
       </Slide>
@@ -207,12 +190,8 @@ const PropostaComercial = () => {
           Uma plataforma digital para conectar viajantes à essência do Brasil.
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-          {[
-            'patrimônios culturais', 'patrimônios naturais', 'parques', 'manifestações culturais',
-            'gastronomia', 'artesanato', 'comunidades', 'guias locais',
-            'roteiros', 'experiências', 'pequenos negócios', 'dados estratégicos',
-          ].map((t, i) => {
-            const tones = ['forest', 'terracotta', 'gold', 'navy'];
+          {["patrimônios culturais", "patrimônios naturais", "parques", "manifestações culturais", "gastronomia", "artesanato", "comunidades", "guias locais", "roteiros", "experiências", "pequenos negócios", "dados estratégicos"].map((t, i) => {
+            const tones = ["forest", "terracotta", "gold", "navy"];
             const c = tones[i % tones.length];
             return (
               <div key={t} className={`bg-${c}/10 border-2 border-${c}/30 rounded-xl px-4 py-3 text-sm font-semibold text-${c} text-center`}>
@@ -236,17 +215,21 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { n: '1', icon: Compass, title: 'Descoberta', text: 'Conecta visitantes ao patrimônio brasileiro por meio de conteúdo curado, mapas e jornadas digitais.', color: 'forest' },
-            { n: '2', icon: Map, title: 'Experiência', text: 'Roteiros personalizados, guias, experiências, hospedagens e benefícios para o viajante.', color: 'terracotta' },
-            { n: '3', icon: Building2, title: 'Desenvolvimento Territorial', text: 'Fortalece pequenos e médios empreendedores do ecossistema turístico e cultural.', color: 'gold' },
-            { n: '4', icon: BarChart3, title: 'Inteligência Turística', text: 'Gera dados, comportamento de visitantes e inteligência estratégica para instituições.', color: 'navy' },
+            { n: "1", icon: Compass, title: "Descoberta", text: "Conecta visitantes ao patrimônio brasileiro por meio de conteúdo curado, mapas e jornadas digitais.", color: "forest" },
+            { n: "2", icon: Map, title: "Experiência", text: "Roteiros personalizados, guias, experiências, hospedagens e benefícios para o viajante.", color: "terracotta" },
+            { n: "3", icon: Building2, title: "Desenvolvimento Territorial", text: "Fortalece pequenos e médios empreendedores do ecossistema turístico e cultural.", color: "gold" },
+            { n: "4", icon: BarChart3, title: "Inteligência Turística", text: "Gera dados, comportamento de visitantes e inteligência estratégica para instituições.", color: "navy" },
           ].map((d) => (
             <div key={d.n} className="bg-card border border-border rounded-2xl p-8 group hover:shadow-brand transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <span className={`text-5xl font-bold text-${d.color}`} style={headingFont}>{d.n}</span>
+                <span className={`text-5xl font-bold text-${d.color}`} style={headingFont}>
+                  {d.n}
+                </span>
                 <d.icon className={`w-8 h-8 text-${d.color}`} />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-2" style={headingFont}>{d.title}</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2" style={headingFont}>
+                {d.title}
+              </h3>
               <p className="text-muted-foreground">{d.text}</p>
             </div>
           ))}
@@ -261,15 +244,31 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-terracotta/10 border-l-4 border-terracotta rounded-r-2xl p-8">
-            <h3 className="font-bold text-terracotta text-lg mb-4" style={headingFont}>Cenário atual</h3>
+            <h3 className="font-bold text-terracotta text-lg mb-4" style={headingFont}>
+              Cenário atual
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['baixa digitalização', 'pouca integração entre patrimônio e turismo', 'ausência de experiência digital unificada', 'dificuldade de acesso à informação', 'pouca conexão entre pequenos negócios e turistas', 'baixa estruturação internacional', 'pouca inteligência de dados aplicada'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+              {[
+                "baixa digitalização",
+                "pouca integração entre patrimônio e turismo",
+                "ausência de experiência digital unificada",
+                "dificuldade de acesso à informação",
+                "pouca conexão entre pequenos negócios e turistas",
+                "baixa estruturação internacional",
+                "pouca inteligência de dados aplicada",
+              ].map((b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ))}
             </ul>
           </div>
           <div className="bg-forest/10 border-l-4 border-forest rounded-r-2xl p-8">
-            <h3 className="font-bold text-forest text-lg mb-4" style={headingFont}>Camada que o Ataîru cria</h3>
+            <h3 className="font-bold text-forest text-lg mb-4" style={headingFont}>
+              Camada que o Ataîru cria
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['patrimônio', 'território', 'turismo', 'cultura', 'tecnologia', 'visitantes', 'desenvolvimento econômico local'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+              {["patrimônio", "território", "turismo", "cultura", "tecnologia", "visitantes", "desenvolvimento econômico local"].map((b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ))}
             </ul>
           </div>
         </div>
@@ -282,7 +281,7 @@ const PropostaComercial = () => {
           Ataîru é a <span className="text-gold">infraestrutura digital</span> do turismo cultural brasileiro.
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
-          {['plataforma de patrimônio', 'hub de experiências culturais', 'ecossistema de turismo sustentável', 'plataforma de inteligência territorial', 'infraestrutura para promoção internacional do Brasil'].map((t) => (
+          {["plataforma de patrimônio", "hub de experiências culturais", "ecossistema de turismo sustentável", "plataforma de inteligência territorial", "infraestrutura para promoção internacional do Brasil"].map((t) => (
             <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
               {t}
             </div>
@@ -298,16 +297,32 @@ const PropostaComercial = () => {
         </h2>
         <div className="space-y-4">
           {[
-            { n: 4, title: 'Comunidade e Dados', desc: 'Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.', access: 'Camada Logada', color: 'navy' },
-            { n: 3, title: 'Ecossistema Territorial', desc: 'Integração com guias, pousadas, restaurantes, artesãos, lojas e operadores turísticos. Reservas de visitas em ateliês, experiências culturais, passeios e contratação de guias.', access: 'Camada Logada', color: 'gold' },
-            { n: 2, title: 'Experiência e Planejamento', desc: 'Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.', access: 'Camada Logada', color: 'terracotta' },
-            { n: 1, title: 'Mapa Vivo do Patrimônio', desc: 'Mapa aberto com patrimônios Mundiais, Culturais, Naturais, Materiais e Imateriais. Geolocalização, filtros, busca, acessibilidade, multilíngue, favoritos e descoberta por proximidade.', access: 'Camada Aberta', color: 'forest' },
+            { n: 4, title: "Comunidade e Dados", desc: "Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.", access: "Camada Logada", color: "navy" },
+            {
+              n: 3,
+              title: "Ecossistema Territorial",
+              desc: "Integração com guias, pousadas, restaurantes, artesãos, lojas e operadores turísticos. Reservas de visitas em ateliês, experiências culturais, passeios e contratação de guias.",
+              access: "Camada Logada",
+              color: "gold",
+            },
+            { n: 2, title: "Experiência e Planejamento", desc: "Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.", access: "Camada Logada", color: "terracotta" },
+            {
+              n: 1,
+              title: "Mapa Vivo do Patrimônio",
+              desc: "Mapa aberto com patrimônios Mundiais, Culturais, Naturais, Materiais e Imateriais. Geolocalização, filtros, busca, acessibilidade, multilíngue, favoritos e descoberta por proximidade.",
+              access: "Camada Aberta",
+              color: "forest",
+            },
           ].map((l) => (
             <div key={l.n} className={`bg-card border-l-8 border-${l.color} rounded-r-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start`}>
-              <div className={`text-6xl font-bold text-${l.color} shrink-0 w-24`} style={headingFont}>0{l.n}</div>
+              <div className={`text-6xl font-bold text-${l.color} shrink-0 w-24`} style={headingFont}>
+                0{l.n}
+              </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap mb-2">
-                  <h3 className="text-2xl font-bold text-primary" style={headingFont}>Camada {l.n} — {l.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary" style={headingFont}>
+                    Camada {l.n} — {l.title}
+                  </h3>
                   <span className={`text-xs font-semibold px-2 py-1 rounded-full bg-${l.color}/15 text-${l.color}`}>{l.access}</span>
                 </div>
                 <p className="text-muted-foreground">{l.desc}</p>
@@ -325,17 +340,53 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { n: 1, title: 'Fundação e Descoberta', time: '3–4 meses', obj: 'Lançar o Ataîru e construir a primeira base de usuários.', del: 'Plataforma web, conteúdo patrimonial, mapa interativo, ~200 patrimônios mapeados, acessibilidade, multilíngue, analytics básicos.', res: 'Produto funcional ao ar com usuários reais.', color: 'forest' },
-            { n: 2, title: 'Monetização e Marketplace', time: '3–4 meses', obj: 'Ativar a camada econômica da plataforma.', del: 'Roteiros com IA, marketplace de guias, reservas, pagamentos, assinatura premium, dashboard de guias, certificação Ataîru Heritage.', res: 'Primeiras receitas e transações reais.', color: 'terracotta' },
-            { n: 3, title: 'Comunidade e Dados Institucionais', time: '4–5 meses', obj: 'Plataforma de engajamento e inteligência territorial.', del: 'Comunidade, passaporte de patrimônios visitados, integração com hotéis e restaurantes, dashboards institucionais, produto de dados para órgãos públicos.', res: 'Abertura da camada B2G.', color: 'gold' },
-            { n: 4, title: 'Experiências de Marca e Ecossistema B2B', time: '4–5 meses', obj: 'Transformar o Ataîru em plataforma autossustentável.', del: 'Experiências branded, APIs com outros serviços do ecossistema, analytics B2B, dashboards privados, parceiros corporativos.', res: 'Múltiplas fontes de receita e escala nacional.', color: 'navy' },
+            {
+              n: 1,
+              title: "Fundação e Descoberta",
+              time: "3–4 meses",
+              obj: "Lançar o Ataîru e construir a primeira base de usuários.",
+              del: "Plataforma web, conteúdo patrimonial, mapa interativo, ~200 patrimônios mapeados, acessibilidade, multilíngue, analytics básicos.",
+              res: "Produto funcional ao ar com usuários reais.",
+              color: "forest",
+            },
+            {
+              n: 2,
+              title: "Monetização e Marketplace",
+              time: "3–4 meses",
+              obj: "Ativar a camada econômica da plataforma.",
+              del: "Roteiros com IA, marketplace de guias, reservas, pagamentos, assinatura premium, dashboard de guias, certificação Ataîru Heritage.",
+              res: "Primeiras receitas e transações reais.",
+              color: "terracotta",
+            },
+            {
+              n: 3,
+              title: "Comunidade e Dados Institucionais",
+              time: "4–5 meses",
+              obj: "Plataforma de engajamento e inteligência territorial.",
+              del: "Comunidade, passaporte de patrimônios visitados, integração com hotéis e restaurantes, dashboards institucionais, produto de dados para órgãos públicos.",
+              res: "Abertura da camada B2G.",
+              color: "gold",
+            },
+            {
+              n: 4,
+              title: "Experiências de Marca e Ecossistema B2B",
+              time: "4–5 meses",
+              obj: "Transformar o Ataîru em plataforma autossustentável.",
+              del: "Experiências branded, APIs com outros serviços do ecossistema, analytics B2B, dashboards privados, parceiros corporativos.",
+              res: "Múltiplas fontes de receita e escala nacional.",
+              color: "navy",
+            },
           ].map((f) => (
             <div key={f.n} className="bg-card border border-border rounded-2xl p-8 flex flex-col">
               <div className="flex items-center justify-between mb-4">
-                <span className={`text-5xl font-bold text-${f.color}`} style={headingFont}>Fase {f.n}</span>
+                <span className={`text-5xl font-bold text-${f.color}`} style={headingFont}>
+                  Fase {f.n}
+                </span>
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full bg-${f.color}/15 text-${f.color}`}>{f.time}</span>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>{f.title}</h3>
+              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
+                {f.title}
+              </h3>
               <p className="text-sm font-semibold text-foreground mb-1">Objetivo</p>
               <p className="text-muted-foreground mb-3">{f.obj}</p>
               <p className="text-sm font-semibold text-foreground mb-1">Entregas</p>
@@ -355,9 +406,13 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h3 className="font-bold text-cream/95 text-lg mb-4" style={headingFont}>Esse banco será</h3>
+            <h3 className="font-bold text-cream/95 text-lg mb-4" style={headingFont}>
+              Esse banco será
+            </h3>
             <ul className="space-y-2 text-cream/90">
-              {['curado por especialistas', 'estruturado em camadas', 'continuamente expandido', 'preparado para IA', 'preparado para SEO', 'preparado para APIs', 'preparado para inteligência territorial'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+              {["curado por especialistas", "estruturado em camadas", "continuamente expandido", "preparado para IA", "preparado para SEO", "preparado para APIs", "preparado para inteligência territorial"].map((b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ))}
             </ul>
           </div>
           <div className="bg-cream/15 backdrop-blur-sm rounded-2xl p-8 border border-cream/20">
@@ -376,19 +431,55 @@ const PropostaComercial = () => {
         </h2>
         <div className="space-y-4">
           {[
-            { n: 1, tag: 'B2G — Financiamento Inicial', title: 'Editais e Patrocínios — Verbas Públicas', items: ['implementação municipal', 'licenciamento', 'hubs digitais', 'centros de interpretação', 'dashboards', 'dados territoriais'], note: 'Traz os principais atores do ecossistema do turismo e da cultura para dentro da plataforma.', color: 'forest' },
-            { n: 2, tag: 'B2C — Receita Inicial', title: 'Usuário Final — teste de 2 formatos', items: ['assinatura premium', 'roteiros IA', 'experiências', 'mais opções no mapa (logado)', 'upgrades'], note: 'Os fluxos dos usuários desenham os caminhos de evolução e geram dados para parceiros institucionais.', color: 'terracotta' },
-            { n: 3, tag: 'Marketplace', title: 'Guias Turísticos e Ecossistema Turismo + Cultura', items: ['marketplace de restaurantes e lojas', 'comissão sobre reservas', 'revenue share', 'experiências', 'serviços turísticos'], note: 'Promove o ecossistema e gera fluxo e receita para todos, com segurança para o viajante.', color: 'gold' },
-            { n: 4, tag: 'B2B — Marcas e Parceiros', title: 'Branded experiences e dados', items: ['experiências branded', 'dashboards exclusivos das marcas', 'patrocínios', 'branded content', 'analytics', 'APIs', 'campanhas territoriais'], note: 'Marcas integradas à comunidade, criando experiências e conteúdo para os viajantes.', color: 'navy' },
+            {
+              n: 1,
+              tag: "B2G — Financiamento Inicial",
+              title: "Editais e Patrocínios — Verbas Públicas",
+              items: ["implementação municipal", "licenciamento", "hubs digitais", "centros de interpretação", "dashboards", "dados territoriais"],
+              note: "Traz os principais atores do ecossistema do turismo e da cultura para dentro da plataforma.",
+              color: "forest",
+            },
+            {
+              n: 2,
+              tag: "B2C — Receita Inicial",
+              title: "Usuário Final — teste de 2 formatos",
+              items: ["assinatura premium", "roteiros IA", "experiências", "mais opções no mapa (logado)", "upgrades"],
+              note: "Os fluxos dos usuários desenham os caminhos de evolução e geram dados para parceiros institucionais.",
+              color: "terracotta",
+            },
+            {
+              n: 3,
+              tag: "Marketplace",
+              title: "Guias Turísticos e Ecossistema Turismo + Cultura",
+              items: ["marketplace de restaurantes e lojas", "comissão sobre reservas", "revenue share", "experiências", "serviços turísticos"],
+              note: "Promove o ecossistema e gera fluxo e receita para todos, com segurança para o viajante.",
+              color: "gold",
+            },
+            {
+              n: 4,
+              tag: "B2B — Marcas e Parceiros",
+              title: "Branded experiences e dados",
+              items: ["experiências branded", "dashboards exclusivos das marcas", "patrocínios", "branded content", "analytics", "APIs", "campanhas territoriais"],
+              note: "Marcas integradas à comunidade, criando experiências e conteúdo para os viajantes.",
+              color: "navy",
+            },
           ].map((c) => (
             <div key={c.n} className="bg-card border border-border rounded-2xl p-6 md:p-8 grid md:grid-cols-[120px_1fr] gap-6">
-              <div className={`text-5xl md:text-6xl font-bold text-${c.color}`} style={headingFont}>0{c.n}</div>
+              <div className={`text-5xl md:text-6xl font-bold text-${c.color}`} style={headingFont}>
+                0{c.n}
+              </div>
               <div>
-                <p className={`text-xs uppercase tracking-widest font-semibold text-${c.color} mb-1`}>Camada {c.n} · {c.tag}</p>
-                <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>{c.title}</h3>
+                <p className={`text-xs uppercase tracking-widest font-semibold text-${c.color} mb-1`}>
+                  Camada {c.n} · {c.tag}
+                </p>
+                <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
+                  {c.title}
+                </h3>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {c.items.map((i) => (
-                    <span key={i} className="text-sm bg-muted px-3 py-1 rounded-full text-foreground">{i}</span>
+                    <span key={i} className="text-sm bg-muted px-3 py-1 rounded-full text-foreground">
+                      {i}
+                    </span>
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground italic">{c.note}</p>
@@ -406,16 +497,18 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: Briefcase, title: 'Trade Turismo', desc: 'Operadores, agências, guias e companhias.', color: 'forest' },
-            { icon: Landmark, title: 'Instituições Públicas', desc: 'Ministérios, secretarias, IPHAN, Embratur, municípios.', color: 'navy' },
-            { icon: Users, title: 'Comunidade e Territórios', desc: 'Comunidades tradicionais, artesãos, produtores locais.', color: 'terracotta' },
-            { icon: Megaphone, title: 'Marcas', desc: 'Parceiros corporativos para experiências e patrocínios.', color: 'gold' },
+            { icon: Briefcase, title: "Trade Turismo", desc: "Operadores, agências, guias e companhias.", color: "forest" },
+            { icon: Landmark, title: "Instituições Públicas", desc: "Ministérios, secretarias, IPHAN, Embratur, municípios.", color: "navy" },
+            { icon: Users, title: "Comunidade e Territórios", desc: "Comunidades tradicionais, artesãos, produtores locais.", color: "terracotta" },
+            { icon: Megaphone, title: "Marcas", desc: "Parceiros corporativos para experiências e patrocínios.", color: "gold" },
           ].map((p) => (
             <div key={p.title} className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-brand transition">
               <div className={`w-14 h-14 mx-auto rounded-2xl bg-${p.color}/15 flex items-center justify-center mb-4`}>
                 <p.icon className={`w-7 h-7 text-${p.color}`} />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2" style={headingFont}>{p.title}</h3>
+              <h3 className="text-lg font-bold text-primary mb-2" style={headingFont}>
+                {p.title}
+              </h3>
               <p className="text-sm text-muted-foreground">{p.desc}</p>
             </div>
           ))}
@@ -429,14 +522,10 @@ const PropostaComercial = () => {
           Profundamente alinhado às agendas do Brasil.
         </h2>
         <div className="flex flex-wrap gap-3 justify-center">
-          {['Acessibilidade', 'Promoção Internacional', 'Cultura', 'Turismo Sustentável', 'Plano Brasil Digital', 'Transformação Digital', 'Economia Criativa', 'Fortalecimento Territorial'].map((t, i) => {
-            const palette = ['bg-forest text-cream', 'bg-terracotta text-cream', 'bg-gold text-navy', 'bg-navy text-cream', 'bg-primary text-cream'];
+          {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial"].map((t, i) => {
+            const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
             return (
-              <span
-                key={t}
-                className={`${palette[i % palette.length]} px-6 py-3 rounded-full text-lg font-semibold`}
-                style={headingFont}
-              >
+              <span key={t} className={`${palette[i % palette.length]} px-6 py-3 rounded-full text-lg font-semibold`} style={headingFont}>
                 {t}
               </span>
             );
@@ -451,17 +540,23 @@ const PropostaComercial = () => {
           Alinhado aos Mercados de Crescimento da Embratur.
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          {['Canadá', 'México', 'Colômbia', 'Peru', 'Holanda', 'Suíça', 'Itália'].map((c) => (
+          {["Canadá", "México", "Colômbia", "Peru", "Holanda", "Suíça", "Itália"].map((c) => (
             <div key={c} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center">
               <MapPin className="w-5 h-5 mx-auto mb-2 text-gold" />
-              <span className="font-semibold" style={headingFont}>{c}</span>
+              <span className="font-semibold" style={headingFont}>
+                {c}
+              </span>
             </div>
           ))}
         </div>
         <div>
-          <h3 className="font-bold text-gold mb-3" style={headingFont}>Objetivos</h3>
+          <h3 className="font-bold text-gold mb-3" style={headingFont}>
+            Objetivos
+          </h3>
           <ul className="grid md:grid-cols-2 gap-2 text-cream/90">
-            {['posicionamento internacional', 'aumento de notoriedade', 'presença no trade', 'ampliação do turismo cultural brasileiro'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+            {["posicionamento internacional", "aumento de notoriedade", "presença no trade", "ampliação do turismo cultural brasileiro"].map((b) => (
+              <Bullet key={b}>{b}</Bullet>
+            ))}
           </ul>
         </div>
       </Slide>
@@ -472,23 +567,28 @@ const PropostaComercial = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-8 leading-tight" style={headingFont}>
           Multicanal, digital, integrada a todos os stakeholders.
         </h2>
-        <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-          Posicionar o Brasil como destino cultural, território de experiências autênticas,
-          potência de biodiversidade e referência em turismo sustentável.
-        </p>
+        <p className="text-lg text-muted-foreground mb-10 max-w-3xl">Posicionar o Brasil como destino cultural, território de experiências autênticas, potência de biodiversidade e referência em turismo sustentável.</p>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-card border border-border rounded-2xl p-8">
             <Camera className="w-8 h-8 text-terracotta mb-3" />
-            <h3 className="text-xl font-bold text-primary mb-4" style={headingFont}>Estratégia Digital</h3>
+            <h3 className="text-xl font-bold text-primary mb-4" style={headingFont}>
+              Estratégia Digital
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['Campanhas Digitais', 'PR internacional', 'Creators', 'Storytelling territorial', 'Conteúdo proprietário'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+              {["Campanhas Digitais", "PR internacional", "Creators", "Storytelling territorial", "Conteúdo proprietário"].map((b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ))}
             </ul>
           </div>
           <div className="bg-card border border-border rounded-2xl p-8">
             <Megaphone className="w-8 h-8 text-forest mb-3" />
-            <h3 className="text-xl font-bold text-primary mb-4" style={headingFont}>OOH e Institucional</h3>
+            <h3 className="text-xl font-bold text-primary mb-4" style={headingFont}>
+              OOH e Institucional
+            </h3>
             <ul className="space-y-2 text-foreground">
-              {['Painéis eletrônicos em locais de grande fluxo', 'Eventos trade e feiras internacionais', 'Mídia especializada', 'Webinários'].map((b) => <Bullet key={b}>{b}</Bullet>)}
+              {["Painéis eletrônicos em locais de grande fluxo", "Eventos trade e feiras internacionais", "Mídia especializada", "Webinários"].map((b) => (
+                <Bullet key={b}>{b}</Bullet>
+              ))}
             </ul>
           </div>
         </div>
@@ -502,16 +602,18 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
-            { icon: TrendingUp, title: 'Econômico', desc: 'Fortalecimento do turismo cultural e do ecossistema turístico, geração de renda local.', color: 'forest' },
-            { icon: MapPin, title: 'Territorial', desc: 'Valorização patrimonial pelo fortalecimento regional e ativação de pequenos negócios.', color: 'terracotta' },
-            { icon: Heart, title: 'Cultural', desc: 'Preservação por meio de educação patrimonial, promovendo a diversidade brasileira.', color: 'gold' },
-            { icon: Globe2, title: 'Internacional', desc: 'Fortalecimento da Marca Brasil e posicionamento como destino cultural global.', color: 'navy' },
+            { icon: TrendingUp, title: "Econômico", desc: "Fortalecimento do turismo cultural e do ecossistema turístico, geração de renda local.", color: "forest" },
+            { icon: MapPin, title: "Territorial", desc: "Valorização patrimonial pelo fortalecimento regional e ativação de pequenos negócios.", color: "terracotta" },
+            { icon: Heart, title: "Cultural", desc: "Preservação por meio de educação patrimonial, promovendo a diversidade brasileira.", color: "gold" },
+            { icon: Globe2, title: "Internacional", desc: "Fortalecimento da Marca Brasil e posicionamento como destino cultural global.", color: "navy" },
           ].map((i) => (
             <div key={i.title} className="bg-card border border-border rounded-2xl p-6">
               <div className={`w-12 h-12 rounded-xl bg-${i.color}/15 flex items-center justify-center mb-4`}>
                 <i.icon className={`w-6 h-6 text-${i.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2" style={headingFont}>{i.title}</h3>
+              <h3 className="text-xl font-bold text-primary mb-2" style={headingFont}>
+                {i.title}
+              </h3>
               <p className="text-sm text-muted-foreground">{i.desc}</p>
             </div>
           ))}
@@ -526,13 +628,15 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: 'Digitais', icon: Database, items: 'Usuários, acessos, retenção, engajamento, conversão.', color: 'forest' },
-            { title: 'Institucionais', icon: Landmark, items: 'Integração de municípios, patrimônios ativados, parcerias.', color: 'navy' },
-            { title: 'Econômicos', icon: TrendingUp, items: 'Reservas, receitas, pequenos negócios conectados.', color: 'gold' },
+            { title: "Digitais", icon: Database, items: "Usuários, acessos, retenção, engajamento, conversão.", color: "forest" },
+            { title: "Institucionais", icon: Landmark, items: "Integração de municípios, patrimônios ativados, parcerias.", color: "navy" },
+            { title: "Econômicos", icon: TrendingUp, items: "Reservas, receitas, pequenos negócios conectados.", color: "gold" },
           ].map((m) => (
             <div key={m.title} className={`rounded-2xl p-8 bg-${m.color}/10 border-l-4 border-${m.color}`}>
               <m.icon className={`w-8 h-8 text-${m.color} mb-4`} />
-              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>{m.title}</h3>
+              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
+                {m.title}
+              </h3>
               <p className="text-muted-foreground">{m.items}</p>
             </div>
           ))}
@@ -556,13 +660,15 @@ const PropostaComercial = () => {
             </thead>
             <tbody className="divide-y divide-border">
               {[
-                ['Fase 1', 'Produto no ar', '03 a 04 meses'],
-                ['Fase 2', 'Receita e marketplace', '03 a 04 meses'],
-                ['Fase 3', 'Dados e comunidade', '04 a 05 meses'],
-                ['Fase 4', 'B2B e escala', '04 a 05 meses'],
+                ["Fase 1", "Produto no ar", "03 a 04 meses"],
+                ["Fase 2", "Receita e marketplace", "03 a 04 meses"],
+                ["Fase 3", "Dados e comunidade", "04 a 05 meses"],
+                ["Fase 4", "B2B e escala", "04 a 05 meses"],
               ].map((r) => (
                 <tr key={r[0]}>
-                  <td className="px-6 py-4 font-bold text-forest" style={headingFont}>{r[0]}</td>
+                  <td className="px-6 py-4 font-bold text-forest" style={headingFont}>
+                    {r[0]}
+                  </td>
                   <td className="px-6 py-4 text-foreground">{r[1]}</td>
                   <td className="px-6 py-4 text-muted-foreground">{r[2]}</td>
                 </tr>
@@ -571,10 +677,18 @@ const PropostaComercial = () => {
           </table>
         </div>
         <div className="mt-8 grid md:grid-cols-2 gap-4 text-foreground">
-          <p><strong className="text-forest">Fase 1</strong> — Parcerias institucionais.</p>
-          <p><strong className="text-terracotta">Fase 2</strong> — Captação institucional e pública.</p>
-          <p><strong className="text-gold">Fase 3</strong> — Patrocínios, ativação de marketplace e dados.</p>
-          <p><strong className="text-navy">Fase 4</strong> — Receita privada e escala B2B.</p>
+          <p>
+            <strong className="text-forest">Fase 1</strong> — Parcerias institucionais.
+          </p>
+          <p>
+            <strong className="text-terracotta">Fase 2</strong> — Captação institucional e pública.
+          </p>
+          <p>
+            <strong className="text-gold">Fase 3</strong> — Patrocínios, ativação de marketplace e dados.
+          </p>
+          <p>
+            <strong className="text-navy">Fase 4</strong> — Receita privada e escala B2B.
+          </p>
         </div>
       </Slide>
 
@@ -586,31 +700,37 @@ const PropostaComercial = () => {
         </h2>
         <div className="space-y-8">
           {[
-            { phase: 'Fase 1 — Parceiro Fundador', total: 'R$ 300.000,00', master: 'R$ 200.000,00', apoio: 'R$ 50.000,00', color: 'forest' },
-            { phase: 'Fase 2 — Marketplace', total: 'R$ 350.000,00', master: 'R$ 250.000,00', apoio: 'R$ 50.000,00', color: 'terracotta' },
-            { phase: 'Fase 3 — Comunidade e Dados Institucionais', total: 'R$ 450.000,00', master: 'R$ 350.000,00', apoio: 'R$ 50.000,00', color: 'gold' },
-            { phase: 'Fase 4 — Experiências de Marca e Ecossistema B2B', total: 'R$ 350.000,00', master: 'R$ 250.000,00', apoio: 'R$ 50.000,00', color: 'navy' },
+            { phase: "Fase 1 — Parceiro Fundador", total: "R$ 300.000,00", master: "R$ 200.000,00", apoio: "R$ 50.000,00", color: "forest" },
+            { phase: "Fase 2 — Marketplace", total: "R$ 350.000,00", master: "R$ 250.000,00", apoio: "R$ 50.000,00", color: "terracotta" },
+            { phase: "Fase 3 — Comunidade e Dados Institucionais", total: "R$ 450.000,00", master: "R$ 350.000,00", apoio: "R$ 50.000,00", color: "gold" },
+            { phase: "Fase 4 — Experiências de Marca e Ecossistema B2B", total: "R$ 350.000,00", master: "R$ 250.000,00", apoio: "R$ 50.000,00", color: "navy" },
           ].map((p) => (
             <div key={p.phase} className="bg-card border border-border rounded-2xl overflow-hidden">
               <div className={`bg-${p.color} text-cream px-6 py-4 flex justify-between items-center flex-wrap gap-3`}>
-                <h3 className="text-xl font-bold" style={headingFont}>{p.phase}</h3>
+                <h3 className="text-xl font-bold" style={headingFont}>
+                  {p.phase}
+                </h3>
                 <span className="text-sm font-semibold">Total captação · {p.total}</span>
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 {[
-                  { label: 'Cota Master', value: p.master },
-                  { label: 'Cota Apoio', value: p.apoio },
+                  { label: "Cota Master", value: p.master },
+                  { label: "Cota Apoio", value: p.apoio },
                 ].map((c) => (
                   <div key={c.label} className="p-6">
                     <div className="flex justify-between items-baseline mb-3">
-                      <h4 className="font-bold text-primary text-lg" style={headingFont}>{c.label}</h4>
-                      <span className={`text-${p.color} font-bold`} style={headingFont}>{c.value}</span>
+                      <h4 className="font-bold text-primary text-lg" style={headingFont}>
+                        {c.label}
+                      </h4>
+                      <span className={`text-${p.color} font-bold`} style={headingFont}>
+                        {c.value}
+                      </span>
                     </div>
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Contrapartidas — 12 meses</p>
                     <ul className="text-sm space-y-1 text-foreground">
                       <Bullet>Logo no site e em todos os materiais</Bullet>
-                      <Bullet>{c.label === 'Cota Master' ? 'Campanha de Marketing Digital conjunta de lançamento (2 meses · 1 mercado)' : 'Participação na campanha digital de lançamento (2 meses · 1 mercado)'}</Bullet>
-                      <Bullet>{c.label === 'Cota Master' ? 'PR conjunto de lançamento do projeto' : 'Participação em PR conjunto de lançamento'}</Bullet>
+                      <Bullet>{c.label === "Cota Master" ? "Campanha de Marketing Digital conjunta de lançamento (2 meses · 1 mercado)" : "Participação na campanha digital de lançamento (2 meses · 1 mercado)"}</Bullet>
+                      <Bullet>{c.label === "Cota Master" ? "PR conjunto de lançamento do projeto" : "Participação em PR conjunto de lançamento"}</Bullet>
                       <Bullet>Acesso aos dados e insights da plataforma por 12 meses</Bullet>
                     </ul>
                   </div>
@@ -627,11 +747,9 @@ const PropostaComercial = () => {
         <h2 className="text-3xl md:text-6xl font-bold mt-6 mb-8 leading-tight" style={headingFont}>
           Porque o patrimônio cultural brasileiro é um dos ativos mais valiosos do país.
         </h2>
-        <p className="text-xl text-cream/90 mb-8 max-w-3xl">
-          E porque ainda não existe uma infraestrutura digital capaz de:
-        </p>
+        <p className="text-xl text-cream/90 mb-8 max-w-3xl">E porque ainda não existe uma infraestrutura digital capaz de:</p>
         <div className="grid md:grid-cols-5 gap-3 mb-10">
-          {['conectá-lo', 'promovê-lo', 'organizá-lo', 'monetizá-lo', 'transformá-lo em experiência'].map((t) => (
+          {["conectá-lo", "promovê-lo", "organizá-lo", "monetizá-lo", "transformá-lo em experiência"].map((t) => (
             <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/20 rounded-xl p-5 text-center text-cream font-semibold capitalize">
               {t}
             </div>
@@ -652,7 +770,7 @@ const PropostaComercial = () => {
             O Ataîru é um convite.
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
-            {['descobrir o Brasil', 'fortalecer territórios', 'preservar patrimônios', 'conectar culturas', 'desenvolver economias locais', 'transformar o turismo cultural'].map((t) => (
+            {["descobrir o Brasil", "fortalecer territórios", "preservar patrimônios", "conectar culturas", "desenvolver economias locais", "transformar o turismo cultural"].map((t) => (
               <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl px-4 py-3 text-cream capitalize">
                 {t}
               </div>
@@ -662,17 +780,14 @@ const PropostaComercial = () => {
             Estamos construindo a infraestrutura digital do turismo cultural do Brasil.
           </p>
           <div className="pt-10 border-t border-cream/20">
-            <p className="text-xs uppercase tracking-widest text-cream/70 mb-4">23 · Contatos</p>
+            <p className="text-xs uppercase tracking-widest text-cream/70 mb-4">Contatos</p>
             <p className="text-xl md:text-2xl mb-2" style={headingFont}>
               Ataîru — seu companheiro de viagem ao coração do Brasil
             </p>
-            <a
-              href="mailto:contato@atairu.tur.br"
-              className="inline-block mt-4 px-8 py-3 bg-gold text-navy rounded-full font-bold hover:bg-gold-light transition"
-            >
+            <a href="mailto:contato@atairu.tur.br" className="inline-block mt-4 px-8 py-3 bg-gold text-navy rounded-full font-bold hover:bg-gold-light transition">
               contato@atairu.tur.br
             </a>
-            <p className="text-sm text-cream/70 mt-8">Realização: CLIC + FAUZI + Zero + Zero&amp;CO</p>
+            <p className="text-sm text-cream/70 mt-8">Realização: CLIC + FAUZI + Zero&amp;CO</p>
           </div>
         </div>
       </Slide>
