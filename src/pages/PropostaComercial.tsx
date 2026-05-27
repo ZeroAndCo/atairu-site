@@ -65,10 +65,17 @@ const PropostaComercial = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* 1 — Cover */}
-      <Slide bg="bg-gradient-hero" className="text-cream relative overflow-hidden">
-        <div className="absolute inset-0 pattern-indigenous opacity-40" />
+      <Slide bg="bg-navy text-cream relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(ellipse at 20% 20%, hsl(15 57% 53% / 0.35) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(45 68% 47% / 0.25) 0%, transparent 55%), linear-gradient(135deg, hsl(200 60% 10%) 0%, hsl(200 60% 14%) 60%, hsl(145 51% 18%) 100%)',
+          }}
+        />
+        <div className="absolute inset-0 pattern-indigenous opacity-25" />
         <div className="relative z-10 text-center">
-          <img src={logo} alt="Ataîru" className="w-24 h-24 mx-auto mb-8 rounded-2xl shadow-2xl bg-cream p-2" />
+          <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-10 drop-shadow-2xl mix-blend-screen opacity-95" />
           <SectionTag color="cream">Apresentação Comercial e Estratégica</SectionTag>
           <h1
             className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight"
