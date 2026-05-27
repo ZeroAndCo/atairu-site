@@ -75,7 +75,7 @@ const PropostaComercial = () => {
         />
         <div className="absolute inset-0 pattern-indigenous opacity-25" />
         <div className="relative z-10 text-center">
-          <img src={logo} alt="Ataîru" className="w-48 md:w-56 mx-auto mb-10 drop-shadow-2xl" style={{ mixBlendMode: 'screen' }} />
+          <img src={logo} alt="Ataîru" className="w-56 md:w-64 mx-auto mb-10 drop-shadow-2xl" />
           <SectionTag color="cream">Apresentação Comercial e Estratégica</SectionTag>
           <h1
             className="text-6xl md:text-8xl font-bold mt-6 mb-6 tracking-tight"
