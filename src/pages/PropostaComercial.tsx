@@ -276,7 +276,7 @@ const PropostaComercial = () => {
       </Slide>
 
       {/* 9 — Posicionamento */}
-      <Slide bg="bg-forest text-cream">
+      <Slide bg="bg-primary text-cream">
         <SectionTag color="cream">Posicionamento</SectionTag>
         <h2 className="text-3xl md:text-6xl font-bold mt-6 mb-10 leading-tight" style={headingFont}>
           Ataîru é a <span className="text-gold">infraestrutura digital</span> do turismo cultural brasileiro.
