@@ -13,6 +13,7 @@ import MapPage from "./pages/Map";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import PropostaComercial from "./pages/PropostaComercial";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 import { getSupportedLanguage } from "@/lib/site";
 
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/map" element={<MapPage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/proposta-comercial" element={<PropostaComercial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
