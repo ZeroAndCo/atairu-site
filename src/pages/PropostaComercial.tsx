@@ -348,7 +348,7 @@ const PropostaComercial = () => {
       </Slide>
 
       {/* 12 — O grande ativo */}
-      <Slide bg="bg-terracotta text-cream">
+      <Slide bg="bg-terracotta-dark text-cream">
         <SectionTag color="cream">O grande ativo</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-8 leading-tight" style={headingFont}>
           O banco vivo de patrimônios culturais e naturais brasileiros.
