@@ -28,7 +28,7 @@ const SectionTag = ({ children, color = 'forest' }: { children: React.ReactNode;
     gold: 'bg-gold/20 text-[hsl(var(--unesco-brown))]',
     terracotta: 'bg-terracotta/15 text-terracotta',
     navy: 'bg-navy/15 text-navy',
-    cream: 'bg-cream/20 text-cream',
+    cream: 'bg-cream/25 text-cream border border-cream/40',
   };
   return (
     <span
