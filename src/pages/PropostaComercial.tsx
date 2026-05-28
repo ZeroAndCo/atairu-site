@@ -368,7 +368,8 @@ const PropostaComercial = () => {
               {
                 n: 4,
                 title: "Experiências e Ecossistema de Marcas",
-                time: "—",
+                time: "4–5 meses",
+
                 desc: "Amplificação das experiências e abertura de uma nova camada econômica.",
                 color: "navy",
               },
