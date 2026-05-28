@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone } from "lucide-react";
+import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone, Check } from "lucide-react";
+
 import logo from "@/assets/logo-atairu.png";
 
 const headingFont = { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' };
