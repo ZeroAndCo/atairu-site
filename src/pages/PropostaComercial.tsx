@@ -553,6 +553,7 @@ const PropostaComercial = () => {
         <div>
           <h3 className="font-bold text-gold mb-3" style={headingFont}>
             Objetivos
+          </h3>
           <ul className="grid md:grid-cols-2 gap-3 text-cream/90">
             {["posicionamento internacional", "aumento de notoriedade", "presença no trade", "ampliação do turismo cultural brasileiro"].map((b) => (
               <li key={b} className="flex items-start gap-3">
@@ -564,7 +565,6 @@ const PropostaComercial = () => {
             ))}
           </ul>
 
-          </ul>
         </div>
       </Slide>
 
