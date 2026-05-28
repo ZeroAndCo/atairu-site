@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone } from "lucide-react";
+import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone, Check } from "lucide-react";
+
 import logo from "@/assets/logo-atairu.png";
 
 const headingFont = { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' };
@@ -553,11 +554,17 @@ const PropostaComercial = () => {
           <h3 className="font-bold text-gold mb-3" style={headingFont}>
             Objetivos
           </h3>
-          <ul className="grid md:grid-cols-2 gap-2 text-cream/90">
+          <ul className="grid md:grid-cols-2 gap-3 text-cream/90">
             {["posicionamento internacional", "aumento de notoriedade", "presença no trade", "ampliação do turismo cultural brasileiro"].map((b) => (
-              <Bullet key={b}>{b}</Bullet>
+              <li key={b} className="flex items-start gap-3">
+                <span className="mt-0.5 w-6 h-6 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 text-gold" strokeWidth={3} />
+                </span>
+                <span>{b}</span>
+              </li>
             ))}
           </ul>
+
         </div>
       </Slide>
 
