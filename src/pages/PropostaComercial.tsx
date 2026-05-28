@@ -553,11 +553,17 @@ const PropostaComercial = () => {
         <div>
           <h3 className="font-bold text-gold mb-3" style={headingFont}>
             Objetivos
-          </h3>
-          <ul className="grid md:grid-cols-2 gap-2 text-cream/90">
+          <ul className="grid md:grid-cols-2 gap-3 text-cream/90">
             {["posicionamento internacional", "aumento de notoriedade", "presença no trade", "ampliação do turismo cultural brasileiro"].map((b) => (
-              <Bullet key={b}>{b}</Bullet>
+              <li key={b} className="flex items-start gap-3">
+                <span className="mt-0.5 w-6 h-6 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 text-gold" strokeWidth={3} />
+                </span>
+                <span>{b}</span>
+              </li>
             ))}
+          </ul>
+
           </ul>
         </div>
       </Slide>
