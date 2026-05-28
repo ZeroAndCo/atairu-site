@@ -88,9 +88,9 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {[
-            { n: "16", label: "Patrimônios Culturais Mundiais", icon: Landmark },
-            { n: "08", label: "Parques de Patrimônio Natural", icon: Leaf },
-            { n: "06", label: "Bens Imateriais da Humanidade", icon: Sparkles },
+            { n: "25", label: "Patrimônios Mundiais", icon: Landmark },
+            { n: "15", label: "Patrimônios Naturais", icon: Leaf },
+            { n: "07", label: "Patrimônios Culturais da Humanidade", icon: Sparkles },
           ].map((s, i) => (
             <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-brand/20">
               <s.icon className="w-8 h-8 text-forest mb-4" />
@@ -153,9 +153,9 @@ const PropostaComercial = () => {
           <div className="bg-gradient-warm text-cream rounded-2xl p-8">
             <TrendingUp className="w-10 h-10 mb-4" />
             <div className="text-5xl font-bold mb-2" style={headingFont}>
-              ≈ 6,66 mi
+              ≈ 9,3 mi
             </div>
-            <p className="opacity-90">turistas estrangeiros no Brasil em 2024 — recorde histórico, +12,6% vs. 2023.</p>
+            <p className="opacity-90">turistas estrangeiros no Brasil em 2025 — segundo recorde histórico consecutivo + 37,1% vs 2024.</p>
           </div>
           <div className="bg-card border border-border rounded-2xl p-8">
             <Globe2 className="w-10 h-10 text-forest mb-4" />
@@ -281,7 +281,7 @@ const PropostaComercial = () => {
           Ataîru é a <span className="text-gold">infraestrutura digital</span> do turismo cultural brasileiro.
         </h2>
         <div className="grid md:grid-cols-5 gap-3">
-          {["plataforma de patrimônio", "hub de experiências culturais", "ecossistema de turismo sustentável", "plataforma de inteligência territorial", "infraestrutura para promoção internacional do Brasil"].map((t) => (
+          {["Plataforma de patrimônio", "Hub de experiências culturais", "Ecossistema de turismo sustentável", "Plataforma de inteligência territorial", "Infraestrutura para promoção internacional do Brasil"].map((t) => (
             <div key={t} className="bg-cream/15 backdrop-blur-sm border border-cream/30 rounded-xl p-5 text-center text-cream/95">
               {t}
             </div>
@@ -297,15 +297,6 @@ const PropostaComercial = () => {
         </h2>
         <div className="space-y-4">
           {[
-            { n: 4, title: "Comunidade e Dados", desc: "Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.", access: "Camada Logada", color: "navy" },
-            {
-              n: 3,
-              title: "Ecossistema Territorial",
-              desc: "Integração com guias, pousadas, restaurantes, artesãos, lojas e operadores turísticos. Reservas de visitas em ateliês, experiências culturais, passeios e contratação de guias.",
-              access: "Camada Logada",
-              color: "gold",
-            },
-            { n: 2, title: "Experiência e Planejamento", desc: "Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.", access: "Camada Logada", color: "terracotta" },
             {
               n: 1,
               title: "Mapa Vivo do Patrimônio",
@@ -313,6 +304,15 @@ const PropostaComercial = () => {
               access: "Camada Aberta",
               color: "forest",
             },
+            { n: 2, title: "Experiência e Planejamento", desc: "Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.", access: "Camada Logada", color: "terracotta" },
+            {
+              n: 3,
+              title: "Ecossistema Territorial",
+              desc: "Integração com guias, pousadas, restaurantes, artesãos, lojas e operadores turísticos. Reservas de visitas em ateliês, experiências culturais, passeios e contratação de guias.",
+              access: "Camada Logada",
+              color: "gold",
+            },
+            { n: 4, title: "Comunidade e Dados", desc: "Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.", access: "Camada Logada", color: "navy" },
           ].map((l) => (
             <div key={l.n} className={`bg-card border-l-8 border-${l.color} rounded-r-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start`}>
               <div className={`text-6xl font-bold text-${l.color} shrink-0 w-24`} style={headingFont}>
@@ -427,39 +427,39 @@ const PropostaComercial = () => {
       <Slide bg="bg-cream">
         <SectionTag color="navy">Financiamento & Receita</SectionTag>
         <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
-          Estruturado em quatro camadas de financiamento e receita.
+          Estrutura em quatro camadas.
         </h2>
         <div className="space-y-4">
           {[
             {
               n: 1,
               tag: "B2G — Financiamento Inicial",
-              title: "Editais e Patrocínios — Verbas Públicas",
-              items: ["implementação municipal", "licenciamento", "hubs digitais", "centros de interpretação", "dashboards", "dados territoriais"],
+              title: "Patrocínios e Editais— Verbas Públicas e Privadas",
+              items: ["Verbas municipais, estaduais ou federais", "Editais públicos", "Editais Investimento Social Privado"],
               note: "Traz os principais atores do ecossistema do turismo e da cultura para dentro da plataforma.",
               color: "forest",
             },
             {
               n: 2,
               tag: "B2C — Receita Inicial",
-              title: "Usuário Final — teste de 2 formatos",
-              items: ["assinatura premium", "roteiros IA", "experiências", "mais opções no mapa (logado)", "upgrades"],
+              title: "Entrada dos Usuários - Assinatura",
+              items: ["Área Logada", "Opções de assinaturas"],
               note: "Os fluxos dos usuários desenham os caminhos de evolução e geram dados para parceiros institucionais.",
               color: "terracotta",
             },
             {
               n: 3,
               tag: "Marketplace",
-              title: "Guias Turísticos e Ecossistema Turismo + Cultura",
-              items: ["marketplace de restaurantes e lojas", "comissão sobre reservas", "revenue share", "experiências", "serviços turísticos"],
+              title: "Ecossistema Turismo e Cultura",
+              items: ["Serviços turísticos", "Reserva de experiências culturais e locais", "Marketplace de negócios locais"],
               note: "Promove o ecossistema e gera fluxo e receita para todos, com segurança para o viajante.",
               color: "gold",
             },
             {
               n: 4,
               tag: "B2B — Marcas e Parceiros",
-              title: "Branded experiences e dados",
-              items: ["experiências branded", "dashboards exclusivos das marcas", "patrocínios", "branded content", "analytics", "APIs", "campanhas territoriais"],
+              title: "Ecossistema das Experiências das Marcas",
+              items: ["Experiências de Marcas", "Conteúdos de Marcas"],
               note: "Marcas integradas à comunidade, criando experiências e conteúdo para os viajantes.",
               color: "navy",
             },
@@ -522,7 +522,7 @@ const PropostaComercial = () => {
           Profundamente alinhado às agendas do Brasil.
         </h2>
         <div className="flex flex-wrap gap-3 justify-center">
-          {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial"].map((t, i) => {
+          {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial", "Plano Brasis"].map((t, i) => {
             const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
             return (
               <span key={t} className={`${palette[i % palette.length]} px-6 py-3 rounded-full text-lg font-semibold`} style={headingFont}>
@@ -659,36 +659,36 @@ const PropostaComercial = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {[
-                ["Fase 1", "Produto no ar", "03 a 04 meses"],
-                ["Fase 2", "Receita e marketplace", "03 a 04 meses"],
-                ["Fase 3", "Dados e comunidade", "04 a 05 meses"],
-                ["Fase 4", "B2B e escala", "04 a 05 meses"],
-              ].map((r) => (
-                <tr key={r[0]}>
-                  <td className="px-6 py-4 font-bold text-forest" style={headingFont}>
-                    {r[0]}
-                  </td>
-                  <td className="px-6 py-4 text-foreground">{r[1]}</td>
-                  <td className="px-6 py-4 text-muted-foreground">{r[2]}</td>
-                </tr>
-              ))}
+              <tr key="Fase 1">
+                <td className="px-6 py-4 font-bold text-forest" style={headingFont}>
+                  Fase 1 — Parcerias institucionais
+                </td>
+                <td className="px-6 py-4 text-foreground">Produto no ar</td>
+                <td className="px-6 py-4 text-muted-foreground">03 a 04 meses</td>
+              </tr>
+              <tr key="Fase 2">
+                <td className="px-6 py-4 font-bold text-terracotta" style={headingFont}>
+                  Fase 2 — Captação institucional e pública
+                </td>
+                <td className="px-6 py-4 text-foreground">Receita e marketplace</td>
+                <td className="px-6 py-4 text-muted-foreground">03 a 04 meses</td>
+              </tr>
+              <tr key="Fase 3">
+                <td className="px-6 py-4 font-bold text-gold" style={headingFont}>
+                  Fase 3 — Patrocínios, ativação de marketplace e dados.
+                </td>
+                <td className="px-6 py-4 text-foreground">Dados e comunidade</td>
+                <td className="px-6 py-4 text-muted-foreground">04 a 05 meses</td>
+              </tr>
+              <tr key="Fase 4">
+                <td className="px-6 py-4 font-bold text-navy" style={headingFont}>
+                  Fase 4 - Receita privada e escala B2B.
+                </td>
+                <td className="px-6 py-4 text-foreground">B2B e escala</td>
+                <td className="px-6 py-4 text-muted-foreground">04 a 05 meses</td>
+              </tr>
             </tbody>
           </table>
-        </div>
-        <div className="mt-8 grid md:grid-cols-2 gap-4 text-foreground">
-          <p>
-            <strong className="text-forest">Fase 1</strong> — Parcerias institucionais.
-          </p>
-          <p>
-            <strong className="text-terracotta">Fase 2</strong> — Captação institucional e pública.
-          </p>
-          <p>
-            <strong className="text-gold">Fase 3</strong> — Patrocínios, ativação de marketplace e dados.
-          </p>
-          <p>
-            <strong className="text-navy">Fase 4</strong> — Receita privada e escala B2B.
-          </p>
         </div>
       </Slide>
 
