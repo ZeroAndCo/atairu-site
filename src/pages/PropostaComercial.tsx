@@ -489,49 +489,49 @@ const PropostaComercial = () => {
         </div>
       </Slide>
 
-      {/* 14 — Ecossistema de parcerias */}
+      {/* 14 — Ecossistema de parcerias + Alinhamento estratégico */}
       <Slide bg="bg-background">
         <SectionTag color="terracotta">Ecossistema de parcerias</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
           O Ataîru quer conectar quatro mundos.
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {[
             { icon: Briefcase, title: "Trade Turismo", desc: "Operadores, agências, guias e companhias.", color: "forest" },
             { icon: Landmark, title: "Instituições Públicas", desc: "Ministérios, secretarias, IPHAN, Embratur, municípios.", color: "navy" },
             { icon: Users, title: "Comunidade e Territórios", desc: "Comunidades tradicionais, artesãos, produtores locais.", color: "terracotta" },
             { icon: Megaphone, title: "Marcas", desc: "Parceiros corporativos para experiências e patrocínios.", color: "gold" },
           ].map((p) => (
-            <div key={p.title} className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-brand transition">
-              <div className={`w-14 h-14 mx-auto rounded-2xl bg-${p.color}/15 flex items-center justify-center mb-4`}>
-                <p.icon className={`w-7 h-7 text-${p.color}`} />
+            <div key={p.title} className="bg-card border border-border rounded-2xl p-5 text-center hover:shadow-brand transition">
+              <div className={`w-12 h-12 mx-auto rounded-2xl bg-${p.color}/15 flex items-center justify-center mb-3`}>
+                <p.icon className={`w-6 h-6 text-${p.color}`} />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2" style={headingFont}>
+              <h3 className="text-base font-bold text-primary mb-1" style={headingFont}>
                 {p.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{p.desc}</p>
+              <p className="text-xs text-muted-foreground">{p.desc}</p>
             </div>
           ))}
         </div>
-      </Slide>
 
-      {/* 15 — Alinhamento estratégico */}
-      <Slide bg="bg-cream">
-        <SectionTag color="forest">Alinhamento estratégico</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
-          Profundamente alinhado às agendas do Brasil.
-        </h2>
-        <div className="flex flex-wrap gap-3 justify-center">
-          {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial", "Plano Brasis"].map((t, i) => {
-            const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
-            return (
-              <span key={t} className={`${palette[i % palette.length]} px-6 py-3 rounded-full text-lg font-semibold`} style={headingFont}>
-                {t}
-              </span>
-            );
-          })}
+        <div className="border-t border-border pt-6">
+          <SectionTag color="forest">Alinhamento estratégico</SectionTag>
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
+            Profundamente alinhado às agendas do Brasil.
+          </h2>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial", "Plano Brasis"].map((t, i) => {
+              const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
+              return (
+                <span key={t} className={`${palette[i % palette.length]} px-4 py-2 rounded-full text-sm md:text-base font-semibold`} style={headingFont}>
+                  {t}
+                </span>
+              );
+            })}
+          </div>
         </div>
       </Slide>
+
 
       {/* 16 — Mercados internacionais */}
       <Slide bg="bg-navy text-cream">
