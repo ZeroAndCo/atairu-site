@@ -594,54 +594,54 @@ const PropostaComercial = () => {
         </div>
       </Slide>
 
-      {/* 18 — Impacto esperado */}
+      {/* 18 — Impacto esperado + Indicadores */}
       <Slide bg="bg-cream">
         <SectionTag color="forest">Impacto esperado</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
           Quatro dimensões de impacto.
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {[
             { icon: TrendingUp, title: "Econômico", desc: "Fortalecimento do turismo cultural e do ecossistema turístico, geração de renda local.", color: "forest" },
             { icon: MapPin, title: "Territorial", desc: "Valorização patrimonial pelo fortalecimento regional e ativação de pequenos negócios.", color: "terracotta" },
             { icon: Heart, title: "Cultural", desc: "Preservação por meio de educação patrimonial, promovendo a diversidade brasileira.", color: "gold" },
             { icon: Globe2, title: "Internacional", desc: "Fortalecimento da Marca Brasil e posicionamento como destino cultural global.", color: "navy" },
           ].map((i) => (
-            <div key={i.title} className="bg-card border border-border rounded-2xl p-6">
-              <div className={`w-12 h-12 rounded-xl bg-${i.color}/15 flex items-center justify-center mb-4`}>
-                <i.icon className={`w-6 h-6 text-${i.color}`} />
+            <div key={i.title} className="bg-card border border-border rounded-2xl p-5">
+              <div className={`w-10 h-10 rounded-xl bg-${i.color}/15 flex items-center justify-center mb-3`}>
+                <i.icon className={`w-5 h-5 text-${i.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2" style={headingFont}>
+              <h3 className="text-lg font-bold text-primary mb-1" style={headingFont}>
                 {i.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{i.desc}</p>
+              <p className="text-xs text-muted-foreground">{i.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="border-t border-border pt-6">
+          <SectionTag color="navy">Indicadores e métricas</SectionTag>
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
+            O que vamos medir.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: "Digitais", icon: Database, items: "Usuários, acessos, retenção, engajamento, conversão.", color: "forest" },
+              { title: "Institucionais", icon: Landmark, items: "Integração de municípios, patrimônios ativados, parcerias.", color: "navy" },
+              { title: "Econômicos", icon: TrendingUp, items: "Reservas, receitas, pequenos negócios conectados.", color: "gold" },
+            ].map((m) => (
+              <div key={m.title} className={`rounded-2xl p-5 bg-${m.color}/10 border-l-4 border-${m.color}`}>
+                <m.icon className={`w-6 h-6 text-${m.color} mb-2`} />
+                <h3 className="text-lg font-bold text-primary mb-1" style={headingFont}>
+                  {m.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{m.items}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Slide>
 
-      {/* 19 — Indicadores */}
-      <Slide bg="bg-background">
-        <SectionTag color="navy">Indicadores e métricas</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
-          O que vamos medir.
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { title: "Digitais", icon: Database, items: "Usuários, acessos, retenção, engajamento, conversão.", color: "forest" },
-            { title: "Institucionais", icon: Landmark, items: "Integração de municípios, patrimônios ativados, parcerias.", color: "navy" },
-            { title: "Econômicos", icon: TrendingUp, items: "Reservas, receitas, pequenos negócios conectados.", color: "gold" },
-          ].map((m) => (
-            <div key={m.title} className={`rounded-2xl p-8 bg-${m.color}/10 border-l-4 border-${m.color}`}>
-              <m.icon className={`w-8 h-8 text-${m.color} mb-4`} />
-              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
-                {m.title}
-              </h3>
-              <p className="text-muted-foreground">{m.items}</p>
-            </div>
-          ))}
-        </div>
-      </Slide>
 
       {/* 20 — Ondas de evolução */}
       <Slide bg="bg-cream">
