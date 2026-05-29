@@ -714,13 +714,13 @@ const PropostaComercial = () => {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 {[
-                  { label: "Cota Master", count: 1, value: p.master },
-                  { label: "Cota Apoio", count: 2, value: p.apoio },
+                  { label: "Cota Master", plural: "Cotas Master", count: 1, value: p.master },
+                  { label: "Cota Apoio", plural: "Cotas Apoio", count: 2, value: p.apoio },
                 ].map((c) => (
                   <div key={c.label} className="p-6">
                     <div className="flex justify-between items-baseline mb-3 gap-3 flex-wrap">
                       <h4 className="font-bold text-primary text-lg" style={headingFont}>
-                        {c.count}× {c.label}{c.count > 1 ? "s" : ""}
+                        {c.count}× {c.count > 1 ? c.plural : c.label}
                       </h4>
                       <span className={`text-${p.color} font-bold`} style={headingFont}>
                         {c.value}{c.count > 1 ? " / cota" : ""}
