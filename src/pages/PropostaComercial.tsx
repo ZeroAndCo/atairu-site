@@ -410,7 +410,7 @@ const PropostaComercial = () => {
             </ul>
           </div>
           <div className="bg-cream/15 backdrop-blur-sm rounded-2xl p-8 border border-cream/20">
-            <p className="text-2xl md:text-3xl font-bold leading-tight" style={headingFont}>
+            <p className="text-2xl md:text-3xl font-bold leading-tight text-left" style={headingFont}>
               Isso torna o Ataîru <span className="text-gold">defensável, escalável e único</span> no mercado brasileiro.
             </p>
           </div>
@@ -714,16 +714,16 @@ const PropostaComercial = () => {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 {[
-                  { label: "Cota Master", value: p.master },
-                  { label: "Cota Apoio", value: p.apoio },
+                  { label: "Cota Master", count: 1, value: p.master },
+                  { label: "Cota Apoio", count: 2, value: p.apoio },
                 ].map((c) => (
                   <div key={c.label} className="p-6">
-                    <div className="flex justify-between items-baseline mb-3">
+                    <div className="flex justify-between items-baseline mb-3 gap-3 flex-wrap">
                       <h4 className="font-bold text-primary text-lg" style={headingFont}>
-                        {c.label}
+                        {c.count}× {c.label}{c.count > 1 ? "s" : ""}
                       </h4>
                       <span className={`text-${p.color} font-bold`} style={headingFont}>
-                        {c.value}
+                        {c.value}{c.count > 1 ? " / cota" : ""}
                       </span>
                     </div>
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Contrapartidas — 12 meses</p>
