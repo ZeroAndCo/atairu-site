@@ -7,9 +7,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Heritage from "./pages/Heritage";
-import MapPage from "./pages/Map";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -50,9 +47,6 @@ const App = () => (
         <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/heritage" element={<Heritage />} />
-          <Route path="/map" element={<MapPage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/proposta-comercial" element={<PropostaComercial />} />

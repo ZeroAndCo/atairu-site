@@ -166,26 +166,6 @@
   }
 }
 
-/* Leaflet Map Customizations */
-.leaflet-container {
-  font-family: 'Inter', system-ui, sans-serif;
-  z-index: 0;
-}
-
-.leaflet-popup-content-wrapper {
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 40px -10px hsl(145 51% 20% / 0.3);
-}
-
-.leaflet-popup-content {
-  margin: 0;
-}
-
-/* Fix marker icons */
-.custom-marker {
-  background: transparent !important;
-  border: none !important;
-}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
