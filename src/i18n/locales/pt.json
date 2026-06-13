@@ -1,89 +1,205 @@
 {
   "nav": {
     "home": "Início",
-    "about": "Sobre",
-    "heritage": "Patrimônios",
-    "map": "Mapa Interativo",
     "team": "Equipe",
     "contact": "Contato"
   },
-  "hero": {
-    "tagline": "Seu Companheiro de Viagem ao Coração do Brasil",
-    "subtitle": "Descubra a riqueza cultural e natural do Brasil através de patrimônios únicos que contam nossa história",
-    "exploreMap": "Explorar o Mapa",
-    "learnMore": "Saiba Mais"
-  },
-  "stats": {
-    "heritages": "Patrimônios",
-    "unesco": "UNESCO",
-    "regions": "Regiões",
-    "states": "Estados"
-  },
-  "categories": {
-    "title": "Categorias de Patrimônio",
-    "world": {
-      "name": "Patrimônio Mundial",
-      "description": "Sítios reconhecidos pela UNESCO por seu valor universal excepcional. Pode ser Cultural, Natural ou ambos. É composto por monumentos, conjuntos de construções e sítios arqueológicos de fundamental importância para a memória, a identidade e a criatividade dos povos e a riqueza das culturas."
+  "home": {
+    "hero": {
+      "eyebrow": "Plataforma de Turismo Cultural e Sustentável do Brasil",
+      "title": "Seu companheiro de viagem ao coração do Brasil",
+      "tagline": "A infraestrutura digital que conecta o patrimônio cultural e natural brasileiro ao turismo nacional e internacional.",
+      "subtitle": "Mais do que um aplicativo: a infraestrutura digital do turismo cultural e sustentável brasileiro."
     },
-    "material": {
-      "name": "Patrimônio Material",
-      "description": "Bens tangíveis de valor histórico, artístico, arqueológico ou etnográfico. Pode estar em coleções, obras de arte, acervos documentais, arquivísticos, fotográficos, sítios arqueológicos, estações ferroviárias, fortes, conjuntos urbanos ou cidades inteiras."
+    "what": {
+      "eyebrow": "O que é",
+      "title": "Uma plataforma digital criada para conectar viajantes à essência do Brasil",
+      "p1": "Nossa proposta é conectar pessoas — viajantes e turistas — à cultura mais profunda do Brasil: suas pessoas, seus sabores, seus saberes, seus lugares e seus patrimônios.",
+      "p2": "Uma ferramenta que apoia a jornada de exploração de todas as possibilidades do nosso país, além de criar em cada localidade a oportunidade de uma transformação social.",
+      "p3": "Nascemos da riqueza e da abundância cultural do nosso país com o objetivo de trazer uma ampla experiência em impacto social e cultural. O Ataîru foi concebido para se tornar a infraestrutura digital do turismo cultural e sustentável brasileiro.",
+      "quote": "O patrimônio cultural brasileiro é um dos ativos mais valiosos do país.",
+      "footer": "Ações regionais · Impacto sistêmico",
+      "pillars": {
+        "tourism": {
+          "title": "Incentivo ao Turismo e à Cultura",
+          "text": "Promovemos o acesso ao melhor do país, em todas as suas escalas e regiões."
+        },
+        "social": {
+          "title": "Impacto Social",
+          "text": "Usamos a plataforma como conexão para a transformação social e a redução das desigualdades."
+        },
+        "territorial": {
+          "title": "Desenvolvimento Territorial",
+          "text": "Fortalecemos as comunidades através do turismo sustentável e da valorização local."
+        }
+      }
     },
-    "intangible": {
-      "name": "Patrimônio Imaterial",
-      "description": "Expressões culturais vivas como danças, manifestações, celebrações. Estão nos saberes, ofícios e modos de fazer; nas celebrações; formas de expressão cênicas, plásticas, musicais ou lúdicas; e nos lugares como mercados, feiras e santuários que abrigam práticas culturais coletivas."
-    },
-    "natural": {
-      "name": "Patrimônio Natural",
-      "description": "Parques nacionais, reservas e áreas de preservação ambiental. Formado por monumentos naturais constituídos por formações físicas e biológicas, formações geológicas e fisiográficas, além de sítios naturais."
-    },
-    "cultural-humanity": {
-      "name": "Patrimônio Cultural da Humanidade",
-      "description": "Abrange práticas, representações, expressões, conhecimentos e técnicas – junto com os instrumentos, objetos, artefatos e lugares culturais que lhes são associados – que as comunidades, os grupos e, em alguns casos, os indivíduos reconhecem como parte integrante de seu Patrimônio Cultural."
-    }
-  },
-  "regions": {
-    "sul": "Sul",
-    "sudeste": "Sudeste",
-    "nordeste": "Nordeste",
-    "centro-oeste": "Centro-Oeste",
-    "norte": "Norte"
-  },
-  "about": {
-    "title": "Sobre o Projeto",
-    "mission": {
-      "title": "Nossa Missão",
-      "text": "Conectar viajantes nacionais e estrangeiros à imensa riqueza cultural e natural do Brasil, promovendo o turismo sustentável e a valorização dos patrimônios e comunidade locais."
+    "how": {
+      "eyebrow": "Como",
+      "title": "Uma plataforma digital para conectar viajantes à essência do Brasil",
+      "items": {
+        "culturalHeritage": "Patrimônios culturais",
+        "naturalHeritage": "Patrimônios naturais",
+        "parks": "Parques",
+        "culturalExpressions": "Manifestações culturais",
+        "gastronomy": "Gastronomia",
+        "crafts": "Artesanato",
+        "communities": "Comunidades",
+        "localGuides": "Guias locais",
+        "itineraries": "Roteiros",
+        "experiences": "Experiências",
+        "smallBusinesses": "Pequenos negócios",
+        "strategicData": "Dados estratégicos"
+      },
+      "statement": "Mais do que um aplicativo: a infraestrutura digital do turismo cultural e sustentável brasileiro."
     },
     "vision": {
-      "title": "Nossa Visão",
-      "text": "Ser o companheiro de viagem definitivo para quem deseja explorar o Brasil autêntico, facilitando o acesso a informações sobre patrimônios culturais e naturais em todo o território nacional e o acesso à comunidades e suas preciosidades."
+      "eyebrow": "Visão Estratégica",
+      "title": "Quatro dimensões, simultaneamente",
+      "items": {
+        "discovery": {
+          "title": "Descoberta",
+          "text": "Conecta visitantes ao patrimônio brasileiro por meio de conteúdo curado, mapas e jornadas digitais."
+        },
+        "experience": {
+          "title": "Experiência",
+          "text": "Roteiros personalizados, guias, experiências, hospedagens e benefícios para o viajante."
+        },
+        "territorial": {
+          "title": "Desenvolvimento Territorial",
+          "text": "Fortalece pequenos e médios empreendedores do ecossistema turístico e cultural."
+        },
+        "intelligence": {
+          "title": "Inteligência Turística",
+          "text": "Gera dados, comportamento de visitantes e inteligência estratégica para instituições."
+        }
+      }
     },
-    "story": {
-      "title": "Nossa História",
-      "text": "O Ataîru nasceu da paixão por revelar as belezas e tradições do Brasil que muitas vezes passam despercebidas. Nosso nome é uma homenagem às raízes indígenas do país.",
-      "origin": "A palavra 'Ataîru' vem do Tupi-Guarani e significa 'companheiro de viagem'. Escolhemos esse nome porque acreditamos que descobrir o Brasil é uma jornada que se faz melhor acompanhado — por histórias, por cultura e por pessoas que compartilham o mesmo amor pelo nosso país.",
-      "purpose": "Nossa plataforma foi criada para conectar viajantes com a essência do Brasil: seus patrimônios culturais e naturais, suas tradições vivas e sua biodiversidade incomparável. Queremos ser a ponte entre você e experiências autênticas que transformam viagens em memórias inesquecíveis."
+    "brazil": {
+      "eyebrow": "O Brasil que o mundo ainda não conhece",
+      "title": "Um dos patrimônios mais ricos do planeta — ainda fragmentado",
+      "subtitle": "O potencial do país em números — e o que ainda precisa ser estruturado.",
+      "numbers": {
+        "worldHeritage": "Patrimônios Mundiais",
+        "naturalHeritage": "Patrimônios Naturais",
+        "culturalHumanity": "Patrimônios Culturais da Humanidade"
+      },
+      "offers": {
+        "title": "O que o Brasil oferece",
+        "offer1": "Patrimônios históricos",
+        "offer2": "Patrimônios naturais",
+        "offer3": "Patrimônios culturais e imateriais",
+        "offer4": "Biomas únicos",
+        "offer5": "Tradições vivas e gastronomias regionais",
+        "offer6": "Festas populares e saberes ancestrais",
+        "offer7": "Comunidades tradicionais"
+      },
+      "gaps": {
+        "title": "O que ainda falta",
+        "gap1": "Informação fragmentada",
+        "gap2": "Pouca digitalização",
+        "gap3": "Desconexão da experiência turística internacional",
+        "gap4": "Ausência de integração tecnológica que transforme patrimônio em jornada"
+      }
     },
-    "heritage": {
-      "title": "Entendendo os Patrimônios",
-      "world": "Patrimônio Mundial UNESCO - Sítios de valor universal excepcional reconhecidos internacionalmente.",
-      "material": "Patrimônio Material - Bens físicos que representam marcos históricos e arquitetônicos.",
-      "intangible": "Patrimônio Imaterial - Tradições, saberes e expressões culturais transmitidas entre gerações.",
-      "natural": "Patrimônio Natural - Áreas protegidas que preservam ecossistemas e biodiversidade únicos.",
-      "cultural-humanity": "Patrimônio Cultural da Humanidade - Práticas, representações e expressões reconhecidas pelas comunidades como parte integrante de seu patrimônio cultural."
+    "problem": {
+      "eyebrow": "O problema que o Ataîru resolve",
+      "title": "Hoje o patrimônio brasileiro sofre com fragmentação digital",
+      "scenario": "Cenário atual",
+      "layer": "Camada que o Ataîru cria",
+      "rows": {
+        "fragmentation": { "scenario": "Baixa digitalização", "layer": "Patrimônio" },
+        "integration": { "scenario": "Pouca integração entre patrimônio e turismo", "layer": "Território" },
+        "experience": { "scenario": "Ausência de experiência digital unificada", "layer": "Turismo" },
+        "access": { "scenario": "Dificuldade de acesso à informação", "layer": "Cultura" },
+        "business": { "scenario": "Pouca conexão entre pequenos negócios e turistas", "layer": "Tecnologia" },
+        "international": { "scenario": "Baixa estruturação internacional", "layer": "Visitantes" },
+        "data": { "scenario": "Pouca inteligência de dados aplicada", "layer": "Desenvolvimento econômico local" }
+      }
+    },
+    "global": {
+      "eyebrow": "Contexto global e oportunidade",
+      "title": "O turismo internacional vive uma transformação estrutural",
+      "stat": "turistas estrangeiros no Brasil em 2025 — segundo recorde histórico consecutivo, +37,1% vs 2024.",
+      "traveler": {
+        "title": "O viajante global busca",
+        "text": "Autenticidade, experiências locais, culturas vivas, sustentabilidade, gastronomia, natureza e conexão emocional com destinos."
+      },
+      "advantages": {
+        "title": "Vantagens competitivas únicas do Brasil",
+        "biodiversity": "Uma das maiores biodiversidades do mundo",
+        "recognition": "Patrimônio reconhecido internacionalmente",
+        "growth": "Crescimento consistente do turismo internacional",
+        "diversity": "Diversidade cultural incomparável",
+        "potential": "Enorme potencial de turismo cultural e natural"
+      },
+      "closing": "Ainda não existe no país uma infraestrutura digital capaz de organizar, conectar, promover, distribuir e monetizar o patrimônio brasileiro como experiência turística escalável. É esse espaço que o Ataîru ocupa."
+    },
+    "positioning": {
+      "eyebrow": "Posicionamento",
+      "title": {
+        "before": "Ataîru é a",
+        "highlight": "infraestrutura digital",
+        "after": "do turismo cultural e natural brasileiro."
+      },
+      "items": {
+        "platform": "Plataforma de patrimônio",
+        "hub": "Hub de experiências culturais",
+        "ecosystem": "Ecossistema de turismo sustentável",
+        "intelligence": "Plataforma de inteligência territorial",
+        "international": "Infraestrutura para promoção internacional do Brasil"
+      }
+    },
+    "impact": {
+      "eyebrow": "Impacto esperado",
+      "title": "Quatro dimensões de impacto",
+      "items": {
+        "economic": {
+          "title": "Econômico",
+          "text": "Fortalecimento do turismo cultural e do ecossistema turístico, geração de renda local."
+        },
+        "territorial": {
+          "title": "Territorial",
+          "text": "Valorização patrimonial pelo fortalecimento regional e ativação de pequenos negócios."
+        },
+        "cultural": {
+          "title": "Cultural",
+          "text": "Preservação por meio de educação patrimonial, promovendo a diversidade brasileira."
+        },
+        "international": {
+          "title": "Internacional",
+          "text": "Fortalecimento da Marca Brasil e posicionamento como destino cultural global."
+        }
+      }
+    },
+    "why": {
+      "eyebrow": "Por que o Ataîru",
+      "title": "Porque o patrimônio cultural brasileiro é um dos ativos mais valiosos do país",
+      "subtitle": "E porque ainda não existe uma infraestrutura digital capaz de:",
+      "verbs": {
+        "connect": "Conectá-lo",
+        "promote": "Promovê-lo",
+        "organize": "Organizá-lo",
+        "monetize": "Monetizá-lo",
+        "transform": "Transformá-lo em experiência"
+      },
+      "closing": "O Ataîru nasce para construir essa infraestrutura."
+    },
+    "invitation": {
+      "eyebrow": "Convite final",
+      "title": "O Ataîru é um convite",
+      "verbs": {
+        "discover": "Descobrir o Brasil",
+        "strengthen": "Fortalecer territórios",
+        "preserve": "Preservar patrimônios",
+        "connect": "Conectar culturas",
+        "develop": "Desenvolver economias locais",
+        "transform": "Transformar o turismo cultural"
+      },
+      "closing": "Estamos construindo a infraestrutura digital do turismo cultural do Brasil.",
+      "contact": "Fale com a gente",
+      "team": "Conheça a equipe"
     }
-  },
-  "map": {
-    "title": "Mapa Interativo",
-    "subtitle": "Explore os patrimônios culturais e naturais do Brasil",
-    "filter": "Filtrar",
-    "search": "Buscar patrimônio...",
-    "allCategories": "Todas as categorias",
-    "allRegions": "Todas as regiões",
-    "allStates": "Todos os estados",
-    "noResults": "Nenhum patrimônio encontrado",
-    "viewDetails": "Ver Detalhes"
   },
   "team": {
     "title": "Nossa Equipe",
@@ -101,41 +217,22 @@
     "success": "Mensagem enviada com sucesso!",
     "newsletter": {
       "title": "Newsletter",
-      "text": "Receba novidades sobre patrimônios e roteiros culturais",
+      "text": "Receba novidades sobre o Ataîru e o turismo cultural brasileiro",
       "placeholder": "Seu e-mail",
       "subscribe": "Inscrever-se"
     }
   },
   "footer": {
-    "description": "Seu companheiro de viagem para descobrir o Brasil autêntico",
+    "description": "Seu companheiro de viagem ao coração do Brasil",
     "quickLinks": "Links Rápidos",
     "followUs": "Siga-nos",
     "rights": "Todos os direitos reservados"
   },
-  "tags": {
-    "all": "Todos os tipos",
-    "cultural": "Cultural",
-    "natural": "Natural",
-    "misto": "Misto"
-  },
-  "heritage": {
-    "viewOnMap": "Ver no Mapa"
-  },
-  "marks": {
-    "unesco": { "label": "Patrimônio Mundial UNESCO" },
-    "iphan": { "label": "Patrimônio Cultural Brasileiro (IPHAN)" },
-    "contran-cultural": { "label": "Patrimônio Cultural — Sinalização Turística" },
-    "contran-natural": { "label": "Patrimônio Natural — Sinalização Turística" },
-    "contran-misto": { "label": "Patrimônio Misto — Sinalização Turística" }
-  },
-  "footerCredit": "Identidade visual baseada nas Orientações Técnicas para Sinalização do Patrimônio Mundial no Brasil (IPHAN/UNESCO, 2013), no emblema do Patrimônio Cultural Brasileiro (IPHAN, 2017) e no Guia Brasileiro de Sinalização Turística (Contran).",
+  "footerCredit": "Realização: CLIC + FAUZI + Zero&CO",
   "common": {
     "loading": "Carregando...",
     "error": "Erro ao carregar",
     "back": "Voltar",
-    "close": "Fechar",
-    "seeAll": "Ver todos",
-    "featured": "Destaque",
-    "unescoWorldHeritage": "Patrimônio Mundial UNESCO"
+    "close": "Fechar"
   }
 }
