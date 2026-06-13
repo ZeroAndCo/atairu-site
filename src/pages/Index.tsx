@@ -659,7 +659,7 @@ const Index = () => {
                   {t('home.invitation.contact')}
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-cream/40 text-cream hover:bg-cream/10 px-8">
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-cream/60 text-cream hover:bg-cream hover:text-navy px-8">
                 <Link to="/team">
                   {t('home.invitation.team')}
                   <ChevronRight className="ml-2 h-5 w-5" />
