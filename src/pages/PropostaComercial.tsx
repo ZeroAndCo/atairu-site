@@ -747,6 +747,44 @@ const PropostaComercial = () => {
         </div>
       </Slide>
 
+      {/* 21b — Cotas de apoio institucional */}
+      <Slide bg="bg-cream">
+        <SectionTag color="navy">Cotas de apoio institucional</SectionTag>
+        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-4 leading-tight" style={headingFont}>
+          Apoio institucional em todas as fases.
+        </h2>
+        <p className="text-sm uppercase tracking-widest text-muted-foreground mb-10 font-semibold">Todas as fases</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Órgãos Públicos e Organizações",
+              items: [
+                "Logo no site e em todos os materiais por tempo indeterminado",
+                "Posts exclusivos na Campanha de Marketing Digital conjunta de lançamento (2 meses · 1 mercado)",
+                "Citação no Release PR de lançamento",
+              ],
+            },
+            {
+              title: "Parceiros Privados",
+              items: [
+                "Logo no site e em todos os materiais por 12 meses",
+                "Posts exclusivos em Campanha de Marketing Digital",
+              ],
+            },
+          ].map((c) => (
+            <div key={c.title} className="bg-card border border-border rounded-2xl p-8">
+              <p className="text-xs uppercase tracking-widest text-navy font-bold mb-3">Apoio Institucional</p>
+              <h3 className="text-2xl font-bold text-primary mb-5" style={headingFont}>{c.title}</h3>
+              <ul className="text-sm space-y-2 text-foreground">
+                {c.items.map((i) => <Bullet key={i}>{i}</Bullet>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Slide>
+
+
+
       {/* 22 — Por que */}
       <Slide bg="bg-gradient-warm text-cream">
         <SectionTag color="cream">Por que o Ataîru</SectionTag>
