@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone } from "lucide-react";
+import { Compass, Globe2, Map, Layers, Users, Sparkles, TrendingUp, Database, Building2, Briefcase, Heart, Target, Lightbulb, Rocket, Award, BarChart3, ArrowDown, MapPin, Leaf, Landmark, Camera, Handshake, Megaphone, Check } from "lucide-react";
+
 import logo from "@/assets/logo-atairu.png";
 
 const headingFont = { fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' };
@@ -341,68 +342,61 @@ const PropostaComercial = () => {
       {/* 11 — Roadmap */}
       <Slide bg="bg-background">
         <SectionTag color="forest">Roadmap estratégico do produto</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
+        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-14 leading-tight" style={headingFont}>
           Quatro fases de evolução, do produto ao ecossistema.
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            {
-              n: 1,
-              title: "Fundação e Descoberta",
-              time: "3–4 meses",
-              obj: "Lançar o Ataîru e construir a primeira base de usuários.",
-              del: "Plataforma web, conteúdo patrimonial, mapa interativo, ~200 patrimônios mapeados, acessibilidade, multilíngue, analytics básicos.",
-              res: "Produto funcional ao ar com usuários reais.",
-              color: "forest",
-            },
-            {
-              n: 2,
-              title: "Monetização e Marketplace",
-              time: "3–4 meses",
-              obj: "Ativar a camada econômica da plataforma.",
-              del: "Roteiros com IA, marketplace de guias, reservas, pagamentos, assinatura premium, dashboard de guias, certificação Ataîru Heritage.",
-              res: "Primeiras receitas e transações reais.",
-              color: "terracotta",
-            },
-            {
-              n: 3,
-              title: "Comunidade e Dados Institucionais",
-              time: "4–5 meses",
-              obj: "Plataforma de engajamento e inteligência territorial.",
-              del: "Comunidade, passaporte de patrimônios visitados, integração com hotéis e restaurantes, dashboards institucionais, produto de dados para órgãos públicos.",
-              res: "Abertura da camada B2G.",
-              color: "gold",
-            },
-            {
-              n: 4,
-              title: "Experiências de Marca e Ecossistema B2B",
-              time: "4–5 meses",
-              obj: "Transformar o Ataîru em plataforma autossustentável.",
-              del: "Experiências branded, APIs com outros serviços do ecossistema, analytics B2B, dashboards privados, parceiros corporativos.",
-              res: "Múltiplas fontes de receita e escala nacional.",
-              color: "navy",
-            },
-          ].map((f) => (
-            <div key={f.n} className="bg-card border border-border rounded-2xl p-8 flex flex-col">
-              <div className="flex items-center justify-between mb-4">
-                <span className={`text-5xl font-bold text-${f.color}`} style={headingFont}>
-                  Fase {f.n}
+        <div className="relative">
+          {/* timeline line */}
+          <div className="hidden md:block absolute top-7 left-0 right-0 h-1 bg-border" />
+          <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+            {[
+              {
+                n: 1,
+                title: "Fundação e Descoberta",
+                time: "3–4 meses",
+                desc: "Lançamento e construção da primeira base de usuários.",
+                color: "forest",
+              },
+              {
+                n: 2,
+                title: "Monetização e Marketplace",
+                time: "3–4 meses",
+                desc: "Ativação da camada econômica da plataforma.",
+                color: "terracotta",
+              },
+              {
+                n: 3,
+                title: "Comunidade e Dados Institucionais",
+                time: "4–5 meses",
+                desc: "Abertura da comunidade e estruturação de uma inteligência territorial.",
+                color: "gold",
+              },
+              {
+                n: 4,
+                title: "Experiências e Ecossistema de Marcas",
+                time: "4–5 meses",
+
+                desc: "Amplificação das experiências e abertura de uma nova camada econômica.",
+                color: "navy",
+              },
+            ].map((f) => (
+              <div key={f.n} className="relative flex flex-col items-center text-center">
+                <div className={`relative z-10 w-14 h-14 rounded-full bg-${f.color} text-cream flex items-center justify-center text-2xl font-bold mb-5 shadow-brand`} style={headingFont}>
+                  {f.n}
+                </div>
+                <span className={`text-xs font-semibold px-3 py-1 rounded-full bg-${f.color}/15 text-${f.color} mb-3`}>
+                  {f.time}
                 </span>
-                <span className={`text-xs font-semibold px-3 py-1 rounded-full bg-${f.color}/15 text-${f.color}`}>{f.time}</span>
+                <h3 className="text-lg font-bold text-primary mb-2 leading-tight" style={headingFont}>
+                  {f.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{f.desc}</p>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
-                {f.title}
-              </h3>
-              <p className="text-sm font-semibold text-foreground mb-1">Objetivo</p>
-              <p className="text-muted-foreground mb-3">{f.obj}</p>
-              <p className="text-sm font-semibold text-foreground mb-1">Entregas</p>
-              <p className="text-muted-foreground mb-3">{f.del}</p>
-              <p className="text-sm font-semibold text-foreground mb-1">Resultado</p>
-              <p className="text-muted-foreground">{f.res}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Slide>
+
 
       {/* 12 — O grande ativo */}
       <Slide bg="bg-terracotta-dark text-cream">
@@ -422,7 +416,7 @@ const PropostaComercial = () => {
             </ul>
           </div>
           <div className="bg-cream/15 backdrop-blur-sm rounded-2xl p-8 border border-cream/20">
-            <p className="text-2xl md:text-3xl font-bold leading-tight" style={headingFont}>
+            <p className="text-2xl md:text-3xl font-bold leading-tight text-left" style={headingFont}>
               Isso torna o Ataîru <span className="text-gold">defensável, escalável e único</span> no mercado brasileiro.
             </p>
           </div>
@@ -495,49 +489,49 @@ const PropostaComercial = () => {
         </div>
       </Slide>
 
-      {/* 14 — Ecossistema de parcerias */}
+      {/* 14 — Ecossistema de parcerias + Alinhamento estratégico */}
       <Slide bg="bg-background">
         <SectionTag color="terracotta">Ecossistema de parcerias</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
           O Ataîru quer conectar quatro mundos.
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {[
             { icon: Briefcase, title: "Trade Turismo", desc: "Operadores, agências, guias e companhias.", color: "forest" },
             { icon: Landmark, title: "Instituições Públicas", desc: "Ministérios, secretarias, IPHAN, Embratur, municípios.", color: "navy" },
             { icon: Users, title: "Comunidade e Territórios", desc: "Comunidades tradicionais, artesãos, produtores locais.", color: "terracotta" },
             { icon: Megaphone, title: "Marcas", desc: "Parceiros corporativos para experiências e patrocínios.", color: "gold" },
           ].map((p) => (
-            <div key={p.title} className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-brand transition">
-              <div className={`w-14 h-14 mx-auto rounded-2xl bg-${p.color}/15 flex items-center justify-center mb-4`}>
-                <p.icon className={`w-7 h-7 text-${p.color}`} />
+            <div key={p.title} className="bg-card border border-border rounded-2xl p-5 text-center hover:shadow-brand transition">
+              <div className={`w-12 h-12 mx-auto rounded-2xl bg-${p.color}/15 flex items-center justify-center mb-3`}>
+                <p.icon className={`w-6 h-6 text-${p.color}`} />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2" style={headingFont}>
+              <h3 className="text-base font-bold text-primary mb-1" style={headingFont}>
                 {p.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{p.desc}</p>
+              <p className="text-xs text-muted-foreground">{p.desc}</p>
             </div>
           ))}
         </div>
-      </Slide>
 
-      {/* 15 — Alinhamento estratégico */}
-      <Slide bg="bg-cream">
-        <SectionTag color="forest">Alinhamento estratégico</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
-          Profundamente alinhado às agendas do Brasil.
-        </h2>
-        <div className="flex flex-wrap gap-3 justify-center">
-          {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial", "Plano Brasis"].map((t, i) => {
-            const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
-            return (
-              <span key={t} className={`${palette[i % palette.length]} px-6 py-3 rounded-full text-lg font-semibold`} style={headingFont}>
-                {t}
-              </span>
-            );
-          })}
+        <div className="border-t border-border pt-6">
+          <SectionTag color="forest">Alinhamento estratégico</SectionTag>
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
+            Profundamente alinhado às agendas do Brasil.
+          </h2>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {["Acessibilidade", "Promoção Internacional", "Cultura", "Turismo Sustentável", "Plano Brasil Digital", "Transformação Digital", "Economia Criativa", "Fortalecimento Territorial", "Plano Brasis"].map((t, i) => {
+              const palette = ["bg-forest text-cream", "bg-terracotta text-cream", "bg-gold text-navy", "bg-navy text-cream", "bg-primary text-cream"];
+              return (
+                <span key={t} className={`${palette[i % palette.length]} px-4 py-2 rounded-full text-sm md:text-base font-semibold`} style={headingFont}>
+                  {t}
+                </span>
+              );
+            })}
+          </div>
         </div>
       </Slide>
+
 
       {/* 16 — Mercados internacionais */}
       <Slide bg="bg-navy text-cream">
@@ -559,11 +553,17 @@ const PropostaComercial = () => {
           <h3 className="font-bold text-gold mb-3" style={headingFont}>
             Objetivos
           </h3>
-          <ul className="grid md:grid-cols-2 gap-2 text-cream/90">
+          <ul className="grid md:grid-cols-2 gap-3 text-cream/90">
             {["posicionamento internacional", "aumento de notoriedade", "presença no trade", "ampliação do turismo cultural brasileiro"].map((b) => (
-              <Bullet key={b}>{b}</Bullet>
+              <li key={b} className="flex items-start gap-3">
+                <span className="mt-0.5 w-6 h-6 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 text-gold" strokeWidth={3} />
+                </span>
+                <span>{b}</span>
+              </li>
             ))}
           </ul>
+
         </div>
       </Slide>
 
@@ -600,54 +600,54 @@ const PropostaComercial = () => {
         </div>
       </Slide>
 
-      {/* 18 — Impacto esperado */}
+      {/* 18 — Impacto esperado + Indicadores */}
       <Slide bg="bg-cream">
         <SectionTag color="forest">Impacto esperado</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
           Quatro dimensões de impacto.
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {[
             { icon: TrendingUp, title: "Econômico", desc: "Fortalecimento do turismo cultural e do ecossistema turístico, geração de renda local.", color: "forest" },
             { icon: MapPin, title: "Territorial", desc: "Valorização patrimonial pelo fortalecimento regional e ativação de pequenos negócios.", color: "terracotta" },
             { icon: Heart, title: "Cultural", desc: "Preservação por meio de educação patrimonial, promovendo a diversidade brasileira.", color: "gold" },
             { icon: Globe2, title: "Internacional", desc: "Fortalecimento da Marca Brasil e posicionamento como destino cultural global.", color: "navy" },
           ].map((i) => (
-            <div key={i.title} className="bg-card border border-border rounded-2xl p-6">
-              <div className={`w-12 h-12 rounded-xl bg-${i.color}/15 flex items-center justify-center mb-4`}>
-                <i.icon className={`w-6 h-6 text-${i.color}`} />
+            <div key={i.title} className="bg-card border border-border rounded-2xl p-5">
+              <div className={`w-10 h-10 rounded-xl bg-${i.color}/15 flex items-center justify-center mb-3`}>
+                <i.icon className={`w-5 h-5 text-${i.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2" style={headingFont}>
+              <h3 className="text-lg font-bold text-primary mb-1" style={headingFont}>
                 {i.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{i.desc}</p>
+              <p className="text-xs text-muted-foreground">{i.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="border-t border-border pt-6">
+          <SectionTag color="navy">Indicadores e métricas</SectionTag>
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mt-4 mb-6 leading-tight" style={headingFont}>
+            O que vamos medir.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: "Digitais", icon: Database, items: "Usuários, acessos, retenção, engajamento, conversão.", color: "forest" },
+              { title: "Institucionais", icon: Landmark, items: "Integração de municípios, patrimônios ativados, parcerias.", color: "navy" },
+              { title: "Econômicos", icon: TrendingUp, items: "Reservas, receitas, pequenos negócios conectados.", color: "gold" },
+            ].map((m) => (
+              <div key={m.title} className={`rounded-2xl p-5 bg-${m.color}/10 border-l-4 border-${m.color}`}>
+                <m.icon className={`w-6 h-6 text-${m.color} mb-2`} />
+                <h3 className="text-lg font-bold text-primary mb-1" style={headingFont}>
+                  {m.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{m.items}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Slide>
 
-      {/* 19 — Indicadores */}
-      <Slide bg="bg-background">
-        <SectionTag color="navy">Indicadores e métricas</SectionTag>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary mt-6 mb-10 leading-tight" style={headingFont}>
-          O que vamos medir.
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { title: "Digitais", icon: Database, items: "Usuários, acessos, retenção, engajamento, conversão.", color: "forest" },
-            { title: "Institucionais", icon: Landmark, items: "Integração de municípios, patrimônios ativados, parcerias.", color: "navy" },
-            { title: "Econômicos", icon: TrendingUp, items: "Reservas, receitas, pequenos negócios conectados.", color: "gold" },
-          ].map((m) => (
-            <div key={m.title} className={`rounded-2xl p-8 bg-${m.color}/10 border-l-4 border-${m.color}`}>
-              <m.icon className={`w-8 h-8 text-${m.color} mb-4`} />
-              <h3 className="text-2xl font-bold text-primary mb-3" style={headingFont}>
-                {m.title}
-              </h3>
-              <p className="text-muted-foreground">{m.items}</p>
-            </div>
-          ))}
-        </div>
-      </Slide>
 
       {/* 20 — Ondas de evolução */}
       <Slide bg="bg-cream">
@@ -720,16 +720,16 @@ const PropostaComercial = () => {
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
                 {[
-                  { label: "Cota Master", value: p.master },
-                  { label: "Cota Apoio", value: p.apoio },
+                  { label: "Cota Master", plural: "Cotas Master", count: 1, value: p.master },
+                  { label: "Cota Apoio", plural: "Cotas Apoio", count: 2, value: p.apoio },
                 ].map((c) => (
                   <div key={c.label} className="p-6">
-                    <div className="flex justify-between items-baseline mb-3">
+                    <div className="flex justify-between items-baseline mb-3 gap-3 flex-wrap">
                       <h4 className="font-bold text-primary text-lg" style={headingFont}>
-                        {c.label}
+                        {c.count}× {c.count > 1 ? c.plural : c.label}
                       </h4>
                       <span className={`text-${p.color} font-bold`} style={headingFont}>
-                        {c.value}
+                        {c.value}{c.count > 1 ? " / cota" : ""}
                       </span>
                     </div>
                     <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Contrapartidas — 12 meses</p>
