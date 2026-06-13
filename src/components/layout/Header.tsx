@@ -48,7 +48,7 @@ export const Header = () => {
             <img 
               src={logo} 
               alt="Ataîru" 
-              className="h-10 md:h-12 w-auto rounded-lg"
+              className="h-12 md:h-14 w-auto rounded-lg"
             />
             <span className="text-2xl md:text-3xl font-bold text-primary hidden sm:block" style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', fontWeight: 700 }}>
               Ataîru
