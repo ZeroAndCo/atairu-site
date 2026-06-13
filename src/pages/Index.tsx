@@ -394,14 +394,14 @@ const Index = () => {
               </h3>
             </div>
             {problemRows.map((row) => (
-              <>
-                <div key={`${row}-s`} className="bg-background p-5 text-foreground/80">
+              <Fragment key={row}>
+                <div className="bg-background p-5 text-foreground/80">
                   {t(`home.problem.rows.${row}.scenario`)}
                 </div>
-                <div key={`${row}-l`} className="bg-forest/5 p-5 text-foreground font-medium">
+                <div className="bg-forest/5 p-5 text-foreground font-medium">
                   {t(`home.problem.rows.${row}.layer`)}
                 </div>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>
