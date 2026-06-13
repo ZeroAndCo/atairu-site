@@ -88,9 +88,9 @@ const PropostaComercial = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {[
-            { n: "25", label: "Patrimônios Mundiais", icon: Landmark },
+            { n: "23", label: "Patrimônios Mundiais da Humanidade", icon: Landmark },
             { n: "15", label: "Patrimônios Naturais", icon: Leaf },
-            { n: "07", label: "Patrimônios Culturais da Humanidade", icon: Sparkles },
+            { n: "07", label: "Patrimônios Culturais", icon: Sparkles },
           ].map((s, i) => (
             <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-brand/20">
               <s.icon className="w-8 h-8 text-forest mb-4" />
@@ -301,18 +301,24 @@ const PropostaComercial = () => {
               n: 1,
               title: "Mapa Vivo do Patrimônio",
               desc: "Mapa aberto com patrimônios Mundiais, Culturais, Naturais, Materiais e Imateriais. Geolocalização, filtros, busca, acessibilidade, multilíngue, favoritos e descoberta por proximidade.",
-              access: "Camada Aberta",
+              access: "Camada Logada Gratuita",
               color: "forest",
             },
-            { n: 2, title: "Experiência e Planejamento", desc: "Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.", access: "Camada Logada", color: "terracotta" },
+            { n: 2, title: "Experiência e Planejamento", desc: "Informações detalhadas, conteúdos complementares, roteiros, descontos e jornadas personalizadas.", access: "Camada Logada Paga", color: "terracotta" },
             {
               n: 3,
               title: "Ecossistema Territorial",
               desc: "Integração com guias, pousadas, restaurantes, artesãos, lojas e operadores turísticos. Reservas de visitas em ateliês, experiências culturais, passeios e contratação de guias.",
-              access: "Camada Logada",
+              access: "Camada Logada Paga",
               color: "gold",
             },
-            { n: 4, title: "Comunidade e Dados", desc: "Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.", access: "Camada Logada", color: "navy" },
+            {
+              n: 4,
+              title: "Comunidade e Dados",
+              desc: "Comunidade entre viajantes, passaporte cultural, avaliações, gamificação, inteligência de dados, analytics institucionais, dashboards territoriais.",
+              access: "Camada Logada Paga",
+              color: "navy",
+            },
           ].map((l) => (
             <div key={l.n} className={`bg-card border-l-8 border-${l.color} rounded-r-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start`}>
               <div className={`text-6xl font-bold text-${l.color} shrink-0 w-24`} style={headingFont}>
