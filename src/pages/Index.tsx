@@ -1,71 +1,76 @@
+import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Compass,
+  BookOpen,
+  Building2,
+  BarChart3,
+  Sparkles,
+  Heart,
+  Globe2,
+  Users,
+  Mail,
+  ChevronRight,
+  TrendingUp,
+  Leaf,
+  Landmark,
+  Languages,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Layout } from '@/components/layout/Layout';
-import { BrazilMap } from '@/components/home/BrazilMap';
 import { PatternBorder } from '@/components/ui/PatternBorder';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { SEO } from '@/components/SEO';
-import { heritages, getUnescoHeritages, getCategoryIcon } from '@/data/heritages';
-import { HeritageMark, HeritageMarks, type HeritageMarkKind } from '@/components/heritage/HeritageMark';
 import { getOrganizationStructuredData, getWebsiteStructuredData } from '@/lib/seo';
 import { getSupportedLanguage } from '@/lib/site';
-import brazilMapHero from '@/assets/brazil-map-hero.png';
 
 const Index = () => {
   const { t, i18n } = useTranslation();
   const currentLang = getSupportedLanguage(i18n.resolvedLanguage || i18n.language);
 
-  const stats = [
-    { value: heritages.length + '+', label: t('stats.heritages'), color: 'text-forest' },
-    { value: getUnescoHeritages().length, label: t('stats.unesco'), color: 'text-gold' },
-    { value: 5, label: t('stats.regions'), color: 'text-terracotta' },
-    { value: 27, label: t('stats.states'), color: 'text-navy' },
+  const pillars = [
+    { icon: Heart, key: 'tourism', color: 'text-terracotta', bg: 'bg-terracotta/10' },
+    { icon: Users, key: 'social', color: 'text-forest', bg: 'bg-forest/10' },
+    { icon: Leaf, key: 'territorial', color: 'text-gold', bg: 'bg-gold/10' },
   ];
 
-  const categories: Array<{
-    key: 'world' | 'material' | 'intangible' | 'natural' | 'cultural-humanity';
-    mark: HeritageMarkKind;
-    borderColor: string;
-    hoverBg: string;
-  }> = [
-    {
-      key: 'world',
-      mark: 'unesco',
-      borderColor: 'border-unesco-brown',
-      hoverBg: 'hover:bg-unesco-brown/5',
-    },
-    {
-      key: 'material',
-      mark: 'iphan',
-      borderColor: 'border-unesco-gold',
-      hoverBg: 'hover:bg-unesco-gold/5',
-    },
-    {
-      key: 'intangible',
-      mark: 'iphan',
-      borderColor: 'border-unesco-gold',
-      hoverBg: 'hover:bg-unesco-gold/5',
-    },
-    {
-      key: 'natural',
-      mark: 'contran-natural',
-      borderColor: 'border-heritage-natural',
-      hoverBg: 'hover:bg-heritage-natural/5',
-    },
-    {
-      key: 'cultural-humanity',
-      mark: 'unesco',
-      borderColor: 'border-unesco-brown',
-      hoverBg: 'hover:bg-unesco-brown/5',
-    },
+  const ecosystem = [
+    'culturalHeritage', 'naturalHeritage', 'parks', 'culturalExpressions',
+    'gastronomy', 'crafts', 'communities', 'localGuides',
+    'itineraries', 'experiences', 'smallBusinesses', 'strategicData',
   ];
 
-  const featuredHeritages = heritages.filter(h => h.unesco).slice(0, 6);
+  const dimensions = [
+    { icon: Compass, key: 'discovery', color: 'forest' },
+    { icon: BookOpen, key: 'experience', color: 'terracotta' },
+    { icon: Building2, key: 'territorial', color: 'gold' },
+    { icon: BarChart3, key: 'intelligence', color: 'navy' },
+  ];
+
+  const heritageItems = [
+    { icon: Landmark, key: 'worldHeritage' },
+    { icon: Leaf, key: 'naturalHeritage' },
+    { icon: Sparkles, key: 'culturalHumanity' },
+  ];
+
+  const problemRows = ['fragmentation', 'integration', 'experience', 'access', 'business', 'international', 'data'];
+
+  const advantages = ['biodiversity', 'recognition', 'growth', 'diversity', 'potential'];
+
+  const positioning = ['platform', 'hub', 'ecosystem', 'intelligence', 'international'];
+
+  const impacts = [
+    { key: 'economic', icon: TrendingUp, color: 'forest' },
+    { key: 'territorial', icon: Landmark, color: 'terracotta' },
+    { key: 'cultural', icon: Sparkles, color: 'gold' },
+    { key: 'international', icon: Globe2, color: 'navy' },
+  ];
+
+  const verbs = ['connect', 'promote', 'organize', 'monetize', 'transform'];
 
   return (
     <Layout>
@@ -74,281 +79,599 @@ const Index = () => {
         language={currentLang}
         structuredData={[getOrganizationStructuredData(), getWebsiteStructuredData()]}
       />
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-cream overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 pattern-indigenous opacity-10" />
-        
-        {/* Content */}
-        <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
-            >
-              <Badge className="mb-6 bg-terracotta/20 text-terracotta border-terracotta/50 text-sm px-4 py-1">
-                🇧🇷 Brasil
-              </Badge>
-              
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                {t('hero.tagline')}
-              </h1>
-              
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl">
-                {t('hero.subtitle')}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  asChild
-                  size="lg" 
-                  className="bg-forest hover:bg-forest-light text-primary-foreground font-semibold px-8"
-                >
-                  <Link to="/map">
-                    <MapPin className="mr-2 h-5 w-5" />
-                    {t('hero.exploreMap')}
-                  </Link>
-                </Button>
-                
-                <Button 
-                  asChild
-                  variant="outline" 
-                  size="lg"
-                  className="border-terracotta/50 text-terracotta hover:bg-terracotta/10 font-semibold px-8"
-                >
-                  <Link to="/about">
-                    {t('hero.learnMore')}
-                    <ChevronRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
 
-            {/* Brazil Map Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
-            >
-              <img 
-                src={brazilMapHero} 
-                alt="Mapa do Brasil com pins de patrimônios" 
-                className="max-w-xl w-full h-auto lg:max-w-2xl"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pattern Border */}
-      <PatternBorder variant={1} height={20} opacity={0.9} />
-
-      {/* Stats Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <p className={`font-serif text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground font-medium">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Map Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
+      {/* ============ HERO ============ */}
+      <section className="relative min-h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-forest/70" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-forest/10 to-forest-light/25" />
+        <div className="container mx-auto px-4 py-24 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t('map.title')}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('map.subtitle')}
+            <Badge className="mb-6 bg-gold/20 text-gold border-gold/40 text-xs tracking-widest px-4 py-1 uppercase">
+              {t('home.hero.eyebrow')}
+            </Badge>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-cream mb-6 leading-[1.05] tracking-tight">
+              {t('home.hero.title')}
+            </h1>
+            <p className="text-lg md:text-2xl text-cream/85 mb-4 font-light leading-relaxed">
+              {t('home.hero.tagline')}
+            </p>
+            <p className="text-base md:text-lg text-cream/70 max-w-2xl mx-auto">
+              {t('home.hero.subtitle')}
             </p>
           </motion.div>
-          
-          <SectionDivider color="forest" className="mb-8" />
-
-          <BrazilMap />
-
-          <div className="text-center mt-8">
-            <Button asChild size="lg" className="bg-forest hover:bg-forest-light">
-              <Link to="/map">
-                <MapPin className="mr-2 h-5 w-5" />
-                {t('hero.exploreMap')}
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Pattern Border */}
-      <PatternBorder variant={2} height={20} opacity={0.9} />
+      <PatternBorder variant={1} height={20} opacity={0.9} />
 
-      {/* Categories Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      {/* ============ O QUE É ============ */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-4"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t('categories.title')}
+            <p className="text-terracotta uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.what.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              {t('home.what.title')}
             </h2>
           </motion.div>
-          
-          <SectionDivider color="terracotta" className="mb-8" />
+          <SectionDivider color="terracotta" className="mb-12" />
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {categories.map((category, index) => (
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-5 text-left text-foreground/80 leading-relaxed"
+            >
+              <p className="text-lg md:text-xl text-forest font-bold">{t('home.what.p1')}</p>
+              <p>{t('home.what.p2')}</p>
+              <p>{t('home.what.p3')}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-cream-dark border-l-4 border-gold p-8 rounded-r-lg"
+            >
+              <p className="text-2xl md:text-3xl font-semibold text-navy italic leading-snug">
+                "{t('home.what.quote')}"
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {pillars.map((p, i) => (
               <motion.div
-                key={category.key}
+                key={p.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                transition={{ delay: i * 0.1 }}
               >
-                <Card className={`h-full border-2 ${category.borderColor} ${category.hoverBg} hover:shadow-brand transition-all cursor-pointer`}>
-                  <CardContent className="p-6 text-center">
-                    <div className="flex items-center justify-center mx-auto mb-4">
-                      <HeritageMark kind={category.mark} size="lg" />
+                <Card className="h-full border-t-4 border-t-terracotta hover:shadow-brand transition-shadow">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 rounded-lg ${p.bg} flex items-center justify-center mb-4`}>
+                      <p.icon className={`h-6 w-6 ${p.color}`} />
                     </div>
-                    <h3 className="font-serif text-xl font-semibold mb-2">
-                      {t(`categories.${category.key}.name`)}
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">
+                      {t(`home.what.pillars.${p.key}.title`)}
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      {t(`categories.${category.key}.description`)}
+                      {t(`home.what.pillars.${p.key}.text`)}
                     </p>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
+
+          <p className="text-center mt-10 text-muted-foreground italic text-sm tracking-wide">
+            {t('home.what.footer')}
+          </p>
         </div>
       </section>
 
-      {/* Featured Heritages Section */}
-      <section className="py-20 bg-cream-dark">
-        <div className="container mx-auto px-4">
+      <PatternBorder variant={2} height={20} opacity={0.9} />
+
+      {/* ============ COMO ============ */}
+      <section className="py-24 bg-cream-dark">
+        <div className="container mx-auto px-4 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-4"
           >
-            <Badge className="mb-4 bg-gold/20 text-gold border-gold/30">
-              {t('common.featured')}
-            </Badge>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-              {t('common.unescoWorldHeritage')}
+            <p className="text-forest uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.how.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 max-w-3xl mx-auto">
+              {t('home.how.title')}
             </h2>
           </motion.div>
-          
-          <SectionDivider color="gold" className="mb-8" />
+          <SectionDivider color="forest" className="mb-12" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredHeritages.map((heritage, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-12">
+            {ecosystem.map((item, i) => (
               <motion.div
-                key={heritage.id}
+                key={item}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04 }}
+                className="bg-background border border-forest/20 rounded-lg p-4 text-center hover:border-forest hover:shadow-md transition-all"
+              >
+                <span className="text-sm md:text-base font-medium text-foreground">
+                  {t(`home.how.items.${item}`)}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-navy text-cream p-8 md:p-10 rounded-lg text-center"
+          >
+            <p className="text-xl md:text-2xl font-semibold leading-snug">
+              {t('home.how.statement')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <PatternBorder variant={1} height={20} opacity={0.9} />
+
+      {/* ============ VISÃO ESTRATÉGICA ============ */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.vision.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              {t('home.vision.title')}
+            </h2>
+          </motion.div>
+          <SectionDivider color="gold" className="mb-12" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {dimensions.map((d, i) => (
+              <motion.div
+                key={d.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: i * 0.1 }}
+                className="relative"
               >
-                <Card className="h-full hover:shadow-brand transition-shadow overflow-hidden group bg-card">
-                  <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
-                    <span className="text-6xl group-hover:scale-110 transition-transform">
-                      {getCategoryIcon(heritage.category)}
-                    </span>
-                    <HeritageMarks heritage={heritage} size="sm" className="absolute top-3 right-3" />
-                  </div>
-                  <CardContent className="p-5">
-                    <h3 className="font-serif text-lg font-semibold mb-2 line-clamp-2">
-                      {heritage.name[currentLang]}
+                <Card className={`h-full border-t-4 border-t-${d.color} hover:shadow-brand transition-shadow`}>
+                  <CardContent className="p-6">
+                    <div className={`flex items-center gap-3 mb-4`}>
+                      <span className={`text-${d.color} text-3xl font-bold`}>0{i + 1}</span>
+                      <d.icon className={`h-7 w-7 text-${d.color}`} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">
+                      {t(`home.vision.items.${d.key}.title`)}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-3">
-                      📍 {heritage.city}, {heritage.state}
-                    </p>
-                    <p className="text-sm text-foreground/80 line-clamp-3">
-                      {heritage.summary[currentLang]}
+                    <p className="text-muted-foreground text-sm">
+                      {t(`home.vision.items.${d.key}.text`)}
                     </p>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
-
-          <div className="text-center mt-10">
-            <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold/10">
-              <Link to="/heritage">
-                {t('common.seeAll')}
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Pattern Border */}
-      <PatternBorder variant={1} height={20} opacity={0.9} />
+      <PatternBorder variant={2} height={20} opacity={0.9} />
 
-      {/* CTA Section */}
-      <section className="py-20 bg-navy relative overflow-hidden">
+      {/* ============ O BRASIL ============ */}
+      <section className="py-24 bg-forest text-cream relative overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-10" />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center mb-4"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6">
-              {t('hero.tagline')}
-            </h2>
-            <p className="text-cream/80 mb-8 text-lg">
-              {t('hero.subtitle')}
+            <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.brazil.eyebrow')}
             </p>
-            <Button 
-              asChild
-              size="lg" 
-              className="bg-terracotta hover:bg-terracotta-dark text-white font-semibold px-10"
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 max-w-4xl mx-auto">
+              {t('home.brazil.title')}
+            </h2>
+            <p className="text-cream/80 max-w-2xl mx-auto text-lg">
+              {t('home.brazil.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+            {heritageItems.map((item, i) => (
+              <motion.div
+                key={item.key}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center border border-cream/20 rounded-lg p-8 bg-cream/5 backdrop-blur-sm"
+              >
+                <item.icon className="w-8 h-8 text-gold mx-auto mb-4" />
+                <p className="text-cream/90 text-sm uppercase tracking-wider">
+                  {t(`home.brazil.numbers.${item.key}`)}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
             >
-              <Link to="/map">
-                <MapPin className="mr-2 h-5 w-5" />
-                {t('hero.exploreMap')}
-              </Link>
-            </Button>
+              <h3 className="text-xl font-semibold mb-4 text-gold">
+                {t('home.brazil.offers.title')}
+              </h3>
+              <ul className="space-y-2 text-cream/85">
+                {['offer1','offer2','offer3','offer4','offer5','offer6','offer7'].map((k) => (
+                  <li key={k} className="flex gap-2">
+                    <span className="text-gold">›</span>
+                    <span>{t(`home.brazil.offers.${k}`)}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-terracotta">
+                {t('home.brazil.gaps.title')}
+              </h3>
+              <ul className="space-y-2 text-cream/85">
+                {['gap1','gap2','gap3','gap4'].map((k) => (
+                  <li key={k} className="flex gap-2">
+                    <span className="text-terracotta">›</span>
+                    <span>{t(`home.brazil.gaps.${k}`)}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ PROBLEMA ============ */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <p className="text-terracotta uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.problem.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              {t('home.problem.title')}
+            </h2>
+          </motion.div>
+          <SectionDivider color="terracotta" className="mb-12" />
+
+          <div className="grid md:grid-cols-2 gap-px bg-border rounded-lg overflow-hidden border border-border">
+            <div className="bg-cream-dark p-5">
+              <h3 className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+                {t('home.problem.scenario')}
+              </h3>
+            </div>
+            <div className="bg-forest p-5">
+              <h3 className="text-xs uppercase tracking-widest text-cream font-semibold">
+                {t('home.problem.layer')}
+              </h3>
+            </div>
+            {problemRows.map((row) => (
+              <Fragment key={row}>
+                <div className="bg-background p-5 text-foreground/80">
+                  {t(`home.problem.rows.${row}.scenario`)}
+                </div>
+                <div className="bg-forest/5 p-5 text-foreground font-medium">
+                  {t(`home.problem.rows.${row}.layer`)}
+                </div>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PatternBorder variant={1} height={20} opacity={0.9} />
+
+      {/* ============ CONTEXTO GLOBAL ============ */}
+      <section className="py-24 bg-cream-dark">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <p className="text-navy uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.global.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 max-w-3xl mx-auto">
+              {t('home.global.title')}
+            </h2>
+          </motion.div>
+          <SectionDivider color="navy" className="mb-12" />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-navy text-cream rounded-lg p-8 md:p-12 text-center mb-12 max-w-3xl mx-auto"
+          >
+            <p className="text-5xl md:text-7xl font-bold text-gold mb-3">≈ 9,3 mi</p>
+            <p className="text-cream/85 text-base md:text-lg">{t('home.global.stat')}</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-l-4 border-l-terracotta">
+              <CardContent className="p-8">
+                <Languages className="h-8 w-8 text-terracotta mb-4" />
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  {t('home.global.traveler.title')}
+                </h3>
+                <p className="text-muted-foreground">
+                  {t('home.global.traveler.text')}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-forest">
+              <CardContent className="p-8">
+                <Sparkles className="h-8 w-8 text-forest mb-4" />
+                <h3 className="text-xl font-semibold mb-4 text-foreground">
+                  {t('home.global.advantages.title')}
+                </h3>
+                <ul className="space-y-2 text-foreground/80 text-sm">
+                  {advantages.map((a) => (
+                    <li key={a} className="flex gap-2">
+                      <span className="text-forest">●</span>
+                      <span>{t(`home.global.advantages.${a}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mt-12 text-foreground/80 text-lg italic max-w-3xl mx-auto"
+          >
+            {t('home.global.closing')}
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ============ POSICIONAMENTO ============ */}
+      <section className="py-24 bg-navy text-cream relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-10" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.positioning.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+              {t('home.positioning.title.before')}{' '}
+              <span className="text-gold">{t('home.positioning.title.highlight')}</span>{' '}
+              {t('home.positioning.title.after')}
+            </h2>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {positioning.map((p, i) => (
+              <motion.div
+                key={p}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="border border-gold/40 bg-gold/10 px-5 py-3 rounded-full text-cream text-sm md:text-base"
+              >
+                {t(`home.positioning.items.${p}`)}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ IMPACTO ============ */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <p className="text-forest uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.impact.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+              {t('home.impact.title')}
+            </h2>
+          </motion.div>
+          <SectionDivider color="forest" className="mb-12" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {impacts.map((im, i) => (
+              <motion.div
+                key={im.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <Card className={`h-full border-t-4 border-t-${im.color} hover:shadow-brand transition-shadow`}>
+                  <CardContent className="p-6">
+                    <im.icon className={`h-8 w-8 text-${im.color} mb-4`} />
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">
+                      {t(`home.impact.items.${im.key}.title`)}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {t(`home.impact.items.${im.key}.text`)}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <PatternBorder variant={2} height={20} opacity={0.9} />
+
+      {/* ============ POR QUE ATAÎRU ============ */}
+      <section className="py-24 bg-terracotta text-cream relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-10" />
+        <div className="container mx-auto px-4 max-w-5xl text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.why.eyebrow')}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto leading-tight">
+              {t('home.why.title')}
+            </h2>
+            <p className="text-cream/85 text-lg max-w-2xl mx-auto">
+              {t('home.why.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {verbs.map((v, i) => (
+              <motion.div
+                key={v}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-cream text-terracotta font-semibold px-6 py-3 rounded-md uppercase tracking-wider text-sm"
+              >
+                {t(`home.why.verbs.${v}`)}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl font-semibold mt-8"
+          >
+            {t('home.why.closing')}
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ============ CONVITE FINAL ============ */}
+      <section className="py-24 bg-navy text-cream relative overflow-hidden">
+        <div className="absolute inset-0 pattern-indigenous opacity-15" />
+        <div className="container mx-auto px-4 max-w-5xl relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+              {t('home.invitation.eyebrow')}
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              {t('home.invitation.title')}
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12 max-w-3xl mx-auto">
+            {['discover','strengthen','preserve','connect','develop','transform'].map((k, i) => (
+              <motion.div
+                key={k}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                className="border border-cream/20 bg-cream/5 backdrop-blur-sm px-4 py-3 rounded text-center text-sm md:text-base text-cream/90"
+              >
+                {t(`home.invitation.verbs.${k}`)}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-xl md:text-2xl text-cream/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+              {t('home.invitation.closing')}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold px-8">
+                <Link to="/contact">
+                  <Mail className="mr-2 h-5 w-5" />
+                  {t('home.invitation.contact')}
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-cream/60 text-cream hover:bg-cream hover:text-navy px-8">
+                <Link to="/team">
+                  {t('home.invitation.team')}
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
-      
-      {/* Bottom Pattern Border */}
-      <PatternBorder variant={2} height={20} opacity={0.9} />
+
+      <PatternBorder variant={1} height={20} opacity={0.9} />
     </Layout>
   );
 };

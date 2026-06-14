@@ -6,11 +6,14 @@ export default {
   safelist: [
     ...["forest", "terracotta", "navy", "gold", "cream", "primary"].flatMap((c) => [
       `bg-${c}`,
+      `bg-${c}/5`,
       `bg-${c}/10`,
       `bg-${c}/15`,
       `bg-${c}/20`,
       `text-${c}`,
       `border-${c}`,
+      `border-t-${c}`,
+      `border-l-${c}`,
     ]),
   ],
   prefix: "",
@@ -71,6 +74,7 @@ export default {
         forest: {
           DEFAULT: "hsl(var(--forest))",
           light: "hsl(var(--forest-light))",
+          dark: "hsl(var(--forest-dark))",
         },
         terracotta: {
           DEFAULT: "hsl(var(--terracotta))",

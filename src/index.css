@@ -8,8 +8,9 @@
   :root {
     /* Core Brand Colors — rebased to the official Pantones used in
        Brazilian heritage signage (IPHAN/UNESCO 2013, IPHAN 2017, Contran). */
-    --forest: 122 47% 45%;          /* Pantone 375C — Patrimônio Natural */
-    --forest-light: 122 47% 55%;
+    --forest: 145 45% 22%;          /* Deep forest — primary brand green */
+    --forest-light: 145 40% 32%;
+    --forest-dark: 145 50% 14%;
     --terracotta: 15 57% 53%;       /* Pantone 167C — Patrimônio Misto */
     --terracotta-dark: 15 57% 43%;
     --navy: 200 60% 14%;            /* IPHAN mandala ground */
@@ -166,26 +167,6 @@
   }
 }
 
-/* Leaflet Map Customizations */
-.leaflet-container {
-  font-family: 'Inter', system-ui, sans-serif;
-  z-index: 0;
-}
-
-.leaflet-popup-content-wrapper {
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 40px -10px hsl(145 51% 20% / 0.3);
-}
-
-.leaflet-popup-content {
-  margin: 0;
-}
-
-/* Fix marker icons */
-.custom-marker {
-  background: transparent !important;
-  border: none !important;
-}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

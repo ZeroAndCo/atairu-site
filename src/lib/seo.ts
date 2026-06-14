@@ -1,14 +1,6 @@
-import { heritages } from "@/data/heritages";
 import { buildCanonicalUrl, DEFAULT_OG_IMAGE_URL, SupportedLanguage } from "@/lib/site";
 
-export type SeoRouteKey =
-  | "home"
-  | "about"
-  | "heritage"
-  | "map"
-  | "team"
-  | "contact"
-  | "notFound";
+export type SeoRouteKey = "home" | "team" | "contact" | "notFound";
 
 type LocalizedString = Record<SupportedLanguage, string>;
 
@@ -23,55 +15,16 @@ const routeSeoConfig: Record<SeoRouteKey, RouteSeoConfig> = {
   home: {
     path: "/",
     title: {
-      pt: "Ataîru - Seu Companheiro de Viagem ao Coração do Brasil",
-      en: "Ataîru - Your Travel Companion to the Heart of Brazil",
-      es: "Ataîru - Tu Compañero de Viaje al Corazón de Brasil",
+      pt: "Ataîru — A infraestrutura digital do turismo cultural brasileiro",
+      en: "Ataîru — The digital infrastructure for Brazilian cultural tourism",
+      es: "Ataîru — La infraestructura digital del turismo cultural brasileño",
     },
     description: {
-      pt: "Seu companheiro de viagem para descobrir o Brasil autêntico",
-      en: "Your travel companion to discover authentic Brazil",
-      es: "Tu compañero de viaje para descubrir el Brasil auténtico",
+      pt: "Plataforma de turismo cultural e sustentável do Brasil. Conectamos o patrimônio cultural e natural brasileiro ao turismo nacional e internacional.",
+      en: "Brazil's cultural and sustainable tourism platform. We connect Brazilian cultural and natural heritage to national and international tourism.",
+      es: "Plataforma de turismo cultural y sostenible de Brasil. Conectamos el patrimonio cultural y natural brasileño al turismo nacional e internacional.",
     },
     type: "website",
-  },
-  about: {
-    path: "/about",
-    title: {
-      pt: "Sobre a Ataîru | Missão e visão",
-      en: "About Ataîru | Mission and vision",
-      es: "Sobre Ataîru | Misión y visión",
-    },
-    description: {
-      pt: "Conheça a proposta da Ataîru para valorizar os patrimônios brasileiros e ampliar o acesso a experiências culturais responsáveis.",
-      en: "Learn how Ataîru highlights Brazilian heritage and broadens access to responsible cultural experiences.",
-      es: "Conoce la propuesta de Ataîru para valorar el patrimonio brasileño y ampliar el acceso a experiencias culturales responsables.",
-    },
-  },
-  heritage: {
-    path: "/heritage",
-    title: {
-      pt: "Patrimônios do Brasil | Coleção Ataîru",
-      en: "Brazilian Heritage | Ataîru collection",
-      es: "Patrimonios de Brasil | Colección Ataîru",
-    },
-    description: {
-      pt: "Navegue por patrimônios mundiais, materiais, imateriais e naturais do Brasil com filtros por categoria e região.",
-      en: "Browse Brazil's world, material, intangible, and natural heritage with category and region filters.",
-      es: "Explora los patrimonios mundiales, materiales, inmateriales y naturales de Brasil con filtros por categoría y región.",
-    },
-  },
-  map: {
-    path: "/map",
-    title: {
-      pt: "Mapa interativo | Patrimônios do Brasil",
-      en: "Interactive map | Brazilian heritage",
-      es: "Mapa interactivo | Patrimonios de Brasil",
-    },
-    description: {
-      pt: "Visualize patrimônios brasileiros no mapa, aplique filtros por região, estado e categoria e descubra novos destinos.",
-      en: "View Brazilian heritage on an interactive map, filter by region, state, and category, and discover new destinations.",
-      es: "Visualiza el patrimonio brasileño en el mapa, filtra por región, estado y categoría y descubre nuevos destinos.",
-    },
   },
   team: {
     path: "/team",
@@ -94,9 +47,9 @@ const routeSeoConfig: Record<SeoRouteKey, RouteSeoConfig> = {
       es: "Contacto | Habla con Ataîru",
     },
     description: {
-      pt: "Entre em contato com a Ataîru para parcerias, dúvidas e novidades sobre patrimônios e roteiros culturais do Brasil.",
-      en: "Contact Ataîru for partnerships, questions, and updates on Brazilian heritage and cultural itineraries.",
-      es: "Ponte en contacto con Ataîru para alianzas, dudas y novedades sobre patrimonio y rutas culturales de Brasil.",
+      pt: "Entre em contato com a Ataîru para parcerias, dúvidas e novidades sobre o turismo cultural brasileiro.",
+      en: "Contact Ataîru for partnerships, questions, and updates on Brazilian cultural tourism.",
+      es: "Ponte en contacto con Ataîru para alianzas, dudas y novedades sobre el turismo cultural brasileño.",
     },
   },
   notFound: {
@@ -107,9 +60,9 @@ const routeSeoConfig: Record<SeoRouteKey, RouteSeoConfig> = {
       es: "Página no encontrada | Ataîru",
     },
     description: {
-      pt: "A página solicitada não foi encontrada. Continue explorando os patrimônios brasileiros com a Ataîru.",
-      en: "The requested page was not found. Keep exploring Brazilian heritage with Ataîru.",
-      es: "La página solicitada no fue encontrada. Sigue explorando el patrimonio brasileño con Ataîru.",
+      pt: "A página solicitada não foi encontrada.",
+      en: "The requested page was not found.",
+      es: "La página solicitada no fue encontrada.",
     },
   },
 };
@@ -143,29 +96,4 @@ export const getWebsiteStructuredData = () => ({
   name: "Ataîru",
   url: buildCanonicalUrl("/"),
   inLanguage: ["pt-BR", "en", "es"],
-});
-
-export const getHeritageCollectionStructuredData = (language: SupportedLanguage) => ({
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: routeSeoConfig.heritage.title[language],
-  description: routeSeoConfig.heritage.description[language],
-  url: buildCanonicalUrl("/heritage"),
-  mainEntity: {
-    "@type": "ItemList",
-    numberOfItems: heritages.length,
-    itemListElement: heritages.slice(0, 10).map((heritage, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: heritage.name[language],
-    })),
-  },
-});
-
-export const getMapStructuredData = (language: SupportedLanguage) => ({
-  "@context": "https://schema.org",
-  "@type": "Map",
-  name: routeSeoConfig.map.title[language],
-  description: routeSeoConfig.map.description[language],
-  url: buildCanonicalUrl("/map"),
 });

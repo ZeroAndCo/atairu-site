@@ -1,89 +1,226 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca de",
-    "heritage": "Patrimonios",
-    "map": "Mapa Interactivo",
     "team": "Equipo",
     "contact": "Contacto"
   },
-  "hero": {
-    "tagline": "Tu Compañero de Viaje al Corazón de Brasil",
-    "subtitle": "Descubre la riqueza cultural y natural de Brasil a través de patrimonios únicos que cuentan nuestra historia",
-    "exploreMap": "Explorar el Mapa",
-    "learnMore": "Saber Más"
-  },
-  "stats": {
-    "heritages": "Patrimonios",
-    "unesco": "UNESCO",
-    "regions": "Regiones",
-    "states": "Estados"
-  },
-  "categories": {
-    "title": "Categorías de Patrimonio",
-    "world": {
-      "name": "Patrimonio Mundial",
-      "description": "Sitios reconocidos por la UNESCO por su valor universal excepcional. Puede ser Cultural, Natural o ambos. Compuesto por monumentos, conjuntos de construcciones y sitios arqueológicos de importancia fundamental para la memoria, la identidad y la creatividad de los pueblos y la riqueza de las culturas."
+  "home": {
+    "hero": {
+      "eyebrow": "Plataforma de Turismo Cultural y Sostenible de Brasil",
+      "title": "Tu compañero de viaje al corazón de Brasil",
+      "tagline": "La infraestructura digital que conecta el patrimonio cultural y natural brasileño al turismo nacional e internacional.",
+      "subtitle": "Más que una aplicación: la infraestructura digital del turismo cultural y sostenible brasileño."
     },
-    "material": {
-      "name": "Patrimonio Material",
-      "description": "Bienes tangibles de valor histórico, artístico, arqueológico o etnográfico. Incluye colecciones, obras de arte, acervos documentales, archivísticos, fotográficos, sitios arqueológicos, estaciones ferroviarias, fuertes, conjuntos urbanos o ciudades enteras."
+    "what": {
+      "eyebrow": "Qué es",
+      "title": "Una plataforma digital creada para conectar viajeros con la esencia de Brasil",
+      "p1": "Nuestra propuesta es conectar personas — viajeros y turistas — con la cultura más profunda de Brasil: sus personas, sabores, saberes, lugares y patrimonios.",
+      "p2": "Una herramienta que apoya el recorrido de exploración de todas las posibilidades de nuestro país, además de crear en cada localidad la oportunidad de una transformación social.",
+      "p3": "Nacimos de la riqueza y la abundancia cultural de nuestro país con el objetivo de generar una amplia experiencia en impacto social y cultural. Ataîru fue concebido para convertirse en la infraestructura digital del turismo cultural y sostenible brasileño.",
+      "quote": "El patrimonio cultural brasileño es uno de los activos más valiosos del país.",
+      "footer": "Acciones regionales · Impacto sistémico",
+      "pillars": {
+        "tourism": {
+          "title": "Turismo y Cultura",
+          "text": "Promovemos el acceso a lo mejor del país, en todas sus escalas y regiones."
+        },
+        "social": {
+          "title": "Impacto Social",
+          "text": "Usamos la plataforma como puente para la transformación social y la reducción de desigualdades."
+        },
+        "territorial": {
+          "title": "Desarrollo Territorial",
+          "text": "Fortalecemos comunidades a través del turismo sostenible y la valoración local."
+        }
+      }
     },
-    "intangible": {
-      "name": "Patrimonio Inmaterial",
-      "description": "Expresiones culturales vivas como danzas, manifestaciones, celebraciones. Se encuentran en los saberes, oficios y modos de hacer; en las celebraciones; formas de expresión escénicas, plásticas, musicales o lúdicas; y en los lugares como mercados, ferias y santuarios que albergan prácticas culturales colectivas."
-    },
-    "natural": {
-      "name": "Patrimonio Natural",
-      "description": "Parques nacionales, reservas y áreas de preservación ambiental. Formado por monumentos naturales constituidos por formaciones físicas y biológicas, formaciones geológicas y fisiográficas, además de sitios naturales."
-    },
-    "cultural-humanity": {
-      "name": "Patrimonio Cultural de la Humanidad",
-      "description": "Abarca prácticas, representaciones, expresiones, conocimientos y técnicas – junto con los instrumentos, objetos, artefactos y espacios culturales que les son asociados – que las comunidades, los grupos y, en algunos casos, los individuos reconocen como parte integrante de su Patrimonio Cultural."
-    }
-  },
-  "regions": {
-    "sul": "Sur",
-    "sudeste": "Sureste",
-    "nordeste": "Noreste",
-    "centro-oeste": "Centro-Oeste",
-    "norte": "Norte"
-  },
-  "about": {
-    "title": "Sobre el Proyecto",
-    "mission": {
-      "title": "Nuestra Misión",
-      "text": "Conectar a viajeros nacionales y extranjeros con la inmensa riqueza cultural y natural de Brasil, promoviendo el turismo sostenible y la valorización de los patrimonios y comunidades locales."
+    "how": {
+      "eyebrow": "Cómo",
+      "title": "Una plataforma digital para conectar viajeros con la esencia de Brasil",
+      "items": {
+        "culturalHeritage": "Patrimonios culturales",
+        "naturalHeritage": "Patrimonios naturales",
+        "parks": "Parques",
+        "culturalExpressions": "Manifestaciones culturales",
+        "gastronomy": "Gastronomía",
+        "crafts": "Artesanía",
+        "communities": "Comunidades",
+        "localGuides": "Guías locales",
+        "itineraries": "Rutas",
+        "experiences": "Experiencias",
+        "smallBusinesses": "Pequeños negocios",
+        "strategicData": "Datos estratégicos"
+      },
+      "statement": "Más que una aplicación: la infraestructura digital del turismo cultural y sostenible brasileño."
     },
     "vision": {
-      "title": "Nuestra Visión",
-      "text": "Ser el compañero de viaje definitivo para quienes desean explorar el Brasil auténtico, facilitando el acceso a información sobre patrimonios culturales y naturales en todo el país y el acceso a las comunidades y sus preciosidades."
+      "eyebrow": "Visión Estratégica",
+      "title": "Cuatro dimensiones, simultáneamente",
+      "items": {
+        "discovery": {
+          "title": "Descubrimiento",
+          "text": "Conecta visitantes con el patrimonio brasileño mediante contenido curado, mapas y recorridos digitales."
+        },
+        "experience": {
+          "title": "Experiencia",
+          "text": "Itinerarios personalizados, guías, experiencias, hospedajes y beneficios para el viajero."
+        },
+        "territorial": {
+          "title": "Desarrollo Territorial",
+          "text": "Fortalece pequeños y medianos emprendedores del ecosistema turístico y cultural."
+        },
+        "intelligence": {
+          "title": "Inteligencia Turística",
+          "text": "Genera datos, comportamiento de visitantes e inteligencia estratégica para instituciones."
+        }
+      }
     },
-    "story": {
-      "title": "Nuestra Historia",
-      "text": "Ataîru nació de la pasión por revelar las bellezas y tradiciones de Brasil que muchas veces pasan desapercibidas. Nuestro nombre es un homenaje a las raíces indígenas del país.",
-      "origin": "La palabra 'Ataîru' proviene del Tupi-Guaraní y significa 'compañero de viaje'. Elegimos este nombre porque creemos que descubrir Brasil es un viaje que se hace mejor acompañado — por historias, por cultura y por personas que comparten el mismo amor por nuestro país.",
-      "purpose": "Nuestra plataforma fue creada para conectar a los viajeros con la esencia de Brasil: su patrimonio cultural y natural, sus tradiciones vivas y su biodiversidad incomparable. Queremos ser el puente entre tú y experiencias auténticas que transforman viajes en recuerdos inolvidables."
+    "brazil": {
+      "eyebrow": "El Brasil que el mundo aún no conoce",
+      "title": "Uno de los patrimonios más ricos del planeta — aún fragmentado",
+      "subtitle": "El potencial del país en números — y lo que aún debe estructurarse.",
+      "numbers": {
+        "worldHeritage": "Patrimonios Mundiales",
+        "naturalHeritage": "Patrimonios Naturales",
+        "culturalHumanity": "Patrimonios Culturales"
+      },
+      "offers": {
+        "title": "Lo que Brasil ofrece",
+        "offer1": "Patrimonios históricos",
+        "offer2": "Patrimonios naturales",
+        "offer3": "Patrimonios culturales e inmateriales",
+        "offer4": "Biomas únicos",
+        "offer5": "Tradiciones vivas y gastronomías regionales",
+        "offer6": "Fiestas populares y saberes ancestrales",
+        "offer7": "Comunidades tradicionales"
+      },
+      "gaps": {
+        "title": "Lo que aún falta",
+        "gap1": "Información fragmentada",
+        "gap2": "Poca digitalización",
+        "gap3": "Desconexión de la experiencia turística internacional",
+        "gap4": "Ausencia de integración tecnológica que convierta el patrimonio en recorrido"
+      }
     },
-    "heritage": {
-      "title": "Entendiendo los Patrimonios",
-      "world": "Patrimonio Mundial UNESCO - Sitios de valor universal excepcional reconocidos internacionalmente.",
-      "material": "Patrimonio Material - Bienes físicos que representan hitos históricos y arquitectónicos.",
-      "intangible": "Patrimonio Inmaterial - Tradiciones, saberes y expresiones culturales transmitidas entre generaciones.",
-      "natural": "Patrimonio Natural - Áreas protegidas que preservan ecosistemas y biodiversidad únicos.",
-      "cultural-humanity": "Patrimonio Cultural de la Humanidad - Prácticas, representaciones y expresiones reconocidas por las comunidades como parte integrante de su patrimonio cultural."
+    "problem": {
+      "eyebrow": "El problema que Ataîru resuelve",
+      "title": "Hoy el patrimonio brasileño sufre por la fragmentación digital",
+      "scenario": "Escenario actual",
+      "layer": "Capa que Ataîru crea",
+      "rows": {
+        "fragmentation": {
+          "scenario": "Baja digitalización",
+          "layer": "Patrimonio"
+        },
+        "integration": {
+          "scenario": "Poca integración entre patrimonio y turismo",
+          "layer": "Territorio"
+        },
+        "experience": {
+          "scenario": "Ausencia de experiencia digital unificada",
+          "layer": "Turismo"
+        },
+        "access": {
+          "scenario": "Dificultad de acceso a la información",
+          "layer": "Cultura"
+        },
+        "business": {
+          "scenario": "Poca conexión entre pequeños negocios y turistas",
+          "layer": "Tecnología"
+        },
+        "international": {
+          "scenario": "Baja estructuración internacional",
+          "layer": "Visitantes"
+        },
+        "data": {
+          "scenario": "Poca inteligencia de datos aplicada",
+          "layer": "Desarrollo económico local"
+        }
+      }
+    },
+    "global": {
+      "eyebrow": "Contexto global y oportunidad",
+      "title": "El turismo internacional vive una transformación estructural",
+      "stat": "turistas extranjeros en Brasil en 2025 — segundo récord histórico consecutivo, +37,1% vs 2024.",
+      "traveler": {
+        "title": "El viajero global busca",
+        "text": "Autenticidad, experiencias locales, culturas vivas, sostenibilidad, gastronomía, naturaleza y conexión emocional con los destinos."
+      },
+      "advantages": {
+        "title": "Ventajas competitivas únicas de Brasil",
+        "biodiversity": "Una de las mayores biodiversidades del mundo",
+        "recognition": "Patrimonio reconocido internacionalmente",
+        "growth": "Crecimiento consistente del turismo internacional",
+        "diversity": "Diversidad cultural incomparable",
+        "potential": "Enorme potencial de turismo cultural y natural"
+      },
+      "closing": "Aún no existe en el país una infraestructura digital capaz de organizar, conectar, promover, distribuir y monetizar el patrimonio brasileño como experiencia turística escalable. Ese es el espacio que ocupa Ataîru."
+    },
+    "positioning": {
+      "eyebrow": "Posicionamiento",
+      "title": {
+        "before": "Ataîru es la",
+        "highlight": "infraestructura digital",
+        "after": "del turismo cultural y natural brasileño."
+      },
+      "items": {
+        "platform": "Plataforma de patrimonio",
+        "hub": "Hub de experiencias culturales",
+        "ecosystem": "Ecosistema de turismo sostenible",
+        "intelligence": "Plataforma de inteligencia territorial",
+        "international": "Infraestructura para la promoción internacional de Brasil"
+      }
+    },
+    "impact": {
+      "eyebrow": "Impacto esperado",
+      "title": "Cuatro dimensiones de impacto",
+      "items": {
+        "economic": {
+          "title": "Económico",
+          "text": "Fortalecimiento del turismo cultural y del ecosistema turístico, generación de ingresos locales."
+        },
+        "territorial": {
+          "title": "Territorial",
+          "text": "Valoración patrimonial mediante el fortalecimiento regional y la activación de pequeños negocios."
+        },
+        "cultural": {
+          "title": "Cultural",
+          "text": "Preservación a través de la educación patrimonial, promoviendo la diversidad brasileña."
+        },
+        "international": {
+          "title": "Internacional",
+          "text": "Fortalecimiento de la Marca Brasil y su posicionamiento como destino cultural global."
+        }
+      }
+    },
+    "why": {
+      "eyebrow": "Por qué Ataîru",
+      "title": "Porque el patrimonio cultural brasileño es uno de los activos más valiosos del país",
+      "subtitle": "Y porque aún no existe una infraestructura digital capaz de:",
+      "verbs": {
+        "connect": "Conectarlo",
+        "promote": "Promoverlo",
+        "organize": "Organizarlo",
+        "monetize": "Monetizarlo",
+        "transform": "Convertirlo en experiencia"
+      },
+      "closing": "Ataîru nace para construir esa infraestructura."
+    },
+    "invitation": {
+      "eyebrow": "Invitación final",
+      "title": "Ataîru es una invitación",
+      "verbs": {
+        "discover": "Descubrir Brasil",
+        "strengthen": "Fortalecer territorios",
+        "preserve": "Preservar patrimonios",
+        "connect": "Conectar culturas",
+        "develop": "Desarrollar economías locales",
+        "transform": "Transformar el turismo cultural"
+      },
+      "closing": "Estamos construyendo la infraestructura digital del turismo cultural de Brasil.",
+      "contact": "Habla con nosotros",
+      "team": "Conoce al equipo"
     }
-  },
-  "map": {
-    "title": "Mapa Interactivo",
-    "subtitle": "Explora los patrimonios culturales y naturales de Brasil",
-    "filter": "Filtrar",
-    "search": "Buscar patrimonio...",
-    "allCategories": "Todas las categorías",
-    "allRegions": "Todas las regiones",
-    "allStates": "Todos los estados",
-    "noResults": "Ningún patrimonio encontrado",
-    "viewDetails": "Ver Detalles"
   },
   "team": {
     "title": "Nuestro Equipo",
@@ -91,51 +228,36 @@
     "partners": "Socios"
   },
   "contact": {
-    "title": "Contáctanos",
-    "subtitle": "¿Tienes preguntas o sugerencias? ¡Nos encantaría escucharte!",
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Tienes dudas o sugerencias? ¡Nos encantaría escucharte!",
     "name": "Nombre",
-    "email": "Correo electrónico",
+    "email": "Correo",
     "subject": "Asunto",
     "message": "Mensaje",
     "send": "Enviar Mensaje",
     "success": "¡Mensaje enviado con éxito!",
     "newsletter": {
-      "title": "Boletín",
-      "text": "Recibe novedades sobre patrimonios y rutas culturales",
+      "title": "Newsletter",
+      "text": "Recibe novedades sobre Ataîru y el turismo cultural brasileño",
       "placeholder": "Tu correo",
       "subscribe": "Suscribirse"
     }
   },
   "footer": {
-    "description": "Tu compañero de viaje para descubrir el Brasil auténtico",
+    "description": "Tu compañero de viaje al corazón de Brasil",
     "quickLinks": "Enlaces Rápidos",
     "followUs": "Síguenos",
     "rights": "Todos los derechos reservados"
   },
-  "tags": {
-    "all": "Todos los tipos",
-    "cultural": "Cultural",
-    "natural": "Natural",
-    "misto": "Mixto"
-  },
-  "heritage": {
-    "viewOnMap": "Ver en el Mapa"
-  },
-  "marks": {
-    "unesco": { "label": "Patrimonio Mundial UNESCO" },
-    "iphan": { "label": "Patrimonio Cultural Brasileño (IPHAN)" },
-    "contran-cultural": { "label": "Patrimonio Cultural — Señalización Turística" },
-    "contran-natural": { "label": "Patrimonio Natural — Señalización Turística" },
-    "contran-misto": { "label": "Patrimonio Mixto — Señalización Turística" }
-  },
-  "footerCredit": "Identidad visual basada en las Orientaciones Técnicas para Señalización del Patrimonio Mundial en Brasil (IPHAN/UNESCO, 2013), el emblema del Patrimonio Cultural Brasileño (IPHAN, 2017) y la Guía Brasileña de Señalización Turística (Contran).",
+  "footerCredit": "Realización: CLIC + FAUZI + Zero&CO",
   "common": {
     "loading": "Cargando...",
     "error": "Error al cargar",
     "back": "Volver",
-    "close": "Cerrar",
-    "seeAll": "Ver todos",
-    "featured": "Destacado",
-    "unescoWorldHeritage": "Patrimonio Mundial UNESCO"
+    "close": "Cerrar"
+  },
+  "institutionalSupport": {
+    "eyebrow": "Apoyo Institucional",
+    "title": "Instituciones que apoyan a Ataîru"
   }
 }

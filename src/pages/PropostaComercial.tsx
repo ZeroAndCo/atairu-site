@@ -88,19 +88,16 @@ const PropostaComercial = () => {
           Um dos patrimônios mais ricos do planeta — ainda fragmentado.
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {[
-            { n: "23", label: "Patrimônios Mundiais da Humanidade", icon: Landmark },
-            { n: "15", label: "Patrimônios Naturais", icon: Leaf },
-            { n: "07", label: "Patrimônios Culturais", icon: Sparkles },
-          ].map((s, i) => (
-            <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-brand/20">
-              <s.icon className="w-8 h-8 text-forest mb-4" />
-              <div className="text-5xl font-bold text-primary mb-2" style={headingFont}>
-                {s.n}
-              </div>
-              <p className="text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
+        {[
+          { label: "Patrimônios Mundiais", icon: Landmark },
+          { label: "Patrimônios Naturais", icon: Leaf },
+          { label: "Patrimônios Culturais", icon: Sparkles },
+        ].map((s, i) => (
+          <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-brand/20">
+            <s.icon className="w-8 h-8 text-forest mb-4" />
+            <p className="text-muted-foreground">{s.label}</p>
+          </div>
+        ))}
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
