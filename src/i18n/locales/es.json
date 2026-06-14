@@ -108,13 +108,34 @@
       "scenario": "Escenario actual",
       "layer": "Capa que Ataîru crea",
       "rows": {
-        "fragmentation": { "scenario": "Baja digitalización", "layer": "Patrimonio" },
-        "integration": { "scenario": "Poca integración entre patrimonio y turismo", "layer": "Territorio" },
-        "experience": { "scenario": "Ausencia de experiencia digital unificada", "layer": "Turismo" },
-        "access": { "scenario": "Dificultad de acceso a la información", "layer": "Cultura" },
-        "business": { "scenario": "Poca conexión entre pequeños negocios y turistas", "layer": "Tecnología" },
-        "international": { "scenario": "Baja estructuración internacional", "layer": "Visitantes" },
-        "data": { "scenario": "Poca inteligencia de datos aplicada", "layer": "Desarrollo económico local" }
+        "fragmentation": {
+          "scenario": "Baja digitalización",
+          "layer": "Patrimonio"
+        },
+        "integration": {
+          "scenario": "Poca integración entre patrimonio y turismo",
+          "layer": "Territorio"
+        },
+        "experience": {
+          "scenario": "Ausencia de experiencia digital unificada",
+          "layer": "Turismo"
+        },
+        "access": {
+          "scenario": "Dificultad de acceso a la información",
+          "layer": "Cultura"
+        },
+        "business": {
+          "scenario": "Poca conexión entre pequeños negocios y turistas",
+          "layer": "Tecnología"
+        },
+        "international": {
+          "scenario": "Baja estructuración internacional",
+          "layer": "Visitantes"
+        },
+        "data": {
+          "scenario": "Poca inteligencia de datos aplicada",
+          "layer": "Desarrollo económico local"
+        }
       }
     },
     "global": {
@@ -234,5 +255,10 @@
     "error": "Error al cargar",
     "back": "Volver",
     "close": "Cerrar"
+  },
+  "institutionalSupport": {
+    "eyebrow": "Apoyo Institucional",
+    "title": "Instituciones que apoyan a Ataîru",
+    "note": "Logotipos mostrados a título indicativo."
   }
 }

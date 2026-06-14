@@ -108,13 +108,34 @@
       "scenario": "Current scenario",
       "layer": "Layer Ataîru creates",
       "rows": {
-        "fragmentation": { "scenario": "Low digitalization", "layer": "Heritage" },
-        "integration": { "scenario": "Little integration between heritage and tourism", "layer": "Territory" },
-        "experience": { "scenario": "No unified digital experience", "layer": "Tourism" },
-        "access": { "scenario": "Difficulty accessing information", "layer": "Culture" },
-        "business": { "scenario": "Few connections between small businesses and tourists", "layer": "Technology" },
-        "international": { "scenario": "Low international structuring", "layer": "Visitors" },
-        "data": { "scenario": "Little applied data intelligence", "layer": "Local economic development" }
+        "fragmentation": {
+          "scenario": "Low digitalization",
+          "layer": "Heritage"
+        },
+        "integration": {
+          "scenario": "Little integration between heritage and tourism",
+          "layer": "Territory"
+        },
+        "experience": {
+          "scenario": "No unified digital experience",
+          "layer": "Tourism"
+        },
+        "access": {
+          "scenario": "Difficulty accessing information",
+          "layer": "Culture"
+        },
+        "business": {
+          "scenario": "Few connections between small businesses and tourists",
+          "layer": "Technology"
+        },
+        "international": {
+          "scenario": "Low international structuring",
+          "layer": "Visitors"
+        },
+        "data": {
+          "scenario": "Little applied data intelligence",
+          "layer": "Local economic development"
+        }
       }
     },
     "global": {
@@ -234,5 +255,10 @@
     "error": "Loading error",
     "back": "Back",
     "close": "Close"
+  },
+  "institutionalSupport": {
+    "eyebrow": "Institutional Support",
+    "title": "Institutions that support Ataîru",
+    "note": "Logos shown for reference only."
   }
 }
