@@ -6,6 +6,7 @@ import mturLogo from '@/assets/mtur-logo.webp.asset.json';
 import unescoLogo from '@/assets/unesco-logo.svg.asset.json';
 import iphanLogo from '@/assets/iphan-logo.png.asset.json';
 import icmbioLogo from '@/assets/icmbio-logo.png.asset.json';
+import ocbpmLogo from '@/assets/ocbpm-logo.svg.asset.json';
 
 const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo', image: mturLogo.url, noBorder: true },
