@@ -12,10 +12,10 @@ const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo', image: mturLogo.url, noBorder: true },
   { key: 'embratur', label: 'Embratur', image: embraturLogo.url, noBorder: true },
   { key: 'mcultura', label: 'Ministério\nda Cultura', image: mincLogo.url, noBorder: true },
-  { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true },
+  { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true, whiteLogo: true },
   { key: 'iphan', label: 'IPHAN', image: iphanLogo.url, noBorder: true },
   { key: 'icmbio', label: 'ICMBio', image: icmbioLogo.url, noBorder: true },
-  { key: 'ocbpm', label: 'OCBPM', image: ocbpmLogo.url, noBorder: true },
+  { key: 'ocbpm', label: 'OCBPM', image: ocbpmLogo.url, noBorder: true, whiteLogo: true },
 ];
 
 const sponsors = [
@@ -36,6 +36,7 @@ interface SupporterItem {
   label: string;
   image?: string;
   noBorder?: boolean;
+  whiteLogo?: boolean;
 }
 
 interface SupporterGridProps {
@@ -64,6 +65,7 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
             src={s.image}
             alt={s.label}
             className="max-w-full max-h-full object-contain"
+            style={s.whiteLogo ? { filter: 'brightness(0) invert(1)' } : undefined}
           />
         ) : (
           <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
