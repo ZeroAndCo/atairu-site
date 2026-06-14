@@ -4,7 +4,7 @@ import embraturLogo from '@/assets/embratur-logo.svg.asset.json';
 
 const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo' },
-  { key: 'embratur', label: 'Embratur', image: embraturLogo.url },
+  { key: 'embratur', label: 'Embratur', image: embraturLogo.url, noBorder: true },
   { key: 'mcultura', label: 'Ministério\nda Cultura' },
   { key: 'unesco', label: 'UNESCO' },
   { key: 'iphan', label: 'IPHAN' },
