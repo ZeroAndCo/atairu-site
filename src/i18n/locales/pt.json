@@ -80,9 +80,9 @@
       "title": "Um dos patrimônios mais ricos do planeta — ainda fragmentado",
       "subtitle": "O potencial do país em números — e o que ainda precisa ser estruturado.",
       "numbers": {
-        "worldHeritage": "Patrimônios Mundiais",
+        "worldHeritage": "Patrimônios Mundiais da Humanidade",
         "naturalHeritage": "Patrimônios Naturais",
-        "culturalHumanity": "Patrimônios Culturais da Humanidade"
+        "culturalHumanity": "Patrimônios Culturais"
       },
       "offers": {
         "title": "O que o Brasil oferece",
@@ -108,13 +108,34 @@
       "scenario": "Cenário atual",
       "layer": "Camada que o Ataîru cria",
       "rows": {
-        "fragmentation": { "scenario": "Baixa digitalização", "layer": "Patrimônio" },
-        "integration": { "scenario": "Pouca integração entre patrimônio e turismo", "layer": "Território" },
-        "experience": { "scenario": "Ausência de experiência digital unificada", "layer": "Turismo" },
-        "access": { "scenario": "Dificuldade de acesso à informação", "layer": "Cultura" },
-        "business": { "scenario": "Pouca conexão entre pequenos negócios e turistas", "layer": "Tecnologia" },
-        "international": { "scenario": "Baixa estruturação internacional", "layer": "Visitantes" },
-        "data": { "scenario": "Pouca inteligência de dados aplicada", "layer": "Desenvolvimento econômico local" }
+        "fragmentation": {
+          "scenario": "Baixa digitalização",
+          "layer": "Patrimônio"
+        },
+        "integration": {
+          "scenario": "Pouca integração entre patrimônio e turismo",
+          "layer": "Território"
+        },
+        "experience": {
+          "scenario": "Ausência de experiência digital unificada",
+          "layer": "Turismo"
+        },
+        "access": {
+          "scenario": "Dificuldade de acesso à informação",
+          "layer": "Cultura"
+        },
+        "business": {
+          "scenario": "Pouca conexão entre pequenos negócios e turistas",
+          "layer": "Tecnologia"
+        },
+        "international": {
+          "scenario": "Baixa estruturação internacional",
+          "layer": "Visitantes"
+        },
+        "data": {
+          "scenario": "Pouca inteligência de dados aplicada",
+          "layer": "Desenvolvimento econômico local"
+        }
       }
     },
     "global": {
@@ -234,5 +255,10 @@
     "error": "Erro ao carregar",
     "back": "Voltar",
     "close": "Fechar"
+  },
+  "institutionalSupport": {
+    "eyebrow": "Apoio Institucional",
+    "title": "Instituições que apoiam o Ataîru",
+    "note": "Logotipos exibidos a título indicativo."
   }
 }

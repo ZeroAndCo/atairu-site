@@ -83,7 +83,8 @@ const Index = () => {
       {/* ============ HERO ============ */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-forest/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-forest/70" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-forest/10 to-forest-light/25" />
         <div className="container mx-auto px-4 py-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -134,7 +135,7 @@ const Index = () => {
               viewport={{ once: true }}
               className="space-y-5 text-left text-foreground/80 leading-relaxed"
             >
-              <p className="text-lg">{t('home.what.p1')}</p>
+              <p className="text-lg md:text-xl text-forest font-medium">{t('home.what.p1')}</p>
               <p>{t('home.what.p2')}</p>
               <p>{t('home.what.p3')}</p>
             </motion.div>
