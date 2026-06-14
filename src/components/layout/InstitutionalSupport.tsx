@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import embraturLogo from '@/assets/embratur-logo.svg.asset.json';
 import mincLogo from '@/assets/minc-logo.png.asset.json';
 import mturLogo from '@/assets/mtur-logo.webp.asset.json';
+import unescoLogo from '@/assets/unesco-logo.svg.asset.json';
 
 const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo', image: mturLogo.url, noBorder: true },
   { key: 'embratur', label: 'Embratur', image: embraturLogo.url, noBorder: true },
   { key: 'mcultura', label: 'Ministério\nda Cultura', image: mincLogo.url, noBorder: true },
-  { key: 'unesco', label: 'UNESCO' },
+  { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true },
   { key: 'iphan', label: 'IPHAN' },
   { key: 'icmbio', label: 'ICMBio' },
   { key: 'ocbpn', label: 'OCBPN' },
