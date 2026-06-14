@@ -15,7 +15,7 @@ const institutional = [
   { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true },
   { key: 'iphan', label: 'IPHAN', image: iphanLogo.url, noBorder: true },
   { key: 'icmbio', label: 'ICMBio', image: icmbioLogo.url, noBorder: true },
-  { key: 'ocbpn', label: 'OCBPN' },
+  { key: 'ocbpm', label: 'OCBPM', image: ocbpmLogo.url, noBorder: true },
 ];
 
 const sponsors = [
