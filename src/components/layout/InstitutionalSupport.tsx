@@ -12,10 +12,10 @@ const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo', image: mturLogo.url, noBorder: true },
   { key: 'embratur', label: 'Embratur', image: embraturLogo.url, noBorder: true },
   { key: 'mcultura', label: 'Ministério\nda Cultura', image: mincLogo.url, noBorder: true },
-  { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true },
+  { key: 'unesco', label: 'UNESCO', image: unescoLogo.url, noBorder: true, whiteLogo: true },
   { key: 'iphan', label: 'IPHAN', image: iphanLogo.url, noBorder: true },
   { key: 'icmbio', label: 'ICMBio', image: icmbioLogo.url, noBorder: true },
-  { key: 'ocbpm', label: 'OCBPM', image: ocbpmLogo.url, noBorder: true },
+  { key: 'ocbpm', label: 'OCBPM', image: ocbpmLogo.url, noBorder: true, whiteLogo: true },
 ];
 
 const sponsors = [
