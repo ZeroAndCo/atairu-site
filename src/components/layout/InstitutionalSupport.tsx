@@ -30,7 +30,7 @@ interface SupporterGridProps {
 }
 
 const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-6xl mx-auto">
+  <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
     {items.map((s, i) => (
       <motion.div
         key={s.key}
@@ -38,7 +38,7 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: startDelay + i * 0.05 }}
-        className="aspect-[3/2] flex items-center justify-center border border-cream/50 rounded-md px-3 py-4 text-center hover:border-cream hover:bg-cream/5 transition-colors"
+        className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[calc(25%-0.75rem)] lg:w-[150px] aspect-[3/2] flex items-center justify-center border border-cream/50 rounded-md px-3 py-4 text-center hover:border-cream hover:bg-cream/5 transition-colors"
         title={s.label.replace('\n', ' ')}
       >
         <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
