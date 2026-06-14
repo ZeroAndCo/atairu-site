@@ -86,48 +86,16 @@ export const InstitutionalSupport = () => {
       style={{ backgroundColor: 'hsl(var(--unesco-brown))' }}
     >
       <div className="absolute inset-0 pattern-indigenous opacity-[0.07]" />
-      <div className="container mx-auto px-4 relative z-10 space-y-16">
-        {/* Institutional Support */}
-        <div>
-          <div className="text-center mb-10">
-            <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
-              {t('institutionalSupport.eyebrow')}
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-cream">
-              {t('institutionalSupport.title')}
-            </h2>
-          </div>
-          <SupporterGrid items={institutional} />
-          <p className="text-center mt-8 text-cream/60 text-xs italic">
-            {t('institutionalSupport.note')}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-10">
+          <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
+            {t('institutionalSupport.eyebrow')}
           </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-cream">
+            {t('institutionalSupport.title')}
+          </h2>
         </div>
-
-        {/* Sponsors */}
-        <div>
-          <div className="text-center mb-10">
-            <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
-              {t('institutionalSupport.sponsors.eyebrow')}
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-cream">
-              {t('institutionalSupport.sponsors.title')}
-            </h2>
-          </div>
-          <SupporterGrid items={sponsors} startDelay={0.2} />
-        </div>
-
-        {/* Media Partners */}
-        <div>
-          <div className="text-center mb-10">
-            <p className="text-cream/70 uppercase tracking-[0.3em] text-xs mb-3 font-semibold">
-              {t('institutionalSupport.media.eyebrow')}
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-cream">
-              {t('institutionalSupport.media.title')}
-            </h2>
-          </div>
-          <SupporterGrid items={media} startDelay={0.2} />
-        </div>
+        <SupporterGrid items={institutional} />
       </div>
     </section>
   );

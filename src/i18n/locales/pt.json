@@ -258,15 +258,6 @@
   },
   "institutionalSupport": {
     "eyebrow": "Apoio Institucional",
-    "title": "Instituições que apoiam o Ataîru",
-    "note": "Logotipos exibidos a título indicativo.",
-    "sponsors": {
-      "eyebrow": "Patrocínios",
-      "title": "Marcas que apoiam o Ataîru"
-    },
-    "media": {
-      "eyebrow": "Parceiros de Mídia",
-      "title": "Mídias que apoiam o Ataîru"
-    }
+    "title": "Instituições que apoiam o Ataîru"
   }
 }
