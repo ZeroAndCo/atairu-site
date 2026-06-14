@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import embraturLogo from '@/assets/embratur-logo.svg.asset.json';
+import mincLogo from '@/assets/minc-logo.png.asset.json';
 
 const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo' },
   { key: 'embratur', label: 'Embratur', image: embraturLogo.url, noBorder: true },
-  { key: 'mcultura', label: 'Ministério\nda Cultura' },
+  { key: 'mcultura', label: 'Ministério\nda Cultura', image: mincLogo.url, noBorder: true },
   { key: 'unesco', label: 'UNESCO' },
   { key: 'iphan', label: 'IPHAN' },
   { key: 'icmbio', label: 'ICMBio' },
