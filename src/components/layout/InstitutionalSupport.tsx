@@ -29,6 +29,7 @@ interface SupporterItem {
   key: string;
   label: string;
   image?: string;
+  noBorder?: boolean;
 }
 
 interface SupporterGridProps {
@@ -45,14 +46,18 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: startDelay + i * 0.05 }}
-        className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[calc(25%-0.75rem)] lg:w-[150px] aspect-[3/2] flex items-center justify-center border border-cream/50 rounded-md px-3 py-4 text-center hover:border-cream hover:bg-cream/5 transition-colors"
+        className={`w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[calc(25%-0.75rem)] lg:w-[150px] aspect-[3/2] flex items-center justify-center rounded-md px-3 py-4 text-center transition-colors ${
+          s.noBorder
+            ? ''
+            : 'border border-cream/50 hover:border-cream hover:bg-cream/5'
+        }`}
         title={s.label.replace('\n', ' ')}
       >
         {s.image ? (
           <img
             src={s.image}
             alt={s.label}
-            className="max-w-full max-h-full object-contain"
+            className="max-w-full max-h-full object-contain brightness-0 invert"
           />
         ) : (
           <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
