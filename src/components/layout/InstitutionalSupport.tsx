@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import embraturLogo from '@/assets/embratur-logo.svg.asset.json';
 
 const institutional = [
   { key: 'mtur', label: 'Ministério\ndo Turismo' },
-  { key: 'embratur', label: 'Embratur' },
+  { key: 'embratur', label: 'Embratur', image: embraturLogo.url },
   { key: 'mcultura', label: 'Ministério\nda Cultura' },
   { key: 'unesco', label: 'UNESCO' },
   { key: 'iphan', label: 'IPHAN' },
@@ -24,8 +25,14 @@ const media = [
   { key: 'midiaD', label: 'Mídia D' },
 ];
 
+interface SupporterItem {
+  key: string;
+  label: string;
+  image?: string;
+}
+
 interface SupporterGridProps {
-  items: { key: string; label: string }[];
+  items: SupporterItem[];
   startDelay?: number;
 }
 
@@ -41,9 +48,17 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
         className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[calc(25%-0.75rem)] lg:w-[150px] aspect-[3/2] flex items-center justify-center border border-cream/50 rounded-md px-3 py-4 text-center hover:border-cream hover:bg-cream/5 transition-colors"
         title={s.label.replace('\n', ' ')}
       >
-        <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
-          {s.label}
-        </span>
+        {s.image ? (
+          <img
+            src={s.image}
+            alt={s.label}
+            className="max-w-full max-h-full object-contain"
+          />
+        ) : (
+          <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
+            {s.label}
+          </span>
+        )}
       </motion.div>
     ))}
   </div>
