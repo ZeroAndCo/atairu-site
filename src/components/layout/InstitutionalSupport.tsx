@@ -65,6 +65,7 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
             src={s.image}
             alt={s.label}
             className="max-w-full max-h-full object-contain"
+            style={s.whiteLogo ? { filter: 'brightness(0) invert(1)' } : undefined}
           />
         ) : (
           <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
