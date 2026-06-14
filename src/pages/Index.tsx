@@ -51,10 +51,10 @@ const Index = () => {
     { icon: BarChart3, key: 'intelligence', color: 'navy' },
   ];
 
-  const heritageNumbers = [
-    { value: '25', key: 'worldHeritage' },
-    { value: '15', key: 'naturalHeritage' },
-    { value: '07', key: 'culturalHumanity' },
+  const heritageItems = [
+    { icon: Landmark, key: 'worldHeritage' },
+    { icon: Leaf, key: 'naturalHeritage' },
+    { icon: Sparkles, key: 'culturalHumanity' },
   ];
 
   const problemRows = ['fragmentation', 'integration', 'experience', 'access', 'business', 'international', 'data'];
@@ -308,18 +308,18 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
-            {heritageNumbers.map((n, i) => (
+            {heritageItems.map((item, i) => (
               <motion.div
-                key={n.key}
+                key={item.key}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="text-center border border-cream/20 rounded-lg p-8 bg-cream/5 backdrop-blur-sm"
               >
-                <p className="text-6xl md:text-7xl font-bold text-gold mb-3">{n.value}</p>
+                <item.icon className="w-8 h-8 text-gold mx-auto mb-4" />
                 <p className="text-cream/90 text-sm uppercase tracking-wider">
-                  {t(`home.brazil.numbers.${n.key}`)}
+                  {t(`home.brazil.numbers.${item.key}`)}
                 </p>
               </motion.div>
             ))}
