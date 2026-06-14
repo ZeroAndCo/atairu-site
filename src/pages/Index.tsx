@@ -135,7 +135,7 @@ const Index = () => {
               viewport={{ once: true }}
               className="space-y-5 text-left text-foreground/80 leading-relaxed"
             >
-              <p className="text-lg">{t('home.what.p1')}</p>
+              <p className="text-lg md:text-xl text-forest font-medium">{t('home.what.p1')}</p>
               <p>{t('home.what.p2')}</p>
               <p>{t('home.what.p3')}</p>
             </motion.div>
