@@ -36,6 +36,7 @@ interface SupporterItem {
   label: string;
   image?: string;
   noBorder?: boolean;
+  whiteLogo?: boolean;
 }
 
 interface SupporterGridProps {
