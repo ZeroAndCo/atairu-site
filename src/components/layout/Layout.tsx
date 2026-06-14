@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { InstitutionalSupport } from './InstitutionalSupport';
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,7 +13,6 @@ export const Layout = ({ children }: LayoutProps) => {
       <main className="flex-1 pt-16 md:pt-20">
         {children}
       </main>
-      <InstitutionalSupport />
       <Footer />
     </div>
   );
