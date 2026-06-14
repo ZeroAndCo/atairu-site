@@ -58,7 +58,7 @@ const SupporterGrid = ({ items, startDelay = 0 }: SupporterGridProps) => (
           <img
             src={s.image}
             alt={s.label}
-            className="max-w-full max-h-full object-contain brightness-0 invert"
+            className="max-w-full max-h-full object-contain"
           />
         ) : (
           <span className="text-cream/90 text-xs md:text-sm font-semibold uppercase tracking-wider leading-tight whitespace-pre-line">
