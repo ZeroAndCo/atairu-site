@@ -83,7 +83,8 @@ const Index = () => {
       {/* ============ HERO ============ */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
         <div className="absolute inset-0 pattern-indigenous opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-forest/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-forest/70" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-forest/10 to-forest-light/25" />
         <div className="container mx-auto px-4 py-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
